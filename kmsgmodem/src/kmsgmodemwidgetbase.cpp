@@ -2,8 +2,8 @@
 /****************************************************************************
 ** Form implementation generated from reading ui file './kmsgmodemwidgetbase.ui'
 **
-** Created: Mon Aug 16 15:29:42 2004
-**      by: The User Interface Compiler ($Id: kmsgmodemwidgetbase.cpp,v 1.2 2004/08/16 14:18:20 wirr Exp $)
+** Created: Sun Aug 22 19:10:28 2004
+**      by: The User Interface Compiler ($Id: kmsgmodemwidgetbase.cpp,v 1.3 2004/08/23 20:48:09 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/
@@ -26,7 +26,6 @@ KMsgModemWidgetBase::KMsgModemWidgetBase( QWidget* parent, const char* name, WFl
 {
     if ( !name )
 	setName( "kmsgmodemwidgetbase" );
-    setSizePolicy( QSizePolicy( (QSizePolicy::SizeType)2, (QSizePolicy::SizeType)2, 0, 0, sizePolicy().hasHeightForWidth() ) );
     setMinimumSize( QSize( 100, 50 ) );
     kmsgmodemwidgetbaseLayout = new QGridLayout( this, 1, 1, 11, 6, "kmsgmodemwidgetbaseLayout"); 
 
@@ -38,6 +37,7 @@ KMsgModemWidgetBase::KMsgModemWidgetBase( QWidget* parent, const char* name, WFl
     MessageView->addColumn( tr2i18n( "Sender" ) );
     MessageView->setSizePolicy( QSizePolicy( (QSizePolicy::SizeType)1, (QSizePolicy::SizeType)1, 0, 0, MessageView->sizePolicy().hasHeightForWidth() ) );
     MessageView->setMinimumSize( QSize( 500, 240 ) );
+    MessageView->setCursor( QCursor( 13 ) );
     MessageView->setMidLineWidth( 0 );
     MessageView->setResizePolicy( KListView::Default );
     MessageView->setProperty( "selectionMode", "Single" );

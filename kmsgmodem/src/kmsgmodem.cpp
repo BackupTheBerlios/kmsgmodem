@@ -539,7 +539,7 @@ void KMsgModem::PlayVoice(int Voice)
 	
 	if(!rc) 
 	{
-		KMessageBox::error(this, i18n("The voice file could not be decoded.\nPlease install SoX. You can find the sourcecode at \
+		KMessageBox::error(this, i18n("The voice file could not be decoded.\nPlease install \"SoX\". You can find the sourcecode at \
 										http://sox.sf.net/"));
 		return;
 	}
@@ -577,14 +577,12 @@ void KMsgModem::showSettings()
    if(KConfigDialog::showDialog("settings"))
      return;
    
-   KConfigDialog *dialog = new KConfigDialog(this, "settings", Config::Self(), 	// bad, change when introducing singelton config
+   KConfigDialog *dialog = new KConfigDialog(this, "settings", Config::Self(),
    								KDialogBase::IconList, KDialogBase::Ok|KDialogBase::Apply|KDialogBase::Cancel, KDialogBase::Ok, true);
    
    dialog->addPage(new GeneralSettings(0, "General"), i18n("General"), "kmsgmodem", i18n("General Settings"));
    
    dialog->addPage(new ModemConnectionSettings(0, "Connection"), i18n("Connection"), "connect_no",  i18n("Connection Settings"));
-   
-   // @ todo change to new settings, or user has to restart program
    
    dialog->show();
 }
@@ -688,7 +686,7 @@ void KMsgModem::SaveFile()
 		
 		if(!rc) 
 		{
-			KMessageBox::error(this, i18n("The voice file could not be decoded.\nPlease install SoX. You can find the sourcecode at \
+			KMessageBox::error(this, i18n("The voice file could not be decoded.\nPlease install \"SoX\". You can find the sourcecode at \
 											http://sox.sf.net/"));
 			return;
 		}

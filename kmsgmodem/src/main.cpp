@@ -28,16 +28,16 @@
 #include <klocale.h>
 
 static const char description[] =
-    I18N_NOOP("USR Sportster Message Center");
+    I18N_NOOP("USR Sportster Message Centre");
 
-static const char version[] = "0.3";
+static const char version[] = "0.4";
 
 static KCmdLineOptions options[] =
 {
     //{ "+URL", I18N_NOOP( "Document to open." ), 0 },
 	{ "delete", I18N_NOOP("Delete memory file"), 0 },
 	{ "baudrate <speed>", I18N_NOOP("Use this baudrate"), 0 },
-	{ "terminal <device>", I18N_NOOP("Use this terminal"), 0 },
+	{ "terminal <device>", I18N_NOOP("Use this interface"), 0 },
     KCmdLineLastOption
 };
 

@@ -8,7 +8,7 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>320</width>
+            <width>330</width>
             <height>284</height>
         </rect>
     </property>
@@ -22,64 +22,13 @@
     </property>
     <property name="minimumSize">
         <size>
-            <width>320</width>
+            <width>330</width>
             <height>280</height>
         </size>
     </property>
     <property name="caption">
         <string>Form1</string>
     </property>
-    <widget class="QButtonGroup">
-        <property name="name">
-            <cstring>buttonGroup1</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>160</y>
-                <width>300</width>
-                <height>110</height>
-            </rect>
-        </property>
-        <property name="title">
-            <string>Fax conversion</string>
-        </property>
-        <widget class="QRadioButton">
-            <property name="name">
-                <cstring>kcfg_NormalQuality</cstring>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>20</x>
-                    <y>30</y>
-                    <width>270</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property name="text">
-                <string>Normal quality (slow)</string>
-            </property>
-            <property name="checked">
-                <bool>true</bool>
-            </property>
-        </widget>
-        <widget class="QRadioButton">
-            <property name="name">
-                <cstring>kcfg_GoodQuality</cstring>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>20</x>
-                    <y>70</y>
-                    <width>270</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property name="text">
-                <string>Good quality (very slow)</string>
-            </property>
-        </widget>
-    </widget>
     <widget class="QGroupBox">
         <property name="name">
             <cstring>groupBox1</cstring>
@@ -88,7 +37,7 @@
             <rect>
                 <x>10</x>
                 <y>10</y>
-                <width>300</width>
+                <width>310</width>
                 <height>130</height>
             </rect>
         </property>
@@ -103,7 +52,7 @@
                 <rect>
                     <x>20</x>
                     <y>80</y>
-                    <width>270</width>
+                    <width>280</width>
                     <height>20</height>
                 </rect>
             </property>
@@ -127,7 +76,7 @@
                 <rect>
                     <x>20</x>
                     <y>40</y>
-                    <width>270</width>
+                    <width>280</width>
                     <height>20</height>
                 </rect>
             </property>
@@ -141,6 +90,57 @@
             </property>
             <property name="text">
                 <string>Check for new messages on startup</string>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QButtonGroup">
+        <property name="name">
+            <cstring>buttonGroup1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>160</y>
+                <width>310</width>
+                <height>110</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Fax conversion</string>
+        </property>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>kcfg_NormalQuality</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>30</y>
+                    <width>280</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Normal quality (slow)</string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>kcfg_GoodQuality</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>70</y>
+                    <width>280</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Good quality (very slow)</string>
             </property>
         </widget>
     </widget>

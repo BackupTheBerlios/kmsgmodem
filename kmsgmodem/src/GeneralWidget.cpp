@@ -2,8 +2,8 @@
 /****************************************************************************
 ** Form implementation generated from reading ui file './GeneralWidget.ui'
 **
-** Created: Mon Aug 16 15:29:46 2004
-**      by: The User Interface Compiler ($Id: GeneralWidget.cpp,v 1.2 2004/08/16 14:18:20 wirr Exp $)
+** Created: Sun Aug 22 19:10:31 2004
+**      by: The User Interface Compiler ($Id: GeneralWidget.cpp,v 1.3 2004/08/23 20:48:08 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/
@@ -11,7 +11,10 @@
 #include "GeneralWidget.h"
 
 #include <qvariant.h>
+#include <qgroupbox.h>
 #include <qcheckbox.h>
+#include <qbuttongroup.h>
+#include <qradiobutton.h>
 #include <qlayout.h>
 #include <qtooltip.h>
 #include <qwhatsthis.h>
@@ -26,21 +29,35 @@ General::General( QWidget* parent, const char* name, WFlags fl )
     if ( !name )
 	setName( "General" );
     setSizePolicy( QSizePolicy( (QSizePolicy::SizeType)1, (QSizePolicy::SizeType)1, 0, 0, sizePolicy().hasHeightForWidth() ) );
-    setMinimumSize( QSize( 300, 150 ) );
-    GeneralLayout = new QGridLayout( this, 1, 1, 11, 6, "GeneralLayout"); 
+    setMinimumSize( QSize( 330, 280 ) );
 
-    kcfg_CheckOnStart = new QCheckBox( this, "kcfg_CheckOnStart" );
-    kcfg_CheckOnStart->setSizePolicy( QSizePolicy( (QSizePolicy::SizeType)4, (QSizePolicy::SizeType)4, 0, 0, kcfg_CheckOnStart->sizePolicy().hasHeightForWidth() ) );
+    groupBox1 = new QGroupBox( this, "groupBox1" );
+    groupBox1->setGeometry( QRect( 10, 10, 310, 130 ) );
 
-    GeneralLayout->addWidget( kcfg_CheckOnStart, 0, 0 );
-
-    kcfg_SetStandAloneModeOnExit = new QCheckBox( this, "kcfg_SetStandAloneModeOnExit" );
+    kcfg_SetStandAloneModeOnExit = new QCheckBox( groupBox1, "kcfg_SetStandAloneModeOnExit" );
+    kcfg_SetStandAloneModeOnExit->setGeometry( QRect( 20, 80, 280, 20 ) );
     kcfg_SetStandAloneModeOnExit->setSizePolicy( QSizePolicy( (QSizePolicy::SizeType)4, (QSizePolicy::SizeType)4, 0, 0, kcfg_SetStandAloneModeOnExit->sizePolicy().hasHeightForWidth() ) );
 
-    GeneralLayout->addWidget( kcfg_SetStandAloneModeOnExit, 1, 0 );
+    kcfg_CheckOnStart = new QCheckBox( groupBox1, "kcfg_CheckOnStart" );
+    kcfg_CheckOnStart->setGeometry( QRect( 20, 40, 280, 20 ) );
+    kcfg_CheckOnStart->setSizePolicy( QSizePolicy( (QSizePolicy::SizeType)4, (QSizePolicy::SizeType)4, 0, 0, kcfg_CheckOnStart->sizePolicy().hasHeightForWidth() ) );
+
+    buttonGroup1 = new QButtonGroup( this, "buttonGroup1" );
+    buttonGroup1->setGeometry( QRect( 10, 160, 310, 110 ) );
+
+    kcfg_NormalQuality = new QRadioButton( buttonGroup1, "kcfg_NormalQuality" );
+    kcfg_NormalQuality->setGeometry( QRect( 20, 30, 280, 20 ) );
+    kcfg_NormalQuality->setChecked( TRUE );
+
+    kcfg_GoodQuality = new QRadioButton( buttonGroup1, "kcfg_GoodQuality" );
+    kcfg_GoodQuality->setGeometry( QRect( 20, 70, 280, 20 ) );
     languageChange();
-    resize( QSize(300, 154).expandedTo(minimumSizeHint()) );
+    resize( QSize(330, 284).expandedTo(minimumSizeHint()) );
     clearWState( WState_Polished );
+
+    // tab order
+    setTabOrder( kcfg_CheckOnStart, kcfg_SetStandAloneModeOnExit );
+    setTabOrder( kcfg_SetStandAloneModeOnExit, kcfg_NormalQuality );
 }
 
 /*
@@ -58,8 +75,12 @@ General::~General()
 void General::languageChange()
 {
     setCaption( tr2i18n( "Form1" ) );
-    kcfg_CheckOnStart->setText( tr2i18n( "Check for new messages on startup" ) );
+    groupBox1->setTitle( tr2i18n( "Start && Exit" ) );
     kcfg_SetStandAloneModeOnExit->setText( tr2i18n( "Set standalone mode on exit" ) );
+    kcfg_CheckOnStart->setText( tr2i18n( "Check for new messages on startup" ) );
+    buttonGroup1->setTitle( tr2i18n( "Fax conversion" ) );
+    kcfg_NormalQuality->setText( tr2i18n( "Normal quality (slow)" ) );
+    kcfg_GoodQuality->setText( tr2i18n( "Good quality (very slow)" ) );
 }
 
 #include "GeneralWidget.moc"

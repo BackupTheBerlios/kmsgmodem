@@ -2,8 +2,8 @@
 /****************************************************************************
 ** Form implementation generated from reading ui file './Modem.ui'
 **
-** Created: Mon Aug 16 15:29:49 2004
-**      by: The User Interface Compiler ($Id: Modem.cpp,v 1.2 2004/08/16 14:18:20 wirr Exp $)
+** Created: Sun Aug 22 19:10:34 2004
+**      by: The User Interface Compiler ($Id: Modem.cpp,v 1.3 2004/08/23 20:48:08 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/
@@ -11,8 +11,10 @@
 #include "Modem.h"
 
 #include <qvariant.h>
-#include <qlabel.h>
+#include <qgroupbox.h>
 #include <klineedit.h>
+#include <qlabel.h>
+#include <kcombobox.h>
 #include <qlayout.h>
 #include <qtooltip.h>
 #include <qwhatsthis.h>
@@ -27,32 +29,33 @@ Modem::Modem( QWidget* parent, const char* name, WFlags fl )
     if ( !name )
 	setName( "Modem" );
     setSizePolicy( QSizePolicy( (QSizePolicy::SizeType)1, (QSizePolicy::SizeType)1, 0, 0, sizePolicy().hasHeightForWidth() ) );
-    setMinimumSize( QSize( 0, 0 ) );
-    ModemLayout = new QGridLayout( this, 1, 1, 11, 6, "ModemLayout"); 
+    setMinimumSize( QSize( 320, 280 ) );
 
-    textLabel1 = new QLabel( this, "textLabel1" );
+    groupBox2 = new QGroupBox( this, "groupBox2" );
+    groupBox2->setGeometry( QRect( 10, 10, 300, 110 ) );
 
-    ModemLayout->addWidget( textLabel1, 0, 0 );
-
-    textLabel2 = new QLabel( this, "textLabel2" );
-
-    ModemLayout->addWidget( textLabel2, 1, 0 );
-    spacer1 = new QSpacerItem( 60, 20, QSizePolicy::Expanding, QSizePolicy::Minimum );
-    ModemLayout->addItem( spacer1, 1, 2 );
-
-    kcfg_Port = new KLineEdit( this, "kcfg_Port" );
+    kcfg_Port = new KLineEdit( groupBox2, "kcfg_Port" );
+    kcfg_Port->setGeometry( QRect( 160, 70, 90, 22 ) );
     kcfg_Port->setSizePolicy( QSizePolicy( (QSizePolicy::SizeType)7, (QSizePolicy::SizeType)0, 0, 0, kcfg_Port->sizePolicy().hasHeightForWidth() ) );
     kcfg_Port->setMinimumSize( QSize( 40, 0 ) );
 
-    ModemLayout->addWidget( kcfg_Port, 1, 1 );
+    textLabel1 = new QLabel( groupBox2, "textLabel1" );
+    textLabel1->setGeometry( QRect( 50, 30, 100, 22 ) );
 
-    kcfg_Baudrate = new KLineEdit( this, "kcfg_Baudrate" );
-    kcfg_Baudrate->setMinimumSize( QSize( 40, 0 ) );
+    kcfg_Baudrate = new KComboBox( FALSE, groupBox2, "kcfg_Baudrate" );
+    kcfg_Baudrate->setGeometry( QRect( 160, 30, 92, 22 ) );
 
-    ModemLayout->addWidget( kcfg_Baudrate, 0, 1 );
+    textLabel2 = new QLabel( groupBox2, "textLabel2" );
+    textLabel2->setGeometry( QRect( 50, 70, 110, 22 ) );
+
+    textLabel1_2 = new QLabel( this, "textLabel1_2" );
+    textLabel1_2->setGeometry( QRect( 10, 210, 300, 40 ) );
     languageChange();
-    resize( QSize(238, 114).expandedTo(minimumSizeHint()) );
+    resize( QSize(320, 284).expandedTo(minimumSizeHint()) );
     clearWState( WState_Polished );
+
+    // tab order
+    setTabOrder( kcfg_Baudrate, kcfg_Port );
 }
 
 /*
@@ -70,8 +73,20 @@ Modem::~Modem()
 void Modem::languageChange()
 {
     setCaption( tr2i18n( "Form1" ) );
+    groupBox2->setTitle( tr2i18n( "Interface" ) );
     textLabel1->setText( tr2i18n( "Baudrate:" ) );
-    textLabel2->setText( tr2i18n( "Device:" ) );
+    kcfg_Baudrate->clear();
+    kcfg_Baudrate->insertItem( tr2i18n( "230400" ) );
+    kcfg_Baudrate->insertItem( tr2i18n( "115200" ) );
+    kcfg_Baudrate->insertItem( tr2i18n( "57600" ) );
+    kcfg_Baudrate->insertItem( tr2i18n( "38400" ) );
+    kcfg_Baudrate->insertItem( tr2i18n( "19200" ) );
+    kcfg_Baudrate->insertItem( tr2i18n( "9600" ) );
+    kcfg_Baudrate->insertItem( tr2i18n( "4800" ) );
+    kcfg_Baudrate->insertItem( tr2i18n( "2400" ) );
+    textLabel2->setText( tr2i18n( "Interface:" ) );
+    textLabel1_2->setText( tr2i18n( "<p align=\"center\">These settings take effect after\n"
+"a restart of KMsgModem.</p>" ) );
 }
 
 #include "Modem.moc"

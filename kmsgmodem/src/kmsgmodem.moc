@@ -1,8 +1,8 @@
 /****************************************************************************
 ** KMsgModem meta object code from reading C++ file 'kmsgmodem.h'
 **
-** Created: Tue Aug 17 11:48:26 2004
-**      by: The Qt MOC ($Id: kmsgmodem.moc,v 1.3 2004/08/18 12:04:33 wirr Exp $)
+** Created: Sun Aug 22 18:43:14 2004
+**      by: The Qt MOC ($Id: kmsgmodem.moc,v 1.4 2004/08/23 20:48:09 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -82,6 +82,12 @@ QMetaObject* KMsgModem::staticMetaObject()
     static const QUMethod slot_9 = {"StopPlayingVoice", 0, 0 };
     static const QUMethod slot_10 = {"ClearMemory", 0, 0 };
     static const QUMethod slot_11 = {"SaveFile", 0, 0 };
+    static const QUParameter param_slot_12[] = {
+	{ 0, &static_QUType_bool, 0, QUParameter::Out }
+    };
+    static const QUMethod slot_12 = {"queryClose", 1, param_slot_12 };
+    static const QUMethod slot_13 = {"QuitApp", 0, 0 };
+    static const QUMethod slot_14 = {"showModemSettings", 0, 0 };
     static const QMetaData slot_tbl[] = {
 	{ "LoadMessages()", &slot_0, QMetaData::Private },
 	{ "ShowFax(int)", &slot_1, QMetaData::Private },
@@ -94,11 +100,14 @@ QMetaObject* KMsgModem::staticMetaObject()
 	{ "SetStatusbarText(QString,int,bool)", &slot_8, QMetaData::Private },
 	{ "StopPlayingVoice()", &slot_9, QMetaData::Private },
 	{ "ClearMemory()", &slot_10, QMetaData::Private },
-	{ "SaveFile()", &slot_11, QMetaData::Private }
+	{ "SaveFile()", &slot_11, QMetaData::Private },
+	{ "queryClose()", &slot_12, QMetaData::Private },
+	{ "QuitApp()", &slot_13, QMetaData::Private },
+	{ "showModemSettings()", &slot_14, QMetaData::Private }
     };
     metaObj = QMetaObject::new_metaobject(
 	"KMsgModem", parentObject,
-	slot_tbl, 12,
+	slot_tbl, 15,
 	0, 0,
 #ifndef QT_NO_PROPERTIES
 	0, 0,
@@ -131,6 +140,9 @@ bool KMsgModem::qt_invoke( int _id, QUObject* _o )
     case 9: StopPlayingVoice(); break;
     case 10: ClearMemory(); break;
     case 11: SaveFile(); break;
+    case 12: static_QUType_bool.set(_o,queryClose()); break;
+    case 13: QuitApp(); break;
+    case 14: showModemSettings(); break;
     default:
 	return KMainWindow::qt_invoke( _id, _o );
     }
