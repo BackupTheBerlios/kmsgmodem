@@ -34,6 +34,7 @@
 #include <kprocess.h>
 #include <klocale.h>
 #include <kuniqueapplication.h>
+#include <kcmdlineargs.h>
 #include <arts/kartsdispatcher.h>
 #include <arts/kartsserver.h>
 #include <arts/kplayobject.h>
@@ -70,6 +71,8 @@ public:
 	
 	void Startup();
 	
+	static void HanldeArgs(KCmdLineArgs *args);
+	
 private:
 	void NewMessage();
 	
@@ -104,7 +107,6 @@ private:
 	enum { VOICE, FAX };
 	unsigned int selectedMessage;
 	unsigned int selectedMessageType;
-	
 
 private slots:	
 	

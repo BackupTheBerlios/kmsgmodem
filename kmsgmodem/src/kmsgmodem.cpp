@@ -735,7 +735,7 @@ void KMsgModem::SaveFile()
 }
 
 
-/*! \brief This function asks the user if s/he wants to really quit
+/*! \brief This function asks the user if s/he wants to really quit.
  *
  *	Its a problem when quitting the application while the thread runs.
  *	Normally this is save, but who knows?
@@ -753,7 +753,7 @@ bool KMsgModem::queryClose()
 }
 
 
-/*! \brief This function is called when the app quits
+/*! \brief This function is called when the app quits.
  *
  *	This function is called whenn the app is quited by the StdAction.
  */
@@ -766,7 +766,7 @@ void KMsgModem::QuitApp()
 }
 
 
-/*! \brief Call this function to enable all actions
+/*! \brief Call this function to enable all actions.
  *
  *	Reactivate the actions.
  */
@@ -780,7 +780,7 @@ void KMsgModem::EnableModemActions()
 }
 
 
-/*! \brief Call this function to disable all actions
+/*! \brief Call this function to disable all actions.
  *
  *	When calling a thread-function call this function first.
  *	This prevents that the user requests another function from
@@ -799,11 +799,80 @@ void KMsgModem::DisableModemActions()
 }
 
 
+/*! \brief Opens the modem config dialog.
+ * 
+ */
 void KMsgModem::showModemSettings()
 {
 	MyModemSettingsDialog *dialog = new MyModemSettingsDialog(modem);
 	
 	dialog->show();
+}
+
+
+/*! \brief This function handels the comand line arguments.
+ * 
+ */
+void KMsgModem::HanldeArgs(KCmdLineArgs *args)
+{
+	QString baud = args->getOption("baudrate");
+	
+	if(!baud.isNull())
+	{
+		int baudrate;
+	
+		//
+		// Select Baudrate, if there is no correct one, use the default
+		//
+		if(baud == "2400")
+		{
+			baudrate = 7;
+		}
+		else if(baud == "4800")
+		{
+			baudrate = 6;
+		}
+		else if(baud == "9600")
+		{
+			baudrate = 5;
+		} 
+		else if(baud == "19200")
+		{
+			baudrate = 4;
+		} 
+		else if(baud == "38400")
+		{
+			baudrate = 3;
+		} 
+		else if(baud == "57600")
+		{
+			baudrate = 2;
+		}
+		else if(baud == "115200")
+		{
+			baudrate = 1;
+		}
+		else if(baud == "230400")
+		{
+			baudrate = 0;
+		} 
+		else 
+		{
+			kdError(0) << "baudrate ignored" << endl;
+			return;
+		}
+		
+		Config::Self()->Baudrate = baudrate;
+	}
+	
+	QString term = args->getOption("terminal");
+	
+	if(!term.isNull())
+	{
+		Config::Self()->Port = term;
+	}
+	
+	if(args->isSet("delete")) remove("/tmp/USRMemory");
 }
 		
 #include "kmsgmodem.moc"

@@ -34,7 +34,10 @@ static const char version[] = "0.3";
 
 static KCmdLineOptions options[] =
 {
-//    { "+[URL]", I18N_NOOP( "Document to open." ), 0 },
+    //{ "+URL", I18N_NOOP( "Document to open." ), 0 },
+	{ "delete", I18N_NOOP("Delete memory file"), 0 },
+	{ "baudrate <speed>", I18N_NOOP("Use this baudrate"), 0 },
+	{ "terminal <device>", I18N_NOOP("Use this terminal"), 0 },
     KCmdLineLastOption
 };
 
@@ -46,8 +49,10 @@ int main(int argc, char **argv)
 	
 	about.addCredit("Torsten Uhlmann", I18N_NOOP("His previous work saved me much time"), 0, 0);
 	about.addCredit("Chris Bagwell", I18N_NOOP("Thanks for SoX"), 0, "http://sox.sourceforge.net/");
+	
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions( options );
+	
     KUniqueApplication app;
     KMsgModem *mainWin = 0;
 
@@ -60,7 +65,7 @@ int main(int argc, char **argv)
         // no session.. just start up normally
         KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 
-        /// @todo do something with the command line args here
+        KMsgModem::HanldeArgs(args);
 
         mainWin = new KMsgModem(&app);
         app.setMainWidget( mainWin );
