@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2004 by Alexander Wiedenbruch                           *
- *   wirr@abacho.de                                                        *
+ *   wirr@users.berlios.de                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -23,6 +23,7 @@
 #include <kdebug.h>
 
 #include <stdlib.h>
+#include <sys/file.h>
 
 
 /*! \brief C'tor
@@ -96,7 +97,18 @@ Connection::Connection(QString interface, QString baud) : interface(interface)
 	#ifdef DEBUG_CON
 		kdDebug(0) << this->interface << " open" << endl;
 	#endif
+			
+	//
+	// lock the tty, so we can use ist exculsively
+	//
+	int rc = flock(fd, LOCK_EX | LOCK_NB);
 	
+	if(rc == -1)
+	{
+		kdError(0) << "It seems that another application is using the tty" << endl;
+		initError = true;
+	}
+		
 	//
 	// taken from modemconnector.cpp by U. Thulmann (C)
 	//
@@ -131,6 +143,9 @@ Connection::~Connection()
 	{
 		kdError(0) << "Could not set old parameters on " << interface << endl;
 	}
+	
+	flock(fd, LOCK_UN);
+	
 	close(fd);
 }
 

@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2004 by Alexander Wiedenbruch                           *
- *   wirr@abacho.de                                                        *
+ *   wirr@users.berlios.de                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -82,29 +82,25 @@ int UsrSmp::DetectModemType()
 {
 	QString resp = SendCommand("ATI3");
 	
-	if(resp.find("Pro") != -1)
+	if ((!resp.contains("message",false)) && (!resp.contains("msg",false)))
 	{
 		#ifdef DEBUG_USR
-			kdDebug(0) << "PROFESSIONAL MODEM" << endl;
+			kdDebug(0) << "Neither Message nor Message Professional: " << resp << endl;
 		#endif
-
-		return NORMAL;
+		return UNSPECIFIED;
+	}
+	if (resp.contains("pro",false))
+	{
+		#ifdef DEBUG_USR
+			kdDebug(0) << "Professional Message Modem: " << resp << endl;
+		#endif
+		return PROFESSIONAL;
 	}
 	
-	if(resp.find("Message") != -1)
-	{
-		#ifdef DEBUG_USR
-			kdDebug(0) << "NORMAL MODEM" << endl;
-		#endif
-
-		return PROFESSIONAL;
-	}		 
-		 
 	#ifdef DEBUG_USR
-		kdDebug(0) << "UNKNOWN MODEM" << endl;
+		kdDebug(0) << "Normal Message Modem: " << resp << endl;
 	#endif
-
-	return UNSPECIFIED;
+	return NORMAL;
 }
 
 
@@ -127,12 +123,12 @@ int UsrSmp::SetStandAloneMode()
 	
 	switch(modemType)
 	{
-		case NORMAL:
+		case PROFESSIONAL:
 				resp = SendCommand("AT+MCA=1");
 				if(resp.find("OK") != -1) return 0;
 				break;
 				
-		case PROFESSIONAL:
+		case NORMAL:
 				resp = SendCommand("AT+MCS=1");
 				if(resp.find("OK") != -1) return 0;
 				break;
@@ -154,12 +150,12 @@ int UsrSmp::UnSetStandAloneMode()
 	
 	switch(modemType)
 	{
-		case NORMAL:
+		case PROFESSIONAL:
 				resp = SendCommand("AT+MCA=0");
 				if(resp.find("OK") != -1) return 0;
 				break;
 				
-		case PROFESSIONAL:
+		case NORMAL:
 				resp = SendCommand("AT+MCS=0");
 				if(resp.find("OK") != -1) return 0;
 				break;
@@ -167,7 +163,7 @@ int UsrSmp::UnSetStandAloneMode()
 		default: break;
 	}
 	
-	return 0;
+	return 1;
 }
 
 

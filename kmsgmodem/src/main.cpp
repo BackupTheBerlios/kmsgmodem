@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2004 by Alexander Wiedenbruch                           *
- *   wirr@abacho.de                                                        *
+ *   wirr@users.berlios.de                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,7 +18,7 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 /*
- * Copyright (C) 2004 Alexander Wiedenbruch <wirr@abacho.de>
+ * Copyright (C) 2004 Alexander Wiedenbruch <wirr@users.berlios.de>
  */
 
 #include "kmsgmodem.h"
@@ -41,8 +41,8 @@ static KCmdLineOptions options[] =
 int main(int argc, char **argv)
 {
     KAboutData about("kmsgmodem", I18N_NOOP("KMsgModem"), version, description,
-                     KAboutData::License_GPL, "(C) 2004 Alexander Wiedenbruch", 0, 0, "wirr@abacho.de");
-    about.addAuthor("Alexander Wiedenbruch", 0, "wirr@abacho.de");
+                     KAboutData::License_GPL, "(C) 2004 Alexander Wiedenbruch", 0, 0, "wirr@users.berlios.de ");
+    about.addAuthor("Alexander Wiedenbruch", 0, "wirr@users.berlios.de ");
 	
 	about.addCredit("Torsten Uhlmann", I18N_NOOP("His previous work saved me much time"), 0, 0);
 	about.addCredit("Chris Bagwell", I18N_NOOP("Thanks for SoX"), 0, "http://sox.sourceforge.net/");

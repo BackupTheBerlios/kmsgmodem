@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2004 by Alexander Wiedenbruch                           *
- *   wirr@abacho.de                                                        *
+ *   wirr@users.berlios.de                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -32,7 +32,11 @@ SimpleModem::SimpleModem(QString interface, QString baud)
 {
 	port = new Connection(interface, baud);
 	
-	if(port->ErrorOnInit()) port = NULL;
+	if(port->ErrorOnInit())
+	{
+		delete port;
+		port = NULL;
+	}
 }
 
 
@@ -135,5 +139,10 @@ void SimpleModem::ReadMemoryToFile(FILE *fd)
 			if(count >= MODEM_USR_PAGE + 2) count = 1;
 		}
 	}
+}
+
+Connection* SimpleModem::GetConnection()
+{
+	return port;
 }
 

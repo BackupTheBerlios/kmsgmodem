@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2004 by Alexander Wiedenbruch                           *
- *   wirr@abacho.de                                                         *
+ *   wirr@users.berlios.de                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -32,7 +32,13 @@ UsrSmpThread::UsrSmpThread(QString interface, QString baud)
  : QThread()
 {
 	simplemodem = new SimpleModem(interface, baud);
+	
+	if(simplemodem->GetConnection() == NULL) initError = INIT_ERROR;
+	else initError = NONE;
+	
 	funcToRun = DEF;
+	
+	WasDLE = 0;
 }
 
 
@@ -143,8 +149,9 @@ void UsrSmpThread::ClearMemory()
  *
  */
 int UsrSmpThread::InitModemThread()
-{
-	WasDLE = 0;
+{	
+	
+	if(initError != NONE) return 0;
 	
 	QString resp = simplemodem->SendCommand("ATZ");
 	if(resp.find("OK") == -1)
@@ -152,7 +159,6 @@ int UsrSmpThread::InitModemThread()
 		initError = RESET_ERROR;
 		return 0;
 	}
-	
 	
 	modemType = DetectModemType();
 	if(modemType == UNSPECIFIED)
@@ -162,6 +168,9 @@ int UsrSmpThread::InitModemThread()
 	}		
 	
 	SetStandAloneMode();
+	
+	initError = NONE;
+	
 	return 1;
 }
 
@@ -177,29 +186,25 @@ int UsrSmpThread::DetectModemType()
 {
 	QString resp = simplemodem->SendCommand("ATI3");
 	
-	if(resp.find("Pro") != -1)
+	if ((!resp.contains("message",false)) && (!resp.contains("msg",false)))
 	{
 		#ifdef DEBUG_USR
-			kdDebug(0) << "PROFESSIONAL MODEM" << endl;
+			kdDebug(0) << "Neither Message nor Message Professional: " << resp << endl;
 		#endif
-
-		return NORMAL;
+		return UNSPECIFIED;
+	}
+	if (resp.contains("pro",false))
+	{
+		#ifdef DEBUG_USR
+			kdDebug(0) << "Professional Message Modem: " << resp << endl;
+		#endif
+		return PROFESSIONAL;
 	}
 	
-	if(resp.find("Message") != -1)
-	{
-		#ifdef DEBUG_USR
-			kdDebug(0) << "NORMAL MODEM" << endl;
-		#endif
-
-		return PROFESSIONAL;
-	}		 
-		 
 	#ifdef DEBUG_USR
-		kdDebug(0) << "UNKNOWN MODEM" << endl;
+		kdDebug(0) << "Normal Message Modem: " << resp << endl;
 	#endif
-
-	return UNSPECIFIED;
+	return NORMAL;
 }
 
 
@@ -597,16 +602,16 @@ int UsrSmpThread::GetModemType()
  */
 int UsrSmpThread::SetStandAloneMode()
 {
-	QString resp;
+QString resp;
 	
 	switch(modemType)
 	{
-		case NORMAL:
+		case PROFESSIONAL:
 				resp = simplemodem->SendCommand("AT+MCA=1");
 				if(resp.find("OK") != -1) return 0;
 				break;
 				
-		case PROFESSIONAL:
+		case NORMAL:
 				resp = simplemodem->SendCommand("AT+MCS=1");
 				if(resp.find("OK") != -1) return 0;
 				break;
@@ -628,12 +633,12 @@ int UsrSmpThread::UnSetStandAloneMode()
 	
 	switch(modemType)
 	{
-		case NORMAL:
+		case PROFESSIONAL:
 				resp = simplemodem->SendCommand("AT+MCA=0");
 				if(resp.find("OK") != -1) return 0;
 				break;
 				
-		case PROFESSIONAL:
+		case NORMAL:
 				resp = simplemodem->SendCommand("AT+MCS=0");
 				if(resp.find("OK") != -1) return 0;
 				break;
@@ -641,7 +646,7 @@ int UsrSmpThread::UnSetStandAloneMode()
 		default: break;
 	}
 	
-	return 0;
+	return 1;
 }
 
 

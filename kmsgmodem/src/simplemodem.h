@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2004 by Alexander Wiedenbruch                           *
- *   wirr@abacho.de                                                        *
+ *   wirr@users.berlios.de                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -32,7 +32,6 @@
 
 #define MODEM_NEW_PAGE 	100
 
-class Connection;
 
 /*!
  *  This class implements all necessery function to communicate
@@ -50,6 +49,8 @@ public:
 	QString SendCommand(QString command);
 	
 	void ReadMemoryToFile(FILE *fd);
+	
+	class Connection* GetConnection();
 	
 private:
 	

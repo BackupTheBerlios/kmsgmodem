@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2004 by Alexander Wiedenbruch                           *
- *   wirr@abacho.de                                                        *
+ *   wirr@users.berlios.de                                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -33,13 +33,16 @@
 #define NONE			4
 #define RESET_ERROR		5
 #define UNSUP			6
+#define INIT_ERROR		7
 
-#define DEF				7
-#define	INIT			8
-#define READMEMORY		9
-#define LOADMESSAGES	10
-#define PLAYVOICE		11
-#define ERASEMESSAGES	12
+#define DEF				8
+#define	INIT			9
+#define READMEMORY		10
+#define LOADMESSAGES	11
+#define PLAYVOICE		12
+#define ERASEMESSAGES	13
+
+//#define DEBUG_USR
 
 struct MemoryInfo
 {

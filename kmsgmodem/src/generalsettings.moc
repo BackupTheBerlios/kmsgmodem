@@ -1,8 +1,8 @@
 /****************************************************************************
 ** GeneralSettings meta object code from reading C++ file 'generalsettings.h'
 **
-** Created: Mon Aug 16 15:29:36 2004
-**      by: The Qt MOC ($Id: generalsettings.moc,v 1.2 2004/08/16 14:18:20 wirr Exp $)
+** Created: Tue Aug 17 11:48:41 2004
+**      by: The Qt MOC ($Id: generalsettings.moc,v 1.3 2004/08/18 12:04:33 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
