@@ -86,7 +86,7 @@
 #define KDEMAXPATHLEN 4096
 
 /* Name of package */
-#define PACKAGE "kmsgmodem"
+#define PACKAGE "$"
 
 /* Define to the address where bug reports for this package should be sent. */
 #define PACKAGE_BUGREPORT ""
@@ -125,7 +125,7 @@
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "0.1"
+#define VERSION "$"
 
 /* Define to 1 if your processor stores words with the most significant byte
    first (like Motorola and SPARC, unlike Intel and VAX). */
