@@ -39,6 +39,7 @@
 #include "usrsmpthread.h"
 
 
+
 /*! \brief C'tor
  *
  */
@@ -47,6 +48,7 @@ KMsgModem::KMsgModem()
 {
 	//
 	// Assemble GUI
+	// @todo add file->save for wav
 	//
 	reload = new KAction(i18n("&Load messages"), "reload", 0, this, SLOT(LoadMessages()),  actionCollection(), "load_messages");
 	reload->setEnabled(false);
@@ -73,11 +75,23 @@ KMsgModem::KMsgModem()
 	createGUI();
 	
 	//
+	// @todo detect Programms
+	//
+	
+	//
 	// the rest
 	//
 	modem = NULL;
 	standaloneModeActive = true;
 	
+	dispatcher = new KArtsDispatcher;
+ 	server = new KArtsServer;
+	
+	playingVoice = false;
+	
+	//
+	// now start
+	//
 	QTimer::singleShot(500, this, SLOT(Startup()));	// The GUI should be shown completly before we do something
 }
 
@@ -98,9 +112,15 @@ KMsgModem::~KMsgModem()
 	modem->terminate();	// Is that all neccessary?
 	modem->exit();
 	modem->wait();	// Wait so that the programm dont crash
-	delete Config::Self();
 	delete modem;
 	modem = NULL;
+	
+	delete Config::Self();
+	
+	playobj->halt();	// @todo find out why it didnt stop playing here
+	delete playobj;
+	delete dispatcher;
+	delete server;
 }
 
 
@@ -389,68 +409,48 @@ void KMsgModem::ShowFax(int Fax)
  *
  */
 void KMsgModem::PlayVoice(int Voice)
-{
-	SetStatusbarText(i18n("Playing voice message...", 0));
+{	
+	if(playingVoice) return;	// Don't play 2 files at the sime time
+	playingVoice = true;
 	
 	modem->GetMessage(Voice);
 
-	/*
+	SetStatusbarText(i18n("Playing voice message..."));
+		
+	//
+	// Setting attributes for sox and run it. 
+	// It is pretty fast, so we don't get asynchron.
+	// Command: sox /tmp/tel.gsm -u -b -c 1 /tmp/tel.wav
+	//
 	KProcess *proc = new KProcess;
 
-   	*proc << "toast";
-   	*proc << "-u" << "-d" << "/tmp/tel.gsm";
-   	QApplication::connect(proc, SIGNAL(processExited(KProcess *)), this, SLOT(ConvGsmExited(KProcess *)));
-   	if(!proc->start())
-	{
-		KMessageBox::error(this, i18n("Please check if you have install the GSM package correctly\nThe source code can be found at: http://kbs.cs.tu-berlin.de/~jutta/toast.html"));
-		return;
-	}
-	*/
+	*proc << "sox";
+	*proc << "/tmp/tel.gsm" << "-u" << "-b" << "-c 1" << "/tmp/tel.wav";
+	
+	proc->start(KProcess::Block);
+
+	//
+	// Now play the voice file
+	// @todo How can i check if an artsd is currently running?
+	KURL url("/tmp/tel.wav");
+	
+ 	KDE::PlayObjectFactory factory( server->server() );
+ 	playobj = factory.createPlayObject(url, true);
+ 	playobj->play();
 	
 	stop->setEnabled(true);
-	modem->PlayVoiceFile();
 	
-	while(!modem->finished()) application->processEvents();
+	while(playobj->state() == Arts::posPlaying) application->processEvents();
+		
+	//
+	// clean up
+	//
+	remove("/tmp/tel.gsm");
+	remove("/tmp/tel.wav");
 	
-	stop->setEnabled(false);
+	playingVoice = false;
+	
 	SetStatusbarText();
-}
-
-
-/*! \brief
- *
- */
-void KMsgModem::ConvGsmExited(KProcess *proc)
-{
-	// @todo use Arts for output
-	/*
- 	FILE *fd = fopen("/tmp/tel", "rb");
-	if(fd == NULL)
-	{
-		KMessageBox::error(this, i18n("The sound file could not be opened"));
-		return;
-	}
-	int sound = open("/dev/audio", O_WRONLY);
-	if(sound == -1)
-	{
-		KMessageBox::error(this, i18n("The audio device could not be opened\nPlease shut down all applications that access the audio device"));
-		return;
-	}
-	
-	char buf;
-	
-	while(fread(&buf, sizeof(buf), 1, fd) != 0)
-   	{
-		write(sound, &buf, sizeof(buf));
-	} 
-	
-	fclose(fd);
-	close(sound);
-	*/
-	/*
-	system("tcat /tmp/tel.gsm > /dev/audio");
-	remove("/tmp/tel");
-	*/
 }
 
 
@@ -513,13 +513,14 @@ void KMsgModem::SetStatusbarText(QString text, int item, bool WithTimeout)
 
 /*! \brief This function kills the playing voice full
  *	
- *	Didn't work atm.
  */
 void KMsgModem::StopPlayingVoice()
 {
-	modem->terminate();
-	modem->wait();
+	playobj->halt();
+	
 	stop->setEnabled(false);
+	
+	playingVoice = false;
 }
 
 

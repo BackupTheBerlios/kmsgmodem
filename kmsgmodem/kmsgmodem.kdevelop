@@ -103,10 +103,32 @@
     </make>
     <run>
       <directoryradio>executable</directoryradio>
+      <runarguments>
+        <kmsgmodem/>
+      </runarguments>
     </run>
     <general>
       <activetarget>src/kmsgmodem</activetarget>
+      <useconfiguration>default</useconfiguration>
     </general>
+    <configurations>
+      <default>
+        <configargs>--enable-debug=full</configargs>
+        <builddir>debug</builddir>
+        <topsourcedir/>
+        <cppflags/>
+        <ldflags/>
+        <ccompiler>kdevgccoptions</ccompiler>
+        <cxxcompiler>kdevgppoptions</cxxcompiler>
+        <f77compiler>kdevg77options</f77compiler>
+        <ccompilerbinary/>
+        <cxxcompilerbinary/>
+        <f77compilerbinary/>
+        <cflags/>
+        <cxxflags/>
+        <f77flags/>
+      </default>
+    </configurations>
   </kdevautoproject>
   <kdevcppsupport>
     <references/>

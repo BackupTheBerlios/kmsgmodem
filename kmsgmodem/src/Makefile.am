@@ -25,7 +25,7 @@ bin_PROGRAMS = kmsgmodem
 # the application source, library search path, and link libraries
 kmsgmodem_SOURCES = main.cpp kmsgmodem.cpp kmsgmodemwidget.cpp kmsgmodemwidgetbase.ui connection.cpp simplemodem.cpp config.cpp GeneralWidget.ui generalsettings.cpp Modem.ui modemsettings.cpp usrsmpthread.cpp
 kmsgmodem_LDFLAGS = $(KDE_RPATH) $(all_libraries)
-kmsgmodem_LDADD = $(LIB_KDEUI)
+kmsgmodem_LDADD = -lartskde $(LIB_KDEUI)
 
 # this is where the desktop file will go 
 shelldesktopdir   = $(kde_appsdir)/Utilities

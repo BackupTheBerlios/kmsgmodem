@@ -28,17 +28,22 @@
 #include <config.h>
 #endif
 
-#include "kmsgmodem.h"
-#include "kmsgmodemwidget.h"
-#include "config.h"
-#include "usrsmpthread.h"
-
 #include <kmainwindow.h>
 #include <kaction.h>
 #include <kstatusbar.h>
 #include <kprocess.h>
 #include <klocale.h>
 #include <kuniqueapplication.h>
+#include <arts/kartsdispatcher.h>
+#include <arts/kartsserver.h>
+#include <arts/kplayobject.h>
+#include <arts/kplayobjectfactory.h>
+
+#include "kmsgmodem.h"
+#include "kmsgmodemwidget.h"
+#include "config.h"
+#include "usrsmpthread.h"
+
 
 class UsrSmpThread;
 class Config;
@@ -82,6 +87,12 @@ private:
 	
 	KUniqueApplication *application;
 	
+	KArtsDispatcher *dispatcher;
+	KArtsServer *server;
+	KDE::PlayObject *playobj;
+	
+	bool playingVoice;
+	
 private slots:
 	void Startup();
 	
@@ -90,8 +101,6 @@ private slots:
 	void ShowFax(int Fax);
 	
 	void PlayVoice(int Voice);
-	
-	void ConvGsmExited(KProcess *proc);
 	
 	void showSettings();
 	
