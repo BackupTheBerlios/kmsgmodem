@@ -1,5 +1,19 @@
 KMsgModem Changelog
 
+V0.4
+----------------------------------------------
+- Date handling
+- Lock tty
+- Create an Icon
+- On exit report that an action is going on
+- Ported to KDE 3.3
+- Control rings
+- Control faxid
+- Control dail-up retrieval
+- Control voice/fax reception
+- Saving of fax files (chose between slow and very slow)
+- Use args for settings (tty, baudrate, del mem file)
+
 V0.3
 ----------------------------------------------
 - using Arts for output now

@@ -1918,7 +1918,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=kmsgmodem
- VERSION=0.1
+ VERSION=0.4
 
 
 cat >>confdefs.h <<_ACEOF

@@ -1,16 +1,6 @@
 KMsgModem ToDo
 
-V0.4
+V0.5
 ----------------------------------------------
-- Saving of fax files
-X- Date handling
-X- Lockfile
-X- Create an Icon
-X- On exit report that an action is going on
-- Use args for settings (tty, baudrate, del mem file)
-- Control ringtones
-- Control telephone id
-- Control dail-up retrival
-- Control voice/fax reception
-- Get/Set voice answer message
-
+-Get/Set voice answer/full message
+-...
