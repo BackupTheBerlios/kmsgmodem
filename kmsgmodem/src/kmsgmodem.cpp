@@ -39,6 +39,7 @@
 #include "kmsgmodemwidget.h"
 #include "generalsettings.h"
 #include "modemsettings.h"
+#include "modemsettingsdialog.h"
 #include "usrsmpthread.h"
 
 
@@ -55,7 +56,7 @@ KMsgModem::KMsgModem(KUniqueApplication *app)
 	saveas = KStdAction::saveAs(this, SLOT(SaveFile()), actionCollection(), "save_as");
 	saveas->setEnabled(false);
 	
-	KStdAction::quit(app, SLOT(quit()), actionCollection());
+	KStdAction::quit(this, SLOT(QuitApp()), actionCollection());
 	
 	reload = new KAction(i18n("&Load messages"), "reload", 0, this, SLOT(LoadMessages()),  actionCollection(), "load_messages");
 	reload->setEnabled(false);
@@ -70,7 +71,7 @@ KMsgModem::KMsgModem(KUniqueApplication *app)
 	clearmemory = new KAction(i18n("&Clear modem memory"),  "edittrash", 0, this, SLOT(ClearMemory()),  actionCollection(), "clear_mem");
 	clearmemory->setEnabled(false);
 	
-	KStdAction::preferences(this, SLOT(showSettings()), actionCollection());
+	preferences = KStdAction::preferences(this, SLOT(showSettings()), actionCollection());
   
 	mainWidget = new KMsgModemWidget(this);
 	setCentralWidget(mainWidget);
@@ -151,11 +152,7 @@ void KMsgModem::Startup()
 		
 			if(error == INIT_ERROR)
 			{
-				KMessageBox::error(this, i18n("Please check if you set the correct baudrate and interface in the settings.\nCheck if there is no other application that uses this interface"));
-				modem->terminate();
-				modem->wait();
-				delete modem;
-				modem = NULL;
+				KMessageBox::error(this, i18n("Please check if you set the correct baudrate and interface in the settings.\nCheck if there is no other application that uses this interface."));
 				return;
 			}
 		}
@@ -249,7 +246,9 @@ void KMsgModem::LoadMessages()
 	
 	modem->ReadMemoryInfo();
 	
+	DisableModemActions();
 	while(!modem->finished()) application->processEvents();
+	EnableModemActions();
 	
 	struct MemoryInfo MemInfo = modem->GetMemoryInfo();
 	
@@ -265,8 +264,10 @@ void KMsgModem::LoadMessages()
 	{
 		SetStatusbarText(i18n("Downloading messages..."));
 		
+		DisableModemActions();
 		modem->LoadMessages();
 		while(!modem->finished()) application->processEvents();
+		EnableModemActions();
 		
 		settings->NoOfFaxMsgs = MemInfo.FaxMsgs;
 		settings->NoOfVoiceMsgs = MemInfo.VoiceMsgs;
@@ -278,8 +279,10 @@ void KMsgModem::LoadMessages()
 	{
 		SetStatusbarText(i18n("Downloading messages..."));
 		
+		DisableModemActions();
 		modem->LoadMessages();
 		while(!modem->finished()) application->processEvents();
+		EnableModemActions();
 		
 		settings->NoOfFaxMsgs = MemInfo.FaxMsgs;
 		settings->NoOfVoiceMsgs = MemInfo.VoiceMsgs;
@@ -389,8 +392,10 @@ void KMsgModem::NewMessage()
 	
 	SetStatusbarText(i18n("Downloading new messages..."));
 	
+	DisableModemActions();
 	modem->LoadMessages();
 	while(!modem->finished()) application->processEvents();
+	EnableModemActions();
 	
 	SetStatusbarText(i18n("Idle"));
 	
@@ -560,7 +565,12 @@ void KMsgModem::showSettings()
    
    dialog->addPage(new ModemConnectionSettings(0, "Connection"), i18n("Connection"), "connect_no",  i18n("Connection Settings"));
    
+   // @ todo change to new settings, or user has to restart program
+   
+   dialog->addPage(new ModemSettingsDialog(modem, 0, "Modem"), i18n("Modem"), 0,  i18n("Modem Settings"));
+   
    dialog->show();
+
 }
 
 
@@ -623,8 +633,10 @@ void KMsgModem::ClearMemory()
 	
 	if(rc == KMessageBox::Yes)
 	{
+		DisableModemActions();
 		modem->ClearMemory();
 		while(!modem->finished()) application->processEvents();
+		EnableModemActions();
 		LoadMessages();
 	}
 }
@@ -685,6 +697,52 @@ bool KMsgModem::queryClose()
 	}
 	
 	return true;
+}
+
+
+/*! \brief This function is called when the app quits
+ *
+ *	This function is called whenn the app is quited by the StdAction.
+ */
+void KMsgModem::QuitApp()
+{
+	if(queryClose())
+	{
+		application->exit();
+	}
+}
+
+
+/*! \brief Call this function to enable all actions
+ *
+ *	Reactivate the actions.
+ */
+void KMsgModem::EnableModemActions()
+{
+	saveas->setEnabled(true);
+	reload->setEnabled(true);
+	standaloneToogle->setEnabled(true);
+	clearmemory->setEnabled(true);
+	preferences->setEnabled(true);
+}
+
+
+/*! \brief Call this function to disable all actions
+ *
+ *	When calling a thread-function call this function first.
+ *	This prevents that the user requests another function from
+ *	modem, that could make a big boom.
+ *	So, we process events file the user couldn't make some, weired.
+ *	But its neccessary to block the other actions but not quit().
+ *  
+ */
+void KMsgModem::DisableModemActions()
+{
+	saveas->setEnabled(false);
+	reload->setEnabled(false);
+	standaloneToogle->setEnabled(false);
+	clearmemory->setEnabled(false);
+	preferences->setEnabled(false);
 }
 
 

@@ -74,6 +74,10 @@ private:
 	void NewMessage();
 	
 	QString CalcDate(int Day, int Hour, int Minute);
+	
+	void EnableModemActions();
+	
+	void DisableModemActions();
 			
 	KMsgModemWidget *mainWidget;
 	
@@ -86,6 +90,7 @@ private:
 	KAction *reload;
 	KAction *clearmemory;
 	KAction *saveas;
+	KAction *preferences;
 	
 	bool standaloneModeActive;
 	
@@ -119,6 +124,8 @@ private slots:
 	void SaveFile();
 	
 	bool queryClose();
+	
+	void QuitApp();
 };
 
 #endif // _KMSGMODEM_H_
