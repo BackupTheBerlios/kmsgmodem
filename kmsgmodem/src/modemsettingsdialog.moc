@@ -1,14 +1,14 @@
 /****************************************************************************
 ** ModemSettingsDialog meta object code from reading C++ file 'modemsettingsdialog.h'
 **
-** Created: Thu Aug 26 17:58:08 2004
-**      by: The Qt MOC ($Id: modemsettingsdialog.moc,v 1.4 2004/08/26 16:09:44 wirr Exp $)
+** Created: Thu Aug 26 18:17:48 2004
+**      by: The Qt MOC ($Id: modemsettingsdialog.moc,v 1.5 2004/08/26 16:22:34 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 #undef QT_NO_COMPAT
-#include "../../src/modemsettingsdialog.h"
+#include "modemsettingsdialog.h"
 #include <qmetaobject.h>
 #include <qapplication.h>
 

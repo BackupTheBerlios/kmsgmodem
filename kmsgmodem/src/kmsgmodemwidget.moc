@@ -1,14 +1,14 @@
 /****************************************************************************
 ** KMsgModemWidget meta object code from reading C++ file 'kmsgmodemwidget.h'
 **
-** Created: Thu Aug 26 17:57:58 2004
-**      by: The Qt MOC ($Id: kmsgmodemwidget.moc,v 1.9 2004/08/26 16:09:44 wirr Exp $)
+** Created: Thu Aug 26 18:17:38 2004
+**      by: The Qt MOC ($Id: kmsgmodemwidget.moc,v 1.10 2004/08/26 16:22:34 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 #undef QT_NO_COMPAT
-#include "../../src/kmsgmodemwidget.h"
+#include "kmsgmodemwidget.h"
 #include <qmetaobject.h>
 #include <qapplication.h>
 

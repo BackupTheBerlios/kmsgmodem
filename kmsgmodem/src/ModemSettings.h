@@ -1,8 +1,8 @@
 /****************************************************************************
 ** Form interface generated from reading ui file '/home/wirr/Dokumente/Programme/Projekte/KMsgModem/kmsgmodem/src/ModemSettings.ui'
 **
-** Created: Thu Aug 26 17:57:40 2004
-**      by: The User Interface Compiler ($Id: ModemSettings.h,v 1.4 2004/08/26 16:09:44 wirr Exp $)
+** Created: Thu Aug 26 18:17:28 2004
+**      by: The User Interface Compiler ($Id: ModemSettings.h,v 1.5 2004/08/26 16:22:34 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/
