@@ -73,7 +73,7 @@
   <kdevdebugger>
     <general>
       <dbgshell>libtool</dbgshell>
-      <programargs/>
+      <programargs>--nofork</programargs>
       <gdbpath/>
       <configGdbScript/>
       <runShellScript/>
@@ -106,6 +106,12 @@
       <runarguments>
         <kmsgmodem/>
       </runarguments>
+      <customdirectory>/</customdirectory>
+      <mainprogram/>
+      <programargs>--nofork</programargs>
+      <terminal>false</terminal>
+      <autocompile>true</autocompile>
+      <envvars/>
     </run>
     <general>
       <activetarget>src/kmsgmodem</activetarget>

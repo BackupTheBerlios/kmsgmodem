@@ -1,1 +1,11 @@
- 
+KMsgModem Changelog
+
+V0.3
+----------------------------------------------
+- using Arts for output now
+- using SoX for the gsm conversion now
+- Saving of voice files supported 
+
+V0.2
+----------------------------------------------
+- first release

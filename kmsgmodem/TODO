@@ -1,5 +1,7 @@
-TODO:
+KMsgModem ToDo
 
-- use arts for output
-- implement more gui features, e.g. save fax...
-- continue implement modem features 
+V0.4
+----------------------------------------------
+- Saving of voice files
+- Date handling
+- ...

@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 
     if (app.isRestored())
     {
-        RESTORE(KMsgModem);
+        RESTORE(KMsgModem(&app));
     }
     else
     {
@@ -67,11 +67,12 @@ int main(int argc, char **argv)
 
         /// @todo do something with the command line args here
 
-        mainWin = new KMsgModem();
+        mainWin = new KMsgModem(&app);
         app.setMainWidget( mainWin );
-		mainWin->setApp(&app);
+		
         mainWin->show();
-
+		mainWin->Startup();
+		
         args->clear();
     }
 

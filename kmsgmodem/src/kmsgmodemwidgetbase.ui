@@ -103,7 +103,7 @@
             <property name="minimumSize">
                 <size>
                     <width>500</width>
-                    <height>250</height>
+                    <height>240</height>
                 </size>
             </property>
             <property name="midLineWidth">

@@ -31,6 +31,7 @@
 #include <kapplication.h>
 #include <kconfigdialog.h>
 #include <kdebug.h>
+#include <kfiledialog.h>
 
 #include "kmsgmodem.h"
 #include "kmsgmodemwidget.h"
@@ -43,17 +44,22 @@
 /*! \brief C'tor
  *
  */
-KMsgModem::KMsgModem()
+KMsgModem::KMsgModem(KUniqueApplication *app)
     : KMainWindow( 0, "KMsgModem" )
 {
 	//
 	// Assemble GUI
-	// @todo add file->save for wav
 	//
+	saveas = KStdAction::saveAs(this, SLOT(SaveFile()), actionCollection(), "save_as");
+	saveas->setEnabled(false);
+	
+	KStdAction::quit(app, SLOT(quit()), actionCollection());
+	
 	reload = new KAction(i18n("&Load messages"), "reload", 0, this, SLOT(LoadMessages()),  actionCollection(), "load_messages");
 	reload->setEnabled(false);
 	
-	standaloneToogle = new KAction(i18n("&Unset standalone mode"),  "connect_established", 0, this, SLOT(ToogleStandaloneMode()),  actionCollection(), "toogle_standalonemode");
+	standaloneToogle = new KAction(i18n("&Unset standalone mode"),  "connect_established", 0, this, SLOT(ToogleStandaloneMode()),  
+										actionCollection(), "toogle_standalonemode");
 	standaloneToogle->setEnabled(false);
 	
 	stop = new KAction(i18n("&Stop playing voice message"),  "player_stop", 0, this, SLOT(StopPlayingVoice()),  actionCollection(), "stop_voice");
@@ -75,30 +81,23 @@ KMsgModem::KMsgModem()
 	createGUI();
 	
 	//
-	// @todo detect Programms
-	//
-	
-	//
 	// the rest
 	//
+	application = app;
+	
 	modem = NULL;
 	standaloneModeActive = true;
 	
 	dispatcher = new KArtsDispatcher;
  	server = new KArtsServer;
-	
-	playingVoice = false;
-	
-	//
-	// now start
-	//
-	QTimer::singleShot(500, this, SLOT(Startup()));	// The GUI should be shown completly before we do something
+	playobj = NULL;
+
+	selectedMessage = 0;
 }
 
-	
+
 /*! \brief D'tor
  *
- *  Not much in here
  */
 KMsgModem::~KMsgModem()
 {	
@@ -117,19 +116,11 @@ KMsgModem::~KMsgModem()
 	
 	delete Config::Self();
 	
-	playobj->halt();	// @todo find out why it didnt stop playing here
+	StopPlayingVoice();	// @todo why didn't it stop playing here?
+	
 	delete playobj;
 	delete dispatcher;
 	delete server;
-}
-
-
-/*! \brief We nee a pointer to the application
- *
- */
-void KMsgModem::setApp(KUniqueApplication *app)
-{
-	application = app;
 }
 
 
@@ -379,9 +370,27 @@ void KMsgModem::NewMessage()
  */
 void KMsgModem::ShowFax(int Fax)
 {
+	selectedMessage = Fax;
+	
+	//
+	// Normally GetMessage should return the correct number of pages,
+	// but i could find a easy way to do this.
+	//
+	MessageInfo info = modem->GetMsgInfo(Fax);
+	
+	if(info.MsgSize == 0)
+	{
+		KMessageBox::error(this, i18n("This fax has no pages.\nThis usually happens when an error occured at the \
+										transmission of the fax."));
+		return;
+	}
+	
 	SetStatusbarText(i18n("Showing fax message...", 0));
 	
+	saveas->setEnabled(false);
+	
 	int Pages = modem->GetMessage(Fax);
+
 
 	QStringList arguments("-normal");
 	
@@ -391,7 +400,36 @@ void KMsgModem::ShowFax(int Fax)
 		arguments += faxarg.arg(i);
 	}
 	
-	KApplication::kdeinitExecWait("kfax", arguments);
+	int rc = KApplication::kdeinitExecWait("kfax", arguments);
+	
+	if(rc != 0) 
+	{
+		KMessageBox::error(this, i18n("Please install KFax.\nYou can find the sourcecode at http:/www.kde.org/"));
+	}
+
+	/*
+	//
+	// This a possible option, but we must kill every running
+	// kfax when quitting.
+	//
+	KProcess *proc = new KProcess;
+
+	*proc << "kfax";
+	*proc << "-normal";
+	for(int i = 1; i <= Pages; i++)
+	{
+		QString faxarg("/tmp/fax-%1");
+		*proc << faxarg.arg(i);
+	}
+	
+	bool rc = proc->start();
+	if(!rc) 
+	{
+		KMessageBox::error(this, i18n("Please install KFax.\nYou can find the sourcecode at http:/www.kde.org/"));
+	}
+	
+	while(proc->isRunning()) application->processEvents();
+	*/
 	
 	for(int i = 1; i <= Pages; i++)
 	{
@@ -410,8 +448,11 @@ void KMsgModem::ShowFax(int Fax)
  */
 void KMsgModem::PlayVoice(int Voice)
 {	
-	if(playingVoice) return;	// Don't play 2 files at the sime time
-	playingVoice = true;
+	selectedMessage = Voice;
+
+	if(playobj != NULL) StopPlayingVoice();
+	
+	saveas->setEnabled(true);
 	
 	modem->GetMessage(Voice);
 
@@ -427,14 +468,24 @@ void KMsgModem::PlayVoice(int Voice)
 	*proc << "sox";
 	*proc << "/tmp/tel.gsm" << "-u" << "-b" << "-c 1" << "/tmp/tel.wav";
 	
-	proc->start(KProcess::Block);
+	bool rc = proc->start(KProcess::Block);
+	
+	remove("/tmp/tel.gsm");
+	
+	if(!rc) 
+	{
+		KMessageBox::error(this, i18n("The voice file could not be decoded.\nPlease install SoX. You can find the sourcecode at \
+										http://sox.sf.net/"));
+		return;
+	}
 
 	//
 	// Now play the voice file
 	// @todo How can i check if an artsd is currently running?
+	//
 	KURL url("/tmp/tel.wav");
 	
- 	KDE::PlayObjectFactory factory( server->server() );
+ 	KDE::PlayObjectFactory factory(server->server());
  	playobj = factory.createPlayObject(url, true);
  	playobj->play();
 	
@@ -445,10 +496,9 @@ void KMsgModem::PlayVoice(int Voice)
 	//
 	// clean up
 	//
-	remove("/tmp/tel.gsm");
 	remove("/tmp/tel.wav");
-	
-	playingVoice = false;
+
+	stop->setEnabled(false);
 	
 	SetStatusbarText();
 }
@@ -519,8 +569,6 @@ void KMsgModem::StopPlayingVoice()
 	playobj->halt();
 	
 	stop->setEnabled(false);
-	
-	playingVoice = false;
 }
 
 
@@ -537,6 +585,46 @@ void KMsgModem::ClearMemory()
 		modem->ClearMemory();
 		while(!modem->finished()) application->processEvents();
 		LoadMessages();
+	}
+}
+
+
+/*! \brief This function saves the voice file
+ *
+ *	Saving of fax files is not supported atm.
+ */
+void KMsgModem::SaveFile()
+{
+	//
+	// I think the user want to save the current selected item
+	// and not the playing one.
+	//
+
+	QString filename = KFileDialog::getSaveFileName("voice-message.wav", "audio/x-wav", this);
+	if((filename.isEmpty()))
+	{
+		return;
+	}
+
+	modem->GetMessage(selectedMessage);
+	
+	//
+	// Now convert the gsm file and save it to the location
+	//
+	KProcess *proc = new KProcess;
+
+	*proc << "sox";
+	*proc << "/tmp/tel.gsm" << "-u" << "-b" << "-c 1" << filename;
+	
+	bool rc = proc->start(KProcess::Block);
+	
+	remove("/tmp/tel.gsm");
+	
+	if(!rc) 
+	{
+		KMessageBox::error(this, i18n("The voice file could not be decoded.\nPlease install SoX. You can find the sourcecode at \
+										http://sox.sf.net/"));
+		return;
 	}
 }
 

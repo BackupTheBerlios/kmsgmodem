@@ -60,14 +60,15 @@ public:
     /**
      * Default Constructor
      */
-    KMsgModem();
+	
+    KMsgModem(KUniqueApplication *app);
 
     /**
      * Default Destructor
      */
     virtual ~KMsgModem();
 	
-	void setApp(KUniqueApplication *app);
+	void Startup();
 	
 private:
 	void NewMessage();
@@ -82,6 +83,7 @@ private:
 	KAction *stop;
 	KAction *reload;
 	KAction *clearmemory;
+	KAction *saveas;
 	
 	bool standaloneModeActive;
 	
@@ -91,10 +93,9 @@ private:
 	KArtsServer *server;
 	KDE::PlayObject *playobj;
 	
-	bool playingVoice;
+	unsigned int selectedMessage;
 	
-private slots:
-	void Startup();
+private slots:	
 	
 	void LoadMessages();
 	
@@ -111,6 +112,8 @@ private slots:
 	void StopPlayingVoice();
 	
 	void ClearMemory();
+	
+	void SaveFile();
 };
 
 #endif // _KMSGMODEM_H_
