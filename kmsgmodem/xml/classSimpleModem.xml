@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.8">
+  <compounddef id="classSimpleModem" kind="class" prot="public">
+    <compoundname>SimpleModem</compoundname>
+    <derivedcompoundref refid="classUsrSmp" prot="private" virt="non-virtual">UsrSmp</derivedcompoundref>
+    <includes refid="simplemodem_8h" local="no">simplemodem.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSimpleModem_1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SimpleModem::SimpleModem</definition>
+        <argsstring>(QString interface=&quot;/dev/ttyS0&quot;, QString baud=&quot;19200&quot;)</argsstring>
+        <name>SimpleModem</name>
+        <param>
+          <type>QString</type>
+          <declname>interface</declname>
+          <defval>&quot;/dev/ttyS0&quot;</defval>
+        </param>
+        <param>
+          <type>QString</type>
+          <declname>baud</declname>
+          <defval>&quot;19200&quot;</defval>
+        </param>
+        <briefdescription>
+<para>C&apos;tor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Mainly for tty init </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/simplemodem.h" line="46" bodystart="31" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classSimpleModem_1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SimpleModem::~SimpleModem</definition>
+        <argsstring>()</argsstring>
+        <name>~SimpleModem</name>
+        <briefdescription>
+<para>D&apos;tor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/simplemodem.h" line="48" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classSimpleModem_1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString SimpleModem::SendCommand</definition>
+        <argsstring>(QString command)</argsstring>
+        <name>SendCommand</name>
+        <param>
+          <type>QString</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>This function sends a command to the modem. </para>        </briefdescription>
+        <detaileddescription>
+<para>Call this function to transmit a command to the modem. As result the response of the modem is returned. The function automatically adds a  at the end of the command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/simplemodem.h" line="50" bodystart="56" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classSimpleModem_1a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimpleModem::ReadMemoryToFile</definition>
+        <argsstring>(FILE *fd)</argsstring>
+        <name>ReadMemoryToFile</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+<para>This function reads from the modem and write it to the specified file. </para>        </briefdescription>
+        <detaileddescription>
+<para>Partly (C) T. Uhlmann from usrmodem.cpp </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/simplemodem.h" line="52" bodystart="116" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSimpleModem_1d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SimpleModem::ResponseOK</definition>
+        <argsstring>(QString command)</argsstring>
+        <name>ResponseOK</name>
+        <param>
+          <type>QString</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>This class checks the string for a status-word from the modem. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/simplemodem.h" line="58" bodystart="94" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSimpleModem_1r0" prot="private" static="no" volatile="no" mutable="no">
+        <type><ref refid="classConnection" kindref="compound">Connection</ref> *</type>
+        <definition>Connection* SimpleModem::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/simplemodem.h" line="56" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements all necessery function to communicate on a high-level basis with the modem. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="32">
+        <label>UsrSmp</label>
+        <link refid="classUsrSmp"/>
+        <childnode refid="31" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>SimpleModem</label>
+        <link refid="classSimpleModem"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="34">
+        <label>Connection</label>
+        <link refid="classConnection"/>
+      </node>
+      <node id="33">
+        <label>SimpleModem</label>
+        <link refid="classSimpleModem"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>port</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/simplemodem.h" line="43" bodystart="42" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classSimpleModem_1r0" prot="private" virt="non-virtual"><scope>SimpleModem</scope><name>port</name></member>
+      <member refid="classSimpleModem_1a3" prot="public" virt="non-virtual"><scope>SimpleModem</scope><name>ReadMemoryToFile</name></member>
+      <member refid="classSimpleModem_1d0" prot="private" virt="non-virtual"><scope>SimpleModem</scope><name>ResponseOK</name></member>
+      <member refid="classSimpleModem_1a2" prot="public" virt="non-virtual"><scope>SimpleModem</scope><name>SendCommand</name></member>
+      <member refid="classSimpleModem_1a0" prot="public" virt="non-virtual"><scope>SimpleModem</scope><name>SimpleModem</name></member>
+      <member refid="classSimpleModem_1a1" prot="public" virt="non-virtual"><scope>SimpleModem</scope><name>~SimpleModem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

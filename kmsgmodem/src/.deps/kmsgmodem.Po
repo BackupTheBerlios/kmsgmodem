@@ -1,0 +1,483 @@
+kmsgmodem.o kmsgmodem.o: kmsgmodem.cpp /usr/include/time.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/gnu/stubs.h \
+  /usr/lib/gcc-lib/i486-slackware-linux/3.3.4/include/stddef.h \
+  /usr/include/bits/time.h /usr/include/bits/types.h \
+  /usr/include/bits/wordsize.h /usr/include/bits/typesizes.h \
+  /usr/include/xlocale.h /opt/kde/include/kmainwindow.h \
+  /opt/kde/include/kxmlguifactory.h /usr/lib/qt/include/qobject.h \
+  /usr/lib/qt/include/qobjectdefs.h /usr/lib/qt/include/qglobal.h \
+  /usr/lib/qt/include/qconfig.h /usr/lib/qt/include/qmodules.h \
+  /usr/lib/qt/include/qfeatures.h /usr/lib/qt/include/qwindowdefs.h \
+  /usr/lib/qt/include/qstring.h /usr/lib/qt/include/qcstring.h \
+  /usr/lib/qt/include/qmemarray.h /usr/lib/qt/include/qgarray.h \
+  /usr/lib/qt/include/qshared.h /usr/lib/qt/include/qwinexport.h \
+  /usr/include/string.h \
+  /usr/lib/gcc-lib/i486-slackware-linux/3.3.4/include/limits.h \
+  /usr/lib/gcc-lib/i486-slackware-linux/3.3.4/include/syslimits.h \
+  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+  /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+  /usr/include/bits/stdio_lim.h /usr/lib/qt/include/qnamespace.h \
+  /usr/lib/qt/include/qevent.h /usr/lib/qt/include/qregion.h \
+  /usr/lib/qt/include/qrect.h /usr/lib/qt/include/qsize.h \
+  /usr/lib/qt/include/qpoint.h /usr/lib/qt/include/qmime.h \
+  /usr/lib/qt/include/qmap.h /usr/lib/qt/include/qdatastream.h \
+  /usr/lib/qt/include/qiodevice.h /usr/lib/qt/include/qpair.h \
+  /usr/lib/qt/include/qvaluelist.h /usr/lib/qt/include/qtl.h \
+  /usr/lib/qt/include/qtextstream.h /usr/include/stdio.h \
+  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+  /usr/include/bits/wchar.h /usr/include/gconv.h \
+  /usr/lib/gcc-lib/i486-slackware-linux/3.3.4/include/stdarg.h \
+  /usr/include/bits/sys_errlist.h /usr/include/bits/stdio.h \
+  /usr/lib/qt/include/qptrlist.h /usr/lib/qt/include/qglist.h \
+  /usr/lib/qt/include/qptrcollection.h /usr/lib/qt/include/qdom.h \
+  /opt/kde/include/kxmlguiclient.h /usr/lib/qt/include/qstringlist.h \
+  /usr/lib/qt/include/qstrlist.h /opt/kde/include/kxmlguibuilder.h \
+  /usr/lib/qt/include/qmainwindow.h /usr/lib/qt/include/qwidget.h \
+  /usr/lib/qt/include/qpaintdevice.h /usr/lib/qt/include/qpalette.h \
+  /usr/lib/qt/include/qcolor.h /usr/lib/qt/include/qbrush.h \
+  /usr/lib/qt/include/qfont.h /usr/lib/qt/include/qfontmetrics.h \
+  /usr/lib/qt/include/qfontinfo.h /usr/lib/qt/include/qsizepolicy.h \
+  /usr/lib/qt/include/qtoolbar.h /usr/lib/qt/include/qdockwindow.h \
+  /usr/lib/qt/include/qframe.h /usr/lib/qt/include/qmetaobject.h \
+  /usr/lib/qt/include/qconnection.h /opt/kde/include/ktoolbar.h \
+  /usr/lib/qt/include/qcombobox.h /opt/kde/include/kglobal.h \
+  /opt/kde/include/kdemacros.h /opt/kde/include/kinstance.h \
+  /usr/lib/qt/include/qguardedptr.h /usr/lib/qt/include/qiconset.h \
+  /usr/lib/qt/include/qpixmap.h /opt/kde/include/klocale.h \
+  /opt/kde/include/klistview.h /usr/lib/qt/include/qlistview.h \
+  /usr/lib/qt/include/qscrollview.h /usr/lib/qt/include/qscrollbar.h \
+  /usr/lib/qt/include/qrangecontrol.h /usr/lib/qt/include/qtimer.h \
+  /opt/kde/include/kmessagebox.h /opt/kde/include/kguiitem.h \
+  /opt/kde/include/kicontheme.h /opt/kde/include/kstdguiitem.h \
+  /opt/kde/include/kapplication.h /opt/kde/include/kdeversion.h \
+  /usr/lib/qt/include/qapplication.h /usr/lib/qt/include/qdesktopwidget.h \
+  /usr/lib/qt/include/qasciidict.h /usr/lib/qt/include/qgdict.h \
+  /usr/lib/qt/include/qtranslator.h /opt/kde/include/kconfigdialog.h \
+  /opt/kde/include/kdialogbase.h /opt/kde/include/kdialog.h \
+  /usr/lib/qt/include/qdialog.h /opt/kde/include/kjanuswidget.h \
+  /usr/lib/qt/include/qsplitter.h /opt/kde/include/klistbox.h \
+  /usr/lib/qt/include/qlistbox.h /opt/kde/include/kdebug.h kmsgmodem.h \
+  config.h /opt/kde/include/kconfigskeleton.h \
+  /usr/lib/qt/include/qdatetime.h /usr/lib/qt/include/qdict.h \
+  /usr/lib/qt/include/qvariant.h /opt/kde/include/kconfig.h \
+  /opt/kde/include/ksharedptr.h /opt/kde/include/kconfigbase.h \
+  /opt/kde/include/kconfigdata.h /opt/kde/include/kglobalsettings.h \
+  kmsgmodemwidget.h kmsgmodemwidgetbase.h usrsmpthread.h \
+  /usr/lib/qt/include/qthread.h /usr/lib/qt/include/qmutex.h \
+  /usr/lib/qt/include/qsemaphore.h /usr/lib/qt/include/qwaitcondition.h \
+  simplemodem.h connection.h /usr/include/sys/types.h \
+  /usr/include/endian.h /usr/include/bits/endian.h \
+  /usr/include/sys/select.h /usr/include/bits/select.h \
+  /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h \
+  /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h \
+  /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
+  /usr/include/bits/fcntl.h /usr/include/termios.h \
+  /usr/include/bits/termios.h /usr/include/sys/ttydefaults.h \
+  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
+  /usr/include/bits/environments.h /usr/include/bits/confname.h \
+  /usr/include/getopt.h /opt/kde/include/kaction.h \
+  /usr/lib/qt/include/qkeysequence.h /opt/kde/include/kshortcut.h \
+  /opt/kde/include/kstdaction.h /opt/kde/include/kactioncollection.h \
+  /opt/kde/include/kactionclasses.h /opt/kde/include/kstatusbar.h \
+  /usr/lib/qt/include/qstatusbar.h /usr/lib/qt/include/qintdict.h \
+  /usr/lib/qt/include/qlabel.h /opt/kde/include/kprocess.h \
+  /usr/include/sys/wait.h /usr/include/signal.h \
+  /usr/include/bits/signum.h /usr/include/bits/siginfo.h \
+  /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
+  /usr/include/asm/sigcontext.h /usr/include/bits/sigstack.h \
+  /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+  /usr/include/sys/resource.h /usr/include/bits/resource.h \
+  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+  /opt/kde/include/kuniqueapplication.h /opt/kde/include/dcopobject.h \
+  /opt/kde/include/kdatastream.h generalsettings.h GeneralWidget.h \
+  modemsettings.h Modem.h kmsgmodem.moc \
+  /usr/lib/qt/include/private/qucomextra_p.h \
+  /usr/lib/qt/include/private/qucom_p.h /usr/lib/qt/include/quuid.h
+
+/usr/include/time.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/lib/gcc-lib/i486-slackware-linux/3.3.4/include/stddef.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/xlocale.h:
+
+/opt/kde/include/kmainwindow.h:
+
+/opt/kde/include/kxmlguifactory.h:
+
+/usr/lib/qt/include/qobject.h:
+
+/usr/lib/qt/include/qobjectdefs.h:
+
+/usr/lib/qt/include/qglobal.h:
+
+/usr/lib/qt/include/qconfig.h:
+
+/usr/lib/qt/include/qmodules.h:
+
+/usr/lib/qt/include/qfeatures.h:
+
+/usr/lib/qt/include/qwindowdefs.h:
+
+/usr/lib/qt/include/qstring.h:
+
+/usr/lib/qt/include/qcstring.h:
+
+/usr/lib/qt/include/qmemarray.h:
+
+/usr/lib/qt/include/qgarray.h:
+
+/usr/lib/qt/include/qshared.h:
+
+/usr/lib/qt/include/qwinexport.h:
+
+/usr/include/string.h:
+
+/usr/lib/gcc-lib/i486-slackware-linux/3.3.4/include/limits.h:
+
+/usr/lib/gcc-lib/i486-slackware-linux/3.3.4/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/include/bits/xopen_lim.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/lib/qt/include/qnamespace.h:
+
+/usr/lib/qt/include/qevent.h:
+
+/usr/lib/qt/include/qregion.h:
+
+/usr/lib/qt/include/qrect.h:
+
+/usr/lib/qt/include/qsize.h:
+
+/usr/lib/qt/include/qpoint.h:
+
+/usr/lib/qt/include/qmime.h:
+
+/usr/lib/qt/include/qmap.h:
+
+/usr/lib/qt/include/qdatastream.h:
+
+/usr/lib/qt/include/qiodevice.h:
+
+/usr/lib/qt/include/qpair.h:
+
+/usr/lib/qt/include/qvaluelist.h:
+
+/usr/lib/qt/include/qtl.h:
+
+/usr/lib/qt/include/qtextstream.h:
+
+/usr/include/stdio.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/gconv.h:
+
+/usr/lib/gcc-lib/i486-slackware-linux/3.3.4/include/stdarg.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+/usr/lib/qt/include/qptrlist.h:
+
+/usr/lib/qt/include/qglist.h:
+
+/usr/lib/qt/include/qptrcollection.h:
+
+/usr/lib/qt/include/qdom.h:
+
+/opt/kde/include/kxmlguiclient.h:
+
+/usr/lib/qt/include/qstringlist.h:
+
+/usr/lib/qt/include/qstrlist.h:
+
+/opt/kde/include/kxmlguibuilder.h:
+
+/usr/lib/qt/include/qmainwindow.h:
+
+/usr/lib/qt/include/qwidget.h:
+
+/usr/lib/qt/include/qpaintdevice.h:
+
+/usr/lib/qt/include/qpalette.h:
+
+/usr/lib/qt/include/qcolor.h:
+
+/usr/lib/qt/include/qbrush.h:
+
+/usr/lib/qt/include/qfont.h:
+
+/usr/lib/qt/include/qfontmetrics.h:
+
+/usr/lib/qt/include/qfontinfo.h:
+
+/usr/lib/qt/include/qsizepolicy.h:
+
+/usr/lib/qt/include/qtoolbar.h:
+
+/usr/lib/qt/include/qdockwindow.h:
+
+/usr/lib/qt/include/qframe.h:
+
+/usr/lib/qt/include/qmetaobject.h:
+
+/usr/lib/qt/include/qconnection.h:
+
+/opt/kde/include/ktoolbar.h:
+
+/usr/lib/qt/include/qcombobox.h:
+
+/opt/kde/include/kglobal.h:
+
+/opt/kde/include/kdemacros.h:
+
+/opt/kde/include/kinstance.h:
+
+/usr/lib/qt/include/qguardedptr.h:
+
+/usr/lib/qt/include/qiconset.h:
+
+/usr/lib/qt/include/qpixmap.h:
+
+/opt/kde/include/klocale.h:
+
+/opt/kde/include/klistview.h:
+
+/usr/lib/qt/include/qlistview.h:
+
+/usr/lib/qt/include/qscrollview.h:
+
+/usr/lib/qt/include/qscrollbar.h:
+
+/usr/lib/qt/include/qrangecontrol.h:
+
+/usr/lib/qt/include/qtimer.h:
+
+/opt/kde/include/kmessagebox.h:
+
+/opt/kde/include/kguiitem.h:
+
+/opt/kde/include/kicontheme.h:
+
+/opt/kde/include/kstdguiitem.h:
+
+/opt/kde/include/kapplication.h:
+
+/opt/kde/include/kdeversion.h:
+
+/usr/lib/qt/include/qapplication.h:
+
+/usr/lib/qt/include/qdesktopwidget.h:
+
+/usr/lib/qt/include/qasciidict.h:
+
+/usr/lib/qt/include/qgdict.h:
+
+/usr/lib/qt/include/qtranslator.h:
+
+/opt/kde/include/kconfigdialog.h:
+
+/opt/kde/include/kdialogbase.h:
+
+/opt/kde/include/kdialog.h:
+
+/usr/lib/qt/include/qdialog.h:
+
+/opt/kde/include/kjanuswidget.h:
+
+/usr/lib/qt/include/qsplitter.h:
+
+/opt/kde/include/klistbox.h:
+
+/usr/lib/qt/include/qlistbox.h:
+
+/opt/kde/include/kdebug.h:
+
+kmsgmodem.h:
+
+config.h:
+
+/opt/kde/include/kconfigskeleton.h:
+
+/usr/lib/qt/include/qdatetime.h:
+
+/usr/lib/qt/include/qdict.h:
+
+/usr/lib/qt/include/qvariant.h:
+
+/opt/kde/include/kconfig.h:
+
+/opt/kde/include/ksharedptr.h:
+
+/opt/kde/include/kconfigbase.h:
+
+/opt/kde/include/kconfigdata.h:
+
+/opt/kde/include/kglobalsettings.h:
+
+kmsgmodemwidget.h:
+
+kmsgmodemwidgetbase.h:
+
+usrsmpthread.h:
+
+/usr/lib/qt/include/qthread.h:
+
+/usr/lib/qt/include/qmutex.h:
+
+/usr/lib/qt/include/qsemaphore.h:
+
+/usr/lib/qt/include/qwaitcondition.h:
+
+simplemodem.h:
+
+connection.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/sys/stat.h:
+
+/usr/include/bits/stat.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/bits/fcntl.h:
+
+/usr/include/termios.h:
+
+/usr/include/bits/termios.h:
+
+/usr/include/sys/ttydefaults.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/getopt.h:
+
+/opt/kde/include/kaction.h:
+
+/usr/lib/qt/include/qkeysequence.h:
+
+/opt/kde/include/kshortcut.h:
+
+/opt/kde/include/kstdaction.h:
+
+/opt/kde/include/kactioncollection.h:
+
+/opt/kde/include/kactionclasses.h:
+
+/opt/kde/include/kstatusbar.h:
+
+/usr/lib/qt/include/qstatusbar.h:
+
+/usr/lib/qt/include/qintdict.h:
+
+/usr/lib/qt/include/qlabel.h:
+
+/opt/kde/include/kprocess.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/signal.h:
+
+/usr/include/bits/signum.h:
+
+/usr/include/bits/siginfo.h:
+
+/usr/include/bits/sigaction.h:
+
+/usr/include/bits/sigcontext.h:
+
+/usr/include/asm/sigcontext.h:
+
+/usr/include/bits/sigstack.h:
+
+/usr/include/sys/ucontext.h:
+
+/usr/include/bits/sigthread.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/bits/resource.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/opt/kde/include/kuniqueapplication.h:
+
+/opt/kde/include/dcopobject.h:
+
+/opt/kde/include/kdatastream.h:
+
+generalsettings.h:
+
+GeneralWidget.h:
+
+modemsettings.h:
+
+Modem.h:
+
+kmsgmodem.moc:
+
+/usr/lib/qt/include/private/qucomextra_p.h:
+
+/usr/lib/qt/include/private/qucom_p.h:
+
+/usr/lib/qt/include/quuid.h:

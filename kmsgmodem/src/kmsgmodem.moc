@@ -1,0 +1,158 @@
+/****************************************************************************
+** KMsgModem meta object code from reading C++ file 'kmsgmodem.h'
+**
+** Created: Wed Aug 11 23:23:46 2004
+**      by: The Qt MOC ($Id: kmsgmodem.moc,v 1.1 2004/08/12 16:42:49 wirr Exp $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "kmsgmodem.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.2. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *KMsgModem::className() const
+{
+    return "KMsgModem";
+}
+
+QMetaObject *KMsgModem::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_KMsgModem( "KMsgModem", &KMsgModem::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString KMsgModem::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "KMsgModem", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString KMsgModem::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "KMsgModem", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* KMsgModem::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = KMainWindow::staticMetaObject();
+    static const QUMethod slot_0 = {"Startup", 0, 0 };
+    static const QUMethod slot_1 = {"LoadMessages", 0, 0 };
+    static const QUParameter param_slot_2[] = {
+	{ "Fax", &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_2 = {"ShowFax", 1, param_slot_2 };
+    static const QUParameter param_slot_3[] = {
+	{ "Voice", &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_3 = {"PlayVoice", 1, param_slot_3 };
+    static const QUParameter param_slot_4[] = {
+	{ "proc", &static_QUType_ptr, "KProcess", QUParameter::In }
+    };
+    static const QUMethod slot_4 = {"ConvGsmExited", 1, param_slot_4 };
+    static const QUMethod slot_5 = {"showSettings", 0, 0 };
+    static const QUMethod slot_6 = {"ToogleStandaloneMode", 0, 0 };
+    static const QUMethod slot_7 = {"SetStatusbarText", 0, 0 };
+    static const QUParameter param_slot_8[] = {
+	{ "text", &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod slot_8 = {"SetStatusbarText", 1, param_slot_8 };
+    static const QUParameter param_slot_9[] = {
+	{ "text", &static_QUType_QString, 0, QUParameter::In },
+	{ "item", &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_9 = {"SetStatusbarText", 2, param_slot_9 };
+    static const QUParameter param_slot_10[] = {
+	{ "text", &static_QUType_QString, 0, QUParameter::In },
+	{ "item", &static_QUType_int, 0, QUParameter::In },
+	{ "WithTimeout", &static_QUType_bool, 0, QUParameter::In }
+    };
+    static const QUMethod slot_10 = {"SetStatusbarText", 3, param_slot_10 };
+    static const QUMethod slot_11 = {"StopPlayingVoice", 0, 0 };
+    static const QUMethod slot_12 = {"ClearMemory", 0, 0 };
+    static const QMetaData slot_tbl[] = {
+	{ "Startup()", &slot_0, QMetaData::Private },
+	{ "LoadMessages()", &slot_1, QMetaData::Private },
+	{ "ShowFax(int)", &slot_2, QMetaData::Private },
+	{ "PlayVoice(int)", &slot_3, QMetaData::Private },
+	{ "ConvGsmExited(KProcess*)", &slot_4, QMetaData::Private },
+	{ "showSettings()", &slot_5, QMetaData::Private },
+	{ "ToogleStandaloneMode()", &slot_6, QMetaData::Private },
+	{ "SetStatusbarText()", &slot_7, QMetaData::Private },
+	{ "SetStatusbarText(QString)", &slot_8, QMetaData::Private },
+	{ "SetStatusbarText(QString,int)", &slot_9, QMetaData::Private },
+	{ "SetStatusbarText(QString,int,bool)", &slot_10, QMetaData::Private },
+	{ "StopPlayingVoice()", &slot_11, QMetaData::Private },
+	{ "ClearMemory()", &slot_12, QMetaData::Private }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"KMsgModem", parentObject,
+	slot_tbl, 13,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_KMsgModem.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* KMsgModem::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "KMsgModem" ) )
+	return this;
+    return KMainWindow::qt_cast( clname );
+}
+
+bool KMsgModem::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: Startup(); break;
+    case 1: LoadMessages(); break;
+    case 2: ShowFax((int)static_QUType_int.get(_o+1)); break;
+    case 3: PlayVoice((int)static_QUType_int.get(_o+1)); break;
+    case 4: ConvGsmExited((KProcess*)static_QUType_ptr.get(_o+1)); break;
+    case 5: showSettings(); break;
+    case 6: ToogleStandaloneMode(); break;
+    case 7: SetStatusbarText(); break;
+    case 8: SetStatusbarText((QString)static_QUType_QString.get(_o+1)); break;
+    case 9: SetStatusbarText((QString)static_QUType_QString.get(_o+1),(int)static_QUType_int.get(_o+2)); break;
+    case 10: SetStatusbarText((QString)static_QUType_QString.get(_o+1),(int)static_QUType_int.get(_o+2),(bool)static_QUType_bool.get(_o+3)); break;
+    case 11: StopPlayingVoice(); break;
+    case 12: ClearMemory(); break;
+    default:
+	return KMainWindow::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool KMsgModem::qt_emit( int _id, QUObject* _o )
+{
+    return KMainWindow::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool KMsgModem::qt_property( int id, int f, QVariant* v)
+{
+    return KMainWindow::qt_property( id, f, v);
+}
+
+bool KMsgModem::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

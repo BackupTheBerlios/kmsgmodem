@@ -1,0 +1,239 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-08 17:54+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: kmsgmodem.cpp:47
+msgid "&Load messages"
+msgstr ""
+
+#: kmsgmodem.cpp:49
+msgid "&Unset standalone mode"
+msgstr ""
+
+#: kmsgmodem.cpp:51
+msgid "&Stop playing voice message"
+msgstr ""
+
+#: kmsgmodem.cpp:53
+msgid "&Clear modem memory"
+msgstr ""
+
+#: kmsgmodem.cpp:62
+msgid "Starting..."
+msgstr ""
+
+#: kmsgmodem.cpp:63
+msgid "No new messages"
+msgstr ""
+
+#: kmsgmodem.cpp:64
+msgid "Mem: unknown"
+msgstr ""
+
+#: kmsgmodem.cpp:126
+msgid ""
+"Please check if the modem is connected to the correct port and switched on."
+msgstr ""
+
+#: kmsgmodem.cpp:140
+msgid "Please check if the modem is connected to the correct port."
+msgstr ""
+
+#: kmsgmodem.cpp:145
+msgid "Please connect a USR Sportster Message Plus or Professional modem."
+msgstr ""
+
+#: kmsgmodem.cpp:162
+msgid "Loading messages..."
+msgstr ""
+
+#: kmsgmodem.cpp:181
+msgid "Downloading messages..."
+msgstr ""
+
+#: kmsgmodem.cpp:203
+msgid "Fax"
+msgstr ""
+
+#: kmsgmodem.cpp:204
+msgid "Tel"
+msgstr ""
+
+#: kmsgmodem.cpp:217 kmsgmodem.cpp:229
+msgid "unknown"
+msgstr ""
+
+#: kmsgmodem.cpp:223
+msgid " pages"
+msgstr ""
+
+#: kmsgmodem.cpp:224
+msgid " page"
+msgstr ""
+
+#: kmsgmodem.cpp:226
+msgid "s"
+msgstr ""
+
+#: kmsgmodem.cpp:234
+#, c-format
+msgid "Mem: %1% free"
+msgstr ""
+
+#: kmsgmodem.cpp:249
+msgid "%1 new message"
+msgstr ""
+
+#: kmsgmodem.cpp:256
+msgid "Downloading new messages..."
+msgstr ""
+
+#: kmsgmodem.cpp:258
+msgid "Idle"
+msgstr ""
+
+#: kmsgmodem.cpp:265
+msgid "There are new messages"
+msgstr ""
+
+#: kmsgmodem.cpp:271
+msgid "Showing fax message..."
+msgstr ""
+
+#: kmsgmodem.cpp:298
+msgid "Playing voice message..."
+msgstr ""
+
+#: kmsgmodem.cpp:365
+msgid "General"
+msgstr ""
+
+#: kmsgmodem.cpp:365
+msgid "General Settings"
+msgstr ""
+
+#: kmsgmodem.cpp:367
+msgid "Connection"
+msgstr ""
+
+#: kmsgmodem.cpp:367
+msgid "Connection Settings"
+msgstr ""
+
+#: kmsgmodem.cpp:377
+msgid "Set standalone mode"
+msgstr ""
+
+#: kmsgmodem.cpp:380
+msgid "Standalone mode unset"
+msgstr ""
+
+#: kmsgmodem.cpp:385
+msgid "Unset standalone mode"
+msgstr ""
+
+#: kmsgmodem.cpp:388
+msgid "Standalone mode set"
+msgstr ""
+
+#: kmsgmodem.cpp:412
+msgid "Are you sure to erase all messages on the modem?"
+msgstr ""
+
+#: main.cpp:31
+msgid "USR Sportster Message Center"
+msgstr ""
+
+#: main.cpp:43
+msgid "KMsgModem"
+msgstr ""
+
+#: main.cpp:47
+msgid "His previous work saved me much time"
+msgstr ""
+
+#: main.cpp:48
+msgid "The GSM decompression algos"
+msgstr ""
+
+#: rc.cpp:1
+msgid "&Modem"
+msgstr ""
+
+#: rc.cpp:2
+msgid "Standard Toolbar"
+msgstr ""
+
+#: rc.cpp:3
+msgid "Message Toolbar"
+msgstr ""
+
+#: rc.cpp:4 rc.cpp:13
+msgid "Form1"
+msgstr ""
+
+#: rc.cpp:5
+msgid "Check for new messages on startup"
+msgstr ""
+
+#: rc.cpp:6
+msgid "Set standalone mode on exit"
+msgstr ""
+
+#: rc.cpp:7
+msgid "kmsgmodemwidgetbase"
+msgstr ""
+
+#: rc.cpp:8
+msgid "#"
+msgstr ""
+
+#: rc.cpp:9
+msgid "Type"
+msgstr ""
+
+#: rc.cpp:10
+msgid "Date"
+msgstr ""
+
+#: rc.cpp:11
+msgid "Size"
+msgstr ""
+
+#: rc.cpp:12
+msgid "Sender"
+msgstr ""
+
+#: rc.cpp:14
+msgid "Baudrate:"
+msgstr ""
+
+#: rc.cpp:15
+msgid "Device:"
+msgstr ""
+
+#: _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr ""
+
+#: _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr ""

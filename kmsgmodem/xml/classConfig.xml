@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.8">
+  <compounddef id="classConfig" kind="class" prot="public">
+    <compoundname>Config</compoundname>
+    <includes refid="src_2config_8h" local="no">config.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classConfig_1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Config::Config</definition>
+        <argsstring>()</argsstring>
+        <name>Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="33" bodystart="24" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Config::~Config</definition>
+        <argsstring>()</argsstring>
+        <name>~Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="35" bodystart="43" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classConfig_1o0" prot="public" static="no" volatile="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Config::SetStandAloneModeOnExit</definition>
+        <argsstring></argsstring>
+        <name>SetStandAloneModeOnExit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="37" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1o1" prot="public" static="no" volatile="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Config::CheckOnStart</definition>
+        <argsstring></argsstring>
+        <name>CheckOnStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="38" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1o2" prot="public" static="no" volatile="no" mutable="no">
+        <type>QString</type>
+        <definition>QString Config::Baudrate</definition>
+        <argsstring></argsstring>
+        <name>Baudrate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="40" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1o3" prot="public" static="no" volatile="no" mutable="no">
+        <type>QString</type>
+        <definition>QString Config::Port</definition>
+        <argsstring></argsstring>
+        <name>Port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="41" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1o4" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int Config::NoOfFaxMsgs</definition>
+        <argsstring></argsstring>
+        <name>NoOfFaxMsgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="43" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1o5" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int Config::NoOfVoiceMsgs</definition>
+        <argsstring></argsstring>
+        <name>NoOfVoiceMsgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="44" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexander Wiedenbruch </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="31" bodystart="30" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classConfig_1o2" prot="public" virt="non-virtual"><scope>Config</scope><name>Baudrate</name></member>
+      <member refid="classConfig_1o1" prot="public" virt="non-virtual"><scope>Config</scope><name>CheckOnStart</name></member>
+      <member refid="classConfig_1a0" prot="public" virt="non-virtual"><scope>Config</scope><name>Config</name></member>
+      <member refid="classConfig_1o4" prot="public" virt="non-virtual"><scope>Config</scope><name>NoOfFaxMsgs</name></member>
+      <member refid="classConfig_1o5" prot="public" virt="non-virtual"><scope>Config</scope><name>NoOfVoiceMsgs</name></member>
+      <member refid="classConfig_1o3" prot="public" virt="non-virtual"><scope>Config</scope><name>Port</name></member>
+      <member refid="classConfig_1o0" prot="public" virt="non-virtual"><scope>Config</scope><name>SetStandAloneModeOnExit</name></member>
+      <member refid="classConfig_1a1" prot="public" virt="non-virtual"><scope>Config</scope><name>~Config</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.8">
+  <compounddef id="kmsgmodemwidgetbase_8h" kind="file">
+    <compoundname>kmsgmodemwidgetbase.h</compoundname>
+    <includes local="no">qvariant.h</includes>
+    <includes local="no">qwidget.h</includes>
+    <includedby refid="kmsgmodemwidget_8h" local="yes">kmsgmodemwidget.h</includedby>
+    <includedby refid="kmsgmodemwidgetbase_8cpp" local="yes">kmsgmodemwidgetbase.cpp</includedby>
+    <includedby refid="kmsgmodemwidgetbase_8moc" local="yes">kmsgmodemwidgetbase.moc</includedby>
+    <incdepgraph>
+      <node id="272">
+        <label>kmsgmodemwidgetbase.h</label>
+        <link refid="kmsgmodemwidgetbase.h"/>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+      </node>
+      <node id="273">
+        <label>qvariant.h</label>
+      </node>
+      <node id="274">
+        <label>qwidget.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="277">
+        <label>kmsgmodem.h</label>
+        <link refid="kmsgmodem_8h-source"/>
+        <childnode refid="277" relation="include">
+        </childnode>
+      </node>
+      <node id="275">
+        <label>kmsgmodemwidgetbase.h</label>
+        <link refid="kmsgmodemwidgetbase.h"/>
+        <childnode refid="276" relation="include">
+        </childnode>
+      </node>
+      <node id="276">
+        <label>kmsgmodemwidget.h</label>
+        <link refid="kmsgmodemwidget_8h-source"/>
+        <childnode refid="277" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classKMsgModemWidgetBase">KMsgModemWidgetBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>Form<sp/>interface<sp/>generated<sp/>from<sp/>reading<sp/>ui<sp/>file<sp/>&apos;/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodemwidgetbase.ui&apos;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>Created:<sp/>Fri<sp/>Aug<sp/>6<sp/>19:42:51<sp/>2004</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>The<sp/>User<sp/>Interface<sp/>Compiler<sp/>($Id: kmsgmodemwidgetbase_8h.xml,v 1.1 2004/08/12 16:43:23 wirr Exp $)</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>WARNING!<sp/>All<sp/>changes<sp/>made<sp/>in<sp/>this<sp/>file<sp/>will<sp/>be<sp/>lost!</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>KMSGMODEMWIDGETBASE_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>KMSGMODEMWIDGETBASE_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qvariant.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qwidget.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QVBoxLayout;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QHBoxLayout;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QGridLayout;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QSpacerItem;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">KListView;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QListViewItem;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">KMsgModemWidgetBase<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QWidget</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>KMsgModemWidgetBase(<sp/>QWidget*<sp/>parent<sp/>=<sp/>0,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/>0,<sp/>WFlags<sp/>fl<sp/>=<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>~KMsgModemWidgetBase();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>KListView*<sp/>MessageView;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MessageClicked(QListViewItem<sp/>*item);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>QGridLayout*<sp/>kmsgmodemwidgetbaseLayout;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>languageChange();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>KMSGMODEMWIDGETBASE_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/kmsgmodemwidgetbase.h"/>
+  </compounddef>
+</doxygen>

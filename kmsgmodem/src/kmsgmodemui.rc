@@ -1,0 +1,18 @@
+<!DOCTYPE kpartgui>
+<kpartgui name="kmsgmodem">
+	<MenuBar>
+    	<Menu name="modem" ><Text>&amp;Modem</Text>
+      		<Action name="load_messages"/>
+	  		<Action name="toogle_standalonemode"/>
+			<Action name="clear_mem"/>
+    	</Menu>
+  	</MenuBar>
+	<ToolBar name="stdToolBar" fullWidth="true" newline="false"><Text>Standard Toolbar</Text>
+			<Action name="load_messages"/>
+			<Action name="toogle_standalonemode"/>
+	</ToolBar>
+	<ToolBar name="ModemToolBar" fullWidth="true" newline="false"><Text>Message Toolbar</Text>
+		<Action name="clear_mem"/>
+		<Action name="stop_voice"/>
+	</ToolBar>
+</kpartgui>	

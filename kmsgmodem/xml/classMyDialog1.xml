@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.8">
+  <compounddef id="classMyDialog1" kind="class" prot="public">
+    <compoundname>MyDialog1</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMyDialog1_1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MyDialog1::MyDialog1</definition>
+        <argsstring>(QWidget *parent=0, const char *name=0, bool modal=FALSE, WFlags fl=0)</argsstring>
+        <name>MyDialog1</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>modal</declname>
+          <defval>FALSE</defval>
+        </param>
+        <param>
+          <type>WFlags</type>
+          <declname>fl</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="31" bodystart="29" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classMyDialog1_1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MyDialog1::~MyDialog1</definition>
+        <argsstring>()</argsstring>
+        <name>~MyDialog1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="32" bodystart="82" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classMyDialog1_1o0" prot="public" static="no" volatile="no" mutable="no">
+        <type>QListBox *</type>
+        <definition>QListBox* MyDialog1::listBox</definition>
+        <argsstring></argsstring>
+        <name>listBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="34" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMyDialog1_1o1" prot="public" static="no" volatile="no" mutable="no">
+        <type>QTabWidget *</type>
+        <definition>QTabWidget* MyDialog1::tabWidget</definition>
+        <argsstring></argsstring>
+        <name>tabWidget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="35" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMyDialog1_1o2" prot="public" static="no" volatile="no" mutable="no">
+        <type>QWidget *</type>
+        <definition>QWidget* MyDialog1::Widget2</definition>
+        <argsstring></argsstring>
+        <name>Widget2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="36" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMyDialog1_1o3" prot="public" static="no" volatile="no" mutable="no">
+        <type>QWidget *</type>
+        <definition>QWidget* MyDialog1::Widget3</definition>
+        <argsstring></argsstring>
+        <name>Widget3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="37" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMyDialog1_1o4" prot="public" static="no" volatile="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* MyDialog1::buttonHelp</definition>
+        <argsstring></argsstring>
+        <name>buttonHelp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="38" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMyDialog1_1o5" prot="public" static="no" volatile="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* MyDialog1::buttonOk</definition>
+        <argsstring></argsstring>
+        <name>buttonOk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="39" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMyDialog1_1o6" prot="public" static="no" volatile="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* MyDialog1::buttonCancel</definition>
+        <argsstring></argsstring>
+        <name>buttonCancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="40" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classMyDialog1_1p0" prot="protected" static="no" volatile="no" mutable="no">
+        <type>QGridLayout *</type>
+        <definition>QGridLayout* MyDialog1::MyDialog1Layout</definition>
+        <argsstring></argsstring>
+        <name>MyDialog1Layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="43" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMyDialog1_1p1" prot="protected" static="no" volatile="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* MyDialog1::Layout1</definition>
+        <argsstring></argsstring>
+        <name>Layout1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="44" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMyDialog1_1p2" prot="protected" static="no" volatile="no" mutable="no">
+        <type>QSpacerItem *</type>
+        <definition>QSpacerItem* MyDialog1::Horizontal_Spacing2</definition>
+        <argsstring></argsstring>
+        <name>Horizontal_Spacing2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="45" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-slot">
+      <memberdef kind="slot" id="classMyDialog1_1j0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>virtual void</type>
+        <definition>void MyDialog1::languageChange</definition>
+        <argsstring>()</argsstring>
+        <name>languageChange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="48" bodystart="91" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralBasis.h" line="27" bodystart="26" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classMyDialog1_1o6" prot="public" virt="non-virtual"><scope>MyDialog1</scope><name>buttonCancel</name></member>
+      <member refid="classMyDialog1_1o4" prot="public" virt="non-virtual"><scope>MyDialog1</scope><name>buttonHelp</name></member>
+      <member refid="classMyDialog1_1o5" prot="public" virt="non-virtual"><scope>MyDialog1</scope><name>buttonOk</name></member>
+      <member refid="classMyDialog1_1p2" prot="protected" virt="non-virtual"><scope>MyDialog1</scope><name>Horizontal_Spacing2</name></member>
+      <member refid="classMyDialog1_1j0" prot="protected" virt="virtual"><scope>MyDialog1</scope><name>languageChange</name></member>
+      <member refid="classMyDialog1_1p1" prot="protected" virt="non-virtual"><scope>MyDialog1</scope><name>Layout1</name></member>
+      <member refid="classMyDialog1_1o0" prot="public" virt="non-virtual"><scope>MyDialog1</scope><name>listBox</name></member>
+      <member refid="classMyDialog1_1a0" prot="public" virt="non-virtual"><scope>MyDialog1</scope><name>MyDialog1</name></member>
+      <member refid="classMyDialog1_1p0" prot="protected" virt="non-virtual"><scope>MyDialog1</scope><name>MyDialog1Layout</name></member>
+      <member refid="classMyDialog1_1o1" prot="public" virt="non-virtual"><scope>MyDialog1</scope><name>tabWidget</name></member>
+      <member refid="classMyDialog1_1o2" prot="public" virt="non-virtual"><scope>MyDialog1</scope><name>Widget2</name></member>
+      <member refid="classMyDialog1_1o3" prot="public" virt="non-virtual"><scope>MyDialog1</scope><name>Widget3</name></member>
+      <member refid="classMyDialog1_1a1" prot="public" virt="non-virtual"><scope>MyDialog1</scope><name>~MyDialog1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

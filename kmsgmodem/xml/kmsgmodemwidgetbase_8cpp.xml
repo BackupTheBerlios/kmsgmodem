@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.8">
+  <compounddef id="kmsgmodemwidgetbase_8cpp" kind="file">
+    <compoundname>kmsgmodemwidgetbase.cpp</compoundname>
+    <includes local="no">klocale.h</includes>
+    <includes refid="kmsgmodemwidgetbase_8h" local="yes">kmsgmodemwidgetbase.h</includes>
+    <includes local="no">qvariant.h</includes>
+    <includes local="no">qheader.h</includes>
+    <includes local="no">klistview.h</includes>
+    <includes local="no">qlayout.h</includes>
+    <includes local="no">qtooltip.h</includes>
+    <includes local="no">qwhatsthis.h</includes>
+    <includes refid="kmsgmodemwidgetbase_8moc" local="yes">kmsgmodemwidgetbase.moc</includes>
+    <incdepgraph>
+      <node id="266">
+        <label>qheader.h</label>
+      </node>
+      <node id="270">
+        <label>qwhatsthis.h</label>
+      </node>
+      <node id="263">
+        <label>kmsgmodemwidgetbase.h</label>
+        <link refid="kmsgmodemwidgetbase_8h-source"/>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="268">
+        <label>qlayout.h</label>
+      </node>
+      <node id="262">
+        <label>klocale.h</label>
+      </node>
+      <node id="261">
+        <label>kmsgmodemwidgetbase.cpp</label>
+        <link refid="kmsgmodemwidgetbase.cpp"/>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+      </node>
+      <node id="269">
+        <label>qtooltip.h</label>
+      </node>
+      <node id="264">
+        <label>qvariant.h</label>
+      </node>
+      <node id="267">
+        <label>klistview.h</label>
+      </node>
+      <node id="265">
+        <label>qwidget.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;klocale.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Form<sp/>implementation<sp/>generated<sp/>from<sp/>reading<sp/>ui<sp/>file<sp/>&apos;/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodemwidgetbase.ui&apos;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>Created:<sp/>Fri<sp/>Aug<sp/>6<sp/>19:43:04<sp/>2004</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>The<sp/>User<sp/>Interface<sp/>Compiler<sp/>($Id: kmsgmodemwidgetbase_8cpp.xml,v 1.1 2004/08/12 16:43:23 wirr Exp $)</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/>WARNING!<sp/>All<sp/>changes<sp/>made<sp/>in<sp/>this<sp/>file<sp/>will<sp/>be<sp/>lost!</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;kmsgmodemwidgetbase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qvariant.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qheader.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;klistview.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qlayout.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qtooltip.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qwhatsthis.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/>Constructs<sp/>a<sp/>KMsgModemWidgetBase<sp/>as<sp/>a<sp/>child<sp/>of<sp/>&apos;parent&apos;,<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/>name<sp/>&apos;name&apos;<sp/>and<sp/>widget<sp/>flags<sp/>set<sp/>to<sp/>&apos;f&apos;.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">KMsgModemWidgetBase::KMsgModemWidgetBase(<sp/>QWidget*<sp/>parent,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name,<sp/>WFlags<sp/>fl<sp/>)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>QWidget(<sp/>parent,<sp/>name,<sp/>fl<sp/>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!name<sp/>)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setName(<sp/></highlight><highlight class="stringliteral">&quot;kmsgmodemwidgetbase&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>setSizePolicy(<sp/>QSizePolicy(<sp/>(QSizePolicy::SizeType)2,<sp/>(QSizePolicy::SizeType)2,<sp/>0,<sp/>0,<sp/>sizePolicy().hasHeightForWidth()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>setMinimumSize(<sp/>QSize(<sp/>100,<sp/>50<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>kmsgmodemwidgetbaseLayout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QGridLayout(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>1,<sp/>1,<sp/>11,<sp/>6,<sp/></highlight><highlight class="stringliteral">&quot;kmsgmodemwidgetbaseLayout&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>KListView(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;MessageView&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;addColumn(<sp/>tr2i18n(<sp/></highlight><highlight class="stringliteral">&quot;#&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;addColumn(<sp/>tr2i18n(<sp/></highlight><highlight class="stringliteral">&quot;Type&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;addColumn(<sp/>tr2i18n(<sp/></highlight><highlight class="stringliteral">&quot;Date&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;addColumn(<sp/>tr2i18n(<sp/></highlight><highlight class="stringliteral">&quot;Size&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;addColumn(<sp/>tr2i18n(<sp/></highlight><highlight class="stringliteral">&quot;Sender&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;setSizePolicy(<sp/>QSizePolicy(<sp/>(QSizePolicy::SizeType)1,<sp/>(QSizePolicy::SizeType)1,<sp/>0,<sp/>0,<sp/>MessageView-&gt;sizePolicy().hasHeightForWidth()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;setMinimumSize(<sp/>QSize(<sp/>500,<sp/>250<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;setMidLineWidth(<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;setResizePolicy(<sp/>KListView::Default<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;setProperty(<sp/></highlight><highlight class="stringliteral">&quot;selectionMode&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Single&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;setAllColumnsShowFocus(<sp/>TRUE<sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;setRootIsDecorated(<sp/>FALSE<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;setFullWidth(<sp/>TRUE<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>kmsgmodemwidgetbaseLayout-&gt;addWidget(<sp/>MessageView,<sp/>0,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>languageChange();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>resize(<sp/>QSize(521,<sp/>272).expandedTo(minimumSizeHint())<sp/>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>clearWState(<sp/>WState_Polished<sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>signals<sp/>and<sp/>slots<sp/>connections</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>connect(<sp/>MessageView,<sp/>SIGNAL(<sp/>clicked(QListViewItem*)<sp/>),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>SLOT(<sp/>MessageClicked(QListViewItem*)<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>*<sp/><sp/>Destroys<sp/>the<sp/>object<sp/>and<sp/>frees<sp/>any<sp/>allocated<sp/>resources</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">KMsgModemWidgetBase::~KMsgModemWidgetBase()</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>need<sp/>to<sp/>delete<sp/>child<sp/>widgets,<sp/>Qt<sp/>does<sp/>it<sp/>all<sp/>for<sp/>us</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/>*<sp/><sp/>Sets<sp/>the<sp/>strings<sp/>of<sp/>the<sp/>subwidgets<sp/>using<sp/>the<sp/>current</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/>*<sp/><sp/>language.</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KMsgModemWidgetBase::languageChange()</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>setCaption(<sp/>tr2i18n(<sp/></highlight><highlight class="stringliteral">&quot;kmsgmodemwidgetbase&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;header()-&gt;setLabel(<sp/>0,<sp/>tr2i18n(<sp/></highlight><highlight class="stringliteral">&quot;#&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;header()-&gt;setLabel(<sp/>1,<sp/>tr2i18n(<sp/></highlight><highlight class="stringliteral">&quot;Type&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;header()-&gt;setLabel(<sp/>2,<sp/>tr2i18n(<sp/></highlight><highlight class="stringliteral">&quot;Date&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;header()-&gt;setLabel(<sp/>3,<sp/>tr2i18n(<sp/></highlight><highlight class="stringliteral">&quot;Size&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageView-&gt;header()-&gt;setLabel(<sp/>4,<sp/>tr2i18n(<sp/></highlight><highlight class="stringliteral">&quot;Sender&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KMsgModemWidgetBase::MessageClicked(QListViewItem*)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>qWarning(<sp/></highlight><highlight class="stringliteral">&quot;KMsgModemWidgetBase::MessageClicked(QListViewItem*):<sp/>Not<sp/>implemented<sp/>yet&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;kmsgmodemwidgetbase.moc&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/kmsgmodemwidgetbase.cpp"/>
+  </compounddef>
+</doxygen>

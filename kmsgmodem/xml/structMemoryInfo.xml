@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.8">
+  <compounddef id="structMemoryInfo" kind="struct" prot="public">
+    <compoundname>MemoryInfo</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMemoryInfo_1o0" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MemoryInfo::MemSize</definition>
+        <argsstring></argsstring>
+        <name>MemSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="46" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMemoryInfo_1o1" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MemoryInfo::MemUsed</definition>
+        <argsstring></argsstring>
+        <name>MemUsed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="47" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMemoryInfo_1o2" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MemoryInfo::VoiceMsgs</definition>
+        <argsstring></argsstring>
+        <name>VoiceMsgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="48" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMemoryInfo_1o3" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MemoryInfo::UnreleasedVoiceMsgs</definition>
+        <argsstring></argsstring>
+        <name>UnreleasedVoiceMsgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="49" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMemoryInfo_1o4" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MemoryInfo::FaxMsgs</definition>
+        <argsstring></argsstring>
+        <name>FaxMsgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="50" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMemoryInfo_1o5" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MemoryInfo::UnreleasedFaxMsgs</definition>
+        <argsstring></argsstring>
+        <name>UnreleasedFaxMsgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="51" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMemoryInfo_1o6" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MemoryInfo::StoredMsgs</definition>
+        <argsstring></argsstring>
+        <name>StoredMsgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="52" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="45" bodystart="44" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structMemoryInfo_1o4" prot="public" virt="non-virtual"><scope>MemoryInfo</scope><name>FaxMsgs</name></member>
+      <member refid="structMemoryInfo_1o0" prot="public" virt="non-virtual"><scope>MemoryInfo</scope><name>MemSize</name></member>
+      <member refid="structMemoryInfo_1o1" prot="public" virt="non-virtual"><scope>MemoryInfo</scope><name>MemUsed</name></member>
+      <member refid="structMemoryInfo_1o6" prot="public" virt="non-virtual"><scope>MemoryInfo</scope><name>StoredMsgs</name></member>
+      <member refid="structMemoryInfo_1o5" prot="public" virt="non-virtual"><scope>MemoryInfo</scope><name>UnreleasedFaxMsgs</name></member>
+      <member refid="structMemoryInfo_1o3" prot="public" virt="non-virtual"><scope>MemoryInfo</scope><name>UnreleasedVoiceMsgs</name></member>
+      <member refid="structMemoryInfo_1o2" prot="public" virt="non-virtual"><scope>MemoryInfo</scope><name>VoiceMsgs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.8">
+  <compounddef id="classKMsgModemWidget" kind="class" prot="public">
+    <compoundname>KMsgModemWidget</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classKMsgModemWidget_1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KMsgModemWidget::KMsgModemWidget</definition>
+        <argsstring>(QWidget *parent=0, const char *name=0, WFlags fl=0)</argsstring>
+        <name>KMsgModemWidget</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>WFlags</type>
+          <declname>fl</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodemwidget.h" line="38" bodystart="31" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classKMsgModemWidget_1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KMsgModemWidget::~KMsgModemWidget</definition>
+        <argsstring>()</argsstring>
+        <name>~KMsgModemWidget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodemwidget.h" line="39" bodystart="38" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="classKMsgModemWidget_1l0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModemWidget::FaxMsgClicked</definition>
+        <argsstring>(int)</argsstring>
+        <name>FaxMsgClicked</name>
+        <param>
+          <type>int</type>
+          <defname>t0</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodemwidget.h" line="53" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="signal" id="classKMsgModemWidget_1l1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModemWidget::VoiceMsgClicked</definition>
+        <argsstring>(int)</argsstring>
+        <name>VoiceMsgClicked</name>
+        <param>
+          <type>int</type>
+          <defname>t0</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodemwidget.h" line="54" bodystart="101" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-slot">
+      <memberdef kind="slot" id="classKMsgModemWidget_1j0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModemWidget::MessageClicked</definition>
+        <argsstring>(QListViewItem *item)</argsstring>
+        <name>MessageClicked</name>
+        <param>
+          <type>QListViewItem *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodemwidget.h" line="50" bodystart="44" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodemwidget.h" line="34" bodystart="33" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classKMsgModemWidget_1l0" prot="public" virt="non-virtual"><scope>KMsgModemWidget</scope><name>FaxMsgClicked</name></member>
+      <member refid="classKMsgModemWidget_1a0" prot="public" virt="non-virtual"><scope>KMsgModemWidget</scope><name>KMsgModemWidget</name></member>
+      <member refid="classKMsgModemWidget_1j0" prot="protected" virt="non-virtual"><scope>KMsgModemWidget</scope><name>MessageClicked</name></member>
+      <member refid="classKMsgModemWidget_1l1" prot="public" virt="non-virtual"><scope>KMsgModemWidget</scope><name>VoiceMsgClicked</name></member>
+      <member refid="classKMsgModemWidget_1a1" prot="public" virt="non-virtual"><scope>KMsgModemWidget</scope><name>~KMsgModemWidget</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

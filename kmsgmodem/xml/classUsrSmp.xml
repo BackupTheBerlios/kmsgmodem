@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.8">
+  <compounddef id="classUsrSmp" kind="class" prot="public">
+    <compoundname>UsrSmp</compoundname>
+    <basecompoundref refid="classSimpleModem" prot="private" virt="non-virtual"></basecompoundref>
+    <includes refid="usrsmp_8h" local="no">usrsmp.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classUsrSmp_1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UsrSmp::UsrSmp</definition>
+        <argsstring>(QString interface=&quot;/dev/ttyS0&quot;, QString baud=&quot;115200&quot;)</argsstring>
+        <name>UsrSmp</name>
+        <param>
+          <type>QString</type>
+          <declname>interface</declname>
+          <defval>&quot;/dev/ttyS0&quot;</defval>
+        </param>
+        <param>
+          <type>QString</type>
+          <declname>baud</declname>
+          <defval>&quot;115200&quot;</defval>
+        </param>
+        <briefdescription>
+<para>C&apos;tor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Not much in here atm. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="94" bodystart="30" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UsrSmp::~UsrSmp</definition>
+        <argsstring>()</argsstring>
+        <name>~UsrSmp</name>
+        <briefdescription>
+<para>D&apos;tor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Not much in here atm. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="96" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UsrSmp::SetEchoOff</definition>
+        <argsstring>()</argsstring>
+        <name>SetEchoOff</name>
+        <briefdescription>
+<para>Disable Echo (test). </para>        </briefdescription>
+        <detaileddescription>
+<para>This function sends ATE0 to the modem. That command will disable the echoing </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="98" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UsrSmp::GetModemType</definition>
+        <argsstring>()</argsstring>
+        <name>GetModemType</name>
+        <briefdescription>
+<para>Returns the modem type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="100" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UsrSmp::SetStandAloneMode</definition>
+        <argsstring>()</argsstring>
+        <name>SetStandAloneMode</name>
+        <briefdescription>
+<para>Sets stand alone mode for a USR modem. </para>        </briefdescription>
+        <detaileddescription>
+<para>Partly (C) T. Uhlmann from usrmodem.cpp </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="102" bodystart="124" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UsrSmp::UnSetStandAloneMode</definition>
+        <argsstring>()</argsstring>
+        <name>UnSetStandAloneMode</name>
+        <briefdescription>
+<para>Unsets stand alone mode for a USR modem. </para>        </briefdescription>
+        <detaileddescription>
+<para>Partly (C) T. Uhlmann from usrmodem.cpp </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="104" bodystart="151" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UsrSmp::ReadMemoryInfo</definition>
+        <argsstring>()</argsstring>
+        <name>ReadMemoryInfo</name>
+        <briefdescription>
+<para>Gets memory and message informations from the modem. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function gets information about the memory first. After that it gets the information about all stored messages</para><para>Partly (C) T. Uhlmann from usrmodem.cpp </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="106" bodystart="181" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QPtrList&lt; struct MessageInfo &gt;</type>
+        <definition>QPtrList&lt; struct MessageInfo &gt; UsrSmp::GetMsgInfo</definition>
+        <argsstring>()</argsstring>
+        <name>GetMsgInfo</name>
+        <briefdescription>
+<para>Returns information about all messages. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="108" bodystart="343" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MessageInfo</type>
+        <definition>struct MessageInfo UsrSmp::GetMsgInfo</definition>
+        <argsstring>(unsigned int index)</argsstring>
+        <name>GetMsgInfo</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Returns information about the specified Message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="110" bodystart="352" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MemoryInfo</type>
+        <definition>struct MemoryInfo UsrSmp::GetMemoryInfo</definition>
+        <argsstring>()</argsstring>
+        <name>GetMemoryInfo</name>
+        <briefdescription>
+<para>Returns information about the memory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="112" bodystart="334" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UsrSmp::LoadMessages</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMessages</name>
+        <briefdescription>
+<para>This function load the stored messages to a temporary file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="114" bodystart="371" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UsrSmp::GetMessage</definition>
+        <argsstring>(int Message)</argsstring>
+        <name>GetMessage</name>
+        <param>
+          <type>int</type>
+          <declname>Message</declname>
+        </param>
+        <briefdescription>
+<para>This function gets the specified message from the temporary file. </para>        </briefdescription>
+        <detaileddescription>
+<para>Partly (C) T. Uhlmann from usrmodem.cpp </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="116" bodystart="390" bodyend="507"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1a12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UsrSmp::GetInitError</definition>
+        <argsstring>()</argsstring>
+        <name>GetInitError</name>
+        <briefdescription>
+<para>Returns the error wich happens in init. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="118" bodystart="547" bodyend="550"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classUsrSmp_1d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UsrSmp::DetectModemType</definition>
+        <argsstring>()</argsstring>
+        <name>DetectModemType</name>
+        <briefdescription>
+<para>Detects if we have a USR modem connected. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function sends ATI3 to the modem, receives the modem information and decides what type of modem is connected</para><para>Partly (C) T. Uhlmann from usrmodem.cpp </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="122" bodystart="81" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classUsrSmp_1d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UsrSmp::WriteFaxPage</definition>
+        <argsstring>(FILE *msgFile, unsigned char c)</argsstring>
+        <name>WriteFaxPage</name>
+        <param>
+          <type>FILE *</type>
+          <declname>msgFile</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>This function splits a stored fax message into tif files. </para>        </briefdescription>
+        <detaileddescription>
+<para>(C) T. Uhlmann from usrmodem.cpp </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="124" bodystart="514" bodyend="541"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classUsrSmp_1r0" prot="private" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int UsrSmp::modemType</definition>
+        <argsstring></argsstring>
+        <name>modemType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="126" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUsrSmp_1r1" prot="private" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int UsrSmp::WasDLE</definition>
+        <argsstring></argsstring>
+        <name>WasDLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="128" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUsrSmp_1r2" prot="private" static="no" volatile="no" mutable="no">
+        <type>MemoryInfo</type>
+        <definition>struct MemoryInfo UsrSmp::MemInfo</definition>
+        <argsstring></argsstring>
+        <name>MemInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="130" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUsrSmp_1r3" prot="private" static="no" volatile="no" mutable="no">
+        <type>QPtrList&lt; struct MessageInfo &gt;</type>
+        <definition>QPtrList&lt;struct MessageInfo&gt; UsrSmp::MsgInfoList</definition>
+        <argsstring></argsstring>
+        <name>MsgInfoList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="132" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUsrSmp_1r4" prot="private" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int UsrSmp::initError</definition>
+        <argsstring></argsstring>
+        <name>initError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="134" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexander Wiedenbruch </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="35">
+        <label>UsrSmp</label>
+        <link refid="classUsrSmp"/>
+        <childnode refid="36" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>SimpleModem</label>
+        <link refid="classSimpleModem"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="37">
+        <label>UsrSmp</label>
+        <link refid="classUsrSmp"/>
+        <childnode refid="38" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>Connection</label>
+        <link refid="classConnection"/>
+      </node>
+      <node id="38">
+        <label>SimpleModem</label>
+        <link refid="classSimpleModem"/>
+        <childnode refid="39" relation="usage">
+          <edgelabel>port</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmp.h" line="92" bodystart="91" bodyend="135"/>
+    <listofallmembers>
+      <member refid="classUsrSmp_1d0" prot="private" virt="non-virtual"><scope>UsrSmp</scope><name>DetectModemType</name></member>
+      <member refid="classUsrSmp_1a12" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>GetInitError</name></member>
+      <member refid="classUsrSmp_1a9" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>GetMemoryInfo</name></member>
+      <member refid="classUsrSmp_1a11" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>GetMessage</name></member>
+      <member refid="classUsrSmp_1a3" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>GetModemType</name></member>
+      <member refid="classUsrSmp_1a7" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>GetMsgInfo</name></member>
+      <member refid="classUsrSmp_1a8" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>GetMsgInfo</name></member>
+      <member refid="classUsrSmp_1r4" prot="private" virt="non-virtual"><scope>UsrSmp</scope><name>initError</name></member>
+      <member refid="classUsrSmp_1a10" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>LoadMessages</name></member>
+      <member refid="classUsrSmp_1r2" prot="private" virt="non-virtual"><scope>UsrSmp</scope><name>MemInfo</name></member>
+      <member refid="classUsrSmp_1r0" prot="private" virt="non-virtual"><scope>UsrSmp</scope><name>modemType</name></member>
+      <member refid="classUsrSmp_1r3" prot="private" virt="non-virtual"><scope>UsrSmp</scope><name>MsgInfoList</name></member>
+      <member refid="classUsrSmp_1a6" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>ReadMemoryInfo</name></member>
+      <member refid="classSimpleModem_1a3" prot="private" virt="non-virtual"><scope>UsrSmp</scope><name>ReadMemoryToFile</name></member>
+      <member refid="classSimpleModem_1a2" prot="private" virt="non-virtual"><scope>UsrSmp</scope><name>SendCommand</name></member>
+      <member refid="classUsrSmp_1a2" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>SetEchoOff</name></member>
+      <member refid="classUsrSmp_1a4" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>SetStandAloneMode</name></member>
+      <member refid="classSimpleModem_1a0" prot="private" virt="non-virtual"><scope>UsrSmp</scope><name>SimpleModem</name></member>
+      <member refid="classUsrSmp_1a5" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>UnSetStandAloneMode</name></member>
+      <member refid="classUsrSmp_1a0" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>UsrSmp</name></member>
+      <member refid="classUsrSmp_1r1" prot="private" virt="non-virtual"><scope>UsrSmp</scope><name>WasDLE</name></member>
+      <member refid="classUsrSmp_1d1" prot="private" virt="non-virtual"><scope>UsrSmp</scope><name>WriteFaxPage</name></member>
+      <member refid="classSimpleModem_1a1" prot="private" virt="non-virtual"><scope>UsrSmp</scope><name>~SimpleModem</name></member>
+      <member refid="classUsrSmp_1a1" prot="public" virt="non-virtual"><scope>UsrSmp</scope><name>~UsrSmp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

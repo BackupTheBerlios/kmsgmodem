@@ -1,0 +1,134 @@
+/****************************************************************************
+** KMsgModemWidget meta object code from reading C++ file 'kmsgmodemwidget.h'
+**
+** Created: Wed Aug 11 21:19:14 2004
+**      by: The Qt MOC ($Id: kmsgmodemwidget.moc,v 1.1 2004/08/12 16:42:49 wirr Exp $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "kmsgmodemwidget.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.2. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *KMsgModemWidget::className() const
+{
+    return "KMsgModemWidget";
+}
+
+QMetaObject *KMsgModemWidget::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_KMsgModemWidget( "KMsgModemWidget", &KMsgModemWidget::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString KMsgModemWidget::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "KMsgModemWidget", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString KMsgModemWidget::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "KMsgModemWidget", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* KMsgModemWidget::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = KMsgModemWidgetBase::staticMetaObject();
+    static const QUParameter param_slot_0[] = {
+	{ "item", &static_QUType_ptr, "QListViewItem", QUParameter::In }
+    };
+    static const QUMethod slot_0 = {"MessageClicked", 1, param_slot_0 };
+    static const QMetaData slot_tbl[] = {
+	{ "MessageClicked(QListViewItem*)", &slot_0, QMetaData::Protected }
+    };
+    static const QUParameter param_signal_0[] = {
+	{ 0, &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod signal_0 = {"FaxMsgClicked", 1, param_signal_0 };
+    static const QUParameter param_signal_1[] = {
+	{ 0, &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod signal_1 = {"VoiceMsgClicked", 1, param_signal_1 };
+    static const QMetaData signal_tbl[] = {
+	{ "FaxMsgClicked(int)", &signal_0, QMetaData::Protected },
+	{ "VoiceMsgClicked(int)", &signal_1, QMetaData::Protected }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"KMsgModemWidget", parentObject,
+	slot_tbl, 1,
+	signal_tbl, 2,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_KMsgModemWidget.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* KMsgModemWidget::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "KMsgModemWidget" ) )
+	return this;
+    return KMsgModemWidgetBase::qt_cast( clname );
+}
+
+// SIGNAL FaxMsgClicked
+void KMsgModemWidget::FaxMsgClicked( int t0 )
+{
+    activate_signal( staticMetaObject()->signalOffset() + 0, t0 );
+}
+
+// SIGNAL VoiceMsgClicked
+void KMsgModemWidget::VoiceMsgClicked( int t0 )
+{
+    activate_signal( staticMetaObject()->signalOffset() + 1, t0 );
+}
+
+bool KMsgModemWidget::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: MessageClicked((QListViewItem*)static_QUType_ptr.get(_o+1)); break;
+    default:
+	return KMsgModemWidgetBase::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool KMsgModemWidget::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: FaxMsgClicked((int)static_QUType_int.get(_o+1)); break;
+    case 1: VoiceMsgClicked((int)static_QUType_int.get(_o+1)); break;
+    default:
+	return KMsgModemWidgetBase::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool KMsgModemWidget::qt_property( int id, int f, QVariant* v)
+{
+    return KMsgModemWidgetBase::qt_property( id, f, v);
+}
+
+bool KMsgModemWidget::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

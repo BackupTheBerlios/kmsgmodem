@@ -1,0 +1,235 @@
+# translation of de.po to 
+# translation of de.po to
+# translation of de.po to
+# translation of de.po to
+# translation of de.po to
+# translation of de.po to
+# translation of de.po to
+# translation of de.po to
+# Alexander Wiedenbruch <Alexander@Wiedenbruch.de>, 2004.
+# Alexander Wiedenbruch <Alexander@Wiedenbruch.de>, 2004.
+# Alexander Wiedenbruch <Alexander@Wiedenbruch.de>, 2004.
+# Alexander Wiedenbruch <Alexander@Wiedenbruch.de>, 2004.
+
+msgid "&Load messages"
+msgstr "&Lade Nachrichten"
+
+#: kmsgmodem.cpp:49
+msgid "&Unset standalone mode"
+msgstr "&Beende unabhängigen Modus"
+
+#: kmsgmodem.cpp:51
+msgid "&Stop playing voice message"
+msgstr "&Stoppe Wiedergabe"
+
+#: kmsgmodem.cpp:53
+msgid "&Clear modem memory"
+msgstr "Lös&che Modemspeicher"
+
+#: kmsgmodem.cpp:62
+msgid "Starting..."
+msgstr "Starte..."
+
+#: kmsgmodem.cpp:63
+msgid "No new messages"
+msgstr "Keine neuen Nachrichten"
+
+#: kmsgmodem.cpp:64
+msgid "Mem: unknown"
+msgstr "Speicher: unbekannt"
+
+#: kmsgmodem.cpp:126
+msgid "Please check if the modem is connected to the correct port and switched on."
+msgstr ""
+"Bitte überprüfen Sie ob das Modem angeschaltet und an den richtigen Port "
+"angeschlossen ist."
+
+#: kmsgmodem.cpp:140
+msgid "Please check if the modem is connected to the correct port."
+msgstr "Bitte überprüfen Sie ob das Modem an den richtigen Port angeschlossen ist."
+
+#: kmsgmodem.cpp:145
+msgid "Please connect a USR Sportster Message Plus or Professional modem."
+msgstr "Bitte schließen Sie ein USR Sportster Message Plus oder Professional Modem an."
+
+#: kmsgmodem.cpp:162
+msgid "Loading messages..."
+msgstr "Lade Nachrichten..."
+
+#: kmsgmodem.cpp:181
+msgid "Downloading messages..."
+msgstr "Laden Nachrichten runter..."
+
+#: kmsgmodem.cpp:203
+msgid "Fax"
+msgstr "Fax"
+
+#: kmsgmodem.cpp:204
+msgid "Tel"
+msgstr "Tel"
+
+#: kmsgmodem.cpp:217 kmsgmodem.cpp:229
+msgid "unknown"
+msgstr "unbekannt"
+
+#: kmsgmodem.cpp:223
+msgid " pages"
+msgstr " Seiten"
+
+#: kmsgmodem.cpp:224
+msgid " page"
+msgstr " Seite"
+
+#: kmsgmodem.cpp:226
+msgid "s"
+msgstr "s"
+
+#: kmsgmodem.cpp:234
+#, c-format
+msgid "Mem: %1% free"
+msgstr "Speicher: %1% frei"
+
+#: kmsgmodem.cpp:249
+msgid "%1 new message"
+msgstr "%1 neue Nachricht"
+
+#: kmsgmodem.cpp:256
+msgid "Downloading new messages..."
+msgstr "Lade neue Nachrichten vom Modem..."
+
+#: kmsgmodem.cpp:258
+msgid "Idle"
+msgstr "Leerlauf"
+
+#: kmsgmodem.cpp:265
+msgid "There are new messages"
+msgstr "Neue Nachrichten vorhanden"
+
+#: kmsgmodem.cpp:271
+msgid "Showing fax message..."
+msgstr "Zeige Faxnachricht..."
+
+#: kmsgmodem.cpp:298
+msgid "Playing voice message..."
+msgstr "Spiele Sprachnachricht..."
+
+#: kmsgmodem.cpp:365
+msgid "General"
+msgstr "Allgemein"
+
+#: kmsgmodem.cpp:365
+msgid "General Settings"
+msgstr "Allgemeine-Einstellungen"
+
+#: kmsgmodem.cpp:367
+msgid "Connection"
+msgstr "Verbindung"
+
+#: kmsgmodem.cpp:367
+msgid "Connection Settings"
+msgstr "Verbindungs-Einstellungen"
+
+#: kmsgmodem.cpp:377
+msgid "Set standalone mode"
+msgstr "Starte unabhängigen Modus"
+
+#: kmsgmodem.cpp:380
+msgid "Standalone mode unset"
+msgstr "Unabhängiger Modus beendet"
+
+#: kmsgmodem.cpp:385
+msgid "Unset standalone mode"
+msgstr "Beende unabhängigen Modus"
+
+#: kmsgmodem.cpp:388
+msgid "Standalone mode set"
+msgstr "Unabhängiger Modus gestartet"
+
+#: kmsgmodem.cpp:412
+msgid "Are you sure to erase all messages on the modem?"
+msgstr "Sind Sie sicher das alle Nachrichten auf dem Modem gelöschen werden sollen?"
+
+#: main.cpp:31
+msgid "USR Sportster Message Center"
+msgstr "USR Sportster Message Center"
+
+#: main.cpp:43
+msgid "KMsgModem"
+msgstr "KMsgModem"
+
+#: main.cpp:47
+msgid "His previous work saved me much time"
+msgstr "Seine vorherige Arbeit hat mir viel Zeit gespart"
+
+#: main.cpp:48
+msgid "The GSM decompression algos"
+msgstr "Die GSM Dekomprimieralgorithmen"
+
+#: rc.cpp:1
+msgid "&Modem"
+msgstr "&Modem"
+
+#: rc.cpp:2
+msgid "Standard Toolbar"
+msgstr "Standard Werkzeugleiste"
+
+#: rc.cpp:3
+msgid "Message Toolbar"
+msgstr "Nachrichten Werkzeugleiste"
+
+#: rc.cpp:4 rc.cpp:13
+msgid "Form1"
+msgstr "Form1"
+
+#: rc.cpp:5
+msgid "Check for new messages on startup"
+msgstr "Prüfe beim Starten auf neue Nachrichten"
+
+#: rc.cpp:6
+msgid "Set standalone mode on exit"
+msgstr "Starte unabhängigen Modus bei Beenden"
+
+#: rc.cpp:7
+msgid "kmsgmodemwidgetbase"
+msgstr "kmsgmodemwidgetbase"
+
+#: rc.cpp:8
+msgid "#"
+msgstr "#"
+
+#: rc.cpp:9
+msgid "Type"
+msgstr "Typ"
+
+#: rc.cpp:10
+msgid "Date"
+msgstr "Datum"
+
+#: rc.cpp:11
+msgid "Size"
+msgstr "Größe"
+
+#: rc.cpp:12
+msgid "Sender"
+msgstr "Sender"
+
+#: rc.cpp:14
+msgid "Baudrate:"
+msgstr "Baudrate:"
+
+#: rc.cpp:15
+msgid "Device:"
+msgstr "Port:"
+
+#: _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr "Alexander Wiedenbruch"
+
+#: _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr "wirr@abacho.de"
+

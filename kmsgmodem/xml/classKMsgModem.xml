@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.8">
+  <compounddef id="classKMsgModem" kind="class" prot="public">
+    <compoundname>KMsgModem</compoundname>
+    <includes refid="kmsgmodem_8h" local="no">kmsgmodem.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classKMsgModem_1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KMsgModem::KMsgModem</definition>
+        <argsstring>()</argsstring>
+        <name>KMsgModem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="56" bodystart="41" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classKMsgModem_1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>virtual</type>
+        <definition>KMsgModem::~KMsgModem</definition>
+        <argsstring>()</argsstring>
+        <name>~KMsgModem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="61" bodystart="79" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classKMsgModem_1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::setApp</definition>
+        <argsstring>(KApplication *app)</argsstring>
+        <name>setApp</name>
+        <param>
+          <type>KApplication *</type>
+          <declname>app</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="63" bodystart="92" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classKMsgModem_1d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::NewMessage</definition>
+        <argsstring>()</argsstring>
+        <name>NewMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="66" bodystart="243" bodyend="266"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classKMsgModem_1r0" prot="private" static="no" volatile="no" mutable="no">
+        <type>KMsgModemWidget *</type>
+        <definition>KMsgModemWidget* KMsgModem::mainWidget</definition>
+        <argsstring></argsstring>
+        <name>mainWidget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="68" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKMsgModem_1r1" prot="private" static="no" volatile="no" mutable="no">
+        <type><ref refid="classUsrSmpThread" kindref="compound">UsrSmpThread</ref> *</type>
+        <definition>UsrSmpThread* KMsgModem::modem</definition>
+        <argsstring></argsstring>
+        <name>modem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="70" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKMsgModem_1r2" prot="private" static="no" volatile="no" mutable="no">
+        <type>KStatusBar *</type>
+        <definition>KStatusBar* KMsgModem::statusbar</definition>
+        <argsstring></argsstring>
+        <name>statusbar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="72" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKMsgModem_1r3" prot="private" static="no" volatile="no" mutable="no">
+        <type>KAction *</type>
+        <definition>KAction* KMsgModem::standaloneToogle</definition>
+        <argsstring></argsstring>
+        <name>standaloneToogle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="74" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKMsgModem_1r4" prot="private" static="no" volatile="no" mutable="no">
+        <type>KAction *</type>
+        <definition>KAction* KMsgModem::stop</definition>
+        <argsstring></argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="75" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKMsgModem_1r5" prot="private" static="no" volatile="no" mutable="no">
+        <type>KAction *</type>
+        <definition>KAction* KMsgModem::reload</definition>
+        <argsstring></argsstring>
+        <name>reload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="76" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKMsgModem_1r6" prot="private" static="no" volatile="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KMsgModem::standaloneModeActive</definition>
+        <argsstring></argsstring>
+        <name>standaloneModeActive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="78" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKMsgModem_1r7" prot="private" static="no" volatile="no" mutable="no">
+        <type>KApplication *</type>
+        <definition>KApplication* KMsgModem::application</definition>
+        <argsstring></argsstring>
+        <name>application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="80" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="classKMsgModem_1k0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::Startup</definition>
+        <argsstring>()</argsstring>
+        <name>Startup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="83" bodystart="97" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="slot" id="classKMsgModem_1k1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::LoadMessages</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMessages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="85" bodystart="160" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="slot" id="classKMsgModem_1k2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::ShowFax</definition>
+        <argsstring>(int Fax)</argsstring>
+        <name>ShowFax</name>
+        <param>
+          <type>int</type>
+          <declname>Fax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="87" bodystart="269" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="slot" id="classKMsgModem_1k3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::PlayVoice</definition>
+        <argsstring>(int Voice)</argsstring>
+        <name>PlayVoice</name>
+        <param>
+          <type>int</type>
+          <declname>Voice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="89" bodystart="296" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="slot" id="classKMsgModem_1k4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::ConvGsmExited</definition>
+        <argsstring>(KProcess *proc)</argsstring>
+        <name>ConvGsmExited</name>
+        <param>
+          <type>KProcess *</type>
+          <declname>proc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="91" bodystart="323" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="slot" id="classKMsgModem_1k5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::showSettings</definition>
+        <argsstring>()</argsstring>
+        <name>showSettings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="93" bodystart="357" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="slot" id="classKMsgModem_1k6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::ToogleStandaloneMode</definition>
+        <argsstring>()</argsstring>
+        <name>ToogleStandaloneMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="95" bodystart="372" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="slot" id="classKMsgModem_1k7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::SetStatusbarText</definition>
+        <argsstring>(QString text=i18n(&quot;Idle&quot;), int item=0, bool WithTimeout=false)</argsstring>
+        <name>SetStatusbarText</name>
+        <param>
+          <type>QString</type>
+          <declname>text</declname>
+          <defval>i18n(&quot;Idle&quot;)</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>item</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>WithTimeout</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="97" bodystart="392" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="slot" id="classKMsgModem_1k8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::StopPlayingVoice</definition>
+        <argsstring>()</argsstring>
+        <name>StopPlayingVoice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="99" bodystart="402" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="slot" id="classKMsgModem_1k9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KMsgModem::ClearMemory</definition>
+        <argsstring>()</argsstring>
+        <name>ClearMemory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="101" bodystart="410" bodyend="420"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Application Main Window. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexander Wiedenbruch &lt;<ulink url="mailto:wirr@abacho.de">wirr@abacho.de</ulink>&gt; </para></simplesect>
+<simplesect kind="version"><para>0.1 </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="12">
+        <label>UsrSmpThread</label>
+        <link refid="classUsrSmpThread"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>simplemodem</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>KMsgModem</label>
+        <link refid="classKMsgModem"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>modem</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Connection</label>
+        <link refid="classConnection"/>
+      </node>
+      <node id="13">
+        <label>SimpleModem</label>
+        <link refid="classSimpleModem"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>port</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/kmsgmodem.h" line="50" bodystart="49" bodyend="102"/>
+    <listofallmembers>
+      <member refid="classKMsgModem_1r7" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>application</name></member>
+      <member refid="classKMsgModem_1k9" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>ClearMemory</name></member>
+      <member refid="classKMsgModem_1k4" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>ConvGsmExited</name></member>
+      <member refid="classKMsgModem_1a0" prot="public" virt="non-virtual"><scope>KMsgModem</scope><name>KMsgModem</name></member>
+      <member refid="classKMsgModem_1k1" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>LoadMessages</name></member>
+      <member refid="classKMsgModem_1r0" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>mainWidget</name></member>
+      <member refid="classKMsgModem_1r1" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>modem</name></member>
+      <member refid="classKMsgModem_1d0" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>NewMessage</name></member>
+      <member refid="classKMsgModem_1k3" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>PlayVoice</name></member>
+      <member refid="classKMsgModem_1r5" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>reload</name></member>
+      <member refid="classKMsgModem_1a2" prot="public" virt="non-virtual"><scope>KMsgModem</scope><name>setApp</name></member>
+      <member refid="classKMsgModem_1k7" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>SetStatusbarText</name></member>
+      <member refid="classKMsgModem_1k2" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>ShowFax</name></member>
+      <member refid="classKMsgModem_1k5" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>showSettings</name></member>
+      <member refid="classKMsgModem_1r6" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>standaloneModeActive</name></member>
+      <member refid="classKMsgModem_1r3" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>standaloneToogle</name></member>
+      <member refid="classKMsgModem_1k0" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>Startup</name></member>
+      <member refid="classKMsgModem_1r2" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>statusbar</name></member>
+      <member refid="classKMsgModem_1r4" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>stop</name></member>
+      <member refid="classKMsgModem_1k8" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>StopPlayingVoice</name></member>
+      <member refid="classKMsgModem_1k6" prot="private" virt="non-virtual"><scope>KMsgModem</scope><name>ToogleStandaloneMode</name></member>
+      <member refid="classKMsgModem_1a1" prot="public" virt="virtual"><scope>KMsgModem</scope><name>~KMsgModem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

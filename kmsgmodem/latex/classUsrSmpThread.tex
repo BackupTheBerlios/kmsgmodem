@@ -1,0 +1,139 @@
+\section{Usr\-Smp\-Thread Class Reference}
+\label{classUsrSmpThread}\index{UsrSmpThread@{UsrSmpThread}}
+{\tt \#include $<$usrsmpthread.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Usr\-Smp\-Thread} (QString interface, QString baud)
+\begin{CompactList}\small\item\em C'tor. \item\end{CompactList}\item 
+{\bf $\sim$Usr\-Smp\-Thread} ()
+\begin{CompactList}\small\item\em D'tor. \item\end{CompactList}\item 
+void {\bf Init\-Modem} ()
+\begin{CompactList}\small\item\em This function inits the modem. \item\end{CompactList}\item 
+void {\bf Read\-Memory\-Info} ()
+\begin{CompactList}\small\item\em Gets memory and message informations from the modem. \item\end{CompactList}\item 
+void {\bf run} ()\label{classUsrSmpThread_a4}
+
+\begin{CompactList}\small\item\em This is the function which runs in the new thread. \item\end{CompactList}\item 
+void {\bf Load\-Messages} ()
+\begin{CompactList}\small\item\em This function load the stored messages to a temporary file. \item\end{CompactList}\item 
+void {\bf Play\-Voice\-File} ()\label{classUsrSmpThread_a6}
+
+\begin{CompactList}\small\item\em Plays the voice file. \item\end{CompactList}\item 
+void {\bf Clear\-Memory} ()
+\begin{CompactList}\small\item\em Deletes all messages. \item\end{CompactList}\item 
+int {\bf Get\-Init\-Error} ()\label{classUsrSmpThread_a8}
+
+\begin{CompactList}\small\item\em Returns the error wich happens in init. \item\end{CompactList}\item 
+Memory\-Info {\bf Get\-Memory\-Info} ()\label{classUsrSmpThread_a9}
+
+\begin{CompactList}\small\item\em Returns information about the memory. \item\end{CompactList}\item 
+QPtr\-List$<$ struct Message\-Info $>$ {\bf Get\-Msg\-Info} ()\label{classUsrSmpThread_a10}
+
+\begin{CompactList}\small\item\em Returns information about all messages. \item\end{CompactList}\item 
+Message\-Info {\bf Get\-Msg\-Info} (unsigned int index)\label{classUsrSmpThread_a11}
+
+\begin{CompactList}\small\item\em Returns information about the specified Message. \item\end{CompactList}\item 
+int {\bf Write\-Fax\-Page} (FILE $\ast$msg\-File, unsigned char c)
+\begin{CompactList}\small\item\em This function splits a stored fax message into tif files. \item\end{CompactList}\item 
+int {\bf Get\-Message} (int Message)
+\begin{CompactList}\small\item\em This function gets the specified message from the temporary file. \item\end{CompactList}\item 
+int {\bf Un\-Set\-Stand\-Alone\-Mode} ()
+\begin{CompactList}\small\item\em Unsets stand alone mode for a USR modem. \item\end{CompactList}\item 
+int {\bf Set\-Stand\-Alone\-Mode} ()
+\begin{CompactList}\small\item\em Sets stand alone mode for a USR modem. \item\end{CompactList}\item 
+int {\bf Get\-Modem\-Type} ()\label{classUsrSmpThread_a16}
+
+\begin{CompactList}\small\item\em Returns the modem type. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Alexander Wiedenbruch \end{Desc}
+
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{UsrSmpThread@{Usr\-Smp\-Thread}!UsrSmpThread@{UsrSmpThread}}
+\index{UsrSmpThread@{UsrSmpThread}!UsrSmpThread@{Usr\-Smp\-Thread}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Usr\-Smp\-Thread::Usr\-Smp\-Thread (QString {\em interface}, QString {\em baud})}\label{classUsrSmpThread_a0}
+
+
+C'tor. 
+
+Not much in here \index{UsrSmpThread@{Usr\-Smp\-Thread}!~UsrSmpThread@{$\sim$UsrSmpThread}}
+\index{~UsrSmpThread@{$\sim$UsrSmpThread}!UsrSmpThread@{Usr\-Smp\-Thread}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Usr\-Smp\-Thread::$\sim${\bf Usr\-Smp\-Thread} ()}\label{classUsrSmpThread_a1}
+
+
+D'tor. 
+
+Not much in here 
+
+\subsection{Member Function Documentation}
+\index{UsrSmpThread@{Usr\-Smp\-Thread}!ClearMemory@{ClearMemory}}
+\index{ClearMemory@{ClearMemory}!UsrSmpThread@{Usr\-Smp\-Thread}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Usr\-Smp\-Thread::Clear\-Memory ()}\label{classUsrSmpThread_a7}
+
+
+Deletes all messages. 
+
+Look in Clear\-Memory\-Private for the code \index{UsrSmpThread@{Usr\-Smp\-Thread}!GetMessage@{GetMessage}}
+\index{GetMessage@{GetMessage}!UsrSmpThread@{Usr\-Smp\-Thread}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Usr\-Smp\-Thread::Get\-Message (int {\em Message})}\label{classUsrSmpThread_a13}
+
+
+This function gets the specified message from the temporary file. 
+
+Partly (C) T. Uhlmann from usrmodem.cpp \index{UsrSmpThread@{Usr\-Smp\-Thread}!InitModem@{InitModem}}
+\index{InitModem@{InitModem}!UsrSmpThread@{Usr\-Smp\-Thread}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Usr\-Smp\-Thread::Init\-Modem ()}\label{classUsrSmpThread_a2}
+
+
+This function inits the modem. 
+
+Look in Init\-Modem\-Private for the code \index{UsrSmpThread@{Usr\-Smp\-Thread}!LoadMessages@{LoadMessages}}
+\index{LoadMessages@{LoadMessages}!UsrSmpThread@{Usr\-Smp\-Thread}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Usr\-Smp\-Thread::Load\-Messages ()}\label{classUsrSmpThread_a5}
+
+
+This function load the stored messages to a temporary file. 
+
+Look in Load\-Messages\-Private for the code \index{UsrSmpThread@{Usr\-Smp\-Thread}!ReadMemoryInfo@{ReadMemoryInfo}}
+\index{ReadMemoryInfo@{ReadMemoryInfo}!UsrSmpThread@{Usr\-Smp\-Thread}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Usr\-Smp\-Thread::Read\-Memory\-Info ()}\label{classUsrSmpThread_a3}
+
+
+Gets memory and message informations from the modem. 
+
+This function gets information about the memory first. After that it gets the information about all stored messages
+
+Look in\-Read\-Memory\-Info\-Private for the code \index{UsrSmpThread@{Usr\-Smp\-Thread}!SetStandAloneMode@{SetStandAloneMode}}
+\index{SetStandAloneMode@{SetStandAloneMode}!UsrSmpThread@{Usr\-Smp\-Thread}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Usr\-Smp\-Thread::Set\-Stand\-Alone\-Mode ()}\label{classUsrSmpThread_a15}
+
+
+Sets stand alone mode for a USR modem. 
+
+Partly (C) T. Uhlmann from usrmodem.cpp \index{UsrSmpThread@{Usr\-Smp\-Thread}!UnSetStandAloneMode@{UnSetStandAloneMode}}
+\index{UnSetStandAloneMode@{UnSetStandAloneMode}!UsrSmpThread@{Usr\-Smp\-Thread}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Usr\-Smp\-Thread::Un\-Set\-Stand\-Alone\-Mode ()}\label{classUsrSmpThread_a14}
+
+
+Unsets stand alone mode for a USR modem. 
+
+Partly (C) T. Uhlmann from usrmodem.cpp \index{UsrSmpThread@{Usr\-Smp\-Thread}!WriteFaxPage@{WriteFaxPage}}
+\index{WriteFaxPage@{WriteFaxPage}!UsrSmpThread@{Usr\-Smp\-Thread}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Usr\-Smp\-Thread::Write\-Fax\-Page (FILE $\ast$ {\em msg\-File}, unsigned char {\em c})}\label{classUsrSmpThread_a12}
+
+
+This function splits a stored fax message into tif files. 
+
+(C) T. Uhlmann from usrmodem.cpp 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+usrsmpthread.h\item 
+usrsmpthread.cpp\end{CompactItemize}

@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.8">
+  <compounddef id="structMessageInfo" kind="struct" prot="public">
+    <compoundname>MessageInfo</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMessageInfo_1o0" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MessageInfo::MsgNumber</definition>
+        <argsstring></argsstring>
+        <name>MsgNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="57" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMessageInfo_1o1" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MessageInfo::MsgType</definition>
+        <argsstring></argsstring>
+        <name>MsgType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="58" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMessageInfo_1o2" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MessageInfo::MsgSize</definition>
+        <argsstring></argsstring>
+        <name>MsgSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="59" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMessageInfo_1o3" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MessageInfo::MsgAttribute</definition>
+        <argsstring></argsstring>
+        <name>MsgAttribute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="60" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMessageInfo_1o4" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MessageInfo::MsgStatus</definition>
+        <argsstring></argsstring>
+        <name>MsgStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="61" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMessageInfo_1o5" prot="public" static="no" volatile="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MessageInfo::ClockValid</definition>
+        <argsstring></argsstring>
+        <name>ClockValid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="62" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMessageInfo_1o6" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MessageInfo::ReceiveDay</definition>
+        <argsstring></argsstring>
+        <name>ReceiveDay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="63" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMessageInfo_1o7" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MessageInfo::ReceiveHour</definition>
+        <argsstring></argsstring>
+        <name>ReceiveHour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="64" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMessageInfo_1o8" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MessageInfo::ReceiveMinute</definition>
+        <argsstring></argsstring>
+        <name>ReceiveMinute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="65" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMessageInfo_1o9" prot="public" static="no" volatile="no" mutable="no">
+        <type>QString</type>
+        <definition>QString MessageInfo::CallerId</definition>
+        <argsstring></argsstring>
+        <name>CallerId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="66" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMessageInfo_1o10" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MessageInfo::MemStartPage</definition>
+        <argsstring></argsstring>
+        <name>MemStartPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="67" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMessageInfo_1o11" prot="public" static="no" volatile="no" mutable="no">
+        <type>int</type>
+        <definition>int MessageInfo::MemAddress</definition>
+        <argsstring></argsstring>
+        <name>MemAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="68" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/usrsmpthread.h" line="56" bodystart="55" bodyend="69"/>
+    <listofallmembers>
+      <member refid="structMessageInfo_1o9" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>CallerId</name></member>
+      <member refid="structMessageInfo_1o5" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>ClockValid</name></member>
+      <member refid="structMessageInfo_1o11" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>MemAddress</name></member>
+      <member refid="structMessageInfo_1o10" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>MemStartPage</name></member>
+      <member refid="structMessageInfo_1o3" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>MsgAttribute</name></member>
+      <member refid="structMessageInfo_1o0" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>MsgNumber</name></member>
+      <member refid="structMessageInfo_1o2" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>MsgSize</name></member>
+      <member refid="structMessageInfo_1o4" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>MsgStatus</name></member>
+      <member refid="structMessageInfo_1o1" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>MsgType</name></member>
+      <member refid="structMessageInfo_1o6" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>ReceiveDay</name></member>
+      <member refid="structMessageInfo_1o7" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>ReceiveHour</name></member>
+      <member refid="structMessageInfo_1o8" prot="public" virt="non-virtual"><scope>MessageInfo</scope><name>ReceiveMinute</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
