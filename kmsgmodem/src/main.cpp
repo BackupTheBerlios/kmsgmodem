@@ -35,7 +35,7 @@
 static const char description[] =
     I18N_NOOP("USR Sportster Message Center");
 
-static const char version[] = "0.2";
+static const char version[] = "0.3";
 
 static KCmdLineOptions options[] =
 {
@@ -49,8 +49,8 @@ int main(int argc, char **argv)
                      KAboutData::License_GPL, "(C) 2004 Alexander Wiedenbruch", 0, 0, "wirr@abacho.de");
     about.addAuthor("Alexander Wiedenbruch", 0, "wirr@abacho.de");
 	
-	about.addCredit("Torsten Uhlmann", I18N_NOOP("His previous work saved me much time"), "TUhlmann@gmx.de", 0);
-	about.addCredit("Jutta Degener, Carsten Bormann", I18N_NOOP("The GSM decompression algos"), 0, "http://kbs.cs.tu-berlin.de/~jutta/toast.html");
+	about.addCredit("Torsten Uhlmann", I18N_NOOP("His previous work saved me much time"), 0, 0);
+	about.addCredit("Chris Bagwell", I18N_NOOP("Thanks for SoX"), 0, "http://sox.sourceforge.net/");
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions( options );
     KUniqueApplication app;
