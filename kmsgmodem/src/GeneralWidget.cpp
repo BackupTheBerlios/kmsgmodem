@@ -1,9 +1,9 @@
 #include <klocale.h>
 /****************************************************************************
-** Form implementation generated from reading ui file './GeneralWidget.ui'
+** Form implementation generated from reading ui file '/home/wirr/Dokumente/Programme/Projekte/KMsgModem/kmsgmodem/src/GeneralWidget.ui'
 **
-** Created: Mon Aug 23 23:43:39 2004
-**      by: The User Interface Compiler ($Id: GeneralWidget.cpp,v 1.6 2004/08/23 21:54:23 wirr Exp $)
+** Created: Thu Aug 26 15:42:45 2004
+**      by: The User Interface Compiler ($Id: GeneralWidget.cpp,v 1.7 2004/08/26 14:01:35 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/

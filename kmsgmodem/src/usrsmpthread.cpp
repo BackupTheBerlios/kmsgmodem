@@ -191,22 +191,16 @@ int UsrSmpThread::DetectModemType()
 	
 	if ((!resp.contains("message",false)) && (!resp.contains("msg",false)))
 	{
-		#ifdef DEBUG_USR
-			kdDebug(0) << "Neither Message nor Message Professional: " << resp << endl;
-		#endif
+		kdDebug() << "Neither Message nor Message Professional: " << resp << endl;
 		return UNSPECIFIED;
 	}
 	if (resp.contains("pro",false))
 	{
-		#ifdef DEBUG_USR
-			kdDebug(0) << "Professional Message Modem: " << resp << endl;
-		#endif
+		kdDebug() << "Professional Message Modem: " << resp << endl;
 		return PROFESSIONAL;
 	}
 	
-	#ifdef DEBUG_USR
-		kdDebug(0) << "Normal Message Modem: " << resp << endl;
-	#endif
+	kdDebug() << "Normal Message Modem: " << resp << endl;
 	return NORMAL;
 }
 
@@ -244,10 +238,7 @@ int UsrSmpThread::ReadMemoryInfoThread()
 	MemInfoString = MemInfoString.remove("\r");
 	MemInfoString = MemInfoString.remove("OK");
 	
-	#ifdef DEBUG_USR
-		kdDebug(0) << "Memory info string: " << MemInfoString << endl;
-	#endif
-	
+	kdDebug() << "Memory info string: " << MemInfoString << endl;
 			
 	MemInfo.MemSize = MemInfoString.mid(0,3).toInt();
 	
@@ -266,7 +257,7 @@ int UsrSmpThread::ReadMemoryInfoThread()
 	MemInfo.StoredMsgs = MemInfo.VoiceMsgs + MemInfo.FaxMsgs;
 	
 	#ifdef DEBUG_USR
-		kdDebug(0)  << "\nMemory Size:\t\t" << MemInfo.MemSize
+		kdDebug()  << "\nMemory Size:\t\t" << MemInfo.MemSize
 		  			<< "\nMemory Used:\t\t" << MemInfo.MemUsed
 					<< "\nVoice Messages:\t\t" << MemInfo.VoiceMsgs
 					<< "\nUnreleased Voice Messages:\t\t" << MemInfo.UnreleasedVoiceMsgs
@@ -277,8 +268,7 @@ int UsrSmpThread::ReadMemoryInfoThread()
 	
 	//
 	// Get infos about messages
-	//
-	
+	//	
 	MsgInfoList.setAutoDelete(true);
 	MsgInfoList.clear();
 			
@@ -300,7 +290,7 @@ int UsrSmpThread::ReadMemoryInfoThread()
 		MsgInfoString = MsgInfoString.remove("OK");
 	
 		#ifdef DEBUG_USR
-			kdDebug(0) << "Message info string: " << MsgInfoString << endl;
+			kdDebug() << "Message info string: " << MsgInfoString << endl;
 		#endif
 				
 		MessageInfo *MsgInfo = new MessageInfo;
@@ -352,7 +342,7 @@ int UsrSmpThread::ReadMemoryInfoThread()
 		#ifdef DEBUG_USR
 			if(MsgInfo->ClockValid)
 			{
-				kdDebug(0)  << "\nMessage Number:\t\t" << MsgInfo->MsgNumber
+				kdDebug()  << "\nMessage Number:\t\t" << MsgInfo->MsgNumber
 							<< "\nMessage Type:\t\t" << MsgInfo->MsgType
 							<< "\nMessage Size:\t\t" << MsgInfo->MsgSize
 							<< "\nMessage Attribute:\t\t" << MsgInfo->MsgAttribute
@@ -364,7 +354,7 @@ int UsrSmpThread::ReadMemoryInfoThread()
 			}
 			else
 			{
-				kdDebug(0)  << "\nMessage Number:\t\t" << MsgInfo->MsgNumber
+				kdDebug()  << "\nMessage Number:\t\t" << MsgInfo->MsgNumber
 							<< "\nMessage Type:\t\t" << MsgInfo->MsgType
 							<< "\nMessage Attribute:\t\t" << MsgInfo->MsgAttribute
 							<< "\nCaller Id:\t\t" << MsgInfo->CallerId
@@ -478,9 +468,7 @@ int UsrSmpThread::GetMessage(int Message)
 
  	if(found)
 	{
-  		#ifdef DEBUG_USR
-			kdDebug(0) << "Message found: " << (int)hdr.Index << endl;
-		#endif
+		kdDebug() << "Message found: " << (int)hdr.Index << endl;
 				
 		MsgAdr = hdr.NextAddr1 * 256;
 		MsgAdr += hdr.NextAddr2;
@@ -687,7 +675,7 @@ time_t UsrSmpThread::GetModemClock()
 	resp = resp.remove("OK");
 	
 	#ifdef DEBUG_USR
-		kdDebug(0) << resp << endl;
+		kdDebug() << resp << endl;
 	#endif
 	
 	int Day = resp.mid(0,3).toInt();
@@ -732,7 +720,7 @@ QString UsrSmpThread::GetFaxId()
 	resp = resp.remove("\"");
 	
 	#ifdef DEBUG_USR
-		kdDebug(0) << resp << endl;
+		kdDebug() << resp << endl;
 	#endif
 	
 	return resp;
@@ -768,7 +756,7 @@ int UsrSmpThread::GetRingSetup()
 	resp = resp.remove("\"");
 	
 	#ifdef DEBUG_USR
-		kdDebug(0) << resp << endl;
+		kdDebug() << resp << endl;
 	#endif
 	
 	return resp.toInt();
@@ -798,7 +786,7 @@ bool UsrSmpThread::GetDailupRetrivalStatus()
 	QString resp = simplemodem->SendCommand("AT+MCD?");
 	
 	#ifdef DEBUG_USR
-		kdDebug(0) << resp << endl;
+		kdDebug() << resp << endl;
 	#endif
 	
 	if(resp.find("0") != -1) return false;
@@ -838,7 +826,7 @@ QString UsrSmpThread::GetDialupPassword()
 	resp = resp.remove("OK");
 	
 	#ifdef DEBUG_USR
-		kdDebug(0) << resp << endl;
+		kdDebug() << resp << endl;
 	#endif
 	
 	if(resp.isEmpty()) return QString::null;	// untested, should work
@@ -881,7 +869,7 @@ bool UsrSmpThread::GetFaxReceptionStatus()
 	QString resp = simplemodem->SendCommand("AT+MCF?");
 	
 	#ifdef DEBUG_USR
-		kdDebug(0) << resp << endl;
+		kdDebug() << resp << endl;
 	#endif
 	
 	if(resp.find("0") != -1) return false;
@@ -917,7 +905,7 @@ bool UsrSmpThread::GetVoiceReceptionStatus()
 	QString resp = simplemodem->SendCommand("AT+MCV?");
 	
 	#ifdef DEBUG_USR
-		kdDebug(0) << resp << endl;
+		kdDebug() << resp << endl;
 	#endif
 	
 	if(resp.find("0") != -1) return false;

@@ -25,8 +25,6 @@
 
 #include "simplemodem.h"
 
-#define DEBUG_USR
-
 #define NORMAL			1
 #define PROFESSIONAL	2
 #define UNSPECIFIED		3

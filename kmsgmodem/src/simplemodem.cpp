@@ -133,7 +133,7 @@ void SimpleModem::ReadMemoryToFile(FILE *fd)
 		if(rc < 0) return;
 		else
 		{
-			//kdDebug(0) << "fputc " << (unsigned char)rc << endl;
+			//kdDebug() << "fputc " << (unsigned char)rc << endl;
 			if(count > 2) fputc((unsigned char) rc, fd);
 			count++;
 			if(count >= MODEM_USR_PAGE + 2) count = 1;

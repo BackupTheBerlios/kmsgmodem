@@ -71,10 +71,6 @@ Connection::Connection(QString interface, QString baud) : interface(interface)
   		baudrate = B230400;
   	} 
 	else baudrate = DEFAULT_BAUDRATE;
-	
-	#ifdef DEBUG_CON
-		kdDebug(0) << "baudrate: " << baudrate << endl;
-	#endif	
 
 	//
 	// Open the device and check if it's a tty
@@ -94,9 +90,7 @@ Connection::Connection(QString interface, QString baud) : interface(interface)
 		return;
 	}
 	
-	#ifdef DEBUG_CON
-		kdDebug(0) << this->interface << " open" << endl;
-	#endif
+	kdDebug() << this->interface << " open" << endl;
 			
 	//
 	// lock the tty, so we can use ist exculsively
@@ -162,9 +156,7 @@ int Connection::Write(QString command)
 		return 1;
 	}
 	
-	#ifdef DEBUG_CON
-		kdDebug(0) << "sent " << command << endl;
-	#endif
+	kdDebug() << "sent " << command << endl;
 	
 	return 0;
 }
@@ -193,9 +185,7 @@ QString Connection::Read()
 
 	QString response(buf);
 	
-	#ifdef DEBUG_CON
-		kdDebug(0) << "received " << response << endl;
-	#endif
+	kdDebug() << "received " << response << endl;
 	
 	return response;
 }
