@@ -1,14 +1,16 @@
 <?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.3.8">
   <compound refid="classConfig" kind="class"><name>Config</name>
-    <member refid="classConfig_1a0" kind="function"><name>Config</name></member>
-    <member refid="classConfig_1a1" kind="function"><name>~Config</name></member>
+    <member refid="classConfig_1a0" kind="function"><name>~Config</name></member>
     <member refid="classConfig_1o0" kind="variable"><name>SetStandAloneModeOnExit</name></member>
     <member refid="classConfig_1o1" kind="variable"><name>CheckOnStart</name></member>
     <member refid="classConfig_1o2" kind="variable"><name>Baudrate</name></member>
     <member refid="classConfig_1o3" kind="variable"><name>Port</name></member>
     <member refid="classConfig_1o4" kind="variable"><name>NoOfFaxMsgs</name></member>
     <member refid="classConfig_1o5" kind="variable"><name>NoOfVoiceMsgs</name></member>
+    <member refid="classConfig_1e0" kind="function"><name>Self</name></member>
+    <member refid="classConfig_1b0" kind="function"><name>Config</name></member>
+    <member refid="classConfig_1v0" kind="variable"><name>instance</name></member>
   </compound>
   <compound refid="classConnection" kind="class"><name>Connection</name>
     <member refid="classConnection_1a0" kind="function"><name>Connection</name></member>
@@ -28,10 +30,16 @@
   <compound refid="classGeneral" kind="class"><name>General</name>
     <member refid="classGeneral_1a0" kind="function"><name>General</name></member>
     <member refid="classGeneral_1a1" kind="function"><name>~General</name></member>
+    <member refid="classGeneral_1a2" kind="function"><name>General</name></member>
+    <member refid="classGeneral_1a3" kind="function"><name>~General</name></member>
     <member refid="classGeneral_1o0" kind="variable"><name>kcfg_CheckOnStart</name></member>
     <member refid="classGeneral_1o1" kind="variable"><name>kcfg_SetStandAloneModeOnExit</name></member>
+    <member refid="classGeneral_1o2" kind="variable"><name>kcfg_CheckOnStart</name></member>
+    <member refid="classGeneral_1o3" kind="variable"><name>kcfg_SetStandAloneModeOnExit</name></member>
     <member refid="classGeneral_1p0" kind="variable"><name>GeneralLayout</name></member>
+    <member refid="classGeneral_1p1" kind="variable"><name>GeneralLayout</name></member>
     <member refid="classGeneral_1j0" kind="slot"><name>languageChange</name></member>
+    <member refid="classGeneral_1j1" kind="slot"><name>languageChange</name></member>
   </compound>
   <compound refid="classGeneralSettings" kind="class"><name>GeneralSettings</name>
     <member refid="classGeneralSettings_1a0" kind="function"><name>GeneralSettings</name></member>
@@ -57,7 +65,7 @@
   <compound refid="classKMsgModem" kind="class"><name>KMsgModem</name>
     <member refid="classKMsgModem_1a0" kind="function"><name>KMsgModem</name></member>
     <member refid="classKMsgModem_1a1" kind="function"><name>~KMsgModem</name></member>
-    <member refid="classKMsgModem_1a2" kind="function"><name>setApp</name></member>
+    <member refid="classKMsgModem_1a2" kind="function"><name>Startup</name></member>
     <member refid="classKMsgModem_1d0" kind="function"><name>NewMessage</name></member>
     <member refid="classKMsgModem_1r0" kind="variable"><name>mainWidget</name></member>
     <member refid="classKMsgModem_1r1" kind="variable"><name>modem</name></member>
@@ -65,18 +73,23 @@
     <member refid="classKMsgModem_1r3" kind="variable"><name>standaloneToogle</name></member>
     <member refid="classKMsgModem_1r4" kind="variable"><name>stop</name></member>
     <member refid="classKMsgModem_1r5" kind="variable"><name>reload</name></member>
-    <member refid="classKMsgModem_1r6" kind="variable"><name>standaloneModeActive</name></member>
-    <member refid="classKMsgModem_1r7" kind="variable"><name>application</name></member>
-    <member refid="classKMsgModem_1k0" kind="slot"><name>Startup</name></member>
-    <member refid="classKMsgModem_1k1" kind="slot"><name>LoadMessages</name></member>
-    <member refid="classKMsgModem_1k2" kind="slot"><name>ShowFax</name></member>
-    <member refid="classKMsgModem_1k3" kind="slot"><name>PlayVoice</name></member>
-    <member refid="classKMsgModem_1k4" kind="slot"><name>ConvGsmExited</name></member>
-    <member refid="classKMsgModem_1k5" kind="slot"><name>showSettings</name></member>
-    <member refid="classKMsgModem_1k6" kind="slot"><name>ToogleStandaloneMode</name></member>
-    <member refid="classKMsgModem_1k7" kind="slot"><name>SetStatusbarText</name></member>
-    <member refid="classKMsgModem_1k8" kind="slot"><name>StopPlayingVoice</name></member>
-    <member refid="classKMsgModem_1k9" kind="slot"><name>ClearMemory</name></member>
+    <member refid="classKMsgModem_1r6" kind="variable"><name>clearmemory</name></member>
+    <member refid="classKMsgModem_1r7" kind="variable"><name>saveas</name></member>
+    <member refid="classKMsgModem_1r8" kind="variable"><name>standaloneModeActive</name></member>
+    <member refid="classKMsgModem_1r9" kind="variable"><name>application</name></member>
+    <member refid="classKMsgModem_1r10" kind="variable"><name>dispatcher</name></member>
+    <member refid="classKMsgModem_1r11" kind="variable"><name>server</name></member>
+    <member refid="classKMsgModem_1r12" kind="variable"><name>playobj</name></member>
+    <member refid="classKMsgModem_1r13" kind="variable"><name>selectedMessage</name></member>
+    <member refid="classKMsgModem_1k0" kind="slot"><name>LoadMessages</name></member>
+    <member refid="classKMsgModem_1k1" kind="slot"><name>ShowFax</name></member>
+    <member refid="classKMsgModem_1k2" kind="slot"><name>PlayVoice</name></member>
+    <member refid="classKMsgModem_1k3" kind="slot"><name>showSettings</name></member>
+    <member refid="classKMsgModem_1k4" kind="slot"><name>ToogleStandaloneMode</name></member>
+    <member refid="classKMsgModem_1k5" kind="slot"><name>SetStatusbarText</name></member>
+    <member refid="classKMsgModem_1k6" kind="slot"><name>StopPlayingVoice</name></member>
+    <member refid="classKMsgModem_1k7" kind="slot"><name>ClearMemory</name></member>
+    <member refid="classKMsgModem_1k8" kind="slot"><name>SaveFile</name></member>
   </compound>
   <compound refid="classKMsgModemWidget" kind="class"><name>KMsgModemWidget</name>
     <member refid="classKMsgModemWidget_1a0" kind="function"><name>KMsgModemWidget</name></member>
@@ -88,10 +101,16 @@
   <compound refid="classKMsgModemWidgetBase" kind="class"><name>KMsgModemWidgetBase</name>
     <member refid="classKMsgModemWidgetBase_1a0" kind="function"><name>KMsgModemWidgetBase</name></member>
     <member refid="classKMsgModemWidgetBase_1a1" kind="function"><name>~KMsgModemWidgetBase</name></member>
+    <member refid="classKMsgModemWidgetBase_1a2" kind="function"><name>KMsgModemWidgetBase</name></member>
+    <member refid="classKMsgModemWidgetBase_1a3" kind="function"><name>~KMsgModemWidgetBase</name></member>
     <member refid="classKMsgModemWidgetBase_1o0" kind="variable"><name>MessageView</name></member>
+    <member refid="classKMsgModemWidgetBase_1o1" kind="variable"><name>MessageView</name></member>
     <member refid="classKMsgModemWidgetBase_1i0" kind="slot"><name>MessageClicked</name></member>
+    <member refid="classKMsgModemWidgetBase_1i1" kind="slot"><name>MessageClicked</name></member>
     <member refid="classKMsgModemWidgetBase_1p0" kind="variable"><name>kmsgmodemwidgetbaseLayout</name></member>
+    <member refid="classKMsgModemWidgetBase_1p1" kind="variable"><name>kmsgmodemwidgetbaseLayout</name></member>
     <member refid="classKMsgModemWidgetBase_1j0" kind="slot"><name>languageChange</name></member>
+    <member refid="classKMsgModemWidgetBase_1j1" kind="slot"><name>languageChange</name></member>
   </compound>
   <compound refid="structMemoryInfo" kind="struct"><name>MemoryInfo</name>
     <member refid="structMemoryInfo_1o0" kind="variable"><name>MemSize</name></member>
@@ -119,13 +138,22 @@
   <compound refid="classModem" kind="class"><name>Modem</name>
     <member refid="classModem_1a0" kind="function"><name>Modem</name></member>
     <member refid="classModem_1a1" kind="function"><name>~Modem</name></member>
+    <member refid="classModem_1a2" kind="function"><name>Modem</name></member>
+    <member refid="classModem_1a3" kind="function"><name>~Modem</name></member>
     <member refid="classModem_1o0" kind="variable"><name>textLabel1</name></member>
     <member refid="classModem_1o1" kind="variable"><name>textLabel2</name></member>
     <member refid="classModem_1o2" kind="variable"><name>kcfg_Port</name></member>
     <member refid="classModem_1o3" kind="variable"><name>kcfg_Baudrate</name></member>
+    <member refid="classModem_1o4" kind="variable"><name>textLabel1</name></member>
+    <member refid="classModem_1o5" kind="variable"><name>textLabel2</name></member>
+    <member refid="classModem_1o6" kind="variable"><name>kcfg_Port</name></member>
+    <member refid="classModem_1o7" kind="variable"><name>kcfg_Baudrate</name></member>
     <member refid="classModem_1p0" kind="variable"><name>ModemLayout</name></member>
     <member refid="classModem_1p1" kind="variable"><name>spacer1</name></member>
+    <member refid="classModem_1p2" kind="variable"><name>ModemLayout</name></member>
+    <member refid="classModem_1p3" kind="variable"><name>spacer1</name></member>
     <member refid="classModem_1j0" kind="slot"><name>languageChange</name></member>
+    <member refid="classModem_1j1" kind="slot"><name>languageChange</name></member>
   </compound>
   <compound refid="classModemConnectionSettings" kind="class"><name>ModemConnectionSettings</name>
     <member refid="classModemConnectionSettings_1a0" kind="function"><name>ModemConnectionSettings</name></member>
@@ -217,6 +245,46 @@
   </compound>
   <compound refid="config_8cpp" kind="file"><name>config.cpp</name>
   </compound>
+  <compound refid="config_8h" kind="file"><name>config.h</name>
+    <member refid="config_8h_1a0" kind="define"><name>HAVE_CRYPT</name></member>
+    <member refid="config_8h_1a1" kind="define"><name>HAVE_DLFCN_H</name></member>
+    <member refid="config_8h_1a2" kind="define"><name>HAVE_INTTYPES_H</name></member>
+    <member refid="config_8h_1a3" kind="define"><name>HAVE_LIBJPEG</name></member>
+    <member refid="config_8h_1a4" kind="define"><name>HAVE_LIBPNG</name></member>
+    <member refid="config_8h_1a5" kind="define"><name>HAVE_LIBPTHREAD</name></member>
+    <member refid="config_8h_1a6" kind="define"><name>HAVE_LIBZ</name></member>
+    <member refid="config_8h_1a7" kind="define"><name>HAVE_MEMORY_H</name></member>
+    <member refid="config_8h_1a8" kind="define"><name>HAVE_RES_INIT</name></member>
+    <member refid="config_8h_1a9" kind="define"><name>HAVE_SGI_STL</name></member>
+    <member refid="config_8h_1a10" kind="define"><name>HAVE_SNPRINTF</name></member>
+    <member refid="config_8h_1a11" kind="define"><name>HAVE_STDINT_H</name></member>
+    <member refid="config_8h_1a12" kind="define"><name>HAVE_STDLIB_H</name></member>
+    <member refid="config_8h_1a13" kind="define"><name>HAVE_STRINGS_H</name></member>
+    <member refid="config_8h_1a14" kind="define"><name>HAVE_STRING_H</name></member>
+    <member refid="config_8h_1a15" kind="define"><name>HAVE_SYS_STAT_H</name></member>
+    <member refid="config_8h_1a16" kind="define"><name>HAVE_SYS_TYPES_H</name></member>
+    <member refid="config_8h_1a17" kind="define"><name>HAVE_UNISTD_H</name></member>
+    <member refid="config_8h_1a18" kind="define"><name>HAVE_VSNPRINTF</name></member>
+    <member refid="config_8h_1a19" kind="define"><name>KDELIBSUFF</name></member>
+    <member refid="config_8h_1a20" kind="define"><name>KDEMAXPATHLEN</name></member>
+    <member refid="config_8h_1a21" kind="define"><name>PACKAGE</name></member>
+    <member refid="config_8h_1a22" kind="define"><name>PACKAGE_BUGREPORT</name></member>
+    <member refid="config_8h_1a23" kind="define"><name>PACKAGE_NAME</name></member>
+    <member refid="config_8h_1a24" kind="define"><name>PACKAGE_STRING</name></member>
+    <member refid="config_8h_1a25" kind="define"><name>PACKAGE_TARNAME</name></member>
+    <member refid="config_8h_1a26" kind="define"><name>PACKAGE_VERSION</name></member>
+    <member refid="config_8h_1a27" kind="define"><name>SIZEOF_CHAR_P</name></member>
+    <member refid="config_8h_1a28" kind="define"><name>SIZEOF_INT</name></member>
+    <member refid="config_8h_1a29" kind="define"><name>SIZEOF_LONG</name></member>
+    <member refid="config_8h_1a30" kind="define"><name>SIZEOF_SHORT</name></member>
+    <member refid="config_8h_1a31" kind="define"><name>SIZEOF_SIZE_T</name></member>
+    <member refid="config_8h_1a32" kind="define"><name>SIZEOF_UNSIGNED_LONG</name></member>
+    <member refid="config_8h_1a33" kind="define"><name>STDC_HEADERS</name></member>
+    <member refid="config_8h_1a34" kind="define"><name>VERSION</name></member>
+    <member refid="config_8h_1a35" kind="define"><name>ksize_t</name></member>
+    <member refid="config_8h_1a36" kind="function"><name>strlcat</name></member>
+    <member refid="config_8h_1a37" kind="function"><name>strlcpy</name></member>
+  </compound>
   <compound refid="debug_2config_8h" kind="file"><name>debug/config.h</name>
     <member refid="debug_2config_8h_1a0" kind="define"><name>HAVE_CRYPT</name></member>
     <member refid="debug_2config_8h_1a1" kind="define"><name>HAVE_DLFCN_H</name></member>
@@ -278,36 +346,59 @@
   </compound>
   <compound refid="generalsettings_8h" kind="file"><name>generalsettings.h</name>
   </compound>
-  <compound refid="generalsettings_8moc" kind="file"><name>generalsettings.moc</name>
-    <member refid="generalsettings_8moc_1a0" kind="function"><name>cleanUp_GeneralSettings</name></member>
+  <compound refid="debug_2src_2generalsettings_8moc" kind="file"><name>debug/src/generalsettings.moc</name>
+    <member refid="debug_2src_2generalsettings_8moc_1a0" kind="function"><name>cleanUp_GeneralSettings</name></member>
   </compound>
-  <compound refid="GeneralWidget_8cpp" kind="file"><name>GeneralWidget.cpp</name>
+  <compound refid="src_2generalsettings_8moc" kind="file"><name>src/generalsettings.moc</name>
+    <member refid="src_2generalsettings_8moc_1a0" kind="function"><name>cleanUp_GeneralSettings</name></member>
   </compound>
-  <compound refid="GeneralWidget_8h" kind="file"><name>GeneralWidget.h</name>
+  <compound refid="debug_2src_2GeneralWidget_8cpp" kind="file"><name>debug/src/GeneralWidget.cpp</name>
   </compound>
-  <compound refid="GeneralWidget_8moc" kind="file"><name>GeneralWidget.moc</name>
-    <member refid="GeneralWidget_8moc_1a0" kind="function"><name>cleanUp_General</name></member>
+  <compound refid="src_2GeneralWidget_8cpp" kind="file"><name>src/GeneralWidget.cpp</name>
+  </compound>
+  <compound refid="debug_2src_2GeneralWidget_8h" kind="file"><name>debug/src/GeneralWidget.h</name>
+  </compound>
+  <compound refid="src_2GeneralWidget_8h" kind="file"><name>src/GeneralWidget.h</name>
+  </compound>
+  <compound refid="debug_2src_2GeneralWidget_8moc" kind="file"><name>debug/src/GeneralWidget.moc</name>
+    <member refid="debug_2src_2GeneralWidget_8moc_1a0" kind="function"><name>cleanUp_General</name></member>
+  </compound>
+  <compound refid="src_2GeneralWidget_8moc" kind="file"><name>src/GeneralWidget.moc</name>
+    <member refid="src_2GeneralWidget_8moc_1a0" kind="function"><name>cleanUp_General</name></member>
   </compound>
   <compound refid="kmsgmodem_8cpp" kind="file"><name>kmsgmodem.cpp</name>
   </compound>
   <compound refid="kmsgmodem_8h" kind="file"><name>kmsgmodem.h</name>
   </compound>
-  <compound refid="kmsgmodem_8moc" kind="file"><name>kmsgmodem.moc</name>
-    <member refid="kmsgmodem_8moc_1a0" kind="function"><name>cleanUp_KMsgModem</name></member>
+  <compound refid="debug_2src_2kmsgmodem_8moc" kind="file"><name>debug/src/kmsgmodem.moc</name>
+    <member refid="debug_2src_2kmsgmodem_8moc_1a0" kind="function"><name>cleanUp_KMsgModem</name></member>
+  </compound>
+  <compound refid="src_2kmsgmodem_8moc" kind="file"><name>src/kmsgmodem.moc</name>
+    <member refid="src_2kmsgmodem_8moc_1a0" kind="function"><name>cleanUp_KMsgModem</name></member>
   </compound>
   <compound refid="kmsgmodemwidget_8cpp" kind="file"><name>kmsgmodemwidget.cpp</name>
   </compound>
   <compound refid="kmsgmodemwidget_8h" kind="file"><name>kmsgmodemwidget.h</name>
   </compound>
-  <compound refid="kmsgmodemwidget_8moc" kind="file"><name>kmsgmodemwidget.moc</name>
-    <member refid="kmsgmodemwidget_8moc_1a0" kind="function"><name>cleanUp_KMsgModemWidget</name></member>
+  <compound refid="debug_2src_2kmsgmodemwidget_8moc" kind="file"><name>debug/src/kmsgmodemwidget.moc</name>
+    <member refid="debug_2src_2kmsgmodemwidget_8moc_1a0" kind="function"><name>cleanUp_KMsgModemWidget</name></member>
   </compound>
-  <compound refid="kmsgmodemwidgetbase_8cpp" kind="file"><name>kmsgmodemwidgetbase.cpp</name>
+  <compound refid="src_2kmsgmodemwidget_8moc" kind="file"><name>src/kmsgmodemwidget.moc</name>
+    <member refid="src_2kmsgmodemwidget_8moc_1a0" kind="function"><name>cleanUp_KMsgModemWidget</name></member>
   </compound>
-  <compound refid="kmsgmodemwidgetbase_8h" kind="file"><name>kmsgmodemwidgetbase.h</name>
+  <compound refid="debug_2src_2kmsgmodemwidgetbase_8cpp" kind="file"><name>debug/src/kmsgmodemwidgetbase.cpp</name>
   </compound>
-  <compound refid="kmsgmodemwidgetbase_8moc" kind="file"><name>kmsgmodemwidgetbase.moc</name>
-    <member refid="kmsgmodemwidgetbase_8moc_1a0" kind="function"><name>cleanUp_KMsgModemWidgetBase</name></member>
+  <compound refid="src_2kmsgmodemwidgetbase_8cpp" kind="file"><name>src/kmsgmodemwidgetbase.cpp</name>
+  </compound>
+  <compound refid="debug_2src_2kmsgmodemwidgetbase_8h" kind="file"><name>debug/src/kmsgmodemwidgetbase.h</name>
+  </compound>
+  <compound refid="src_2kmsgmodemwidgetbase_8h" kind="file"><name>src/kmsgmodemwidgetbase.h</name>
+  </compound>
+  <compound refid="debug_2src_2kmsgmodemwidgetbase_8moc" kind="file"><name>debug/src/kmsgmodemwidgetbase.moc</name>
+    <member refid="debug_2src_2kmsgmodemwidgetbase_8moc_1a0" kind="function"><name>cleanUp_KMsgModemWidgetBase</name></member>
+  </compound>
+  <compound refid="src_2kmsgmodemwidgetbase_8moc" kind="file"><name>src/kmsgmodemwidgetbase.moc</name>
+    <member refid="src_2kmsgmodemwidgetbase_8moc_1a0" kind="function"><name>cleanUp_KMsgModemWidgetBase</name></member>
   </compound>
   <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="main_8cpp_1a3" kind="function"><name>main</name></member>
@@ -315,19 +406,29 @@
     <member refid="main_8cpp_1a1" kind="variable"><name>version</name></member>
     <member refid="main_8cpp_1a2" kind="variable"><name>options</name></member>
   </compound>
-  <compound refid="Modem_8cpp" kind="file"><name>Modem.cpp</name>
+  <compound refid="debug_2src_2Modem_8cpp" kind="file"><name>debug/src/Modem.cpp</name>
   </compound>
-  <compound refid="Modem_8h" kind="file"><name>Modem.h</name>
+  <compound refid="src_2Modem_8cpp" kind="file"><name>src/Modem.cpp</name>
   </compound>
-  <compound refid="Modem_8moc" kind="file"><name>Modem.moc</name>
-    <member refid="Modem_8moc_1a0" kind="function"><name>cleanUp_Modem</name></member>
+  <compound refid="debug_2src_2Modem_8h" kind="file"><name>debug/src/Modem.h</name>
+  </compound>
+  <compound refid="src_2Modem_8h" kind="file"><name>src/Modem.h</name>
+  </compound>
+  <compound refid="debug_2src_2Modem_8moc" kind="file"><name>debug/src/Modem.moc</name>
+    <member refid="debug_2src_2Modem_8moc_1a0" kind="function"><name>cleanUp_Modem</name></member>
+  </compound>
+  <compound refid="src_2Modem_8moc" kind="file"><name>src/Modem.moc</name>
+    <member refid="src_2Modem_8moc_1a0" kind="function"><name>cleanUp_Modem</name></member>
   </compound>
   <compound refid="modemsettings_8cpp" kind="file"><name>modemsettings.cpp</name>
   </compound>
   <compound refid="modemsettings_8h" kind="file"><name>modemsettings.h</name>
   </compound>
-  <compound refid="modemsettings_8moc" kind="file"><name>modemsettings.moc</name>
-    <member refid="modemsettings_8moc_1a0" kind="function"><name>cleanUp_ModemConnectionSettings</name></member>
+  <compound refid="debug_2src_2modemsettings_8moc" kind="file"><name>debug/src/modemsettings.moc</name>
+    <member refid="debug_2src_2modemsettings_8moc_1a0" kind="function"><name>cleanUp_ModemConnectionSettings</name></member>
+  </compound>
+  <compound refid="src_2modemsettings_8moc" kind="file"><name>src/modemsettings.moc</name>
+    <member refid="src_2modemsettings_8moc_1a0" kind="function"><name>cleanUp_ModemConnectionSettings</name></member>
   </compound>
   <compound refid="settings_8h" kind="file"><name>settings.h</name>
   </compound>

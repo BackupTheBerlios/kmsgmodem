@@ -5,109 +5,109 @@
     <includes refid="kmsgmodemwidget_8h" local="yes">kmsgmodemwidget.h</includes>
     <includes local="no">kdebug.h</includes>
     <includes local="no">klistview.h</includes>
-    <includes refid="kmsgmodemwidget_8moc" local="yes">kmsgmodemwidget.moc</includes>
+    <includes refid="src_2kmsgmodemwidget_8moc" local="yes">kmsgmodemwidget.moc</includes>
     <incdepgraph>
-      <node id="214">
+      <node id="298">
         <label>sys/stat.h</label>
       </node>
-      <node id="209">
+      <node id="293">
         <label>qstring.h</label>
       </node>
-      <node id="212">
+      <node id="296">
         <label>connection.h</label>
         <link refid="connection_8h-source"/>
-        <childnode refid="213" relation="include">
+        <childnode refid="297" relation="include">
         </childnode>
-        <childnode refid="214" relation="include">
+        <childnode refid="298" relation="include">
         </childnode>
-        <childnode refid="215" relation="include">
+        <childnode refid="299" relation="include">
         </childnode>
-        <childnode refid="216" relation="include">
+        <childnode refid="300" relation="include">
         </childnode>
-        <childnode refid="217" relation="include">
+        <childnode refid="301" relation="include">
         </childnode>
-        <childnode refid="218" relation="include">
+        <childnode refid="302" relation="include">
         </childnode>
-        <childnode refid="209" relation="include">
+        <childnode refid="293" relation="include">
         </childnode>
       </node>
-      <node id="219">
+      <node id="303">
         <label>kdebug.h</label>
       </node>
-      <node id="215">
+      <node id="299">
         <label>fcntl.h</label>
       </node>
-      <node id="216">
+      <node id="300">
         <label>termios.h</label>
       </node>
-      <node id="210">
+      <node id="294">
         <label>qptrlist.h</label>
       </node>
-      <node id="204">
-        <label>kmsgmodemwidgetbase.h</label>
-        <link refid="kmsgmodemwidgetbase_8h-source"/>
-        <childnode refid="205" relation="include">
-        </childnode>
-        <childnode refid="206" relation="include">
-        </childnode>
-      </node>
-      <node id="213">
+      <node id="297">
         <label>sys/types.h</label>
       </node>
-      <node id="217">
+      <node id="301">
         <label>unistd.h</label>
       </node>
-      <node id="205">
+      <node id="289">
         <label>qvariant.h</label>
       </node>
-      <node id="203">
+      <node id="287">
         <label>kmsgmodemwidget.h</label>
         <link refid="kmsgmodemwidget_8h-source"/>
-        <childnode refid="204" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
-        <childnode refid="207" relation="include">
+        <childnode refid="291" relation="include">
         </childnode>
       </node>
-      <node id="202">
+      <node id="286">
         <label>kmsgmodemwidget.cpp</label>
         <link refid="kmsgmodemwidget.cpp"/>
-        <childnode refid="203" relation="include">
+        <childnode refid="287" relation="include">
         </childnode>
-        <childnode refid="219" relation="include">
+        <childnode refid="303" relation="include">
         </childnode>
-        <childnode refid="220" relation="include">
+        <childnode refid="304" relation="include">
         </childnode>
       </node>
-      <node id="220">
+      <node id="304">
         <label>klistview.h</label>
       </node>
-      <node id="206">
+      <node id="290">
         <label>qwidget.h</label>
       </node>
-      <node id="208">
+      <node id="292">
         <label>qthread.h</label>
       </node>
-      <node id="207">
+      <node id="288">
+        <label>kmsgmodemwidgetbase.h</label>
+        <link refid="src_2kmsgmodemwidgetbase_8h-source"/>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+      </node>
+      <node id="291">
         <label>usrsmpthread.h</label>
         <link refid="usrsmpthread_8h-source"/>
-        <childnode refid="208" relation="include">
+        <childnode refid="292" relation="include">
         </childnode>
-        <childnode refid="209" relation="include">
+        <childnode refid="293" relation="include">
         </childnode>
-        <childnode refid="210" relation="include">
+        <childnode refid="294" relation="include">
         </childnode>
-        <childnode refid="211" relation="include">
+        <childnode refid="295" relation="include">
         </childnode>
       </node>
-      <node id="218">
+      <node id="302">
         <label>stdio.h</label>
       </node>
-      <node id="211">
+      <node id="295">
         <label>simplemodem.h</label>
         <link refid="simplemodem_8h-source"/>
-        <childnode refid="212" relation="include">
+        <childnode refid="296" relation="include">
         </childnode>
-        <childnode refid="218" relation="include">
+        <childnode refid="302" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -118,7 +118,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2004<sp/>by<sp/>Alexander<sp/>Wiedenbruch<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>wirr@abacho.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>wirr@users.berlios.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/><sp/>*</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by<sp/><sp/>*</highlight></codeline>
@@ -136,7 +136,7 @@
 <codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="19"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2004<sp/>Alexander<sp/>Wiedenbruch<sp/>&lt;wirr@abacho.de&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2004<sp/>Alexander<sp/>Wiedenbruch<sp/>&lt;wirr@users.berlios.de&gt;</highlight></codeline>
 <codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>

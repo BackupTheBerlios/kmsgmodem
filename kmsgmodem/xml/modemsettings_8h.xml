@@ -2,29 +2,30 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.8">
   <compounddef id="modemsettings_8h" kind="file">
     <compoundname>modemsettings.h</compoundname>
-    <includes refid="Modem_8h" local="yes">Modem.h</includes>
-    <includedby refid="modemsettings_8moc" local="yes">modemsettings.moc</includedby>
+    <includes refid="src_2Modem_8h" local="yes">Modem.h</includes>
+    <includedby refid="debug_2src_2modemsettings_8moc" local="yes">modemsettings.moc</includedby>
     <includedby refid="kmsgmodem_8cpp" local="yes">kmsgmodem.cpp</includedby>
     <includedby refid="modemsettings_8cpp" local="yes">modemsettings.cpp</includedby>
+    <includedby refid="src_2modemsettings_8moc" local="yes">modemsettings.moc</includedby>
     <incdepgraph>
-      <node id="346">
+      <node id="501">
         <label>Modem.h</label>
-        <link refid="Modem_8h-source"/>
-        <childnode refid="347" relation="include">
+        <link refid="src_2Modem_8h-source"/>
+        <childnode refid="502" relation="include">
         </childnode>
-        <childnode refid="348" relation="include">
+        <childnode refid="503" relation="include">
         </childnode>
       </node>
-      <node id="345">
+      <node id="500">
         <label>modemsettings.h</label>
         <link refid="modemsettings.h"/>
-        <childnode refid="346" relation="include">
+        <childnode refid="501" relation="include">
         </childnode>
       </node>
-      <node id="347">
+      <node id="502">
         <label>qvariant.h</label>
       </node>
-      <node id="348">
+      <node id="503">
         <label>qwidget.h</label>
       </node>
     </incdepgraph>
@@ -36,7 +37,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2004<sp/>by<sp/>Alexander<sp/>Wiedenbruch<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Alexander@Wiedenbruch.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>wirr@users.berlios.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/><sp/>*</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by<sp/><sp/>*</highlight></codeline>

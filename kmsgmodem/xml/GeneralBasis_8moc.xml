@@ -8,39 +8,39 @@
     <includes local="no">private/qucomextra_p.h</includes>
     <includedby refid="GeneralBasis_8cpp" local="yes">GeneralBasis.cpp</includedby>
     <incdepgraph>
-      <node id="67">
+      <node id="69">
         <label>private/qucomextra_p.h</label>
       </node>
-      <node id="64">
+      <node id="66">
         <label>qdialog.h</label>
       </node>
-      <node id="66">
+      <node id="68">
         <label>qapplication.h</label>
       </node>
-      <node id="62">
+      <node id="64">
         <label>GeneralBasis.h</label>
         <link refid="GeneralBasis_8h-source"/>
-        <childnode refid="63" relation="include">
-        </childnode>
-        <childnode refid="64" relation="include">
-        </childnode>
-      </node>
-      <node id="63">
-        <label>qvariant.h</label>
-      </node>
-      <node id="61">
-        <label>GeneralBasis.moc</label>
-        <link refid="GeneralBasis.moc"/>
-        <childnode refid="62" relation="include">
-        </childnode>
         <childnode refid="65" relation="include">
         </childnode>
         <childnode refid="66" relation="include">
         </childnode>
-        <childnode refid="67" relation="include">
-        </childnode>
       </node>
       <node id="65">
+        <label>qvariant.h</label>
+      </node>
+      <node id="63">
+        <label>GeneralBasis.moc</label>
+        <link refid="GeneralBasis.moc"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
         <label>qmetaobject.h</label>
       </node>
     </incdepgraph>
@@ -74,7 +74,7 @@
 <codeline lineno="2"><highlight class="comment">**<sp/>MyDialog1<sp/>meta<sp/>object<sp/>code<sp/>from<sp/>reading<sp/>C++<sp/>file<sp/>&apos;GeneralBasis.h&apos;</highlight></codeline>
 <codeline lineno="3"><highlight class="comment">**</highlight></codeline>
 <codeline lineno="4"><highlight class="comment">**<sp/>Created:<sp/>Fri<sp/>Aug<sp/>6<sp/>21:55:51<sp/>2004</highlight></codeline>
-<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>The<sp/>Qt<sp/>MOC<sp/>($Id: GeneralBasis_8moc.xml,v 1.1 2004/08/12 16:43:20 wirr Exp $)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>The<sp/>Qt<sp/>MOC<sp/>($Id: GeneralBasis_8moc.xml,v 1.2 2004/08/19 16:15:46 wirr Exp $)</highlight></codeline>
 <codeline lineno="6"><highlight class="comment">**</highlight></codeline>
 <codeline lineno="7"><highlight class="comment">**<sp/>WARNING!<sp/>All<sp/>changes<sp/>made<sp/>in<sp/>this<sp/>file<sp/>will<sp/>be<sp/>lost!</highlight></codeline>
 <codeline lineno="8"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>

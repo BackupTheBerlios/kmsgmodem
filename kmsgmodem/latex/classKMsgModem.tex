@@ -8,20 +8,19 @@ Application Main Window.
 \subsection*{Public Member Functions}
 \begin{CompactItemize}
 \item 
-{\bf KMsg\-Modem} ()
-\item 
+{\bf KMsg\-Modem} (KUnique\-Application $\ast$app)
+\begin{CompactList}\small\item\em C'tor. \item\end{CompactList}\item 
 virtual {\bf $\sim$KMsg\-Modem} ()
-\item 
-void {\bf set\-App} (KApplication $\ast$app)\label{classKMsgModem_a2}
-
-\end{CompactItemize}
+\begin{CompactList}\small\item\em D'tor. \item\end{CompactList}\item 
+void {\bf Startup} ()
+\begin{CompactList}\small\item\em This is the main startup routine. \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Detailed Description}
 Application Main Window. 
 
 \begin{Desc}
-\item[Author:]Alexander Wiedenbruch $<${\tt wirr@abacho.de}$>$ \end{Desc}
+\item[Author:]Alexander Wiedenbruch $<${\tt wirr@users.berlios.de}$>$ \end{Desc}
 \begin{Desc}
 \item[Version:]0.1 \end{Desc}
 
@@ -31,15 +30,29 @@ Application Main Window.
 \subsection{Constructor \& Destructor Documentation}
 \index{KMsgModem@{KMsg\-Modem}!KMsgModem@{KMsgModem}}
 \index{KMsgModem@{KMsgModem}!KMsgModem@{KMsg\-Modem}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}KMsg\-Modem::KMsg\-Modem ()}\label{classKMsgModem_a0}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}KMsg\-Modem::KMsg\-Modem (KUnique\-Application $\ast$ {\em app})}\label{classKMsgModem_a0}
 
+
+C'tor. 
 
 Default Constructor \index{KMsgModem@{KMsg\-Modem}!~KMsgModem@{$\sim$KMsgModem}}
 \index{~KMsgModem@{$\sim$KMsgModem}!KMsgModem@{KMsg\-Modem}}
 \subsubsection{\setlength{\rightskip}{0pt plus 5cm}KMsg\-Modem::$\sim${\bf KMsg\-Modem} ()\hspace{0.3cm}{\tt  [virtual]}}\label{classKMsgModem_a1}
 
 
+D'tor. 
+
 Default Destructor 
+
+\subsection{Member Function Documentation}
+\index{KMsgModem@{KMsg\-Modem}!Startup@{Startup}}
+\index{Startup@{Startup}!KMsgModem@{KMsg\-Modem}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void KMsg\-Modem::Startup ()}\label{classKMsgModem_a2}
+
+
+This is the main startup routine. 
+
+In this function we try to establish a connection to the modem, and finally start loading messages. 
 
 The documentation for this class was generated from the following files:\begin{CompactItemize}
 \item 

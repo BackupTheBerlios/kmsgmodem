@@ -379,7 +379,7 @@
       </memberdef>
       <memberdef kind="define" id="debug_2config_8h_1a34" prot="public" static="no">
         <name>VERSION</name>
-        <initializer>&quot;0.1&quot;</initializer>
+        <initializer>&quot;0.3&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -580,7 +580,7 @@
 <codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STDC_HEADERS<sp/>1</highlight></codeline>
 <codeline lineno="126"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Version<sp/>number<sp/>of<sp/>package<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VERSION<sp/>&quot;0.1&quot;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VERSION<sp/>&quot;0.3&quot;</highlight></codeline>
 <codeline lineno="129"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>1<sp/>if<sp/>your<sp/>processor<sp/>stores<sp/>words<sp/>with<sp/>the<sp/>most<sp/>significant<sp/>byte</highlight></codeline>
 <codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/>first<sp/>(like<sp/>Motorola<sp/>and<sp/>SPARC,<sp/>unlike<sp/>Intel<sp/>and<sp/>VAX).<sp/>*/</highlight><highlight class="normal"></highlight></codeline>

@@ -6,19 +6,6 @@
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classConfig_1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Config::Config</definition>
-        <argsstring>()</argsstring>
-        <name>Config</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="33" bodystart="24" bodyend="40"/>
-      </memberdef>
-      <memberdef kind="function" id="classConfig_1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
         <definition>Config::~Config</definition>
         <argsstring>()</argsstring>
         <name>~Config</name>
@@ -28,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="35" bodystart="43" bodyend="45"/>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="36" bodystart="44" bodyend="46"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -43,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="37" bodystart="37" bodyend="-1"/>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="40" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classConfig_1o1" prot="public" static="no" volatile="no" mutable="no">
         <type>bool</type>
@@ -56,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="38" bodystart="38" bodyend="-1"/>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="41" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classConfig_1o2" prot="public" static="no" volatile="no" mutable="no">
         <type>QString</type>
@@ -69,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="40" bodystart="40" bodyend="-1"/>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="43" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classConfig_1o3" prot="public" static="no" volatile="no" mutable="no">
         <type>QString</type>
@@ -82,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="41" bodystart="41" bodyend="-1"/>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="44" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classConfig_1o4" prot="public" static="no" volatile="no" mutable="no">
         <type>int</type>
@@ -95,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="43" bodystart="43" bodyend="-1"/>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="46" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classConfig_1o5" prot="public" static="no" volatile="no" mutable="no">
         <type>int</type>
@@ -108,7 +95,53 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="44" bodystart="44" bodyend="-1"/>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="47" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classConfig_1e0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classConfig" kindref="compound">Config</ref> *</type>
+        <definition>Config * Config::Self</definition>
+        <argsstring>()</argsstring>
+        <name>Self</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="38" bodystart="48" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classConfig_1b0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Config::Config</definition>
+        <argsstring>()</argsstring>
+        <name>Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="33" bodystart="25" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classConfig_1v0" prot="private" static="yes" volatile="no" mutable="no">
+        <type><ref refid="classConfig" kindref="compound">Config</ref> *</type>
+        <definition>Config * Config::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <initializer> NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="50" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -116,16 +149,27 @@
     <detaileddescription>
 <para><simplesect kind="author"><para>Alexander Wiedenbruch </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="31" bodystart="30" bodyend="46"/>
+    <collaborationgraph>
+      <node id="1">
+        <label>Config</label>
+        <link refid="classConfig"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/config.h" line="31" bodystart="30" bodyend="52"/>
     <listofallmembers>
       <member refid="classConfig_1o2" prot="public" virt="non-virtual"><scope>Config</scope><name>Baudrate</name></member>
       <member refid="classConfig_1o1" prot="public" virt="non-virtual"><scope>Config</scope><name>CheckOnStart</name></member>
-      <member refid="classConfig_1a0" prot="public" virt="non-virtual"><scope>Config</scope><name>Config</name></member>
+      <member refid="classConfig_1b0" prot="protected" virt="non-virtual"><scope>Config</scope><name>Config</name></member>
+      <member refid="classConfig_1v0" prot="private" virt="non-virtual"><scope>Config</scope><name>instance</name></member>
       <member refid="classConfig_1o4" prot="public" virt="non-virtual"><scope>Config</scope><name>NoOfFaxMsgs</name></member>
       <member refid="classConfig_1o5" prot="public" virt="non-virtual"><scope>Config</scope><name>NoOfVoiceMsgs</name></member>
       <member refid="classConfig_1o3" prot="public" virt="non-virtual"><scope>Config</scope><name>Port</name></member>
+      <member refid="classConfig_1e0" prot="public" virt="non-virtual"><scope>Config</scope><name>Self</name></member>
       <member refid="classConfig_1o0" prot="public" virt="non-virtual"><scope>Config</scope><name>SetStandAloneModeOnExit</name></member>
-      <member refid="classConfig_1a1" prot="public" virt="non-virtual"><scope>Config</scope><name>~Config</name></member>
+      <member refid="classConfig_1a0" prot="public" virt="non-virtual"><scope>Config</scope><name>~Config</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

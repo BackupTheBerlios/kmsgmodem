@@ -6,22 +6,18 @@
     <includes local="no">kdebug.h</includes>
     <includes local="no">stdlib.h</includes>
     <incdepgraph>
-      <node id="15">
+      <node id="17">
         <label>sys/stat.h</label>
       </node>
-      <node id="20">
+      <node id="22">
         <label>qstring.h</label>
       </node>
-      <node id="22">
+      <node id="24">
         <label>stdlib.h</label>
       </node>
-      <node id="13">
+      <node id="15">
         <label>connection.h</label>
         <link refid="connection_8h-source"/>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
         <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
@@ -32,33 +28,37 @@
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
-      </node>
-      <node id="21">
-        <label>kdebug.h</label>
-      </node>
-      <node id="16">
-        <label>fcntl.h</label>
-      </node>
-      <node id="17">
-        <label>termios.h</label>
-      </node>
-      <node id="14">
-        <label>sys/types.h</label>
-      </node>
-      <node id="18">
-        <label>unistd.h</label>
-      </node>
-      <node id="19">
-        <label>stdio.h</label>
-      </node>
-      <node id="12">
-        <label>connection.cpp</label>
-        <link refid="connection.cpp"/>
-        <childnode refid="13" relation="include">
-        </childnode>
         <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>kdebug.h</label>
+      </node>
+      <node id="18">
+        <label>fcntl.h</label>
+      </node>
+      <node id="19">
+        <label>termios.h</label>
+      </node>
+      <node id="16">
+        <label>sys/types.h</label>
+      </node>
+      <node id="20">
+        <label>unistd.h</label>
+      </node>
+      <node id="21">
+        <label>stdio.h</label>
+      </node>
+      <node id="14">
+        <label>connection.cpp</label>
+        <link refid="connection.cpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -69,7 +69,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2004<sp/>by<sp/>Alexander<sp/>Wiedenbruch<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>wirr@abacho.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>wirr@users.berlios.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/><sp/>*</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by<sp/><sp/>*</highlight></codeline>

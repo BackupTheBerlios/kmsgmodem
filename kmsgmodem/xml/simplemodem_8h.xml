@@ -8,85 +8,85 @@
     <includedby refid="simplemodem_8cpp" local="yes">simplemodem.cpp</includedby>
     <includedby refid="usrsmp_8h" local="yes">usrsmp.h</includedby>
     <incdepgraph>
-      <node id="378">
+      <node id="542">
         <label>sys/stat.h</label>
       </node>
-      <node id="383">
+      <node id="547">
         <label>qstring.h</label>
       </node>
-      <node id="376">
+      <node id="540">
         <label>connection.h</label>
         <link refid="connection_8h-source"/>
-        <childnode refid="377" relation="include">
+        <childnode refid="541" relation="include">
         </childnode>
-        <childnode refid="378" relation="include">
+        <childnode refid="542" relation="include">
         </childnode>
-        <childnode refid="379" relation="include">
+        <childnode refid="543" relation="include">
         </childnode>
-        <childnode refid="380" relation="include">
+        <childnode refid="544" relation="include">
         </childnode>
-        <childnode refid="381" relation="include">
+        <childnode refid="545" relation="include">
         </childnode>
-        <childnode refid="382" relation="include">
+        <childnode refid="546" relation="include">
         </childnode>
-        <childnode refid="383" relation="include">
+        <childnode refid="547" relation="include">
         </childnode>
       </node>
-      <node id="379">
+      <node id="543">
         <label>fcntl.h</label>
       </node>
-      <node id="380">
+      <node id="544">
         <label>termios.h</label>
       </node>
-      <node id="377">
+      <node id="541">
         <label>sys/types.h</label>
       </node>
-      <node id="381">
+      <node id="545">
         <label>unistd.h</label>
       </node>
-      <node id="382">
+      <node id="546">
         <label>stdio.h</label>
       </node>
-      <node id="375">
+      <node id="539">
         <label>simplemodem.h</label>
         <link refid="simplemodem.h"/>
-        <childnode refid="376" relation="include">
+        <childnode refid="540" relation="include">
         </childnode>
-        <childnode refid="382" relation="include">
+        <childnode refid="546" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="387">
+      <node id="551">
         <label>kmsgmodem.h</label>
         <link refid="kmsgmodem_8h-source"/>
-        <childnode refid="387" relation="include">
+        <childnode refid="551" relation="include">
         </childnode>
       </node>
-      <node id="388">
+      <node id="552">
         <label>usrsmp.h</label>
         <link refid="usrsmp_8h-source"/>
       </node>
-      <node id="386">
+      <node id="550">
         <label>kmsgmodemwidget.h</label>
         <link refid="kmsgmodemwidget_8h-source"/>
-        <childnode refid="387" relation="include">
+        <childnode refid="551" relation="include">
         </childnode>
       </node>
-      <node id="385">
+      <node id="549">
         <label>usrsmpthread.h</label>
         <link refid="usrsmpthread_8h-source"/>
-        <childnode refid="386" relation="include">
+        <childnode refid="550" relation="include">
         </childnode>
-        <childnode refid="387" relation="include">
+        <childnode refid="551" relation="include">
         </childnode>
       </node>
-      <node id="384">
+      <node id="548">
         <label>simplemodem.h</label>
         <link refid="simplemodem.h"/>
-        <childnode refid="385" relation="include">
+        <childnode refid="549" relation="include">
         </childnode>
-        <childnode refid="388" relation="include">
+        <childnode refid="552" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -155,7 +155,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2004<sp/>by<sp/>Alexander<sp/>Wiedenbruch<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>wirr@abacho.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>wirr@users.berlios.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/><sp/>*</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by<sp/><sp/>*</highlight></codeline>

@@ -7,28 +7,28 @@
     <includes local="no">qapplication.h</includes>
     <includes local="no">private/qucomextra_p.h</includes>
     <incdepgraph>
-      <node id="42">
+      <node id="44">
         <label>private/qucomextra_p.h</label>
       </node>
-      <node id="41">
+      <node id="43">
         <label>qapplication.h</label>
       </node>
-      <node id="39">
+      <node id="41">
         <label>../../src/general.h</label>
       </node>
-      <node id="40">
+      <node id="42">
         <label>qmetaobject.h</label>
       </node>
-      <node id="38">
+      <node id="40">
         <label>general.moc</label>
         <link refid="general.moc"/>
-        <childnode refid="39" relation="include">
-        </childnode>
-        <childnode refid="40" relation="include">
-        </childnode>
         <childnode refid="41" relation="include">
         </childnode>
         <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -62,7 +62,7 @@
 <codeline lineno="2"><highlight class="comment">**<sp/>General<sp/>meta<sp/>object<sp/>code<sp/>from<sp/>reading<sp/>C++<sp/>file<sp/>&apos;general.h&apos;</highlight></codeline>
 <codeline lineno="3"><highlight class="comment">**</highlight></codeline>
 <codeline lineno="4"><highlight class="comment">**<sp/>Created:<sp/>Fri<sp/>Aug<sp/>6<sp/>21:55:49<sp/>2004</highlight></codeline>
-<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>The<sp/>Qt<sp/>MOC<sp/>($Id: general_8moc.xml,v 1.1 2004/08/12 16:43:20 wirr Exp $)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>The<sp/>Qt<sp/>MOC<sp/>($Id: general_8moc.xml,v 1.2 2004/08/19 16:15:46 wirr Exp $)</highlight></codeline>
 <codeline lineno="6"><highlight class="comment">**</highlight></codeline>
 <codeline lineno="7"><highlight class="comment">**<sp/>WARNING!<sp/>All<sp/>changes<sp/>made<sp/>in<sp/>this<sp/>file<sp/>will<sp/>be<sp/>lost!</highlight></codeline>
 <codeline lineno="8"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>

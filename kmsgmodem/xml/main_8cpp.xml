@@ -3,167 +3,189 @@
   <compounddef id="main_8cpp" kind="file">
     <compoundname>main.cpp</compoundname>
     <includes refid="kmsgmodem_8h" local="yes">kmsgmodem.h</includes>
-    <includes local="no">kapplication.h</includes>
+    <includes local="no">kuniqueapplication.h</includes>
     <includes local="no">kaboutdata.h</includes>
     <includes local="no">kcmdlineargs.h</includes>
     <includes local="no">klocale.h</includes>
     <incdepgraph>
-      <node id="299">
+      <node id="437">
         <label>sys/stat.h</label>
       </node>
-      <node id="305">
+      <node id="443">
         <label>kconfigskeleton.h</label>
       </node>
-      <node id="294">
+      <node id="432">
         <label>qstring.h</label>
       </node>
-      <node id="297">
+      <node id="421">
+        <label>kuniqueapplication.h</label>
+      </node>
+      <node id="435">
         <label>connection.h</label>
         <link refid="connection_8h-source"/>
-        <childnode refid="298" relation="include">
+        <childnode refid="436" relation="include">
         </childnode>
-        <childnode refid="299" relation="include">
+        <childnode refid="437" relation="include">
         </childnode>
-        <childnode refid="300" relation="include">
+        <childnode refid="438" relation="include">
         </childnode>
-        <childnode refid="301" relation="include">
+        <childnode refid="439" relation="include">
         </childnode>
-        <childnode refid="302" relation="include">
+        <childnode refid="440" relation="include">
         </childnode>
-        <childnode refid="303" relation="include">
+        <childnode refid="441" relation="include">
         </childnode>
-        <childnode refid="294" relation="include">
+        <childnode refid="432" relation="include">
         </childnode>
       </node>
-      <node id="300">
+      <node id="438">
         <label>fcntl.h</label>
       </node>
-      <node id="306">
+      <node id="416">
         <label>kmainwindow.h</label>
       </node>
-      <node id="301">
+      <node id="439">
         <label>termios.h</label>
       </node>
-      <node id="308">
+      <node id="418">
         <label>kstatusbar.h</label>
       </node>
-      <node id="287">
+      <node id="415">
         <label>kmsgmodem.h</label>
         <link refid="kmsgmodem_8h-source"/>
-        <childnode refid="287" relation="include">
+        <childnode refid="416" relation="include">
         </childnode>
-        <childnode refid="288" relation="include">
+        <childnode refid="417" relation="include">
         </childnode>
-        <childnode refid="304" relation="include">
+        <childnode refid="418" relation="include">
         </childnode>
-        <childnode refid="292" relation="include">
+        <childnode refid="419" relation="include">
         </childnode>
-        <childnode refid="306" relation="include">
+        <childnode refid="420" relation="include">
         </childnode>
-        <childnode refid="307" relation="include">
+        <childnode refid="421" relation="include">
         </childnode>
-        <childnode refid="308" relation="include">
+        <childnode refid="422" relation="include">
         </childnode>
-        <childnode refid="309" relation="include">
+        <childnode refid="423" relation="include">
         </childnode>
-        <childnode refid="310" relation="include">
+        <childnode refid="424" relation="include">
+        </childnode>
+        <childnode refid="425" relation="include">
+        </childnode>
+        <childnode refid="415" relation="include">
+        </childnode>
+        <childnode refid="426" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="430" relation="include">
         </childnode>
       </node>
-      <node id="295">
+      <node id="433">
         <label>qptrlist.h</label>
       </node>
-      <node id="289">
-        <label>kmsgmodemwidgetbase.h</label>
-        <link refid="kmsgmodemwidgetbase_8h-source"/>
-        <childnode refid="290" relation="include">
-        </childnode>
-        <childnode refid="291" relation="include">
-        </childnode>
-      </node>
-      <node id="310">
+      <node id="420">
         <label>klocale.h</label>
       </node>
-      <node id="311">
-        <label>kapplication.h</label>
-      </node>
-      <node id="298">
+      <node id="436">
         <label>sys/types.h</label>
       </node>
-      <node id="286">
+      <node id="414">
         <label>main.cpp</label>
         <link refid="main.cpp"/>
-        <childnode refid="287" relation="include">
+        <childnode refid="415" relation="include">
         </childnode>
-        <childnode refid="311" relation="include">
+        <childnode refid="421" relation="include">
         </childnode>
-        <childnode refid="312" relation="include">
+        <childnode refid="444" relation="include">
         </childnode>
-        <childnode refid="313" relation="include">
+        <childnode refid="445" relation="include">
         </childnode>
-        <childnode refid="310" relation="include">
+        <childnode refid="420" relation="include">
         </childnode>
       </node>
-      <node id="302">
+      <node id="440">
         <label>unistd.h</label>
       </node>
-      <node id="290">
+      <node id="425">
+        <label>arts/kplayobjectfactory.h</label>
+      </node>
+      <node id="428">
         <label>qvariant.h</label>
       </node>
-      <node id="288">
+      <node id="422">
+        <label>arts/kartsdispatcher.h</label>
+      </node>
+      <node id="426">
         <label>kmsgmodemwidget.h</label>
         <link refid="kmsgmodemwidget_8h-source"/>
-        <childnode refid="289" relation="include">
+        <childnode refid="427" relation="include">
         </childnode>
-        <childnode refid="292" relation="include">
+        <childnode refid="430" relation="include">
         </childnode>
       </node>
-      <node id="291">
+      <node id="424">
+        <label>arts/kplayobject.h</label>
+      </node>
+      <node id="429">
         <label>qwidget.h</label>
       </node>
-      <node id="309">
+      <node id="419">
         <label>kprocess.h</label>
       </node>
-      <node id="293">
+      <node id="431">
         <label>qthread.h</label>
       </node>
-      <node id="307">
+      <node id="427">
+        <label>kmsgmodemwidgetbase.h</label>
+        <link refid="src_2kmsgmodemwidgetbase_8h-source"/>
+        <childnode refid="428" relation="include">
+        </childnode>
+        <childnode refid="429" relation="include">
+        </childnode>
+      </node>
+      <node id="423">
+        <label>arts/kartsserver.h</label>
+      </node>
+      <node id="417">
         <label>kaction.h</label>
       </node>
-      <node id="313">
+      <node id="445">
         <label>kcmdlineargs.h</label>
       </node>
-      <node id="292">
+      <node id="430">
         <label>usrsmpthread.h</label>
         <link refid="usrsmpthread_8h-source"/>
-        <childnode refid="293" relation="include">
+        <childnode refid="431" relation="include">
         </childnode>
-        <childnode refid="294" relation="include">
+        <childnode refid="432" relation="include">
         </childnode>
-        <childnode refid="295" relation="include">
+        <childnode refid="433" relation="include">
         </childnode>
-        <childnode refid="296" relation="include">
+        <childnode refid="434" relation="include">
         </childnode>
       </node>
-      <node id="303">
+      <node id="441">
         <label>stdio.h</label>
       </node>
-      <node id="312">
+      <node id="444">
         <label>kaboutdata.h</label>
       </node>
-      <node id="296">
+      <node id="434">
         <label>simplemodem.h</label>
         <link refid="simplemodem_8h-source"/>
-        <childnode refid="297" relation="include">
+        <childnode refid="435" relation="include">
         </childnode>
-        <childnode refid="303" relation="include">
+        <childnode refid="441" relation="include">
         </childnode>
       </node>
-      <node id="304">
+      <node id="442">
         <label>config.h</label>
         <link refid="src_2config_8h-source"/>
-        <childnode refid="305" relation="include">
+        <childnode refid="443" relation="include">
         </childnode>
-        <childnode refid="294" relation="include">
+        <childnode refid="432" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -187,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
 <para><xrefsect id="todo_1_todo000002"><xreftitle>Todo</xreftitle><xrefdescription><para>do something with the command line args here</para></xrefdescription></xrefsect></para>        </inbodydescription>
-        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/main.cpp" line="42" bodystart="41" bodyend="75"/>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/main.cpp" line="42" bodystart="41" bodyend="76"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -211,7 +233,7 @@
         <definition>const char version[]</definition>
         <argsstring>[]</argsstring>
         <name>version</name>
-        <initializer> &quot;0.2&quot;</initializer>
+        <initializer> &quot;0.3&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -246,7 +268,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2004<sp/>by<sp/>Alexander<sp/>Wiedenbruch<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>wirr@abacho.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>wirr@users.berlios.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/><sp/>*</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by<sp/><sp/>*</highlight></codeline>
@@ -264,11 +286,11 @@
 <codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="19"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2004<sp/>Alexander<sp/>Wiedenbruch<sp/>&lt;wirr@abacho.de&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2004<sp/>Alexander<sp/>Wiedenbruch<sp/>&lt;wirr@users.berlios.de&gt;</highlight></codeline>
 <codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;kmsgmodem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;kapplication.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;kuniqueapplication.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;kaboutdata.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;kcmdlineargs.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;klocale.h&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -276,7 +298,7 @@
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>description[]<sp/>=</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>I18N_NOOP(</highlight><highlight class="stringliteral">&quot;USR<sp/>Sportster<sp/>Message<sp/>Center&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>version[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>version[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.3&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>KCmdLineOptions<sp/>options[]<sp/>=</highlight></codeline>
 <codeline lineno="36"><highlight class="normal">{</highlight></codeline>
@@ -287,19 +309,19 @@
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)</highlight></codeline>
 <codeline lineno="42"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>KAboutData<sp/>about(</highlight><highlight class="stringliteral">&quot;kmsgmodem&quot;</highlight><highlight class="normal">,<sp/>I18N_NOOP(</highlight><highlight class="stringliteral">&quot;KMsgModem&quot;</highlight><highlight class="normal">),<sp/>version,<sp/>description,</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KAboutData::License_GPL,<sp/></highlight><highlight class="stringliteral">&quot;(C)<sp/>2004<sp/>Alexander<sp/>Wiedenbruch&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;wirr@abacho.de&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>about.addAuthor(</highlight><highlight class="stringliteral">&quot;Alexander<sp/>Wiedenbruch&quot;</highlight><highlight class="normal">,<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;wirr@abacho.de&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KAboutData::License_GPL,<sp/></highlight><highlight class="stringliteral">&quot;(C)<sp/>2004<sp/>Alexander<sp/>Wiedenbruch&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;wirr@users.berlios.de<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>about.addAuthor(</highlight><highlight class="stringliteral">&quot;Alexander<sp/>Wiedenbruch&quot;</highlight><highlight class="normal">,<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;wirr@users.berlios.de<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>about.addCredit(</highlight><highlight class="stringliteral">&quot;Torsten<sp/>Uhlmann&quot;</highlight><highlight class="normal">,<sp/>I18N_NOOP(</highlight><highlight class="stringliteral">&quot;His<sp/>previous<sp/>work<sp/>saved<sp/>me<sp/>much<sp/>time&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;TUhlmann@gmx.de&quot;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>about.addCredit(</highlight><highlight class="stringliteral">&quot;Jutta<sp/>Degener,<sp/>Carsten<sp/>Bormann&quot;</highlight><highlight class="normal">,<sp/>I18N_NOOP(</highlight><highlight class="stringliteral">&quot;The<sp/>GSM<sp/>decompression<sp/>algos&quot;</highlight><highlight class="normal">),<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;http://kbs.cs.tu-berlin.de/~jutta/toast.html&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>about.addCredit(</highlight><highlight class="stringliteral">&quot;Torsten<sp/>Uhlmann&quot;</highlight><highlight class="normal">,<sp/>I18N_NOOP(</highlight><highlight class="stringliteral">&quot;His<sp/>previous<sp/>work<sp/>saved<sp/>me<sp/>much<sp/>time&quot;</highlight><highlight class="normal">),<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>about.addCredit(</highlight><highlight class="stringliteral">&quot;Chris<sp/>Bagwell&quot;</highlight><highlight class="normal">,<sp/>I18N_NOOP(</highlight><highlight class="stringliteral">&quot;Thanks<sp/>for<sp/>SoX&quot;</highlight><highlight class="normal">),<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;http://sox.sourceforge.net/&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>KCmdLineArgs::init(argc,<sp/>argv,<sp/>&amp;about);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>KCmdLineArgs::addCmdLineOptions(<sp/>options<sp/>);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>KApplication<sp/>app;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>KUniqueApplication<sp/>app;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classKMsgModem" kindref="compound">KMsgModem</ref><sp/>*mainWin<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(app.isRestored())</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RESTORE(<ref refid="classKMsgModem" kindref="compound">KMsgModem</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RESTORE(<ref refid="classKMsgModem" kindref="compound">KMsgModem</ref>(&amp;app));</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -307,18 +329,19 @@
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KCmdLineArgs<sp/>*args<sp/>=<sp/>KCmdLineArgs::parsedArgs();</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainWin<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classKMsgModem" kindref="compound">KMsgModem</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainWin<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classKMsgModem" kindref="compound">KMsgModem</ref>(&amp;app);</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>app.setMainWidget(<sp/>mainWin<sp/>);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainWin-&gt;<ref refid="classKMsgModem_1a2" kindref="member">setApp</ref>(&amp;app);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainWin-&gt;show();</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args-&gt;clear();</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>mainWin<sp/>has<sp/>WDestructiveClose<sp/>flag<sp/>by<sp/>default,<sp/>so<sp/>it<sp/>will<sp/>delete<sp/>itself.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>app.exec();</highlight></codeline>
-<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainWin-&gt;<ref refid="classKMsgModem_1a2" kindref="member">Startup</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args-&gt;clear();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>mainWin<sp/>has<sp/>WDestructiveClose<sp/>flag<sp/>by<sp/>default,<sp/>so<sp/>it<sp/>will<sp/>delete<sp/>itself.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>app.exec();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/main.cpp"/>
   </compounddef>

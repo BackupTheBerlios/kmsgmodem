@@ -3,32 +3,32 @@
   <compounddef id="generalsettings_8cpp" kind="file">
     <compoundname>generalsettings.cpp</compoundname>
     <includes refid="generalsettings_8h" local="yes">generalsettings.h</includes>
-    <includes refid="generalsettings_8moc" local="yes">generalsettings.moc</includes>
+    <includes refid="src_2generalsettings_8moc" local="yes">generalsettings.moc</includes>
     <incdepgraph>
-      <node id="69">
-        <label>generalsettings.cpp</label>
-        <link refid="generalsettings.cpp"/>
-        <childnode refid="70" relation="include">
-        </childnode>
-      </node>
-      <node id="72">
-        <label>qvariant.h</label>
-      </node>
       <node id="73">
-        <label>qwidget.h</label>
+        <label>GeneralWidget.h</label>
+        <link refid="src_2GeneralWidget_8h-source"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
       </node>
       <node id="71">
-        <label>GeneralWidget.h</label>
-        <link refid="GeneralWidget_8h-source"/>
+        <label>generalsettings.cpp</label>
+        <link refid="generalsettings.cpp"/>
         <childnode refid="72" relation="include">
         </childnode>
-        <childnode refid="73" relation="include">
-        </childnode>
       </node>
-      <node id="70">
+      <node id="74">
+        <label>qvariant.h</label>
+      </node>
+      <node id="75">
+        <label>qwidget.h</label>
+      </node>
+      <node id="72">
         <label>generalsettings.h</label>
         <link refid="generalsettings_8h-source"/>
-        <childnode refid="71" relation="include">
+        <childnode refid="73" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -39,7 +39,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2004<sp/>by<sp/>Alexander<sp/>Wiedenbruch<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Alexander@Wiedenbruch.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>wirr@users.berlios.de<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/><sp/>*</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by<sp/><sp/>*</highlight></codeline>

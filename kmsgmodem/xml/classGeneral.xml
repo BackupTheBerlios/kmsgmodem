@@ -44,6 +44,47 @@
         </inbodydescription>
         <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralWidget.h" line="28" bodystart="49" bodyend="52"/>
       </memberdef>
+      <memberdef kind="function" id="classGeneral_1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>General::General</definition>
+        <argsstring>(QWidget *parent=0, const char *name=0, WFlags fl=0)</argsstring>
+        <name>General</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>WFlags</type>
+          <declname>fl</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/GeneralWidget.h" line="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneral_1a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>General::~General</definition>
+        <argsstring>()</argsstring>
+        <name>~General</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/GeneralWidget.h" line="28"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="classGeneral_1o0" prot="public" static="no" volatile="no" mutable="no">
@@ -72,6 +113,32 @@
         </inbodydescription>
         <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralWidget.h" line="31" bodystart="31" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="classGeneral_1o2" prot="public" static="no" volatile="no" mutable="no">
+        <type>QCheckBox *</type>
+        <definition>QCheckBox* General::kcfg_CheckOnStart</definition>
+        <argsstring></argsstring>
+        <name>kcfg_CheckOnStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/GeneralWidget.h" line="30" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneral_1o3" prot="public" static="no" volatile="no" mutable="no">
+        <type>QCheckBox *</type>
+        <definition>QCheckBox* General::kcfg_SetStandAloneModeOnExit</definition>
+        <argsstring></argsstring>
+        <name>kcfg_SetStandAloneModeOnExit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/GeneralWidget.h" line="31" bodystart="31" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="classGeneral_1p0" prot="protected" static="no" volatile="no" mutable="no">
@@ -86,6 +153,19 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralWidget.h" line="34" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneral_1p1" prot="protected" static="no" volatile="no" mutable="no">
+        <type>QGridLayout *</type>
+        <definition>QGridLayout* General::GeneralLayout</definition>
+        <argsstring></argsstring>
+        <name>GeneralLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/GeneralWidget.h" line="34" bodystart="34" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-slot">
@@ -102,6 +182,19 @@
         </inbodydescription>
         <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralWidget.h" line="37" bodystart="58" bodyend="63"/>
       </memberdef>
+      <memberdef kind="slot" id="classGeneral_1j1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>virtual void</type>
+        <definition>virtual void General::languageChange</definition>
+        <argsstring>()</argsstring>
+        <name>languageChange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/GeneralWidget.h" line="37"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -110,11 +203,17 @@
     <location file="/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/debug/src/GeneralWidget.h" line="23" bodystart="22" bodyend="39"/>
     <listofallmembers>
       <member refid="classGeneral_1a0" prot="public" virt="non-virtual"><scope>General</scope><name>General</name></member>
+      <member refid="classGeneral_1a2" prot="public" virt="non-virtual"><scope>General</scope><name>General</name></member>
       <member refid="classGeneral_1p0" prot="protected" virt="non-virtual"><scope>General</scope><name>GeneralLayout</name></member>
+      <member refid="classGeneral_1p1" prot="protected" virt="non-virtual"><scope>General</scope><name>GeneralLayout</name></member>
       <member refid="classGeneral_1o0" prot="public" virt="non-virtual"><scope>General</scope><name>kcfg_CheckOnStart</name></member>
+      <member refid="classGeneral_1o2" prot="public" virt="non-virtual"><scope>General</scope><name>kcfg_CheckOnStart</name></member>
       <member refid="classGeneral_1o1" prot="public" virt="non-virtual"><scope>General</scope><name>kcfg_SetStandAloneModeOnExit</name></member>
+      <member refid="classGeneral_1o3" prot="public" virt="non-virtual"><scope>General</scope><name>kcfg_SetStandAloneModeOnExit</name></member>
       <member refid="classGeneral_1j0" prot="protected" virt="virtual"><scope>General</scope><name>languageChange</name></member>
+      <member refid="classGeneral_1j1" prot="protected" virt="virtual"><scope>General</scope><name>languageChange</name></member>
       <member refid="classGeneral_1a1" prot="public" virt="non-virtual"><scope>General</scope><name>~General</name></member>
+      <member refid="classGeneral_1a3" prot="public" virt="non-virtual"><scope>General</scope><name>~General</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

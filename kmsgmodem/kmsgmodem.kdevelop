@@ -2,7 +2,7 @@
 <kdevelop>
   <general>
     <author>Alexander Wiedenbruch</author>
-    <email>wirr@abacho.de</email>
+    <email>wirr@users.berlios.de</email>
     <version>$VERSION$</version>
     <projectmanagement>KDevKDEAutoProject</projectmanagement>
     <primarylanguage>C++</primarylanguage>
@@ -12,7 +12,7 @@
     </keywords>
     <projectdirectory>.</projectdirectory>
     <absoluteprojectpath>false</absoluteprojectpath>
-    <description/>
+    <description></description>
     <ignoreparts/>
     <secondaryLanguages/>
   </general>
@@ -69,15 +69,22 @@
     <ignoreqt_xml>
       <toc>qmake User Guide</toc>
     </ignoreqt_xml>
+    <projectdoc>
+      <userdocDir>html/</userdocDir>
+      <apidocDir>html/</apidocDir>
+    </projectdoc>
+    <ignoredoxygen/>
+    <ignorekdocs/>
+    <ignoredevhelp/>
   </kdevdoctreeview>
   <kdevdebugger>
     <general>
       <dbgshell>libtool</dbgshell>
       <programargs>--nofork</programargs>
-      <gdbpath/>
-      <configGdbScript/>
-      <runShellScript/>
-      <runGdbScript/>
+      <gdbpath></gdbpath>
+      <configGdbScript></configGdbScript>
+      <runShellScript></runShellScript>
+      <runGdbScript></runGdbScript>
       <breakonloadinglibs>true</breakonloadinglibs>
       <separatetty>false</separatetty>
       <floatingtoolbar>false</floatingtoolbar>
@@ -88,6 +95,7 @@
     </display>
   </kdevdebugger>
   <kdevfilecreate>
+    <filetypes/>
     <useglobaltypes>
       <type ext="ui" />
       <type ext="cpp" />

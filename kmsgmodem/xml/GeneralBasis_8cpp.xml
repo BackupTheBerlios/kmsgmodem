@@ -14,56 +14,52 @@
     <includes local="no">qwhatsthis.h</includes>
     <includes refid="GeneralBasis_8moc" local="yes">GeneralBasis.moc</includes>
     <incdepgraph>
-      <node id="55">
+      <node id="57">
         <label>qwhatsthis.h</label>
       </node>
-      <node id="48">
+      <node id="50">
         <label>qdialog.h</label>
       </node>
-      <node id="52">
+      <node id="54">
         <label>qpushbutton.h</label>
       </node>
-      <node id="53">
+      <node id="55">
         <label>qlayout.h</label>
       </node>
-      <node id="45">
+      <node id="47">
         <label>klocale.h</label>
       </node>
-      <node id="54">
+      <node id="56">
         <label>qtooltip.h</label>
       </node>
-      <node id="50">
+      <node id="52">
         <label>qtabwidget.h</label>
       </node>
-      <node id="49">
+      <node id="51">
         <label>qlistbox.h</label>
       </node>
-      <node id="46">
+      <node id="48">
         <label>GeneralBasis.h</label>
         <link refid="GeneralBasis_8h-source"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>qvariant.h</label>
+      </node>
+      <node id="53">
+        <label>qwidget.h</label>
+      </node>
+      <node id="46">
+        <label>GeneralBasis.cpp</label>
+        <link refid="GeneralBasis.cpp"/>
         <childnode refid="47" relation="include">
         </childnode>
         <childnode refid="48" relation="include">
         </childnode>
-      </node>
-      <node id="47">
-        <label>qvariant.h</label>
-      </node>
-      <node id="51">
-        <label>qwidget.h</label>
-      </node>
-      <node id="44">
-        <label>GeneralBasis.cpp</label>
-        <link refid="GeneralBasis.cpp"/>
-        <childnode refid="45" relation="include">
-        </childnode>
-        <childnode refid="46" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
         <childnode refid="49" relation="include">
-        </childnode>
-        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="51" relation="include">
         </childnode>
@@ -74,6 +70,10 @@
         <childnode refid="54" relation="include">
         </childnode>
         <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -87,7 +87,7 @@
 <codeline lineno="3"><highlight class="comment">**<sp/>Form<sp/>implementation<sp/>generated<sp/>from<sp/>reading<sp/>ui<sp/>file<sp/>&apos;/home/wirr/Dokumente/Programme/Projekte/kmsgmodem/src/GeneralBasis.ui&apos;</highlight></codeline>
 <codeline lineno="4"><highlight class="comment">**</highlight></codeline>
 <codeline lineno="5"><highlight class="comment">**<sp/>Created:<sp/>Fri<sp/>Aug<sp/>6<sp/>21:55:51<sp/>2004</highlight></codeline>
-<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>The<sp/>User<sp/>Interface<sp/>Compiler<sp/>($Id: GeneralBasis_8cpp.xml,v 1.1 2004/08/12 16:43:20 wirr Exp $)</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>The<sp/>User<sp/>Interface<sp/>Compiler<sp/>($Id: GeneralBasis_8cpp.xml,v 1.2 2004/08/19 16:15:46 wirr Exp $)</highlight></codeline>
 <codeline lineno="7"><highlight class="comment">**</highlight></codeline>
 <codeline lineno="8"><highlight class="comment">**<sp/>WARNING!<sp/>All<sp/>changes<sp/>made<sp/>in<sp/>this<sp/>file<sp/>will<sp/>be<sp/>lost!</highlight></codeline>
 <codeline lineno="9"><highlight class="comment">****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
