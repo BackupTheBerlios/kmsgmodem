@@ -32,7 +32,7 @@ connection.o connection.o: connection.cpp connection.h \
   /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
   /opt/kde/include/kdebug.h /usr/include/stdlib.h \
   /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
-  /usr/include/alloca.h
+  /usr/include/alloca.h /usr/include/sys/file.h
 
 connection.h:
 
@@ -165,3 +165,5 @@ connection.h:
 /usr/include/bits/waitstatus.h:
 
 /usr/include/alloca.h:
+
+/usr/include/sys/file.h:

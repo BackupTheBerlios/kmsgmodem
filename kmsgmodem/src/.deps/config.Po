@@ -33,10 +33,12 @@ config.o config.o: config.cpp config.h /opt/kde/include/kconfigskeleton.h \
   /usr/lib/qt/include/qrect.h /usr/lib/qt/include/qsize.h \
   /usr/lib/qt/include/qvariant.h /usr/lib/qt/include/qmap.h \
   /usr/lib/qt/include/qpair.h /opt/kde/include/kconfig.h \
-  /opt/kde/include/ksharedptr.h /opt/kde/include/kconfigbase.h \
-  /usr/lib/qt/include/qobject.h /usr/lib/qt/include/qevent.h \
-  /usr/lib/qt/include/qregion.h /usr/lib/qt/include/qmime.h \
-  /opt/kde/include/kconfigdata.h /opt/kde/include/kglobalsettings.h
+  /opt/kde/include/kconfigbase.h /usr/lib/qt/include/qobject.h \
+  /usr/lib/qt/include/qevent.h /usr/lib/qt/include/qregion.h \
+  /usr/lib/qt/include/qmime.h /opt/kde/include/kconfigdata.h \
+  /opt/kde/include/klockfile.h /opt/kde/include/ksharedptr.h \
+  /opt/kde/include/kglobalsettings.h /usr/include/time.h \
+  /usr/include/bits/time.h
 
 config.h:
 
@@ -166,8 +168,6 @@ config.h:
 
 /opt/kde/include/kconfig.h:
 
-/opt/kde/include/ksharedptr.h:
-
 /opt/kde/include/kconfigbase.h:
 
 /usr/lib/qt/include/qobject.h:
@@ -180,4 +180,12 @@ config.h:
 
 /opt/kde/include/kconfigdata.h:
 
+/opt/kde/include/klockfile.h:
+
+/opt/kde/include/ksharedptr.h:
+
 /opt/kde/include/kglobalsettings.h:
+
+/usr/include/time.h:
+
+/usr/include/bits/time.h:

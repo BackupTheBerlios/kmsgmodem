@@ -33,57 +33,128 @@ main.o main.o: main.cpp kmsgmodem.h config.h \
   /usr/lib/qt/include/qrect.h /usr/lib/qt/include/qsize.h \
   /usr/lib/qt/include/qvariant.h /usr/lib/qt/include/qmap.h \
   /usr/lib/qt/include/qpair.h /opt/kde/include/kconfig.h \
-  /opt/kde/include/ksharedptr.h /opt/kde/include/kconfigbase.h \
-  /usr/lib/qt/include/qobject.h /usr/lib/qt/include/qevent.h \
-  /usr/lib/qt/include/qregion.h /usr/lib/qt/include/qmime.h \
-  /opt/kde/include/kconfigdata.h /opt/kde/include/kglobalsettings.h \
-  kmsgmodemwidget.h kmsgmodemwidgetbase.h /usr/lib/qt/include/qwidget.h \
+  /opt/kde/include/kconfigbase.h /usr/lib/qt/include/qobject.h \
+  /usr/lib/qt/include/qevent.h /usr/lib/qt/include/qregion.h \
+  /usr/lib/qt/include/qmime.h /opt/kde/include/kconfigdata.h \
+  /opt/kde/include/klockfile.h /opt/kde/include/ksharedptr.h \
+  /opt/kde/include/kglobalsettings.h /usr/include/time.h \
+  /usr/include/bits/time.h /opt/kde/include/kmainwindow.h \
+  /opt/kde/include/kxmlguifactory.h /usr/lib/qt/include/qdom.h \
+  /opt/kde/include/kxmlguiclient.h /opt/kde/include/kxmlguibuilder.h \
+  /usr/lib/qt/include/qmainwindow.h /usr/lib/qt/include/qwidget.h \
   /usr/lib/qt/include/qpaintdevice.h /usr/lib/qt/include/qpalette.h \
   /usr/lib/qt/include/qbrush.h /usr/lib/qt/include/qfontmetrics.h \
   /usr/lib/qt/include/qfontinfo.h /usr/lib/qt/include/qsizepolicy.h \
-  usrsmpthread.h /usr/lib/qt/include/qthread.h \
-  /usr/lib/qt/include/qmutex.h /usr/lib/qt/include/qsemaphore.h \
-  /usr/lib/qt/include/qwaitcondition.h simplemodem.h connection.h \
-  /usr/include/sys/types.h /usr/include/time.h /usr/include/endian.h \
+  /usr/lib/qt/include/qtoolbar.h /usr/lib/qt/include/qdockwindow.h \
+  /usr/lib/qt/include/qframe.h /usr/lib/qt/include/qmetaobject.h \
+  /usr/lib/qt/include/qconnection.h /opt/kde/include/ktoolbar.h \
+  /usr/lib/qt/include/qcombobox.h /opt/kde/include/kglobal.h \
+  /opt/kde/include/kdemacros.h /opt/kde/include/kinstance.h \
+  /usr/lib/qt/include/qguardedptr.h /usr/lib/qt/include/qiconset.h \
+  /usr/lib/qt/include/qpixmap.h /opt/kde/include/kaction.h \
+  /usr/lib/qt/include/qkeysequence.h /opt/kde/include/kguiitem.h \
+  /opt/kde/include/kicontheme.h /opt/kde/include/kshortcut.h \
+  /opt/kde/include/kstdaction.h /opt/kde/include/kactioncollection.h \
+  /opt/kde/include/kactionclasses.h /opt/kde/include/kstatusbar.h \
+  /usr/lib/qt/include/qstatusbar.h /usr/lib/qt/include/qintdict.h \
+  /usr/lib/qt/include/qlabel.h /opt/kde/include/kprocess.h \
+  /usr/include/sys/types.h /usr/include/endian.h \
   /usr/include/bits/endian.h /usr/include/sys/select.h \
   /usr/include/bits/select.h /usr/include/bits/sigset.h \
-  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
-  /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h \
-  /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
-  /usr/include/bits/fcntl.h /usr/include/termios.h \
-  /usr/include/bits/termios.h /usr/include/sys/ttydefaults.h \
+  /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/sched.h /usr/include/sys/wait.h /usr/include/signal.h \
+  /usr/include/bits/signum.h /usr/include/bits/siginfo.h \
+  /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
+  /usr/include/asm/sigcontext.h /usr/include/bits/sigstack.h \
+  /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+  /usr/include/sys/resource.h /usr/include/bits/resource.h \
+  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
   /usr/include/unistd.h /usr/include/bits/posix_opt.h \
   /usr/include/bits/environments.h /usr/include/bits/confname.h \
-  /usr/include/getopt.h /opt/kde/include/kmainwindow.h \
-  /opt/kde/include/kxmlguifactory.h /usr/lib/qt/include/qdom.h \
-  /opt/kde/include/kxmlguiclient.h /opt/kde/include/kxmlguibuilder.h \
-  /usr/lib/qt/include/qmainwindow.h /usr/lib/qt/include/qtoolbar.h \
-  /usr/lib/qt/include/qdockwindow.h /usr/lib/qt/include/qframe.h \
-  /usr/lib/qt/include/qmetaobject.h /usr/lib/qt/include/qconnection.h \
-  /opt/kde/include/ktoolbar.h /usr/lib/qt/include/qcombobox.h \
-  /opt/kde/include/kglobal.h /opt/kde/include/kdemacros.h \
-  /opt/kde/include/kinstance.h /usr/lib/qt/include/qguardedptr.h \
-  /usr/lib/qt/include/qiconset.h /usr/lib/qt/include/qpixmap.h \
-  /opt/kde/include/kaction.h /usr/lib/qt/include/qkeysequence.h \
-  /opt/kde/include/kguiitem.h /opt/kde/include/kicontheme.h \
-  /opt/kde/include/kshortcut.h /opt/kde/include/kstdaction.h \
-  /opt/kde/include/kactioncollection.h /opt/kde/include/kactionclasses.h \
-  /opt/kde/include/kstatusbar.h /usr/lib/qt/include/qstatusbar.h \
-  /usr/lib/qt/include/qintdict.h /usr/lib/qt/include/qlabel.h \
-  /opt/kde/include/kprocess.h /usr/include/sys/wait.h \
-  /usr/include/signal.h /usr/include/bits/signum.h \
-  /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
-  /usr/include/bits/sigcontext.h /usr/include/asm/sigcontext.h \
-  /usr/include/bits/sigstack.h /usr/include/sys/ucontext.h \
-  /usr/include/bits/sigthread.h /usr/include/sys/resource.h \
-  /usr/include/bits/resource.h /usr/include/bits/waitflags.h \
-  /usr/include/bits/waitstatus.h /opt/kde/include/klocale.h \
+  /usr/include/getopt.h /opt/kde/include/klocale.h \
   /opt/kde/include/kuniqueapplication.h /opt/kde/include/kapplication.h \
   /opt/kde/include/kdeversion.h /usr/lib/qt/include/qapplication.h \
   /usr/lib/qt/include/qdesktopwidget.h /usr/lib/qt/include/qasciidict.h \
   /usr/lib/qt/include/qtranslator.h /opt/kde/include/dcopobject.h \
-  /opt/kde/include/kdatastream.h /opt/kde/include/kaboutdata.h \
-  /opt/kde/include/kcmdlineargs.h /opt/kde/include/kurl.h
+  /opt/kde/include/kdatastream.h /opt/kde/include/kcmdlineargs.h \
+  /opt/kde/include/kurl.h /opt/kde/include/arts/kartsdispatcher.h \
+  /opt/kde/include/arts/kartsserver.h /opt/kde/include/arts/kmedia2.h \
+  /opt/kde/include/arts/common.h /opt/kde/include/arts/buffer.h \
+  /usr/include/c++/3.3.4/string \
+  /usr/include/c++/3.3.4/i486-slackware-linux/bits/c++config.h \
+  /usr/include/c++/3.3.4/i486-slackware-linux/bits/os_defines.h \
+  /usr/include/c++/3.3.4/bits/stringfwd.h \
+  /usr/include/c++/3.3.4/bits/char_traits.h \
+  /usr/include/c++/3.3.4/cstring /usr/include/c++/3.3.4/cstddef \
+  /usr/include/c++/3.3.4/bits/fpos.h \
+  /usr/include/c++/3.3.4/i486-slackware-linux/bits/c++io.h \
+  /usr/include/c++/3.3.4/cstdio \
+  /usr/include/c++/3.3.4/i486-slackware-linux/bits/gthr.h \
+  /usr/include/c++/3.3.4/i486-slackware-linux/bits/gthr-default.h \
+  /usr/include/pthread.h /usr/include/sched.h \
+  /usr/include/bits/initspin.h /usr/include/c++/3.3.4/cwchar \
+  /usr/include/c++/3.3.4/ctime /usr/include/c++/3.3.4/memory \
+  /usr/include/c++/3.3.4/bits/stl_algobase.h \
+  /usr/include/c++/3.3.4/climits /usr/include/c++/3.3.4/cstdlib \
+  /usr/include/stdlib.h /usr/include/alloca.h /usr/include/c++/3.3.4/new \
+  /usr/include/c++/3.3.4/exception /usr/include/c++/3.3.4/iosfwd \
+  /usr/include/c++/3.3.4/i486-slackware-linux/bits/c++locale.h \
+  /usr/include/c++/3.3.4/clocale /usr/include/locale.h \
+  /usr/include/bits/locale.h /usr/include/langinfo.h \
+  /usr/include/nl_types.h /usr/local/include/iconv.h /usr/include/errno.h \
+  /usr/include/bits/errno.h /usr/include/linux/errno.h \
+  /usr/include/asm/errno.h /usr/include/libintl.h \
+  /usr/include/c++/3.3.4/cctype /usr/include/ctype.h \
+  /usr/include/c++/3.3.4/bits/functexcept.h \
+  /usr/include/c++/3.3.4/exception_defines.h \
+  /usr/include/c++/3.3.4/bits/stl_pair.h \
+  /usr/include/c++/3.3.4/bits/type_traits.h \
+  /usr/include/c++/3.3.4/bits/stl_iterator_base_types.h \
+  /usr/include/c++/3.3.4/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/3.3.4/bits/concept_check.h \
+  /usr/include/c++/3.3.4/bits/stl_iterator.h \
+  /usr/include/c++/3.3.4/bits/stl_alloc.h \
+  /usr/include/c++/3.3.4/bits/stl_threads.h \
+  /usr/include/c++/3.3.4/i486-slackware-linux/bits/atomicity.h \
+  /usr/include/c++/3.3.4/bits/stl_construct.h \
+  /usr/include/c++/3.3.4/bits/stl_uninitialized.h \
+  /usr/include/c++/3.3.4/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/3.3.4/bits/stl_function.h \
+  /usr/include/c++/3.3.4/bits/basic_string.h \
+  /usr/include/c++/3.3.4/algorithm /usr/include/c++/3.3.4/bits/stl_algo.h \
+  /usr/include/c++/3.3.4/bits/stl_heap.h \
+  /usr/include/c++/3.3.4/bits/stl_tempbuf.h \
+  /usr/include/c++/3.3.4/bits/basic_string.tcc \
+  /usr/include/c++/3.3.4/vector /usr/include/c++/3.3.4/bits/stl_vector.h \
+  /usr/include/c++/3.3.4/bits/stl_bvector.h \
+  /usr/include/c++/3.3.4/bits/vector.tcc /opt/kde/include/arts/type.h \
+  /opt/kde/include/arts/dispatcher.h /opt/kde/include/arts/pool.h \
+  /usr/include/c++/3.3.4/stack /usr/include/c++/3.3.4/bits/stl_deque.h \
+  /usr/include/c++/3.3.4/bits/stl_stack.h \
+  /usr/include/c++/3.3.4/bits/deque.tcc /usr/include/c++/3.3.4/list \
+  /usr/include/c++/3.3.4/bits/stl_list.h \
+  /usr/include/c++/3.3.4/bits/list.tcc /opt/kde/include/arts/iomanager.h \
+  /usr/include/sys/time.h /opt/kde/include/arts/tcpserver.h \
+  /opt/kde/include/arts/unixserver.h /opt/kde/include/arts/connection.h \
+  /opt/kde/include/arts/notification.h /usr/include/c++/3.3.4/queue \
+  /usr/include/c++/3.3.4/bits/stl_queue.h /usr/include/c++/3.3.4/deque \
+  /opt/kde/include/arts/object.h /usr/include/assert.h \
+  /usr/include/c++/3.3.4/map /usr/include/c++/3.3.4/bits/stl_tree.h \
+  /usr/include/c++/3.3.4/bits/stl_map.h \
+  /usr/include/c++/3.3.4/bits/stl_multimap.h \
+  /opt/kde/include/arts/objectmanager.h /opt/kde/include/arts/factory.h \
+  /opt/kde/include/arts/startupmanager.h \
+  /opt/kde/include/arts/idlfilereg.h /opt/kde/include/arts/asyncstream.h \
+  /opt/kde/include/arts/datapacket.h /opt/kde/include/arts/mcoputils.h \
+  /opt/kde/include/arts/anyref.h /opt/kde/include/arts/connect.h \
+  /opt/kde/include/arts/core.h /opt/kde/include/arts/reference.h \
+  /opt/kde/include/arts/artsflow.h /opt/kde/include/arts/soundserver.h \
+  /opt/kde/include/arts/kplayobject.h \
+  /opt/kde/include/arts/kplayobjectfactory.h kmsgmodemwidget.h \
+  kmsgmodemwidgetbase.h usrsmpthread.h /usr/lib/qt/include/qthread.h \
+  /usr/lib/qt/include/qmutex.h /usr/lib/qt/include/qsemaphore.h \
+  /usr/lib/qt/include/qwaitcondition.h simplemodem.h connection.h \
+  /opt/kde/include/kaboutdata.h
 
 kmsgmodem.h:
 
@@ -215,8 +286,6 @@ config.h:
 
 /opt/kde/include/kconfig.h:
 
-/opt/kde/include/ksharedptr.h:
-
 /opt/kde/include/kconfigbase.h:
 
 /usr/lib/qt/include/qobject.h:
@@ -229,11 +298,27 @@ config.h:
 
 /opt/kde/include/kconfigdata.h:
 
+/opt/kde/include/klockfile.h:
+
+/opt/kde/include/ksharedptr.h:
+
 /opt/kde/include/kglobalsettings.h:
 
-kmsgmodemwidget.h:
+/usr/include/time.h:
 
-kmsgmodemwidgetbase.h:
+/usr/include/bits/time.h:
+
+/opt/kde/include/kmainwindow.h:
+
+/opt/kde/include/kxmlguifactory.h:
+
+/usr/lib/qt/include/qdom.h:
+
+/opt/kde/include/kxmlguiclient.h:
+
+/opt/kde/include/kxmlguibuilder.h:
+
+/usr/lib/qt/include/qmainwindow.h:
 
 /usr/lib/qt/include/qwidget.h:
 
@@ -248,78 +333,6 @@ kmsgmodemwidgetbase.h:
 /usr/lib/qt/include/qfontinfo.h:
 
 /usr/lib/qt/include/qsizepolicy.h:
-
-usrsmpthread.h:
-
-/usr/lib/qt/include/qthread.h:
-
-/usr/lib/qt/include/qmutex.h:
-
-/usr/lib/qt/include/qsemaphore.h:
-
-/usr/lib/qt/include/qwaitcondition.h:
-
-simplemodem.h:
-
-connection.h:
-
-/usr/include/sys/types.h:
-
-/usr/include/time.h:
-
-/usr/include/endian.h:
-
-/usr/include/bits/endian.h:
-
-/usr/include/sys/select.h:
-
-/usr/include/bits/select.h:
-
-/usr/include/bits/sigset.h:
-
-/usr/include/bits/time.h:
-
-/usr/include/sys/sysmacros.h:
-
-/usr/include/bits/pthreadtypes.h:
-
-/usr/include/bits/sched.h:
-
-/usr/include/sys/stat.h:
-
-/usr/include/bits/stat.h:
-
-/usr/include/fcntl.h:
-
-/usr/include/bits/fcntl.h:
-
-/usr/include/termios.h:
-
-/usr/include/bits/termios.h:
-
-/usr/include/sys/ttydefaults.h:
-
-/usr/include/unistd.h:
-
-/usr/include/bits/posix_opt.h:
-
-/usr/include/bits/environments.h:
-
-/usr/include/bits/confname.h:
-
-/usr/include/getopt.h:
-
-/opt/kde/include/kmainwindow.h:
-
-/opt/kde/include/kxmlguifactory.h:
-
-/usr/lib/qt/include/qdom.h:
-
-/opt/kde/include/kxmlguiclient.h:
-
-/opt/kde/include/kxmlguibuilder.h:
-
-/usr/lib/qt/include/qmainwindow.h:
 
 /usr/lib/qt/include/qtoolbar.h:
 
@@ -373,6 +386,24 @@ connection.h:
 
 /opt/kde/include/kprocess.h:
 
+/usr/include/sys/types.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/bits/sched.h:
+
 /usr/include/sys/wait.h:
 
 /usr/include/signal.h:
@@ -401,6 +432,16 @@ connection.h:
 
 /usr/include/bits/waitstatus.h:
 
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/getopt.h:
+
 /opt/kde/include/klocale.h:
 
 /opt/kde/include/kuniqueapplication.h:
@@ -421,8 +462,246 @@ connection.h:
 
 /opt/kde/include/kdatastream.h:
 
-/opt/kde/include/kaboutdata.h:
-
 /opt/kde/include/kcmdlineargs.h:
 
 /opt/kde/include/kurl.h:
+
+/opt/kde/include/arts/kartsdispatcher.h:
+
+/opt/kde/include/arts/kartsserver.h:
+
+/opt/kde/include/arts/kmedia2.h:
+
+/opt/kde/include/arts/common.h:
+
+/opt/kde/include/arts/buffer.h:
+
+/usr/include/c++/3.3.4/string:
+
+/usr/include/c++/3.3.4/i486-slackware-linux/bits/c++config.h:
+
+/usr/include/c++/3.3.4/i486-slackware-linux/bits/os_defines.h:
+
+/usr/include/c++/3.3.4/bits/stringfwd.h:
+
+/usr/include/c++/3.3.4/bits/char_traits.h:
+
+/usr/include/c++/3.3.4/cstring:
+
+/usr/include/c++/3.3.4/cstddef:
+
+/usr/include/c++/3.3.4/bits/fpos.h:
+
+/usr/include/c++/3.3.4/i486-slackware-linux/bits/c++io.h:
+
+/usr/include/c++/3.3.4/cstdio:
+
+/usr/include/c++/3.3.4/i486-slackware-linux/bits/gthr.h:
+
+/usr/include/c++/3.3.4/i486-slackware-linux/bits/gthr-default.h:
+
+/usr/include/pthread.h:
+
+/usr/include/sched.h:
+
+/usr/include/bits/initspin.h:
+
+/usr/include/c++/3.3.4/cwchar:
+
+/usr/include/c++/3.3.4/ctime:
+
+/usr/include/c++/3.3.4/memory:
+
+/usr/include/c++/3.3.4/bits/stl_algobase.h:
+
+/usr/include/c++/3.3.4/climits:
+
+/usr/include/c++/3.3.4/cstdlib:
+
+/usr/include/stdlib.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/3.3.4/new:
+
+/usr/include/c++/3.3.4/exception:
+
+/usr/include/c++/3.3.4/iosfwd:
+
+/usr/include/c++/3.3.4/i486-slackware-linux/bits/c++locale.h:
+
+/usr/include/c++/3.3.4/clocale:
+
+/usr/include/locale.h:
+
+/usr/include/bits/locale.h:
+
+/usr/include/langinfo.h:
+
+/usr/include/nl_types.h:
+
+/usr/local/include/iconv.h:
+
+/usr/include/errno.h:
+
+/usr/include/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/libintl.h:
+
+/usr/include/c++/3.3.4/cctype:
+
+/usr/include/ctype.h:
+
+/usr/include/c++/3.3.4/bits/functexcept.h:
+
+/usr/include/c++/3.3.4/exception_defines.h:
+
+/usr/include/c++/3.3.4/bits/stl_pair.h:
+
+/usr/include/c++/3.3.4/bits/type_traits.h:
+
+/usr/include/c++/3.3.4/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/3.3.4/bits/stl_iterator_base_funcs.h:
+
+/usr/include/c++/3.3.4/bits/concept_check.h:
+
+/usr/include/c++/3.3.4/bits/stl_iterator.h:
+
+/usr/include/c++/3.3.4/bits/stl_alloc.h:
+
+/usr/include/c++/3.3.4/bits/stl_threads.h:
+
+/usr/include/c++/3.3.4/i486-slackware-linux/bits/atomicity.h:
+
+/usr/include/c++/3.3.4/bits/stl_construct.h:
+
+/usr/include/c++/3.3.4/bits/stl_uninitialized.h:
+
+/usr/include/c++/3.3.4/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/3.3.4/bits/stl_function.h:
+
+/usr/include/c++/3.3.4/bits/basic_string.h:
+
+/usr/include/c++/3.3.4/algorithm:
+
+/usr/include/c++/3.3.4/bits/stl_algo.h:
+
+/usr/include/c++/3.3.4/bits/stl_heap.h:
+
+/usr/include/c++/3.3.4/bits/stl_tempbuf.h:
+
+/usr/include/c++/3.3.4/bits/basic_string.tcc:
+
+/usr/include/c++/3.3.4/vector:
+
+/usr/include/c++/3.3.4/bits/stl_vector.h:
+
+/usr/include/c++/3.3.4/bits/stl_bvector.h:
+
+/usr/include/c++/3.3.4/bits/vector.tcc:
+
+/opt/kde/include/arts/type.h:
+
+/opt/kde/include/arts/dispatcher.h:
+
+/opt/kde/include/arts/pool.h:
+
+/usr/include/c++/3.3.4/stack:
+
+/usr/include/c++/3.3.4/bits/stl_deque.h:
+
+/usr/include/c++/3.3.4/bits/stl_stack.h:
+
+/usr/include/c++/3.3.4/bits/deque.tcc:
+
+/usr/include/c++/3.3.4/list:
+
+/usr/include/c++/3.3.4/bits/stl_list.h:
+
+/usr/include/c++/3.3.4/bits/list.tcc:
+
+/opt/kde/include/arts/iomanager.h:
+
+/usr/include/sys/time.h:
+
+/opt/kde/include/arts/tcpserver.h:
+
+/opt/kde/include/arts/unixserver.h:
+
+/opt/kde/include/arts/connection.h:
+
+/opt/kde/include/arts/notification.h:
+
+/usr/include/c++/3.3.4/queue:
+
+/usr/include/c++/3.3.4/bits/stl_queue.h:
+
+/usr/include/c++/3.3.4/deque:
+
+/opt/kde/include/arts/object.h:
+
+/usr/include/assert.h:
+
+/usr/include/c++/3.3.4/map:
+
+/usr/include/c++/3.3.4/bits/stl_tree.h:
+
+/usr/include/c++/3.3.4/bits/stl_map.h:
+
+/usr/include/c++/3.3.4/bits/stl_multimap.h:
+
+/opt/kde/include/arts/objectmanager.h:
+
+/opt/kde/include/arts/factory.h:
+
+/opt/kde/include/arts/startupmanager.h:
+
+/opt/kde/include/arts/idlfilereg.h:
+
+/opt/kde/include/arts/asyncstream.h:
+
+/opt/kde/include/arts/datapacket.h:
+
+/opt/kde/include/arts/mcoputils.h:
+
+/opt/kde/include/arts/anyref.h:
+
+/opt/kde/include/arts/connect.h:
+
+/opt/kde/include/arts/core.h:
+
+/opt/kde/include/arts/reference.h:
+
+/opt/kde/include/arts/artsflow.h:
+
+/opt/kde/include/arts/soundserver.h:
+
+/opt/kde/include/arts/kplayobject.h:
+
+/opt/kde/include/arts/kplayobjectfactory.h:
+
+kmsgmodemwidget.h:
+
+kmsgmodemwidgetbase.h:
+
+usrsmpthread.h:
+
+/usr/lib/qt/include/qthread.h:
+
+/usr/lib/qt/include/qmutex.h:
+
+/usr/lib/qt/include/qsemaphore.h:
+
+/usr/lib/qt/include/qwaitcondition.h:
+
+simplemodem.h:
+
+connection.h:
+
+/opt/kde/include/kaboutdata.h:

@@ -36,18 +36,19 @@ Modem.o Modem.o: Modem.cpp /opt/kde/include/klocale.h \
   /usr/lib/qt/include/qpalette.h /usr/lib/qt/include/qcolor.h \
   /usr/lib/qt/include/qbrush.h /usr/lib/qt/include/qfont.h \
   /usr/lib/qt/include/qfontmetrics.h /usr/lib/qt/include/qfontinfo.h \
-  /usr/lib/qt/include/qsizepolicy.h /usr/lib/qt/include/qlabel.h \
+  /usr/lib/qt/include/qsizepolicy.h /usr/lib/qt/include/qgroupbox.h \
   /usr/lib/qt/include/qframe.h /opt/kde/include/klineedit.h \
   /usr/lib/qt/include/qlineedit.h /opt/kde/include/kcompletion.h \
   /usr/lib/qt/include/qguardedptr.h /opt/kde/include/kglobalsettings.h \
   /opt/kde/include/ksortablevaluelist.h /opt/kde/include/kshortcut.h \
-  /usr/lib/qt/include/qkeysequence.h /usr/lib/qt/include/qlayout.h \
-  /usr/lib/qt/include/qtooltip.h /usr/lib/qt/include/qwhatsthis.h \
-  /usr/lib/qt/include/qcursor.h Modem.moc \
-  /usr/lib/qt/include/qmetaobject.h /usr/lib/qt/include/qconnection.h \
-  /usr/lib/qt/include/qapplication.h /usr/lib/qt/include/qdesktopwidget.h \
-  /usr/lib/qt/include/qasciidict.h /usr/lib/qt/include/qgdict.h \
-  /usr/lib/qt/include/qtranslator.h \
+  /usr/lib/qt/include/qkeysequence.h /usr/lib/qt/include/qlabel.h \
+  /opt/kde/include/kcombobox.h /usr/lib/qt/include/qcombobox.h \
+  /usr/lib/qt/include/qlayout.h /usr/lib/qt/include/qtooltip.h \
+  /usr/lib/qt/include/qwhatsthis.h /usr/lib/qt/include/qcursor.h \
+  Modem.moc /usr/lib/qt/include/qmetaobject.h \
+  /usr/lib/qt/include/qconnection.h /usr/lib/qt/include/qapplication.h \
+  /usr/lib/qt/include/qdesktopwidget.h /usr/lib/qt/include/qasciidict.h \
+  /usr/lib/qt/include/qgdict.h /usr/lib/qt/include/qtranslator.h \
   /usr/lib/qt/include/private/qucomextra_p.h \
   /usr/lib/qt/include/private/qucom_p.h /usr/lib/qt/include/quuid.h
 
@@ -195,7 +196,7 @@ Modem.h:
 
 /usr/lib/qt/include/qsizepolicy.h:
 
-/usr/lib/qt/include/qlabel.h:
+/usr/lib/qt/include/qgroupbox.h:
 
 /usr/lib/qt/include/qframe.h:
 
@@ -214,6 +215,12 @@ Modem.h:
 /opt/kde/include/kshortcut.h:
 
 /usr/lib/qt/include/qkeysequence.h:
+
+/usr/lib/qt/include/qlabel.h:
+
+/opt/kde/include/kcombobox.h:
+
+/usr/lib/qt/include/qcombobox.h:
 
 /usr/lib/qt/include/qlayout.h:
 

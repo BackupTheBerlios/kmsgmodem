@@ -39,10 +39,10 @@ kmsgmodemwidget.o kmsgmodemwidget.o: kmsgmodemwidget.cpp \
   /usr/lib/qt/include/qsizepolicy.h usrsmpthread.h \
   /usr/lib/qt/include/qthread.h /usr/lib/qt/include/qmutex.h \
   /usr/lib/qt/include/qsemaphore.h /usr/lib/qt/include/qwaitcondition.h \
-  simplemodem.h connection.h /usr/include/sys/types.h /usr/include/time.h \
-  /usr/include/endian.h /usr/include/bits/endian.h \
-  /usr/include/sys/select.h /usr/include/bits/select.h \
-  /usr/include/bits/sigset.h /usr/include/bits/time.h \
+  /usr/include/time.h /usr/include/bits/time.h simplemodem.h connection.h \
+  /usr/include/sys/types.h /usr/include/endian.h \
+  /usr/include/bits/endian.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/bits/sigset.h \
   /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/sched.h /usr/include/sys/stat.h \
   /usr/include/bits/stat.h /usr/include/fcntl.h /usr/include/bits/fcntl.h \
@@ -213,13 +213,15 @@ usrsmpthread.h:
 
 /usr/lib/qt/include/qwaitcondition.h:
 
+/usr/include/time.h:
+
+/usr/include/bits/time.h:
+
 simplemodem.h:
 
 connection.h:
 
 /usr/include/sys/types.h:
-
-/usr/include/time.h:
 
 /usr/include/endian.h:
 
@@ -230,8 +232,6 @@ connection.h:
 /usr/include/bits/select.h:
 
 /usr/include/bits/sigset.h:
-
-/usr/include/bits/time.h:
 
 /usr/include/sys/sysmacros.h:
 

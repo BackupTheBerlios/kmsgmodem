@@ -37,8 +37,10 @@ GeneralWidget.o GeneralWidget.o: GeneralWidget.cpp \
   /usr/lib/qt/include/qpalette.h /usr/lib/qt/include/qcolor.h \
   /usr/lib/qt/include/qbrush.h /usr/lib/qt/include/qfont.h \
   /usr/lib/qt/include/qfontmetrics.h /usr/lib/qt/include/qfontinfo.h \
-  /usr/lib/qt/include/qsizepolicy.h /usr/lib/qt/include/qcheckbox.h \
+  /usr/lib/qt/include/qsizepolicy.h /usr/lib/qt/include/qgroupbox.h \
+  /usr/lib/qt/include/qframe.h /usr/lib/qt/include/qcheckbox.h \
   /usr/lib/qt/include/qbutton.h /usr/lib/qt/include/qkeysequence.h \
+  /usr/lib/qt/include/qbuttongroup.h /usr/lib/qt/include/qradiobutton.h \
   /usr/lib/qt/include/qlayout.h /usr/lib/qt/include/qtooltip.h \
   /usr/lib/qt/include/qwhatsthis.h /usr/lib/qt/include/qcursor.h \
   GeneralWidget.moc /usr/lib/qt/include/qmetaobject.h \
@@ -192,11 +194,19 @@ GeneralWidget.h:
 
 /usr/lib/qt/include/qsizepolicy.h:
 
+/usr/lib/qt/include/qgroupbox.h:
+
+/usr/lib/qt/include/qframe.h:
+
 /usr/lib/qt/include/qcheckbox.h:
 
 /usr/lib/qt/include/qbutton.h:
 
 /usr/lib/qt/include/qkeysequence.h:
+
+/usr/lib/qt/include/qbuttongroup.h:
+
+/usr/lib/qt/include/qradiobutton.h:
 
 /usr/lib/qt/include/qlayout.h:
 
