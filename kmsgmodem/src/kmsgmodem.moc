@@ -1,8 +1,8 @@
 /****************************************************************************
 ** KMsgModem meta object code from reading C++ file 'kmsgmodem.h'
 **
-** Created: Sun Aug 22 18:43:14 2004
-**      by: The Qt MOC ($Id: kmsgmodem.moc,v 1.6 2004/08/23 21:28:25 wirr Exp $)
+** Created: Mon Aug 23 23:43:10 2004
+**      by: The Qt MOC ($Id: kmsgmodem.moc,v 1.7 2004/08/23 21:54:23 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
