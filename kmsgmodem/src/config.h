@@ -41,8 +41,10 @@ public:
 	
 	bool SetStandAloneModeOnExit;
 	bool CheckOnStart;
+	bool NormalQuality;
+	bool GoodQuality;
 	
-	QString Baudrate;
+	int Baudrate;
 	QString Port;
 	
 	int NoOfFaxMsgs;

@@ -17,44 +17,29 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-#include "config.h"
+#ifndef MYMODEMSETTINGSDIALOG_H
+#define MYMODEMSETTINGSDIALOG_H
 
-Config *Config::instance = NULL;
+#include <kdialogbase.h>
+#include <klocale.h>
 
-Config::Config()
- : KConfigSkeleton()
+#include "modemsettingsdialog.h"
+
+/**
+@author Alexander Wiedenbruch
+*/
+class MyModemSettingsDialog : public KDialogBase
 {
-	setCurrentGroup("General");
-	addItemBool("CheckOnStart", CheckOnStart, true);
-	addItemBool("SetStandAloneModeOnExit", SetStandAloneModeOnExit, true);
-	addItemBool("NormalQuality", NormalQuality, true);
-	addItemBool("GoodQuality", GoodQuality, false);
+public:
+	MyModemSettingsDialog(UsrSmpThread *modem);
+
+    ~MyModemSettingsDialog();
 	
-	setCurrentGroup("Modem");
-	addItemInt("Baudrate", Baudrate, 1);
-	addItemString("Port", Port, "/dev/ttyS0");
+private:
+	ModemSettingsDialog *settings;
 	
-	setCurrentGroup("Messages");
-	addItemInt("NoOfVoiceMsgs", NoOfVoiceMsgs, -1);
-	addItemInt("NoOfFaxMsgs", NoOfFaxMsgs, -1);
-	addItemLong("ResetTime", ResetTime, time(NULL));
-	
-	readConfig();
-}
+	void slotOk();
 
+};
 
-Config::~Config()
-{
-}
-
-Config *Config::Self()
-{
-	if(instance == NULL)
-	{
-		instance = new Config();
-	}
-	
-	return instance;
-}
-
-
+#endif

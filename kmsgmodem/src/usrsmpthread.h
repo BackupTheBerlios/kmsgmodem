@@ -142,6 +142,32 @@ public:
 	
 	int ResetModemClock();
 	
+	QString GetFaxId();
+	
+	int SetFaxId(QString faxId);
+	
+	int GetRingSetup();
+	
+	int SetRingSetup(int rings);
+	
+	bool GetDailupRetrivalStatus();
+	
+	int SetDailupRetrival(bool enable);
+	
+	QString GetDialupPassword();
+	
+	int SetDialupPassword(QString password);
+	
+	int WriteSettings();
+	
+	bool GetFaxReceptionStatus();
+	
+	int SetFaxReceptionStatus(bool enable);
+	
+	bool GetVoiceReceptionStatus();
+	
+	int SetVoiceReceptionStatus(bool enable);
+	
 private:
 	
 	//

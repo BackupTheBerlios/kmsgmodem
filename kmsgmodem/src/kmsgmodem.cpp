@@ -41,7 +41,7 @@
 #include "modemsettings.h"
 #include "modemsettingsdialog.h"
 #include "usrsmpthread.h"
-
+#include "mymodemsettingsdialog.h"
 
 
 /*! \brief C'tor
@@ -54,24 +54,24 @@ KMsgModem::KMsgModem(KUniqueApplication *app)
 	// Assemble GUI
 	//
 	saveas = KStdAction::saveAs(this, SLOT(SaveFile()), actionCollection(), "save_as");
-	saveas->setEnabled(false);
 	
 	KStdAction::quit(this, SLOT(QuitApp()), actionCollection());
 	
 	reload = new KAction(i18n("&Load messages"), "reload", 0, this, SLOT(LoadMessages()),  actionCollection(), "load_messages");
-	reload->setEnabled(false);
 	
 	standaloneToogle = new KAction(i18n("&Unset standalone mode"),  "connect_established", 0, this, SLOT(ToogleStandaloneMode()),  
 										actionCollection(), "toogle_standalonemode");
-	standaloneToogle->setEnabled(false);
 	
 	stop = new KAction(i18n("&Stop playing voice message"),  "player_stop", 0, this, SLOT(StopPlayingVoice()),  actionCollection(), "stop_voice");
 	stop->setEnabled(false);
 	
 	clearmemory = new KAction(i18n("&Clear modem memory"),  "edittrash", 0, this, SLOT(ClearMemory()),  actionCollection(), "clear_mem");
-	clearmemory->setEnabled(false);
+	
+	modemPreferences = new KAction(i18n("&Configure modem..."),  0, 0, this, SLOT(showModemSettings()),  actionCollection(), "modem_settings");
 	
 	preferences = KStdAction::preferences(this, SLOT(showSettings()), actionCollection());
+	
+	DisableModemActions();
   
 	mainWidget = new KMsgModemWidget(this);
 	setCentralWidget(mainWidget);
@@ -147,7 +147,21 @@ void KMsgModem::Startup()
 			// We init the modem here, if we don't get a response the timeout
 			// rescues the program.
 			//
-			modem = new UsrSmpThread(settings->Port, settings->Baudrate);
+			QString baudrate;
+			switch(settings->Baudrate)
+			{
+				case 0: baudrate = "230400"; break;
+				case 1: baudrate = "115200"; break;
+				case 2: baudrate = "57600"; break;
+				case 3: baudrate = "38400"; break;
+				case 4: baudrate = "19200"; break;
+				case 5: baudrate = "9600"; break;
+				case 6: baudrate = "4800"; break;
+				case 7: baudrate = "2400"; break;
+				default: baudrate = "115200"; break;
+			}
+			
+			modem = new UsrSmpThread(settings->Port, baudrate);
 			int error = modem->GetInitError();
 		
 			if(error == INIT_ERROR)
@@ -219,10 +233,13 @@ void KMsgModem::Startup()
 		
 		if(error == NONE)
 		{
+			saveas->setEnabled(false);
 			reload->setEnabled(true);
 			standaloneToogle->setEnabled(true);
 			stop->setEnabled(false);
 			clearmemory->setEnabled(true);
+			modemPreferences->setEnabled(true);
+			
 			stopFunc = true;
 			break;
 		}
@@ -417,6 +434,7 @@ void KMsgModem::NewMessage()
 void KMsgModem::ShowFax(int Fax)
 {
 	selectedMessage = Fax;
+	selectedMessageType = FAX;
 	
 	//
 	// Normally GetMessage should return the correct number of pages,
@@ -433,7 +451,7 @@ void KMsgModem::ShowFax(int Fax)
 	
 	SetStatusbarText(i18n("Showing fax message...", 0));
 	
-	saveas->setEnabled(false);
+	saveas->setEnabled(true);
 	
 	int Pages = modem->GetMessage(Fax);
 
@@ -495,6 +513,7 @@ void KMsgModem::ShowFax(int Fax)
 void KMsgModem::PlayVoice(int Voice)
 {	
 	selectedMessage = Voice;
+	selectedMessageType = VOICE;
 
 	if(playobj != NULL) StopPlayingVoice();
 	
@@ -567,10 +586,7 @@ void KMsgModem::showSettings()
    
    // @ todo change to new settings, or user has to restart program
    
-   dialog->addPage(new ModemSettingsDialog(modem, 0, "Modem"), i18n("Modem"), 0,  i18n("Modem Settings"));
-   
    dialog->show();
-
 }
 
 
@@ -642,42 +658,79 @@ void KMsgModem::ClearMemory()
 }
 
 
-/*! \brief This function saves the voice file
+/*! \brief This function saves the selected voice or fax file
  *
  *	Saving of fax files is not supported atm.
  */
 void KMsgModem::SaveFile()
 {
-	//
-	// I think the user want to save the current selected item
-	// and not the playing one.
-	//
-
-	QString filename = KFileDialog::getSaveFileName("voice-message.wav", "audio/x-wav", this);
-	if((filename.isEmpty()))
+	if(selectedMessageType == VOICE)
 	{
-		return;
+		QString filename = KFileDialog::getSaveFileName("voice-message.wav", "audio/x-wav", this);
+		if((filename.isEmpty()))
+		{
+			return;
+		}
+	
+		modem->GetMessage(selectedMessage);
+		
+		//
+		// Now convert the gsm file and save it to the location
+		//
+		KProcess *proc = new KProcess;
+	
+		*proc << "sox";
+		*proc << "/tmp/tel.gsm" << "-u" << "-b" << "-c 1" << filename;
+		
+		bool rc = proc->start(KProcess::Block);
+		
+		remove("/tmp/tel.gsm");
+		
+		if(!rc) 
+		{
+			KMessageBox::error(this, i18n("The voice file could not be decoded.\nPlease install SoX. You can find the sourcecode at \
+											http://sox.sf.net/"));
+			return;
+		}
 	}
-
-	modem->GetMessage(selectedMessage);
-	
-	//
-	// Now convert the gsm file and save it to the location
-	//
-	KProcess *proc = new KProcess;
-
-	*proc << "sox";
-	*proc << "/tmp/tel.gsm" << "-u" << "-b" << "-c 1" << filename;
-	
-	bool rc = proc->start(KProcess::Block);
-	
-	remove("/tmp/tel.gsm");
-	
-	if(!rc) 
+	else
 	{
-		KMessageBox::error(this, i18n("The voice file could not be decoded.\nPlease install SoX. You can find the sourcecode at \
-										http://sox.sf.net/"));
-		return;
+		QString filename = KFileDialog::getSaveFileName("fax-message.ps", "application/postscript", this);
+		if((filename.isEmpty()))
+		{
+			return;
+		}
+	
+		int Pages = modem->GetMessage(selectedMessage);
+		
+		//
+		// Now convert the fax file and save it to the location
+		// KProcess didn't like the command line.
+		//
+		QString command;
+		
+		if(Config::Self()->NormalQuality)
+			command = "convert -page A4 -sample \"100x200%\"! g3:/tmp/fax-* ";
+		else
+			command = "convert -page A4 -resize \"100x200%\"! g3:/tmp/fax-* ";
+		
+		command += filename;
+		int rc = system(command);
+		
+		if(rc < 0) 
+		{
+			KMessageBox::error(this, i18n("The fax file could not be decoded.\nPlease install \"convert\". You can find the sourcecode at \
+											http://www.imagemagick.org/"));
+			return;
+		}
+		
+		for(int i = 1; i <= Pages; i++)
+		{
+			QString faxarg("/tmp/fax-%1");
+			faxarg = faxarg.arg(i);
+		
+			remove(faxarg);
+		}
 	}
 }
 
@@ -723,7 +776,7 @@ void KMsgModem::EnableModemActions()
 	reload->setEnabled(true);
 	standaloneToogle->setEnabled(true);
 	clearmemory->setEnabled(true);
-	preferences->setEnabled(true);
+	modemPreferences->setEnabled(true);
 }
 
 
@@ -742,8 +795,15 @@ void KMsgModem::DisableModemActions()
 	reload->setEnabled(false);
 	standaloneToogle->setEnabled(false);
 	clearmemory->setEnabled(false);
-	preferences->setEnabled(false);
+	modemPreferences->setEnabled(false);
 }
 
 
+void KMsgModem::showModemSettings()
+{
+	MyModemSettingsDialog *dialog = new MyModemSettingsDialog(modem);
+	
+	dialog->show();
+}
+		
 #include "kmsgmodem.moc"

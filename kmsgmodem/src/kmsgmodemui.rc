@@ -1,7 +1,7 @@
 <!DOCTYPE kpartgui>
 <kpartgui name="kmsgmodem">
 	<MenuBar>
-		<Menu name="file"><Text>&amp;File</Text>
+		<Menu name="file">
       		<Action name="save_as"/>
     	</Menu>
 	
@@ -10,6 +10,10 @@
 	  		<Action name="toogle_standalonemode"/>
 			<Action name="clear_mem"/>
     	</Menu>
+	
+	   	<Menu name="settings">
+			<Action name="modem_settings"/>
+    	</Menu>		
   	</MenuBar>
 					
 	<ToolBar name="stdToolBar" fullWidth="true" newline="false"><Text>Standard Toolbar</Text>

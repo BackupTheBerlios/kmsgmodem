@@ -1,0 +1,324 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>settings</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>settings</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>325</width>
+            <height>454</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>325</width>
+            <height>450</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Form1</string>
+    </property>
+    <widget class="Line">
+        <property name="name">
+            <cstring>line1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>300</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>HLine</enum>
+        </property>
+        <property name="frameShadow">
+            <enum>Sunken</enum>
+        </property>
+        <property name="lineWidth">
+            <number>1</number>
+        </property>
+        <property name="orientation">
+            <enum>Horizontal</enum>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabel1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>250</width>
+                <height>16</height>
+            </rect>
+        </property>
+        <property name="font">
+            <font>
+                <bold>1</bold>
+            </font>
+        </property>
+        <property name="text">
+            <string>Modem Settings</string>
+        </property>
+    </widget>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>groupBox5</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>130</y>
+                <width>300</width>
+                <height>70</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Rings before pick up</string>
+        </property>
+        <widget class="KIntSpinBox">
+            <property name="name">
+                <cstring>Rings</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>230</x>
+                    <y>30</y>
+                    <width>50</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>6</number>
+            </property>
+            <property name="minValue">
+                <number>3</number>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel1_2</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>30</y>
+                    <width>140</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Number of rings:</string>
+            </property>
+            <property name="alignment">
+                <set>AlignVCenter|AlignLeft</set>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>groupBox7</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>340</y>
+                <width>300</width>
+                <height>100</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Message reception</string>
+        </property>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>Fax</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>30</y>
+                    <width>190</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Enable fax reception</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>Voice</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>60</y>
+                    <width>210</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Enable voice reception</string>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>groupBox4</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>40</y>
+                <width>300</width>
+                <height>70</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Fax identification string</string>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>faxIdLabel</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>30</y>
+                    <width>43</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Fax ID:</string>
+            </property>
+            <property name="alignment">
+                <set>AlignVCenter|AlignLeft</set>
+            </property>
+        </widget>
+        <widget class="KLineEdit">
+            <property name="name">
+                <cstring>faxId</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>120</x>
+                    <y>30</y>
+                    <width>160</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>1</hsizetype>
+                    <vsizetype>1</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>160</width>
+                    <height>21</height>
+                </size>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>groupBox6</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>220</y>
+                <width>300</width>
+                <height>100</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Dialup retrieval</string>
+        </property>
+        <widget class="KLineEdit">
+            <property name="name">
+                <cstring>Pass</cstring>
+            </property>
+            <property name="enabled">
+                <bool>true</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>240</x>
+                    <y>60</y>
+                    <width>40</width>
+                    <height>22</height>
+                </rect>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel2</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>130</x>
+                    <y>60</y>
+                    <width>65</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Password:</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>Dialup</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>30</y>
+                    <width>190</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Enable dialup retrieval</string>
+            </property>
+        </widget>
+    </widget>
+</widget>
+<customwidgets>
+</customwidgets>
+<connections>
+    <connection>
+        <sender>faxId</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>settings</receiver>
+        <slot>settingsChanged()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>faxId</tabstop>
+    <tabstop>Rings</tabstop>
+    <tabstop>Dialup</tabstop>
+    <tabstop>Pass</tabstop>
+    <tabstop>Fax</tabstop>
+    <tabstop>Voice</tabstop>
+</tabstops>
+<slots>
+    <slot>settingsChanged()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>knuminput.h</includehint>
+</includehints>
+</UI>

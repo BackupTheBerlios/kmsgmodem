@@ -153,19 +153,22 @@ int UsrSmpThread::InitModemThread()
 	
 	if(initError != NONE) return 0;
 	
+	//  In +M mode this resets the flash memory
+	/*
 	QString resp = simplemodem->SendCommand("ATZ");
 	if(resp.find("OK") == -1)
 	{
 		initError = RESET_ERROR;
 		return 0;
 	}
+	*/
 	
 	modemType = DetectModemType();
 	if(modemType == UNSPECIFIED)
 	{
 		initError = UNSUP;
 		return 0;
-	}		
+	}	
 	
 	SetStandAloneMode();
 	
@@ -672,6 +675,9 @@ int UsrSmpThread::ClearMemoryThread()
 }
 
 
+/*! \brief This dunction gets the modem time
+ *
+ */
 time_t UsrSmpThread::GetModemClock()
 {
 	QString resp = simplemodem->SendCommand("AT+MCC?");
@@ -679,6 +685,10 @@ time_t UsrSmpThread::GetModemClock()
 	resp = resp.remove("\n");
 	resp = resp.remove("\r");
 	resp = resp.remove("OK");
+	
+	#ifdef DEBUG_USR
+		kdDebug(0) << resp << endl;
+	#endif
 	
 	int Day = resp.mid(0,3).toInt();
 	int Hour = resp.mid(4,3).toInt();
@@ -697,6 +707,9 @@ time_t UsrSmpThread::GetModemClock()
 }
 
 
+/*! \brief Resets the modem time
+ *
+ */
 int UsrSmpThread::ResetModemClock()
 {
 	QString resp = simplemodem->SendCommand("AT+MCC");
@@ -705,3 +718,228 @@ int UsrSmpThread::ResetModemClock()
 	return 1;
 }
 
+
+/*! \brief Gets the current fax ID from the modem
+ *
+ */
+QString UsrSmpThread::GetFaxId()
+{	
+	QString resp = simplemodem->SendCommand("AT+MFI?");
+	
+	resp = resp.remove("\n");
+	resp = resp.remove("\r");
+	resp = resp.remove("OK");
+	resp = resp.remove("\"");
+	
+	#ifdef DEBUG_USR
+		kdDebug(0) << resp << endl;
+	#endif
+	
+	return resp;
+}
+
+
+/*! \brief Sets the fax ID
+ *
+ */
+int UsrSmpThread::SetFaxId(QString faxId)
+{
+	QString command("AT+MFI=\"");
+	command += faxId;
+	command += "\"";
+	
+	QString resp = simplemodem->SendCommand(command);
+	if(resp.find("OK") != -1) return 0;
+	
+	return 1;
+}
+
+
+/*! \brief Gets the number of rings before answering.
+ *
+ */
+int UsrSmpThread::GetRingSetup()
+{
+	QString resp = simplemodem->SendCommand("AT+MCR?");
+	
+	resp = resp.remove("\n");
+	resp = resp.remove("\r");
+	resp = resp.remove("OK");
+	resp = resp.remove("\"");
+	
+	#ifdef DEBUG_USR
+		kdDebug(0) << resp << endl;
+	#endif
+	
+	return resp.toInt();
+}
+
+
+/*! \brief Sets the number of rings before answering.
+ *
+ */
+int UsrSmpThread::SetRingSetup(int rings)
+{
+	QString command("AT+MCR=%1");
+	command = command.arg(rings);
+	
+	QString resp = simplemodem->SendCommand(command);
+	if(resp.find("OK") != -1) return 0;
+	
+	return 1;
+}
+
+
+/*! \brief Get if the dial up retrival is enabled
+ *
+ */
+bool UsrSmpThread::GetDailupRetrivalStatus()
+{
+	QString resp = simplemodem->SendCommand("AT+MCD?");
+	
+	#ifdef DEBUG_USR
+		kdDebug(0) << resp << endl;
+	#endif
+	
+	if(resp.find("0") != -1) return false;
+	
+	return true;
+}
+
+
+/*! \brief Disable/enable the dial up retrival
+ *
+ */
+int UsrSmpThread::SetDailupRetrival(bool enable)
+{
+	QString command;
+	
+	if(enable)
+		command = "AT+MCD=1";
+	else
+		command = "AT+MCD=0";
+	
+	QString resp = simplemodem->SendCommand(command);
+	if(resp.find("OK") != -1) return 0;
+	
+	return 1;
+}
+
+
+/*! \brief Get dialup password
+ *
+ */
+QString UsrSmpThread::GetDialupPassword()
+{
+	QString resp = simplemodem->SendCommand("AT+MCP?");
+
+	resp = resp.remove("\n");
+	resp = resp.remove("\r");
+	resp = resp.remove("OK");
+	
+	#ifdef DEBUG_USR
+		kdDebug(0) << resp << endl;
+	#endif
+	
+	if(resp.isEmpty()) return QString::null;	// untested, should work
+	return resp;
+}
+
+
+/*! \brief Set dialup password
+ *
+ */
+int UsrSmpThread::SetDialupPassword(QString password)
+{
+	QString command("AT+MCP=%1");
+	command = command.arg(password.toInt());
+	
+	QString resp = simplemodem->SendCommand(command);
+	if(resp.find("OK") != -1) return 0;
+	
+	return 1;
+}
+
+
+/*! \brief Write settings into non volatile memory
+ *
+ */
+int UsrSmpThread::WriteSettings()
+{
+	QString resp = simplemodem->SendCommand("AT+MCW");
+	if(resp.find("OK") != -1) return 0;
+	
+	return 1;
+}
+
+
+/*! \brief Get fax reception status
+ *
+ */
+bool UsrSmpThread::GetFaxReceptionStatus()
+{
+	QString resp = simplemodem->SendCommand("AT+MCF?");
+	
+	#ifdef DEBUG_USR
+		kdDebug(0) << resp << endl;
+	#endif
+	
+	if(resp.find("0") != -1) return false;
+	
+	return true;
+}
+
+
+/*! \brief Set fax reception status
+ *
+ */
+int UsrSmpThread::SetFaxReceptionStatus(bool enable)
+{
+	QString command;
+	
+	if(enable)
+		command = "AT+MCF=1";
+	else
+		command = "AT+MCF=0";
+	
+	QString resp = simplemodem->SendCommand(command);
+	if(resp.find("OK") != -1) return 0;
+	
+	return 1;
+}
+
+
+/*! \brief Get voice reception status
+ *
+ */
+bool UsrSmpThread::GetVoiceReceptionStatus()
+{
+	QString resp = simplemodem->SendCommand("AT+MCV?");
+	
+	#ifdef DEBUG_USR
+		kdDebug(0) << resp << endl;
+	#endif
+	
+	if(resp.find("0") != -1) return false;
+	
+	return true;
+}
+
+
+/*! \brief Set voice reception status
+ *
+ */
+int UsrSmpThread::SetVoiceReceptionStatus(bool enable)
+{
+	QString command;
+	
+	if(enable)
+		command = "AT+MCV=1";
+	else
+		command = "AT+MCV=0";
+	
+	QString resp = simplemodem->SendCommand(command);
+	if(resp.find("OK") != -1) return 0;
+	
+	return 1;
+}

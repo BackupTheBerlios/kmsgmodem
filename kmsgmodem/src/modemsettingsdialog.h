@@ -17,44 +17,61 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-#include "config.h"
 
-Config *Config::instance = NULL;
+#ifndef MODEMSETTINGSDIALOG_H
+#define MODEMSETTINGSDIALOG_H
 
-Config::Config()
- : KConfigSkeleton()
+#include <qstring.h>
+#include <qvalidator.h>
+
+#include "ModemSettings.h"
+#include "usrsmpthread.h"
+
+class ModemSettingsDialog : public settings
 {
-	setCurrentGroup("General");
-	addItemBool("CheckOnStart", CheckOnStart, true);
-	addItemBool("SetStandAloneModeOnExit", SetStandAloneModeOnExit, true);
-	addItemBool("NormalQuality", NormalQuality, true);
-	addItemBool("GoodQuality", GoodQuality, false);
-	
-	setCurrentGroup("Modem");
-	addItemInt("Baudrate", Baudrate, 1);
-	addItemString("Port", Port, "/dev/ttyS0");
-	
-	setCurrentGroup("Messages");
-	addItemInt("NoOfVoiceMsgs", NoOfVoiceMsgs, -1);
-	addItemInt("NoOfFaxMsgs", NoOfFaxMsgs, -1);
-	addItemLong("ResetTime", ResetTime, time(NULL));
-	
-	readConfig();
-}
+  Q_OBJECT
+
+public:
+  ModemSettingsDialog(UsrSmpThread *modem, QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
+  ~ModemSettingsDialog();
+
+  void WriteSettings();
+  /*$PUBLIC_FUNCTIONS$*/
+
+public slots:
+  /*$PUBLIC_SLOTS$*/
 
 
-Config::~Config()
-{
-}
+protected:
+  /*$PROTECTED_FUNCTIONS$*/
 
-Config *Config::Self()
-{
-	if(instance == NULL)
-	{
-		instance = new Config();
-	}
+protected slots:
+  /*$PROTECTED_SLOTS$*/
+  
+private:
+
+	QValidator *FaxValid;
 	
-	return instance;
-}
+	QValidator *PwdValid;
 
+	bool settingsChangedVar;
+
+	UsrSmpThread *modem;
+	
+	int rings;
+	
+	QString faxIdOrg;
+	
+	bool dialupStatus;
+	
+	QString password;
+	
+	bool voiceStatus;
+	
+	bool faxStatus;
+public slots:
+    virtual void settingsChanged();
+};
+
+#endif
 

@@ -17,44 +17,30 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-#include "config.h"
+#include "mymodemsettingsdialog.h"
 
-Config *Config::instance = NULL;
-
-Config::Config()
- : KConfigSkeleton()
+MyModemSettingsDialog::MyModemSettingsDialog(UsrSmpThread *modem)
+	: KDialogBase(KDialogBase::Swallow, i18n("Configure Modem..."), KDialogBase::Ok | KDialogBase::Cancel, KDialogBase::Ok)
 {
-	setCurrentGroup("General");
-	addItemBool("CheckOnStart", CheckOnStart, true);
-	addItemBool("SetStandAloneModeOnExit", SetStandAloneModeOnExit, true);
-	addItemBool("NormalQuality", NormalQuality, true);
-	addItemBool("GoodQuality", GoodQuality, false);
+	settings = new ModemSettingsDialog(modem, this);
 	
-	setCurrentGroup("Modem");
-	addItemInt("Baudrate", Baudrate, 1);
-	addItemString("Port", Port, "/dev/ttyS0");
+	setMainWidget(settings);
 	
-	setCurrentGroup("Messages");
-	addItemInt("NoOfVoiceMsgs", NoOfVoiceMsgs, -1);
-	addItemInt("NoOfFaxMsgs", NoOfFaxMsgs, -1);
-	addItemLong("ResetTime", ResetTime, time(NULL));
-	
-	readConfig();
 }
 
 
-Config::~Config()
+MyModemSettingsDialog::~MyModemSettingsDialog()
 {
+	delete settings;
 }
 
-Config *Config::Self()
+
+void MyModemSettingsDialog::slotOk()
 {
-	if(instance == NULL)
-	{
-		instance = new Config();
-	}
+	settings->WriteSettings();
 	
-	return instance;
+	delete this;	// quit
 }
+
 
 

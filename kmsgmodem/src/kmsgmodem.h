@@ -91,6 +91,7 @@ private:
 	KAction *clearmemory;
 	KAction *saveas;
 	KAction *preferences;
+	KAction *modemPreferences;
 	
 	bool standaloneModeActive;
 	
@@ -100,7 +101,9 @@ private:
 	KArtsServer server;
 	KDE::PlayObject *playobj;
 	
+	enum { VOICE, FAX };
 	unsigned int selectedMessage;
+	unsigned int selectedMessageType;
 	
 
 private slots:	
@@ -126,6 +129,8 @@ private slots:
 	bool queryClose();
 	
 	void QuitApp();
+	
+	void showModemSettings();
 };
 
 #endif // _KMSGMODEM_H_

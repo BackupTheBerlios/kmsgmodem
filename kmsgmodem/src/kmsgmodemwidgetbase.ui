@@ -12,14 +12,6 @@
             <height>272</height>
         </rect>
     </property>
-    <property name="sizePolicy">
-        <sizepolicy>
-            <hsizetype>2</hsizetype>
-            <vsizetype>2</vsizetype>
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-        </sizepolicy>
-    </property>
     <property name="minimumSize">
         <size>
             <width>100</width>
@@ -105,6 +97,9 @@
                     <width>500</width>
                     <height>240</height>
                 </size>
+            </property>
+            <property name="cursor">
+                <cursor>13</cursor>
             </property>
             <property name="midLineWidth">
                 <number>0</number>
