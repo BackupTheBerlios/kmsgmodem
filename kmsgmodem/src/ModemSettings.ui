@@ -1,8 +1,8 @@
 <!DOCTYPE UI><UI version="3.3" stdsetdef="1">
-<class>settings</class>
+<class>MyModemSettings</class>
 <widget class="QDialog">
     <property name="name">
-        <cstring>settings</cstring>
+        <cstring>MyModemSettings</cstring>
     </property>
     <property name="geometry">
         <rect>
@@ -82,25 +82,6 @@
         <property name="title">
             <string>Rings before pick up</string>
         </property>
-        <widget class="KIntSpinBox">
-            <property name="name">
-                <cstring>Rings</cstring>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>230</x>
-                    <y>30</y>
-                    <width>50</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property name="maxValue">
-                <number>6</number>
-            </property>
-            <property name="minValue">
-                <number>3</number>
-            </property>
-        </widget>
         <widget class="QLabel">
             <property name="name">
                 <cstring>textLabel1_2</cstring>
@@ -118,6 +99,25 @@
             </property>
             <property name="alignment">
                 <set>AlignVCenter|AlignLeft</set>
+            </property>
+        </widget>
+        <widget class="KIntSpinBox">
+            <property name="name">
+                <cstring>Rings</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>230</x>
+                    <y>30</y>
+                    <width>50</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>6</number>
+            </property>
+            <property name="minValue">
+                <number>3</number>
             </property>
         </widget>
     </widget>
@@ -246,22 +246,6 @@
         <property name="title">
             <string>Dialup retrieval</string>
         </property>
-        <widget class="KLineEdit">
-            <property name="name">
-                <cstring>Pass</cstring>
-            </property>
-            <property name="enabled">
-                <bool>true</bool>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>240</x>
-                    <y>60</y>
-                    <width>40</width>
-                    <height>22</height>
-                </rect>
-            </property>
-        </widget>
         <widget class="QLabel">
             <property name="name">
                 <cstring>textLabel2</cstring>
@@ -276,6 +260,22 @@
             </property>
             <property name="text">
                 <string>Password:</string>
+            </property>
+        </widget>
+        <widget class="KLineEdit">
+            <property name="name">
+                <cstring>Pass</cstring>
+            </property>
+            <property name="enabled">
+                <bool>true</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>240</x>
+                    <y>60</y>
+                    <width>40</width>
+                    <height>22</height>
+                </rect>
             </property>
         </widget>
         <widget class="QCheckBox">
@@ -302,7 +302,37 @@
     <connection>
         <sender>faxId</sender>
         <signal>textChanged(const QString&amp;)</signal>
-        <receiver>settings</receiver>
+        <receiver>MyModemSettings</receiver>
+        <slot>settingsChanged()</slot>
+    </connection>
+    <connection>
+        <sender>Rings</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>MyModemSettings</receiver>
+        <slot>settingsChanged()</slot>
+    </connection>
+    <connection>
+        <sender>Dialup</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>MyModemSettings</receiver>
+        <slot>settingsChanged()</slot>
+    </connection>
+    <connection>
+        <sender>Pass</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>MyModemSettings</receiver>
+        <slot>settingsChanged()</slot>
+    </connection>
+    <connection>
+        <sender>Voice</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>MyModemSettings</receiver>
+        <slot>settingsChanged()</slot>
+    </connection>
+    <connection>
+        <sender>Fax</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>MyModemSettings</receiver>
         <slot>settingsChanged()</slot>
     </connection>
 </connections>
@@ -316,6 +346,7 @@
 </tabstops>
 <slots>
     <slot>settingsChanged()</slot>
+    <slot>Fax_stateChanged(int)</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>

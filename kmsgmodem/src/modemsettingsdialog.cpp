@@ -30,7 +30,7 @@
 #include <qcheckbox.h>
 
 ModemSettingsDialog::ModemSettingsDialog(UsrSmpThread *modem, QWidget* parent, const char* name, bool modal, WFlags fl)
-: settings(parent,name, modal,fl)
+: MyModemSettings(parent,name, modal,fl)
 {
 	if(modem->running())
 	{

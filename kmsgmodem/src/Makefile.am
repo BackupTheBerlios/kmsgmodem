@@ -2,7 +2,7 @@
 INCLUDES = $(all_includes)
 
 # these are the headers for your project
-noinst_HEADERS = kmsgmodem.h
+noinst_HEADERS = kmsgmodem.h filebase.h
 
 # let automoc handle all of the meta source files (moc)
 METASOURCES = AUTO
@@ -20,10 +20,10 @@ KDE_ICON = kmsgmodem
 bin_PROGRAMS = kmsgmodem
 
 # the application source, library search path, and link libraries
-kmsgmodem_SOURCES = main.cpp kmsgmodem.cpp config.cpp connection.cpp \
-	generalsettings.cpp kmsgmodemwidget.cpp modemsettings.cpp modemsettingsdialog.cpp \
-	mymodemsettingsdialog.cpp simplemodem.cpp usrsmpthread.cpp GeneralWidget.ui \
-	kmsgmodemwidgetbase.ui ModemSettings.ui Modem.ui
+kmsgmodem_SOURCES = main.cpp kmsgmodem.cpp connection.cpp generalsettings.cpp \
+	kmsgmodemwidget.cpp modemsettings.cpp modemsettingsdialog.cpp mymodemsettingsdialog.cpp \
+	simplemodem.cpp usrsmpthread.cpp GeneralWidget.ui kmsgmodemwidgetbase.ui \
+	ModemSettings.ui Modem.ui settings.cpp filebase.cpp
 kmsgmodem_LDFLAGS = $(KDE_RPATH) $(all_libraries)
 kmsgmodem_LDADD = -lartskde $(LIB_KDEUI)
 

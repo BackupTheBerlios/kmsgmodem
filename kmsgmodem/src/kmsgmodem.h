@@ -42,8 +42,9 @@
 
 #include "kmsgmodem.h"
 #include "kmsgmodemwidget.h"
-#include "config.h"
+#include "settings.h"
 #include "usrsmpthread.h"
+#include "filebase.h"
 
 
 class UsrSmpThread;

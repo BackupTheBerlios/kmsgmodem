@@ -22,21 +22,41 @@
 
 #include <kconfigskeleton.h>
 
+#include <kconfigskeleton.h>
+
+#include <qstring.h>
+
+#include <time.h>
+
 /**
 @author Alexander Wiedenbruch
 */
 class Settings : public KConfigSkeleton
 {
+protected:
+    Settings();
+
 public:
-	Settings();
-			
     ~Settings();
 	
+	static Settings *Self();
+	
+	bool SetStandAloneModeOnExit;
 	bool CheckOnStart;
+	bool NormalQuality;
+	bool GoodQuality;
 	
-	QString Baudrate;
-	
+	int Baudrate;
 	QString Port;
+	
+	int NoOfFaxMsgs;
+	int NoOfVoiceMsgs;
+	
+	time_t ResetTime;
+
+private:	
+	static Settings *instance;
+
 };
 
 #endif

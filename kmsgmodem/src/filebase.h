@@ -17,61 +17,37 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-
-#ifndef MODEMSETTINGSDIALOG_H
-#define MODEMSETTINGSDIALOG_H
+#ifndef FILEBASE_H
+#define FILEBASE_H
 
 #include <qstring.h>
-#include <qvalidator.h>
 
-#include "ModemSettings.h"
-#include "usrsmpthread.h"
+#include<ktempdir.h>
 
-class ModemSettingsDialog : public MyModemSettings
+/**
+@author Alexander Wiedenbruch
+*/
+class FileBase
 {
-  Q_OBJECT
+protected:
+    FileBase();
 
 public:
-  ModemSettingsDialog(UsrSmpThread *modem, QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
-  ~ModemSettingsDialog();
-
-  void WriteSettings();
-  /*$PUBLIC_FUNCTIONS$*/
-
-public slots:
-  /*$PUBLIC_SLOTS$*/
-
-
-protected:
-  /*$PROTECTED_FUNCTIONS$*/
-
-protected slots:
-  /*$PROTECTED_SLOTS$*/
-  
-private:
-
-	QValidator *FaxValid;
+    ~FileBase();
 	
-	QValidator *PwdValid;
+	static FileBase *Self();
+	
+	void DeleteTempDir();
+	
+	QString MemoryFilename;
+	
+	QString MsgDirName;
+	
+public:	
+	static FileBase *instance;
+	
+	KTempDir *tmp;
 
-	bool settingsChangedVar;
-
-	UsrSmpThread *modem;
-	
-	int rings;
-	
-	QString faxIdOrg;
-	
-	bool dialupStatus;
-	
-	QString password;
-	
-	bool voiceStatus;
-	
-	bool faxStatus;
-public slots:
-    virtual void settingsChanged();
 };
 
 #endif
-

@@ -17,61 +17,42 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
+#include "settings.h"
 
-#ifndef MODEMSETTINGSDIALOG_H
-#define MODEMSETTINGSDIALOG_H
+Settings *Settings::instance = NULL;
 
-#include <qstring.h>
-#include <qvalidator.h>
-
-#include "ModemSettings.h"
-#include "usrsmpthread.h"
-
-class ModemSettingsDialog : public MyModemSettings
+Settings::Settings()
+ : KConfigSkeleton()
 {
-  Q_OBJECT
-
-public:
-  ModemSettingsDialog(UsrSmpThread *modem, QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
-  ~ModemSettingsDialog();
-
-  void WriteSettings();
-  /*$PUBLIC_FUNCTIONS$*/
-
-public slots:
-  /*$PUBLIC_SLOTS$*/
-
-
-protected:
-  /*$PROTECTED_FUNCTIONS$*/
-
-protected slots:
-  /*$PROTECTED_SLOTS$*/
-  
-private:
-
-	QValidator *FaxValid;
+	setCurrentGroup("General");
+	addItemBool("CheckOnStart", CheckOnStart, true);
+	addItemBool("SetStandAloneModeOnExit", SetStandAloneModeOnExit, true);
+	addItemBool("NormalQuality", NormalQuality, true);
+	addItemBool("GoodQuality", GoodQuality, false);
 	
-	QValidator *PwdValid;
+	setCurrentGroup("Modem");
+	addItemInt("Baudrate", Baudrate, 1);
+	addItemString("Port", Port, "/dev/ttyS0");
+	
+	setCurrentGroup("Messages");
+	addItemInt("NoOfVoiceMsgs", NoOfVoiceMsgs, -1);
+	addItemInt("NoOfFaxMsgs", NoOfFaxMsgs, -1);
+	addItemLong("ResetTime", ResetTime, time(NULL));
+	
+	readConfig();
+}
 
-	bool settingsChangedVar;
 
-	UsrSmpThread *modem;
-	
-	int rings;
-	
-	QString faxIdOrg;
-	
-	bool dialupStatus;
-	
-	QString password;
-	
-	bool voiceStatus;
-	
-	bool faxStatus;
-public slots:
-    virtual void settingsChanged();
-};
+Settings::~Settings()
+{
+}
 
-#endif
-
+Settings *Settings::Self()
+{
+	if(instance == NULL)
+	{
+		instance = new Settings();
+	}
+	
+	return instance;
+}

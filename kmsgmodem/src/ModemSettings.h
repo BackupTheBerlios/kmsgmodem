@@ -1,14 +1,14 @@
 /****************************************************************************
-** Form interface generated from reading ui file '/home/wirr/Dokumente/Programme/Projekte/KMsgModem/kmsgmodem/src/ModemSettings.ui'
+** Form interface generated from reading ui file './ModemSettings.ui'
 **
-** Created: Thu Aug 26 18:17:28 2004
-**      by: The User Interface Compiler ($Id: ModemSettings.h,v 1.5 2004/08/26 16:22:34 wirr Exp $)
+** Created: Sat Oct 16 15:06:08 2004
+**      by: The User Interface Compiler ($Id: ModemSettings.h,v 1.6 2004/10/16 13:25:03 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/
 
-#ifndef SETTINGS_H
-#define SETTINGS_H
+#ifndef MYMODEMSETTINGS_H
+#define MYMODEMSETTINGS_H
 
 #include <qvariant.h>
 #include <qdialog.h>
@@ -24,19 +24,19 @@ class KIntSpinBox;
 class QCheckBox;
 class KLineEdit;
 
-class settings : public QDialog
+class MyModemSettings : public QDialog
 {
     Q_OBJECT
 
 public:
-    settings( QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
-    ~settings();
+    MyModemSettings( QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
+    ~MyModemSettings();
 
     QFrame* line1;
     QLabel* textLabel1;
     QGroupBox* groupBox5;
-    KIntSpinBox* Rings;
     QLabel* textLabel1_2;
+    KIntSpinBox* Rings;
     QGroupBox* groupBox7;
     QCheckBox* Fax;
     QCheckBox* Voice;
@@ -44,12 +44,13 @@ public:
     QLabel* faxIdLabel;
     KLineEdit* faxId;
     QGroupBox* groupBox6;
-    KLineEdit* Pass;
     QLabel* textLabel2;
+    KLineEdit* Pass;
     QCheckBox* Dialup;
 
 public slots:
     virtual void settingsChanged();
+    virtual void Fax_stateChanged(int);
 
 protected:
 
@@ -58,4 +59,4 @@ protected slots:
 
 };
 
-#endif // SETTINGS_H
+#endif // MYMODEMSETTINGS_H

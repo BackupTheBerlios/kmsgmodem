@@ -22,6 +22,7 @@
 #include <kdebug.h>
 
 #include "usrsmpthread.h"
+#include "filebase.h"
 
 
 /*! \brief C'tor
@@ -37,6 +38,9 @@ UsrSmpThread::UsrSmpThread(QString interface, QString baud)
 	else initError = NONE;
 	
 	funcToRun = DEF;
+	
+	// Bugfix
+	umask(066);	// Allow only the user to read the files
 	
 	WasDLE = 0;
 }
@@ -409,7 +413,7 @@ struct MessageInfo UsrSmpThread::GetMsgInfo(unsigned int index)
  */
 void UsrSmpThread::LoadMessagesThread()
 {
-	FILE *fd = fopen("/tmp/USRMemory", "wb");
+	FILE *fd = fopen(FileBase::Self()->MemoryFilename, "wb");
 	if(fd == NULL)
 	{
 		kdError(0) << "Could not open temporary memory file" << endl;
@@ -428,7 +432,7 @@ void UsrSmpThread::LoadMessagesThread()
  */
 int UsrSmpThread::GetMessage(int Message)
 {
-	FILE *fd = fopen("/tmp/USRMemory", "rb");
+	FILE *fd = fopen(FileBase::Self()->MemoryFilename, "rb");
 	if(fd == NULL)
 	{
 		kdError(0) << "Could not open temporary memory file" << endl;
@@ -479,16 +483,20 @@ int UsrSmpThread::GetMessage(int Message)
 		
 		unsigned char c;
 		
-		char filename[20];
+		QString filename;
 		
 		if(hdr.Type == 2)	// Tel
 		{
-			sprintf(filename, "/tmp/tel.gsm");
+			//sprintf(filename, "/tmp/tel.gsm");
+			filename = FileBase::Self()->MsgDirName;
+			filename += "tel.gsm";
 		}
 		
 		if(hdr.Type == 1)	// Fax
 		{
-			sprintf(filename, "/tmp/fax-1");
+			//sprintf(filename, "/tmp/fax-1");
+			filename = FileBase::Self()->MsgDirName;
+			filename += "fax-1";
 		}
 		
 		FILE *MsgFd = fopen(filename, "wb");
@@ -515,8 +523,11 @@ int UsrSmpThread::GetMessage(int Message)
 						{
 							fclose(MsgFd);
 							PageNo++;
-							char filename[20];
-							sprintf(filename, "/tmp/fax-%i", PageNo);
+							//char filename[20];
+							//sprintf(filename, "/tmp/fax-%i", PageNo);
+							filename = FileBase::Self()->MsgDirName;
+							filename += "fax-%1";
+							filename = filename.arg(PageNo);
 							if (!(MsgFd = fopen(filename,"wb")))
 							{
 								return -1;

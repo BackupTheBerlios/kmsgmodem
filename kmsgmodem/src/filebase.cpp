@@ -17,61 +17,37 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
+#include <kstandarddirs.h>
+#include <kdebug.h>
 
-#ifndef MODEMSETTINGSDIALOG_H
-#define MODEMSETTINGSDIALOG_H
+#include "filebase.h"
 
-#include <qstring.h>
-#include <qvalidator.h>
+FileBase *FileBase::instance = NULL;
 
-#include "ModemSettings.h"
-#include "usrsmpthread.h"
-
-class ModemSettingsDialog : public MyModemSettings
+FileBase::FileBase()
 {
-  Q_OBJECT
-
-public:
-  ModemSettingsDialog(UsrSmpThread *modem, QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
-  ~ModemSettingsDialog();
-
-  void WriteSettings();
-  /*$PUBLIC_FUNCTIONS$*/
-
-public slots:
-  /*$PUBLIC_SLOTS$*/
-
-
-protected:
-  /*$PROTECTED_FUNCTIONS$*/
-
-protected slots:
-  /*$PROTECTED_SLOTS$*/
-  
-private:
-
-	QValidator *FaxValid;
+	MemoryFilename = locateLocal("data", "kmsgmodem/modem/memory");
 	
-	QValidator *PwdValid;
+	tmp = new KTempDir();
+	tmp->setAutoDelete(true);
+	
+	MsgDirName = tmp->name();
+}
 
-	bool settingsChangedVar;
 
-	UsrSmpThread *modem;
-	
-	int rings;
-	
-	QString faxIdOrg;
-	
-	bool dialupStatus;
-	
-	QString password;
-	
-	bool voiceStatus;
-	
-	bool faxStatus;
-public slots:
-    virtual void settingsChanged();
-};
+FileBase::~FileBase()
+{
+	delete tmp;
+}
 
-#endif
+
+FileBase *FileBase::Self()
+{
+	if(instance == NULL)
+	{
+		instance = new FileBase();
+	}
+	
+	return instance;
+}
 

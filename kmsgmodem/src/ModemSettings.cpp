@@ -1,10 +1,10 @@
 #include <kdialog.h>
 #include <klocale.h>
 /****************************************************************************
-** Form implementation generated from reading ui file '/home/wirr/Dokumente/Programme/Projekte/KMsgModem/kmsgmodem/src/ModemSettings.ui'
+** Form implementation generated from reading ui file './ModemSettings.ui'
 **
-** Created: Thu Aug 26 18:18:05 2004
-**      by: The User Interface Compiler ($Id: ModemSettings.cpp,v 1.5 2004/08/26 16:22:34 wirr Exp $)
+** Created: Sat Oct 16 15:06:51 2004
+**      by: The User Interface Compiler ($Id: ModemSettings.cpp,v 1.6 2004/10/16 13:25:03 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/
@@ -23,17 +23,17 @@
 #include <qwhatsthis.h>
 
 /*
- *  Constructs a settings as a child of 'parent', with the
+ *  Constructs a MyModemSettings as a child of 'parent', with the
  *  name 'name' and widget flags set to 'f'.
  *
  *  The dialog will by default be modeless, unless you set 'modal' to
  *  TRUE to construct a modal dialog.
  */
-settings::settings( QWidget* parent, const char* name, bool modal, WFlags fl )
+MyModemSettings::MyModemSettings( QWidget* parent, const char* name, bool modal, WFlags fl )
     : QDialog( parent, name, modal, fl )
 {
     if ( !name )
-	setName( "settings" );
+	setName( "MyModemSettings" );
     setMinimumSize( QSize( 325, 450 ) );
 
     line1 = new QFrame( this, "line1" );
@@ -52,14 +52,14 @@ settings::settings( QWidget* parent, const char* name, bool modal, WFlags fl )
     groupBox5 = new QGroupBox( this, "groupBox5" );
     groupBox5->setGeometry( QRect( 10, 130, 300, 70 ) );
 
+    textLabel1_2 = new QLabel( groupBox5, "textLabel1_2" );
+    textLabel1_2->setGeometry( QRect( 20, 30, 140, 20 ) );
+    textLabel1_2->setAlignment( int( QLabel::AlignVCenter | QLabel::AlignLeft ) );
+
     Rings = new KIntSpinBox( groupBox5, "Rings" );
     Rings->setGeometry( QRect( 230, 30, 50, 22 ) );
     Rings->setMaxValue( 6 );
     Rings->setMinValue( 3 );
-
-    textLabel1_2 = new QLabel( groupBox5, "textLabel1_2" );
-    textLabel1_2->setGeometry( QRect( 20, 30, 140, 20 ) );
-    textLabel1_2->setAlignment( int( QLabel::AlignVCenter | QLabel::AlignLeft ) );
 
     groupBox7 = new QGroupBox( this, "groupBox7" );
     groupBox7->setGeometry( QRect( 10, 340, 300, 100 ) );
@@ -85,12 +85,12 @@ settings::settings( QWidget* parent, const char* name, bool modal, WFlags fl )
     groupBox6 = new QGroupBox( this, "groupBox6" );
     groupBox6->setGeometry( QRect( 10, 220, 300, 100 ) );
 
+    textLabel2 = new QLabel( groupBox6, "textLabel2" );
+    textLabel2->setGeometry( QRect( 130, 60, 65, 20 ) );
+
     Pass = new KLineEdit( groupBox6, "Pass" );
     Pass->setEnabled( TRUE );
     Pass->setGeometry( QRect( 240, 60, 40, 22 ) );
-
-    textLabel2 = new QLabel( groupBox6, "textLabel2" );
-    textLabel2->setGeometry( QRect( 130, 60, 65, 20 ) );
 
     Dialup = new QCheckBox( groupBox6, "Dialup" );
     Dialup->setGeometry( QRect( 20, 30, 190, 20 ) );
@@ -100,6 +100,11 @@ settings::settings( QWidget* parent, const char* name, bool modal, WFlags fl )
 
     // signals and slots connections
     connect( faxId, SIGNAL( textChanged(const QString&) ), this, SLOT( settingsChanged() ) );
+    connect( Rings, SIGNAL( valueChanged(int) ), this, SLOT( settingsChanged() ) );
+    connect( Dialup, SIGNAL( toggled(bool) ), this, SLOT( settingsChanged() ) );
+    connect( Pass, SIGNAL( textChanged(const QString&) ), this, SLOT( settingsChanged() ) );
+    connect( Voice, SIGNAL( toggled(bool) ), this, SLOT( settingsChanged() ) );
+    connect( Fax, SIGNAL( toggled(bool) ), this, SLOT( settingsChanged() ) );
 
     // tab order
     setTabOrder( faxId, Rings );
@@ -112,7 +117,7 @@ settings::settings( QWidget* parent, const char* name, bool modal, WFlags fl )
 /*
  *  Destroys the object and frees any allocated resources
  */
-settings::~settings()
+MyModemSettings::~MyModemSettings()
 {
     // no need to delete child widgets, Qt does it all for us
 }
@@ -121,7 +126,7 @@ settings::~settings()
  *  Sets the strings of the subwidgets using the current
  *  language.
  */
-void settings::languageChange()
+void MyModemSettings::languageChange()
 {
     setCaption( tr2i18n( "Form1" ) );
     textLabel1->setText( tr2i18n( "Modem Settings" ) );
@@ -137,9 +142,14 @@ void settings::languageChange()
     Dialup->setText( tr2i18n( "Enable dialup retrieval" ) );
 }
 
-void settings::settingsChanged()
+void MyModemSettings::settingsChanged()
 {
-    qWarning( "settings::settingsChanged(): Not implemented yet" );
+    qWarning( "MyModemSettings::settingsChanged(): Not implemented yet" );
+}
+
+void MyModemSettings::Fax_stateChanged(int)
+{
+    qWarning( "MyModemSettings::Fax_stateChanged(int): Not implemented yet" );
 }
 
 #include "ModemSettings.moc"

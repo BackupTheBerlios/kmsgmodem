@@ -30,7 +30,7 @@
 static const char description[] =
     I18N_NOOP("USR Sportster Message Centre");
 
-static const char version[] = "0.5-devel";
+static const char version[] = "0.4.1";
 
 static KCmdLineOptions options[] =
 {

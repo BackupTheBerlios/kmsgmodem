@@ -1,10 +1,10 @@
 #include <kdialog.h>
 #include <klocale.h>
 /****************************************************************************
-** Form implementation generated from reading ui file '/home/wirr/Dokumente/Programme/Projekte/KMsgModem/kmsgmodem/src/GeneralWidget.ui'
+** Form implementation generated from reading ui file './GeneralWidget.ui'
 **
-** Created: Thu Aug 26 18:17:58 2004
-**      by: The User Interface Compiler ($Id: GeneralWidget.cpp,v 1.9 2004/08/26 16:22:33 wirr Exp $)
+** Created: Sat Oct 16 15:06:44 2004
+**      by: The User Interface Compiler ($Id: GeneralWidget.cpp,v 1.10 2004/10/16 13:25:02 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/

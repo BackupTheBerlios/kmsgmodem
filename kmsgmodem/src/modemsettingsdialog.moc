@@ -1,8 +1,8 @@
 /****************************************************************************
 ** ModemSettingsDialog meta object code from reading C++ file 'modemsettingsdialog.h'
 **
-** Created: Thu Aug 26 18:17:48 2004
-**      by: The Qt MOC ($Id: modemsettingsdialog.moc,v 1.5 2004/08/26 16:22:34 wirr Exp $)
+** Created: Sat Oct 16 15:06:34 2004
+**      by: The Qt MOC ($Id: modemsettingsdialog.moc,v 1.6 2004/10/16 13:25:03 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -51,7 +51,7 @@ QMetaObject* ModemSettingsDialog::staticMetaObject()
 {
     if ( metaObj )
 	return metaObj;
-    QMetaObject* parentObject = settings::staticMetaObject();
+    QMetaObject* parentObject = MyModemSettings::staticMetaObject();
     static const QUMethod slot_0 = {"settingsChanged", 0, 0 };
     static const QMetaData slot_tbl[] = {
 	{ "settingsChanged()", &slot_0, QMetaData::Public }
@@ -73,7 +73,7 @@ void* ModemSettingsDialog::qt_cast( const char* clname )
 {
     if ( !qstrcmp( clname, "ModemSettingsDialog" ) )
 	return this;
-    return settings::qt_cast( clname );
+    return MyModemSettings::qt_cast( clname );
 }
 
 bool ModemSettingsDialog::qt_invoke( int _id, QUObject* _o )
@@ -81,20 +81,20 @@ bool ModemSettingsDialog::qt_invoke( int _id, QUObject* _o )
     switch ( _id - staticMetaObject()->slotOffset() ) {
     case 0: settingsChanged(); break;
     default:
-	return settings::qt_invoke( _id, _o );
+	return MyModemSettings::qt_invoke( _id, _o );
     }
     return TRUE;
 }
 
 bool ModemSettingsDialog::qt_emit( int _id, QUObject* _o )
 {
-    return settings::qt_emit(_id,_o);
+    return MyModemSettings::qt_emit(_id,_o);
 }
 #ifndef QT_NO_PROPERTIES
 
 bool ModemSettingsDialog::qt_property( int id, int f, QVariant* v)
 {
-    return settings::qt_property( id, f, v);
+    return MyModemSettings::qt_property( id, f, v);
 }
 
 bool ModemSettingsDialog::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }

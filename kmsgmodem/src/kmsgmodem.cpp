@@ -102,7 +102,10 @@ KMsgModem::KMsgModem(KUniqueApplication *app)
  */
 KMsgModem::~KMsgModem()
 {	
-	Config *settings = Config::Self();	
+	delete FileBase::Self(); // seems to be time-critical, so call it first
+	StopPlayingVoice();	// @todo why didn't it stop playing here?
+	
+	Settings *settings = Settings::Self();	
 	settings->writeConfig();
 	
 	if(settings->SetStandAloneModeOnExit && !standaloneModeActive)
@@ -119,9 +122,7 @@ KMsgModem::~KMsgModem()
 		modem = NULL;
 	}
 	
-	delete Config::Self();
-	
-	StopPlayingVoice();	// @todo why didn't it stop playing here?
+	delete Settings::Self();
 	
 	delete playobj;
 }
@@ -136,7 +137,7 @@ KMsgModem::~KMsgModem()
 void KMsgModem::Startup()
 {
 	// Read Config
-	Config *settings = Config::Self();
+	Settings *settings = Settings::Self();
 	bool stopFunc = true;
 	
 	do
@@ -276,7 +277,7 @@ void KMsgModem::LoadMessages()
 	}
 	
 	// The memory file is not up to date, e.g. the modem memory was changed by another program
-	Config *settings = Config::Self();
+	Settings *settings = Settings::Self();
 	if((MemInfo.FaxMsgs != settings->NoOfFaxMsgs) || (MemInfo.VoiceMsgs != settings->NoOfVoiceMsgs))
 	{
 		SetStatusbarText(i18n("Downloading messages..."));
@@ -291,7 +292,7 @@ void KMsgModem::LoadMessages()
 	}
 	
 	// The temporary file was deleted, so we must read the messages again
-	bool fileExists = checkAccess("/tmp/USRMemory", F_OK);
+	bool fileExists = checkAccess(FileBase::Self()->MemoryFilename, F_OK);
 	if(!fileExists)
 	{
 		SetStatusbarText(i18n("Downloading messages..."));
@@ -370,11 +371,11 @@ void KMsgModem::LoadMessages()
  *	So, when the modem is reseted, every message rec. time
  *	is in the future.
  *	Perhaps the date is calced wrong when "now > rec date"
- *	but I think that is no great problem for the user.
+ *	but I think that is no big problem for the user.
  */
 QString KMsgModem::CalcDate(int Day, int Hour, int Minute)
 {	
-	Config *settings = Config::Self();
+	Settings *settings = Settings::Self();
 	
 	time_t MsgTime = Minute * 60;
 	MsgTime += Hour * 60 * 60;
@@ -420,7 +421,7 @@ void KMsgModem::NewMessage()
 	// Save the message numbers for the case another programm downloaded
 	// the new messages first.
 	//
-	Config *settings = Config::Self();
+	Settings *settings = Settings::Self();
 	settings->NoOfFaxMsgs = MemInfo.FaxMsgs;
 	settings->NoOfVoiceMsgs = MemInfo.VoiceMsgs;
 	
@@ -453,14 +454,19 @@ void KMsgModem::ShowFax(int Fax)
 	
 	saveas->setEnabled(true);
 	
-	int Pages = modem->GetMessage(Fax);
-
+	//
+	// Bugfix
+	// int Pages = modem->GetMessage(Fax);
+	//
+	modem->GetMessage(Fax);
+	int Pages = info.MsgSize;
 
 	QStringList arguments("-normal");
 	
 	for(int i = 1; i <= Pages; i++)
 	{
-		QString faxarg("/tmp/fax-%1");
+		QString faxarg(FileBase::Self()->MsgDirName);
+		faxarg += "fax-%1";
 		arguments += faxarg.arg(i);
 	}
 	
@@ -494,15 +500,6 @@ void KMsgModem::ShowFax(int Fax)
 	
 	while(proc->isRunning()) application->processEvents();
 	*/
-	
-	for(int i = 1; i <= Pages; i++)
-	{
-		QString faxarg("/tmp/fax-%1");
-		faxarg = faxarg.arg(i);
-		
-		remove(faxarg);
-	}
-	
 	SetStatusbarText();
 }
 
@@ -531,11 +528,11 @@ void KMsgModem::PlayVoice(int Voice)
 	KProcess *proc = new KProcess;
 
 	*proc << "sox";
-	*proc << "/tmp/tel.gsm" << "-u" << "-b" << "-c 1" << "/tmp/tel.wav";
+	*proc << FileBase::Self()->MsgDirName + "tel.gsm" << "-u" << "-b" << "-c 1" << FileBase::Self()->MsgDirName + "tel.wav";
 	
 	bool rc = proc->start(KProcess::Block);
 	
-	remove("/tmp/tel.gsm");
+	//remove("/tmp/tel.gsm");
 	
 	if(!rc) 
 	{
@@ -548,7 +545,7 @@ void KMsgModem::PlayVoice(int Voice)
 	// Now play the voice file
 	// @todo How can i check if an artsd is currently running?
 	//
-	KURL url("/tmp/tel.wav");
+	KURL url(FileBase::Self()->MsgDirName + "tel.wav");
 	
  	KDE::PlayObjectFactory factory(server.server());
  	playobj = factory.createPlayObject(url, true);
@@ -561,7 +558,7 @@ void KMsgModem::PlayVoice(int Voice)
 	//
 	// clean up
 	//
-	remove("/tmp/tel.wav");
+	//remove("/tmp/tel.wav");
 
 	stop->setEnabled(false);
 	
@@ -577,7 +574,7 @@ void KMsgModem::showSettings()
    if(KConfigDialog::showDialog("settings"))
      return;
    
-   KConfigDialog *dialog = new KConfigDialog(this, "settings", Config::Self(),
+   KConfigDialog *dialog = new KConfigDialog(this, "settings", Settings::Self(),
    								KDialogBase::IconList, KDialogBase::Ok|KDialogBase::Apply|KDialogBase::Cancel, KDialogBase::Ok, true);
    
    dialog->addPage(new GeneralSettings(0, "General"), i18n("General"), "kmsgmodem", i18n("General Settings"));
@@ -678,11 +675,11 @@ void KMsgModem::SaveFile()
 		KProcess *proc = new KProcess;
 	
 		*proc << "sox";
-		*proc << "/tmp/tel.gsm" << "-u" << "-b" << "-c 1" << filename;
+		*proc << FileBase::Self()->MsgDirName + "tel.gsm" << "-u" << "-b" << "-c 1" << filename;
 		
 		bool rc = proc->start(KProcess::Block);
 		
-		remove("/tmp/tel.gsm");
+		//remove("/tmp/tel.gsm");
 		
 		if(!rc) 
 		{
@@ -699,7 +696,7 @@ void KMsgModem::SaveFile()
 			return;
 		}
 	
-		int Pages = modem->GetMessage(selectedMessage);
+		modem->GetMessage(selectedMessage);
 		
 		//
 		// Now convert the fax file and save it to the location
@@ -707,10 +704,10 @@ void KMsgModem::SaveFile()
 		//
 		QString command;
 		
-		if(Config::Self()->NormalQuality)
-			command = "convert -page A4 -sample \"100x200%\"! g3:/tmp/fax-* ";
+		if(Settings::Self()->NormalQuality)
+			command = "convert -page A4 -sample \"100x200%\"! g3:" + FileBase::Self()->MsgDirName + "fax-* ";
 		else
-			command = "convert -page A4 -resize \"100x200%\"! g3:/tmp/fax-* ";
+			command = "convert -page A4 -resize \"100x200%\"! g3:" + FileBase::Self()->MsgDirName + "fax-* ";
 		
 		command += filename;
 		int rc = system(command);
@@ -720,14 +717,6 @@ void KMsgModem::SaveFile()
 			KMessageBox::error(this, i18n("The fax file could not be decoded.\nPlease install \"convert\". You can find the sourcecode at \
 											http://www.imagemagick.org/"));
 			return;
-		}
-		
-		for(int i = 1; i <= Pages; i++)
-		{
-			QString faxarg("/tmp/fax-%1");
-			faxarg = faxarg.arg(i);
-		
-			remove(faxarg);
 		}
 	}
 }
@@ -860,17 +849,17 @@ void KMsgModem::HanldeArgs(KCmdLineArgs *args)
 			return;
 		}
 		
-		Config::Self()->Baudrate = baudrate;
+		Settings::Self()->Baudrate = baudrate;
 	}
 	
 	QString term = args->getOption("terminal");
 	
 	if(!term.isNull())
 	{
-		Config::Self()->Port = term;
+		Settings::Self()->Port = term;
 	}
 	
-	if(args->isSet("delete")) remove("/tmp/USRMemory");
+	if(args->isSet("delete")) remove(FileBase::Self()->MemoryFilename);
 }
 		
 #include "kmsgmodem.moc"
