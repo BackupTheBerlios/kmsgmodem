@@ -1,8 +1,8 @@
 /****************************************************************************
 ** Form interface generated from reading ui file './Modem.ui'
 **
-** Created: Mon Aug 23 23:15:33 2004
-**      by: The User Interface Compiler ($Id: Modem.h,v 1.4 2004/08/23 21:19:22 wirr Exp $)
+** Created: Sun Aug 22 19:09:47 2004
+**      by: The User Interface Compiler ($Id: Modem.h,v 1.5 2004/08/23 21:28:25 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/

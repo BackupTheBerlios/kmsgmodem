@@ -1,123 +1,125 @@
-# translation of de.po to 
-# Alexander Wiedenbruch <wirr@users.berlios.de>, 2004.
 #: kmsgmodem.cpp:60
 msgid "&Load messages"
 msgstr "&Lade Nachrichten"
 
-#: kmsgmodem.cpp:63
+#: kmsgmodem.cpp:62
 msgid "&Unset standalone mode"
-msgstr "&Beende unabhngigen Modus"
+msgstr "&Beende unabhängigen Modus"
 
-#: kmsgmodem.cpp:67
+#: kmsgmodem.cpp:65
 msgid "&Stop playing voice message"
 msgstr "&Stoppe Wiedergabe"
 
-#: kmsgmodem.cpp:70
+#: kmsgmodem.cpp:68
 msgid "&Clear modem memory"
-msgstr "Ls&che Modemspeicher"
+msgstr "Lösche Modemspeicher"
 
-#: kmsgmodem.cpp:79
+#: kmsgmodem.cpp:70
+msgid "&Configure modem..."
+msgstr "&Konfiguriere Modem..."
+
+#: kmsgmodem.cpp:80
 msgid "Starting..."
 msgstr "Starte..."
 
-#: kmsgmodem.cpp:80
+#: kmsgmodem.cpp:81
 msgid "No new messages"
 msgstr "Keine neuen Nachrichten"
 
-#: kmsgmodem.cpp:81
+#: kmsgmodem.cpp:82
 msgid "Mem: unknown"
 msgstr "Speicher: unbekannt"
 
-#: kmsgmodem.cpp:154
+#: kmsgmodem.cpp:169
 msgid ""
 "Please check if you set the correct baudrate and interface in the settings.\n"
-"Check if there is no other application that uses this interface"
+"Check if there is no other application that uses this interface."
 msgstr ""
+"Bitte überprüfen Sie ob Sie die richtige Baudrate eingestellt haben\n"
+"Bitte überprüfen Sie außerdem ob keine andere Anwendung auf die Schnittstelle "
+"zugreifen kann."
 
-#: kmsgmodem.cpp:189
-msgid ""
-"Please check if the modem is connected to the correct port and switched on."
+#: kmsgmodem.cpp:200
+msgid "Please check if the modem is connected to the correct port and switched on."
 msgstr ""
-"Bitte berprfen Sie ob das Modem angeschaltet und an den richtigen Port "
+"Bitte überprüfen Sie ob das Modem angeschaltet und an den richtigen Port "
 "angeschlossen ist."
 
-#: kmsgmodem.cpp:205
+#: kmsgmodem.cpp:216
 msgid "Please check if the modem is connected to the correct port."
-msgstr ""
-"Bitte berprfen Sie ob das Modem an den richtigen Port angeschlossen ist."
+msgstr "Bitte überprüfen Sie ob das Modem an den richtigen Port angeschlossen ist."
 
-#: kmsgmodem.cpp:219
+#: kmsgmodem.cpp:230
 msgid "Please connect a USR Sportster Message Plus or Professional modem."
-msgstr ""
-"Bitte schlieen Sie ein USR Sportster Message Plus oder Professional Modem an."
+msgstr "Bitte schließen Sie ein USR Sportster Message Plus oder Professional Modem an."
 
-#: kmsgmodem.cpp:247
+#: kmsgmodem.cpp:261
 msgid "Loading messages..."
 msgstr "Lade Nachrichten..."
 
-#: kmsgmodem.cpp:266 kmsgmodem.cpp:279
+#: kmsgmodem.cpp:282 kmsgmodem.cpp:297
 msgid "Downloading messages..."
 msgstr "Laden Nachrichten runter..."
 
-#: kmsgmodem.cpp:310
+#: kmsgmodem.cpp:330
 msgid "Fax"
 msgstr "Fax"
 
-#: kmsgmodem.cpp:311
+#: kmsgmodem.cpp:331
 msgid "Tel"
 msgstr "Tel"
 
-#: kmsgmodem.cpp:320 kmsgmodem.cpp:332 kmsgmodem.cpp:365
+#: kmsgmodem.cpp:340 kmsgmodem.cpp:352 kmsgmodem.cpp:385
 msgid "unknown"
 msgstr "unbekannt"
 
-#: kmsgmodem.cpp:326
+#: kmsgmodem.cpp:346
 msgid " pages"
 msgstr " Seiten"
 
-#: kmsgmodem.cpp:327
+#: kmsgmodem.cpp:347
 msgid " page"
 msgstr " Seite"
 
-#: kmsgmodem.cpp:329
+#: kmsgmodem.cpp:349
 msgid "s"
 msgstr "s"
 
-#: kmsgmodem.cpp:337
+#: kmsgmodem.cpp:357
 #, c-format
 msgid "Mem: %1% free"
 msgstr "Speicher: %1% frei"
 
-#: kmsgmodem.cpp:383
+#: kmsgmodem.cpp:403
 msgid "%1 new message"
 msgstr "%1 neue Nachricht"
 
-#: kmsgmodem.cpp:390
+#: kmsgmodem.cpp:410
 msgid "Downloading new messages..."
 msgstr "Lade neue Nachrichten vom Modem..."
 
-#: kmsgmodem.cpp:395
+#: kmsgmodem.cpp:417
 msgid "Idle"
 msgstr "Leerlauf"
 
-#: kmsgmodem.cpp:405
+#: kmsgmodem.cpp:427
 msgid "There are new messages"
 msgstr "Neue Nachrichten vorhanden"
 
-#: kmsgmodem.cpp:424
+#: kmsgmodem.cpp:447
 msgid ""
 "This fax has no pages.\n"
 "This usually happens when an error occured at the \t\t\t\t\t\t\t\t\t"
 "\ttransmission of the fax."
 msgstr ""
-"Dieses Fax enthlt keine Seite\n"
-"Dies geschieht gewhnlich bei bertragungsproblemen."
+"Dieses Fax enthält keine Seite\n"
+"Dies geschieht gewöhnlich bei Übertragungsproblemen."
 
-#: kmsgmodem.cpp:429
+#: kmsgmodem.cpp:452
 msgid "Showing fax message..."
 msgstr "Zeige Faxnachricht..."
 
-#: kmsgmodem.cpp:448
+#: kmsgmodem.cpp:471
 #, fuzzy
 msgid ""
 "Please install KFax.\n"
@@ -126,135 +128,328 @@ msgstr ""
 "Bitte installieren Sie KFax\n"
 "Den Sourcecode finden Sie unter http://www.kde.org/"
 
-#: kmsgmodem.cpp:500
+#: kmsgmodem.cpp:524
 msgid "Playing voice message..."
 msgstr "Spiele Sprachnachricht..."
 
-#: kmsgmodem.cpp:518 kmsgmodem.cpp:666
+#: kmsgmodem.cpp:542
+#, fuzzy
 msgid ""
 "The voice file could not be decoded.\n"
-"Please install SoX. You can find the sourcecode at \t\t\t\t\t\t\t\t\t"
+"Please install \"SoX\". You can find the sourcecode at \t\t\t\t\t\t\t\t\t"
+"\thttp://sox.sf.net/"
+msgstr ""
+"Die Sprachnachricht konnte nicht dekodiert werden.\n"
+"Bitte installieren Sie SoX. Den Sourcecode finden Sie unter http://sox.sf."
+"net/"
+
+#: kmsgmodem.cpp:583
+msgid "General"
+msgstr "Allgemein"
+
+#: kmsgmodem.cpp:583
+msgid "General Settings"
+msgstr "Allgemeine-Einstellungen"
+
+#: kmsgmodem.cpp:585
+msgid "Connection"
+msgstr "Verbindung"
+
+#: kmsgmodem.cpp:585
+msgid "Connection Settings"
+msgstr "Verbindungs-Einstellungen"
+
+#: kmsgmodem.cpp:599
+msgid "Set standalone mode"
+msgstr "Starte unabhängigen Modus"
+
+#: kmsgmodem.cpp:602
+msgid "Standalone mode unset"
+msgstr "Unabhängiger Modus beendet"
+
+#: kmsgmodem.cpp:607
+msgid "Unset standalone mode"
+msgstr "Beende unabhängigen Modus"
+
+#: kmsgmodem.cpp:610
+msgid "Standalone mode set"
+msgstr "Unabhängiger Modus gestartet"
+
+#: kmsgmodem.cpp:646
+msgid "Are you sure to erase all messages on the modem?"
+msgstr "Sind Sie sicher, dass alle Nachrichten auf dem Modem gelöscht werden sollen?"
+
+#: kmsgmodem.cpp:689
+#, fuzzy
+msgid ""
+"The voice file could not be decoded.\n"
+"Please install \"SoX\". You can find the sourcecode at \t\t\t\t\t\t\t\t\t\t"
 "\thttp://sox.sf.net/"
 msgstr ""
 "Die Sprachnachricht konnte nicht dekodiert werden.\n"
 " Bitte installieren Sie SoX. Den Sourcecode finden Sie unter http://sox.sf."
 "net/"
 
-#: kmsgmodem.cpp:559
-msgid "General"
-msgstr "Allgemein"
-
-#: kmsgmodem.cpp:559
-msgid "General Settings"
-msgstr "Allgemeine-Einstellungen"
-
-#: kmsgmodem.cpp:561
-msgid "Connection"
-msgstr "Verbindung"
-
-#: kmsgmodem.cpp:561
-msgid "Connection Settings"
-msgstr "Verbindungs-Einstellungen"
-
-#: kmsgmodem.cpp:575
-msgid "Set standalone mode"
-msgstr "Starte unabhngigen Modus"
-
-#: kmsgmodem.cpp:578
-msgid "Standalone mode unset"
-msgstr "Unabhngiger Modus beendet"
-
-#: kmsgmodem.cpp:583
-msgid "Unset standalone mode"
-msgstr "Beende unabhngigen Modus"
-
-#: kmsgmodem.cpp:586
-msgid "Standalone mode set"
-msgstr "Unabhngiger Modus gestartet"
-
-#: kmsgmodem.cpp:622
-msgid "Are you sure to erase all messages on the modem?"
+#: kmsgmodem.cpp:720
+#, fuzzy
+msgid ""
+"The fax file could not be decoded.\n"
+"Please install \"convert\". You can find the sourcecode at \t\t\t\t\t\t\t\t\t"
+"\t\thttp://www.imagemagick.org/"
 msgstr ""
-"Sind Sie sicher dass alle Nachrichten auf dem Modem gelscht werden sollen?"
+"Die Sprachnachricht konnte nicht dekodiert werden.\n"
+" Bitte installieren Sie SoX. Den Sourcecode finden Sie unter http://sox.sf."
+"net/"
 
-#: kmsgmodem.cpp:682
+#: kmsgmodem.cpp:745
 msgid ""
 "You quit the application while an action is still running. This is not "
 "recommendable.\n"
 "Do you really want to continue quitting the application?"
 msgstr ""
+"Sie haben die Anwenudng beendet während eine Aktion durchgeführt wird. Das wird "
+"nicht empfohlen.\n"
+"Wollen Sie wirklich die Anwendung beenden?"
 
 #: main.cpp:31
-msgid "USR Sportster Message Center"
-msgstr "USR Sportster Message Center"
+msgid "USR Sportster Message Centre"
+msgstr "USR Sportster Message Centre"
 
-#: main.cpp:43
+#: main.cpp:38
+msgid "Delete memory file"
+msgstr "Lösche Speicherdatei"
+
+#: main.cpp:39
+msgid "Use this baudrate"
+msgstr "Benutze diese Baudrate"
+
+#: main.cpp:40
+msgid "Use this interface"
+msgstr "Benutze diese Schnittstelle"
+
+#: main.cpp:46
 msgid "KMsgModem"
 msgstr "KMsgModem"
 
-#: main.cpp:47
+#: main.cpp:50
 msgid "His previous work saved me much time"
 msgstr "Seine vorherige Arbeit hat mir viel Zeit gespart"
 
-#: main.cpp:48
+#: main.cpp:51
 msgid "Thanks for SoX"
-msgstr "Danke fr SoX"
+msgstr "Danke für SoX"
+
+#: modemsettingsdialog.cpp:81
+#, fuzzy
+msgid "Are you sure to save the settings?"
+msgstr "Sind Sie sicher, dass Sie die Einstellungen speichern wollen?"
+
+#: modemsettingsdialog.cpp:103
+msgid "The settings could not be saved."
+msgstr "Die Einstellungen konnten nicht gespeichert werden."
+
+#: mymodemsettingsdialog.cpp:23
+msgid "Configure Modem..."
+msgstr "Konfiguriere Modem..."
 
 #: rc.cpp:2
+#, no-c-format
 msgid "&Modem"
 msgstr "&Modem"
 
-#: rc.cpp:3
+#: rc.cpp:4
+#, no-c-format
 msgid "Standard Toolbar"
 msgstr "Standard Werkzeugleiste"
 
-#: rc.cpp:4 rc.cpp:5
+#: rc.cpp:6 rc.cpp:8
+#, no-c-format
 msgid "Message Toolbar"
 msgstr "Nachrichten Werkzeugleiste"
 
-#: rc.cpp:6 rc.cpp:15
+#: rc.cpp:10 rc.cpp:36 rc.cpp:60
+#, no-c-format
 msgid "Form1"
 msgstr "Form1"
 
-#: rc.cpp:7
-msgid "Check for new messages on startup"
-msgstr "Prfe beim Starten auf neue Nachrichten"
+#: rc.cpp:12
+#, no-c-format
+msgid "Fax conversion"
+msgstr "Faxkonvertierung"
 
-#: rc.cpp:8
+#: rc.cpp:14
+#, no-c-format
+msgid "Normal quality (slow)"
+msgstr "Normale Qualität (langsam)"
+
+#: rc.cpp:16
+#, no-c-format
+msgid "Good quality (very slow)"
+msgstr "Gute Qualität (sehr langsam)"
+
+#: rc.cpp:18
+#, no-c-format
+msgid "Start && Exit"
+msgstr "Starten && Beenden"
+
+#: rc.cpp:20
+#, no-c-format
 msgid "Set standalone mode on exit"
-msgstr "Starte unabhngigen Modus bei Beenden"
+msgstr "Starte unabhängigen Modus beim Beenden"
 
-#: rc.cpp:9
+#: rc.cpp:22
+#, no-c-format
+msgid "Check for new messages on startup"
+msgstr "Prüfe beim Starten auf neue Nachrichten"
+
+#: rc.cpp:24
+#, no-c-format
 msgid "kmsgmodemwidgetbase"
 msgstr "kmsgmodemwidgetbase"
 
-#: rc.cpp:10
+#: rc.cpp:26
+#, no-c-format
 msgid "#"
 msgstr "#"
 
-#: rc.cpp:11
+#: rc.cpp:28
+#, no-c-format
 msgid "Type"
 msgstr "Typ"
 
-#: rc.cpp:12
+#: rc.cpp:30
+#, no-c-format
 msgid "Date"
 msgstr "Datum"
 
-#: rc.cpp:13
+#: rc.cpp:32
+#, no-c-format
 msgid "Size"
-msgstr "Gre"
+msgstr "Größe"
 
-#: rc.cpp:14
+#: rc.cpp:34
+#, no-c-format
 msgid "Sender"
 msgstr "Sender"
 
-#: rc.cpp:16
+#: rc.cpp:38
+#, fuzzy, no-c-format
+msgid "Modem Settings"
+msgstr "Verbindungs-Einstellungen"
+
+#: rc.cpp:40
+#, no-c-format
+msgid "Rings before pick up"
+msgstr "Klingelzeichen vor abheben"
+
+#: rc.cpp:42
+#, no-c-format
+msgid "Number of rings:"
+msgstr "Anzahl Klingelzeichen"
+
+#: rc.cpp:44
+#, no-c-format
+msgid "Message reception"
+msgstr "Nachrichtenempfang"
+
+#: rc.cpp:46
+#, no-c-format
+msgid "Enable fax reception"
+msgstr "Aktiviere Faxempfang"
+
+#: rc.cpp:48
+#, no-c-format
+msgid "Enable voice reception"
+msgstr "Aktiviere Sprachempfang"
+
+#: rc.cpp:50
+#, no-c-format
+msgid "Fax identification string"
+msgstr "Fax ID Angabe"
+
+#: rc.cpp:52
+#, fuzzy, no-c-format
+msgid "Fax ID:"
+msgstr "Fax ID:"
+
+#: rc.cpp:54
+#, no-c-format
+msgid "Dialup retrieval"
+msgstr "Fernabfrage"
+
+#: rc.cpp:56
+#, no-c-format
+msgid "Password:"
+msgstr "Passwort:"
+
+#: rc.cpp:58
+#, no-c-format
+msgid "Enable dialup retrieval"
+msgstr "Aktiviere Fernabfrage"
+
+#: rc.cpp:62
+#, no-c-format
+msgid "Interface"
+msgstr "Schnittstelle"
+
+#: rc.cpp:64
+#, no-c-format
 msgid "Baudrate:"
 msgstr "Baudrate:"
 
-#: rc.cpp:17
-msgid "Device:"
-msgstr "Port:"
+#: rc.cpp:66
+#, no-c-format
+msgid "230400"
+msgstr "230400"
+
+#: rc.cpp:68
+#, no-c-format
+msgid "115200"
+msgstr "115200"
+
+#: rc.cpp:70
+#, no-c-format
+msgid "57600"
+msgstr "57600"
+
+#: rc.cpp:72
+#, no-c-format
+msgid "38400"
+msgstr "38400"
+
+#: rc.cpp:74
+#, no-c-format
+msgid "19200"
+msgstr "19200"
+
+#: rc.cpp:76
+#, no-c-format
+msgid "9600"
+msgstr "9600"
+
+#: rc.cpp:78
+#, no-c-format
+msgid "4800"
+msgstr "4800"
+
+#: rc.cpp:80
+#, no-c-format
+msgid "2400"
+msgstr "2400"
+
+#: rc.cpp:82
+#, fuzzy, no-c-format
+msgid "Interface:"
+msgstr "Schnittstelle:"
+
+#: rc.cpp:84
+#, no-c-format
+msgid ""
+"<p align=\"center\">These settings take effect after\n"
+"a restart of KMsgModem.</p>"
+msgstr ""
+"<p align=\"center\">Diese Einstellungen werden erst\n"
+"nach dem Neustart des Programms wirksam.</p>"
 
 #: _translatorinfo.cpp:1
 msgid ""
@@ -267,3 +462,4 @@ msgid ""
 "_: EMAIL OF TRANSLATORS\n"
 "Your emails"
 msgstr "wirr@users.berlios.de"
+

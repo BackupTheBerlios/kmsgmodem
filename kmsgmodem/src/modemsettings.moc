@@ -1,8 +1,8 @@
 /****************************************************************************
 ** ModemConnectionSettings meta object code from reading C++ file 'modemsettings.h'
 **
-** Created: Mon Aug 23 23:15:59 2004
-**      by: The Qt MOC ($Id: modemsettings.moc,v 1.4 2004/08/23 21:19:22 wirr Exp $)
+** Created: Tue Aug 17 11:48:45 2004
+**      by: The Qt MOC ($Id: modemsettings.moc,v 1.5 2004/08/23 21:28:25 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/

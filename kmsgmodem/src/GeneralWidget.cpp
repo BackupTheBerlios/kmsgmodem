@@ -2,8 +2,8 @@
 /****************************************************************************
 ** Form implementation generated from reading ui file './GeneralWidget.ui'
 **
-** Created: Mon Aug 23 23:16:12 2004
-**      by: The User Interface Compiler ($Id: GeneralWidget.cpp,v 1.4 2004/08/23 21:19:22 wirr Exp $)
+** Created: Sun Aug 22 19:10:31 2004
+**      by: The User Interface Compiler ($Id: GeneralWidget.cpp,v 1.5 2004/08/23 21:28:25 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/
