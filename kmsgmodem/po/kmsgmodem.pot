@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-19 17:34+0200\n"
+"POT-Creation-Date: 2004-08-26 17:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,167 +20,185 @@ msgstr ""
 msgid "&Load messages"
 msgstr ""
 
-#: kmsgmodem.cpp:63
+#: kmsgmodem.cpp:62
 msgid "&Unset standalone mode"
 msgstr ""
 
-#: kmsgmodem.cpp:67
+#: kmsgmodem.cpp:65
 msgid "&Stop playing voice message"
 msgstr ""
 
-#: kmsgmodem.cpp:70
+#: kmsgmodem.cpp:68
 msgid "&Clear modem memory"
 msgstr ""
 
-#: kmsgmodem.cpp:79
-msgid "Starting..."
+#: kmsgmodem.cpp:70
+msgid "&Configure modem..."
 msgstr ""
 
 #: kmsgmodem.cpp:80
-msgid "No new messages"
+msgid "Starting..."
 msgstr ""
 
 #: kmsgmodem.cpp:81
+msgid "No new messages"
+msgstr ""
+
+#: kmsgmodem.cpp:82
 msgid "Mem: unknown"
 msgstr ""
 
-#: kmsgmodem.cpp:154
+#: kmsgmodem.cpp:169
 msgid ""
 "Please check if you set the correct baudrate and interface in the settings.\n"
-"Check if there is no other application that uses this interface"
+"Check if there is no other application that uses this interface."
 msgstr ""
 
-#: kmsgmodem.cpp:189
+#: kmsgmodem.cpp:200
 msgid ""
 "Please check if the modem is connected to the correct port and switched on."
 msgstr ""
 
-#: kmsgmodem.cpp:205
+#: kmsgmodem.cpp:216
 msgid "Please check if the modem is connected to the correct port."
 msgstr ""
 
-#: kmsgmodem.cpp:219
+#: kmsgmodem.cpp:230
 msgid "Please connect a USR Sportster Message Plus or Professional modem."
 msgstr ""
 
-#: kmsgmodem.cpp:247
+#: kmsgmodem.cpp:261
 msgid "Loading messages..."
 msgstr ""
 
-#: kmsgmodem.cpp:266 kmsgmodem.cpp:279
+#: kmsgmodem.cpp:282 kmsgmodem.cpp:297
 msgid "Downloading messages..."
 msgstr ""
 
-#: kmsgmodem.cpp:310
+#: kmsgmodem.cpp:330
 msgid "Fax"
 msgstr ""
 
-#: kmsgmodem.cpp:311
+#: kmsgmodem.cpp:331
 msgid "Tel"
 msgstr ""
 
-#: kmsgmodem.cpp:320 kmsgmodem.cpp:332 kmsgmodem.cpp:365
+#: kmsgmodem.cpp:340 kmsgmodem.cpp:352 kmsgmodem.cpp:385
 msgid "unknown"
 msgstr ""
 
-#: kmsgmodem.cpp:326
+#: kmsgmodem.cpp:346
 msgid " pages"
 msgstr ""
 
-#: kmsgmodem.cpp:327
+#: kmsgmodem.cpp:347
 msgid " page"
 msgstr ""
 
-#: kmsgmodem.cpp:329
+#: kmsgmodem.cpp:349
 msgid "s"
 msgstr ""
 
-#: kmsgmodem.cpp:337
+#: kmsgmodem.cpp:357
 #, c-format
 msgid "Mem: %1% free"
 msgstr ""
 
-#: kmsgmodem.cpp:383
+#: kmsgmodem.cpp:403
 msgid "%1 new message"
 msgstr ""
 
-#: kmsgmodem.cpp:390
+#: kmsgmodem.cpp:410
 msgid "Downloading new messages..."
 msgstr ""
 
-#: kmsgmodem.cpp:395
+#: kmsgmodem.cpp:417
 msgid "Idle"
 msgstr ""
 
-#: kmsgmodem.cpp:405
+#: kmsgmodem.cpp:427
 msgid "There are new messages"
 msgstr ""
 
-#: kmsgmodem.cpp:424
+#: kmsgmodem.cpp:447
 msgid ""
 "This fax has no pages.\n"
 "This usually happens when an error occured at the \t\t\t\t\t\t\t\t\t"
 "\ttransmission of the fax."
 msgstr ""
 
-#: kmsgmodem.cpp:429
+#: kmsgmodem.cpp:452
 msgid "Showing fax message..."
 msgstr ""
 
-#: kmsgmodem.cpp:448
+#: kmsgmodem.cpp:471
 msgid ""
 "Please install KFax.\n"
 "You can find the sourcecode at http://www.kde.org/"
 msgstr ""
 
-#: kmsgmodem.cpp:500
+#: kmsgmodem.cpp:524
 msgid "Playing voice message..."
 msgstr ""
 
-#: kmsgmodem.cpp:518 kmsgmodem.cpp:666
+#: kmsgmodem.cpp:542
 msgid ""
 "The voice file could not be decoded.\n"
-"Please install SoX. You can find the sourcecode at \t\t\t\t\t\t\t\t\t"
+"Please install \"SoX\". You can find the sourcecode at \t\t\t\t\t\t\t\t\t"
 "\thttp://sox.sf.net/"
 msgstr ""
 
-#: kmsgmodem.cpp:559
+#: kmsgmodem.cpp:583
 msgid "General"
 msgstr ""
 
-#: kmsgmodem.cpp:559
+#: kmsgmodem.cpp:583
 msgid "General Settings"
 msgstr ""
 
-#: kmsgmodem.cpp:561
+#: kmsgmodem.cpp:585
 msgid "Connection"
 msgstr ""
 
-#: kmsgmodem.cpp:561
+#: kmsgmodem.cpp:585
 msgid "Connection Settings"
 msgstr ""
 
-#: kmsgmodem.cpp:575
+#: kmsgmodem.cpp:599
 msgid "Set standalone mode"
 msgstr ""
 
-#: kmsgmodem.cpp:578
+#: kmsgmodem.cpp:602
 msgid "Standalone mode unset"
 msgstr ""
 
-#: kmsgmodem.cpp:583
+#: kmsgmodem.cpp:607
 msgid "Unset standalone mode"
 msgstr ""
 
-#: kmsgmodem.cpp:586
+#: kmsgmodem.cpp:610
 msgid "Standalone mode set"
 msgstr ""
 
-#: kmsgmodem.cpp:622
+#: kmsgmodem.cpp:646
 msgid "Are you sure to erase all messages on the modem?"
 msgstr ""
 
-#: kmsgmodem.cpp:682
+#: kmsgmodem.cpp:689
+msgid ""
+"The voice file could not be decoded.\n"
+"Please install \"SoX\". You can find the sourcecode at \t\t\t\t\t\t\t\t\t\t"
+"\thttp://sox.sf.net/"
+msgstr ""
+
+#: kmsgmodem.cpp:720
+msgid ""
+"The fax file could not be decoded.\n"
+"Please install \"convert\". You can find the sourcecode at \t\t\t\t\t\t\t\t\t"
+"\t\thttp://www.imagemagick.org/"
+msgstr ""
+
+#: kmsgmodem.cpp:745
 msgid ""
 "You quit the application while an action is still running. This is not "
 "recommendable.\n"
@@ -188,75 +206,240 @@ msgid ""
 msgstr ""
 
 #: main.cpp:31
-msgid "USR Sportster Message Center"
+msgid "USR Sportster Message Centre"
 msgstr ""
 
-#: main.cpp:43
+#: main.cpp:38
+msgid "Delete memory file"
+msgstr ""
+
+#: main.cpp:39
+msgid "Use this baudrate"
+msgstr ""
+
+#: main.cpp:40
+msgid "Use this interface"
+msgstr ""
+
+#: main.cpp:46
 msgid "KMsgModem"
 msgstr ""
 
-#: main.cpp:47
+#: main.cpp:50
 msgid "His previous work saved me much time"
 msgstr ""
 
-#: main.cpp:48
+#: main.cpp:51
 msgid "Thanks for SoX"
 msgstr ""
 
+#: modemsettingsdialog.cpp:81
+msgid "Are you sure to save the settings?"
+msgstr ""
+
+#: modemsettingsdialog.cpp:103
+msgid "The settings could not be saved."
+msgstr ""
+
+#: mymodemsettingsdialog.cpp:23
+msgid "Configure Modem..."
+msgstr ""
+
 #: rc.cpp:2
+#, no-c-format
 msgid "&Modem"
 msgstr ""
 
-#: rc.cpp:3
+#: rc.cpp:4
+#, no-c-format
 msgid "Standard Toolbar"
 msgstr ""
 
-#: rc.cpp:4 rc.cpp:5
+#: rc.cpp:6 rc.cpp:8
+#, no-c-format
 msgid "Message Toolbar"
 msgstr ""
 
-#: rc.cpp:6 rc.cpp:15
+#: rc.cpp:10 rc.cpp:36 rc.cpp:60
+#, no-c-format
 msgid "Form1"
 msgstr ""
 
-#: rc.cpp:7
-msgid "Check for new messages on startup"
-msgstr ""
-
-#: rc.cpp:8
-msgid "Set standalone mode on exit"
-msgstr ""
-
-#: rc.cpp:9
-msgid "kmsgmodemwidgetbase"
-msgstr ""
-
-#: rc.cpp:10
-msgid "#"
-msgstr ""
-
-#: rc.cpp:11
-msgid "Type"
-msgstr ""
-
 #: rc.cpp:12
-msgid "Date"
-msgstr ""
-
-#: rc.cpp:13
-msgid "Size"
+#, no-c-format
+msgid "Start && Exit"
 msgstr ""
 
 #: rc.cpp:14
-msgid "Sender"
+#, no-c-format
+msgid "Set standalone mode on exit"
 msgstr ""
 
 #: rc.cpp:16
+#, no-c-format
+msgid "Check for new messages on startup"
+msgstr ""
+
+#: rc.cpp:18
+#, no-c-format
+msgid "Fax conversion"
+msgstr ""
+
+#: rc.cpp:20
+#, no-c-format
+msgid "Normal quality (slow)"
+msgstr ""
+
+#: rc.cpp:22
+#, no-c-format
+msgid "Good quality (very slow)"
+msgstr ""
+
+#: rc.cpp:24
+#, no-c-format
+msgid "kmsgmodemwidgetbase"
+msgstr ""
+
+#: rc.cpp:26
+#, no-c-format
+msgid "#"
+msgstr ""
+
+#: rc.cpp:28
+#, no-c-format
+msgid "Type"
+msgstr ""
+
+#: rc.cpp:30
+#, no-c-format
+msgid "Date"
+msgstr ""
+
+#: rc.cpp:32
+#, no-c-format
+msgid "Size"
+msgstr ""
+
+#: rc.cpp:34
+#, no-c-format
+msgid "Sender"
+msgstr ""
+
+#: rc.cpp:38
+#, no-c-format
+msgid "Modem Settings"
+msgstr ""
+
+#: rc.cpp:40
+#, no-c-format
+msgid "Rings before pick up"
+msgstr ""
+
+#: rc.cpp:42
+#, no-c-format
+msgid "Number of rings:"
+msgstr ""
+
+#: rc.cpp:44
+#, no-c-format
+msgid "Message reception"
+msgstr ""
+
+#: rc.cpp:46
+#, no-c-format
+msgid "Enable fax reception"
+msgstr ""
+
+#: rc.cpp:48
+#, no-c-format
+msgid "Enable voice reception"
+msgstr ""
+
+#: rc.cpp:50
+#, no-c-format
+msgid "Fax identification string"
+msgstr ""
+
+#: rc.cpp:52
+#, no-c-format
+msgid "Fax ID:"
+msgstr ""
+
+#: rc.cpp:54
+#, no-c-format
+msgid "Dialup retrieval"
+msgstr ""
+
+#: rc.cpp:56
+#, no-c-format
+msgid "Password:"
+msgstr ""
+
+#: rc.cpp:58
+#, no-c-format
+msgid "Enable dialup retrieval"
+msgstr ""
+
+#: rc.cpp:62
+#, no-c-format
+msgid "Interface"
+msgstr ""
+
+#: rc.cpp:64
+#, no-c-format
 msgid "Baudrate:"
 msgstr ""
 
-#: rc.cpp:17
-msgid "Device:"
+#: rc.cpp:66
+#, no-c-format
+msgid "230400"
+msgstr ""
+
+#: rc.cpp:68
+#, no-c-format
+msgid "115200"
+msgstr ""
+
+#: rc.cpp:70
+#, no-c-format
+msgid "57600"
+msgstr ""
+
+#: rc.cpp:72
+#, no-c-format
+msgid "38400"
+msgstr ""
+
+#: rc.cpp:74
+#, no-c-format
+msgid "19200"
+msgstr ""
+
+#: rc.cpp:76
+#, no-c-format
+msgid "9600"
+msgstr ""
+
+#: rc.cpp:78
+#, no-c-format
+msgid "4800"
+msgstr ""
+
+#: rc.cpp:80
+#, no-c-format
+msgid "2400"
+msgstr ""
+
+#: rc.cpp:82
+#, no-c-format
+msgid "Interface:"
+msgstr ""
+
+#: rc.cpp:84
+#, no-c-format
+msgid ""
+"<p align=\"center\">These settings take effect after\n"
+"a restart of KMsgModem.</p>"
 msgstr ""
 
 #: _translatorinfo.cpp:1

@@ -1,9 +1,10 @@
+#include <kdialog.h>
 #include <klocale.h>
 /****************************************************************************
 ** Form implementation generated from reading ui file '/home/wirr/Dokumente/Programme/Projekte/KMsgModem/kmsgmodem/src/ModemSettings.ui'
 **
-** Created: Thu Aug 26 15:42:52 2004
-**      by: The User Interface Compiler ($Id: ModemSettings.cpp,v 1.3 2004/08/26 14:01:35 wirr Exp $)
+** Created: Thu Aug 26 17:58:25 2004
+**      by: The User Interface Compiler ($Id: ModemSettings.cpp,v 1.4 2004/08/26 16:09:44 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/
