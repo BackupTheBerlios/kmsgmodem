@@ -273,8 +273,8 @@ void KMsgModem::LoadMessages()
 	}
 	
 	// The temporary file was deleted, so we must read the messages again
-	FILE *fileEx = fopen("/tmp/USRMemory", "r");
-	if(fileEx == NULL)
+	bool fileExists = checkAccess("/tmp/USRMemory", F_OK);
+	if(!fileExists)
 	{
 		SetStatusbarText(i18n("Downloading messages..."));
 		
@@ -284,9 +284,8 @@ void KMsgModem::LoadMessages()
 		settings->NoOfFaxMsgs = MemInfo.FaxMsgs;
 		settings->NoOfVoiceMsgs = MemInfo.VoiceMsgs;
 	}
-	if(fileEx != NULL) fclose(fileEx);
 	
-	// Check if the modem clock should be resetted
+	// Check if the modem clock should be reseted
 	time_t modemTime = modem->GetModemClock();
 	if(modemTime == 0)
 	{
@@ -348,7 +347,7 @@ void KMsgModem::LoadMessages()
  *
  *	To make it simple, asume that from every message from
  *  the future the date is unknown.
- *	So, when the modem is resetted, every message rec. time
+ *	So, when the modem is reseted, every message rec. time
  *	is in the future.
  *	Perhaps the date is calced wrong when "now > rec date"
  *	but I think that is no great problem for the user.
