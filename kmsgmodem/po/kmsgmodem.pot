@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-08 17:54+0200\n"
+"POT-Creation-Date: 2004-08-15 15:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,141 +16,161 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: kmsgmodem.cpp:47
+#: kmsgmodem.cpp:58
 msgid "&Load messages"
 msgstr ""
 
-#: kmsgmodem.cpp:49
+#: kmsgmodem.cpp:61
 msgid "&Unset standalone mode"
 msgstr ""
 
-#: kmsgmodem.cpp:51
+#: kmsgmodem.cpp:65
 msgid "&Stop playing voice message"
 msgstr ""
 
-#: kmsgmodem.cpp:53
+#: kmsgmodem.cpp:68
 msgid "&Clear modem memory"
 msgstr ""
 
-#: kmsgmodem.cpp:62
+#: kmsgmodem.cpp:77
 msgid "Starting..."
 msgstr ""
 
-#: kmsgmodem.cpp:63
+#: kmsgmodem.cpp:78
 msgid "No new messages"
 msgstr ""
 
-#: kmsgmodem.cpp:64
+#: kmsgmodem.cpp:79
 msgid "Mem: unknown"
 msgstr ""
 
-#: kmsgmodem.cpp:126
+#: kmsgmodem.cpp:176
 msgid ""
 "Please check if the modem is connected to the correct port and switched on."
 msgstr ""
 
-#: kmsgmodem.cpp:140
+#: kmsgmodem.cpp:192
 msgid "Please check if the modem is connected to the correct port."
 msgstr ""
 
-#: kmsgmodem.cpp:145
+#: kmsgmodem.cpp:206
 msgid "Please connect a USR Sportster Message Plus or Professional modem."
 msgstr ""
 
-#: kmsgmodem.cpp:162
+#: kmsgmodem.cpp:234
 msgid "Loading messages..."
 msgstr ""
 
-#: kmsgmodem.cpp:181
+#: kmsgmodem.cpp:253 kmsgmodem.cpp:267
 msgid "Downloading messages..."
 msgstr ""
 
-#: kmsgmodem.cpp:203
+#: kmsgmodem.cpp:292
 msgid "Fax"
 msgstr ""
 
-#: kmsgmodem.cpp:204
+#: kmsgmodem.cpp:293
 msgid "Tel"
 msgstr ""
 
-#: kmsgmodem.cpp:217 kmsgmodem.cpp:229
+#: kmsgmodem.cpp:306 kmsgmodem.cpp:318
 msgid "unknown"
 msgstr ""
 
-#: kmsgmodem.cpp:223
+#: kmsgmodem.cpp:312
 msgid " pages"
 msgstr ""
 
-#: kmsgmodem.cpp:224
+#: kmsgmodem.cpp:313
 msgid " page"
 msgstr ""
 
-#: kmsgmodem.cpp:226
+#: kmsgmodem.cpp:315
 msgid "s"
 msgstr ""
 
-#: kmsgmodem.cpp:234
+#: kmsgmodem.cpp:323
 #, c-format
 msgid "Mem: %1% free"
 msgstr ""
 
-#: kmsgmodem.cpp:249
+#: kmsgmodem.cpp:341
 msgid "%1 new message"
 msgstr ""
 
-#: kmsgmodem.cpp:256
+#: kmsgmodem.cpp:348
 msgid "Downloading new messages..."
 msgstr ""
 
-#: kmsgmodem.cpp:258
+#: kmsgmodem.cpp:353
 msgid "Idle"
 msgstr ""
 
-#: kmsgmodem.cpp:265
+#: kmsgmodem.cpp:364
 msgid "There are new messages"
 msgstr ""
 
-#: kmsgmodem.cpp:271
-msgid "Showing fax message..."
-msgstr ""
-
-#: kmsgmodem.cpp:298
-msgid "Playing voice message..."
-msgstr ""
-
-#: kmsgmodem.cpp:365
-msgid "General"
-msgstr ""
-
-#: kmsgmodem.cpp:365
-msgid "General Settings"
-msgstr ""
-
-#: kmsgmodem.cpp:367
-msgid "Connection"
-msgstr ""
-
-#: kmsgmodem.cpp:367
-msgid "Connection Settings"
-msgstr ""
-
-#: kmsgmodem.cpp:377
-msgid "Set standalone mode"
-msgstr ""
-
-#: kmsgmodem.cpp:380
-msgid "Standalone mode unset"
-msgstr ""
-
-#: kmsgmodem.cpp:385
-msgid "Unset standalone mode"
+#: kmsgmodem.cpp:383
+msgid ""
+"This fax has no pages.\n"
+"This usually happens when an error occured at the \t\t\t\t\t\t\t\t\t"
+"\ttransmission of the fax."
 msgstr ""
 
 #: kmsgmodem.cpp:388
+msgid "Showing fax message..."
+msgstr ""
+
+#: kmsgmodem.cpp:407
+msgid ""
+"Please install KFax.\n"
+"You can find the sourcecode at http://www.kde.org/"
+msgstr ""
+
+#: kmsgmodem.cpp:459
+msgid "Playing voice message..."
+msgstr ""
+
+#: kmsgmodem.cpp:477 kmsgmodem.cpp:625
+msgid ""
+"The voice file could not be decoded.\n"
+"Please install SoX. You can find the sourcecode at \t\t\t\t\t\t\t\t\t"
+"\thttp://sox.sf.net/"
+msgstr ""
+
+#: kmsgmodem.cpp:518
+msgid "General"
+msgstr ""
+
+#: kmsgmodem.cpp:518
+msgid "General Settings"
+msgstr ""
+
+#: kmsgmodem.cpp:520
+msgid "Connection"
+msgstr ""
+
+#: kmsgmodem.cpp:520
+msgid "Connection Settings"
+msgstr ""
+
+#: kmsgmodem.cpp:534
+msgid "Set standalone mode"
+msgstr ""
+
+#: kmsgmodem.cpp:537
+msgid "Standalone mode unset"
+msgstr ""
+
+#: kmsgmodem.cpp:542
+msgid "Unset standalone mode"
+msgstr ""
+
+#: kmsgmodem.cpp:545
 msgid "Standalone mode set"
 msgstr ""
 
-#: kmsgmodem.cpp:412
+#: kmsgmodem.cpp:581
 msgid "Are you sure to erase all messages on the modem?"
 msgstr ""
 
@@ -167,62 +187,62 @@ msgid "His previous work saved me much time"
 msgstr ""
 
 #: main.cpp:48
-msgid "The GSM decompression algos"
-msgstr ""
-
-#: rc.cpp:1
-msgid "&Modem"
+msgid "Thanks for SoX"
 msgstr ""
 
 #: rc.cpp:2
-msgid "Standard Toolbar"
+msgid "&Modem"
 msgstr ""
 
 #: rc.cpp:3
+msgid "Standard Toolbar"
+msgstr ""
+
+#: rc.cpp:4 rc.cpp:5
 msgid "Message Toolbar"
 msgstr ""
 
-#: rc.cpp:4 rc.cpp:13
+#: rc.cpp:6 rc.cpp:15
 msgid "Form1"
 msgstr ""
 
-#: rc.cpp:5
+#: rc.cpp:7
 msgid "Check for new messages on startup"
 msgstr ""
 
-#: rc.cpp:6
+#: rc.cpp:8
 msgid "Set standalone mode on exit"
 msgstr ""
 
-#: rc.cpp:7
+#: rc.cpp:9
 msgid "kmsgmodemwidgetbase"
 msgstr ""
 
-#: rc.cpp:8
+#: rc.cpp:10
 msgid "#"
 msgstr ""
 
-#: rc.cpp:9
+#: rc.cpp:11
 msgid "Type"
 msgstr ""
 
-#: rc.cpp:10
+#: rc.cpp:12
 msgid "Date"
 msgstr ""
 
-#: rc.cpp:11
+#: rc.cpp:13
 msgid "Size"
 msgstr ""
 
-#: rc.cpp:12
+#: rc.cpp:14
 msgid "Sender"
 msgstr ""
 
-#: rc.cpp:14
+#: rc.cpp:16
 msgid "Baudrate:"
 msgstr ""
 
-#: rc.cpp:15
+#: rc.cpp:17
 msgid "Device:"
 msgstr ""
 

@@ -2,8 +2,8 @@
 /****************************************************************************
 ** Form implementation generated from reading ui file './Modem.ui'
 **
-** Created: Wed Aug 11 21:19:32 2004
-**      by: The User Interface Compiler ($Id: Modem.cpp,v 1.1 2004/08/12 16:42:50 wirr Exp $)
+** Created: Mon Aug 16 15:29:49 2004
+**      by: The User Interface Compiler ($Id: Modem.cpp,v 1.2 2004/08/16 14:18:20 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/

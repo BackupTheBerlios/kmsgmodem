@@ -87,9 +87,7 @@ KMsgModem::KMsgModem(KUniqueApplication *app)
 	
 	modem = NULL;
 	standaloneModeActive = true;
-	
-	dispatcher = new KArtsDispatcher;
- 	server = new KArtsServer;
+
 	playobj = NULL;
 
 	selectedMessage = 0;
@@ -110,7 +108,7 @@ KMsgModem::~KMsgModem()
 
 	modem->terminate();	// Is that all neccessary?
 	modem->exit();
-	modem->wait();	// Wait so that the programm dont crash
+	modem->wait();	// Wait, so that the programm dont crash
 	delete modem;
 	modem = NULL;
 	
@@ -119,8 +117,6 @@ KMsgModem::~KMsgModem()
 	StopPlayingVoice();	// @todo why didn't it stop playing here?
 	
 	delete playobj;
-	delete dispatcher;
-	delete server;
 }
 
 
@@ -404,7 +400,7 @@ void KMsgModem::ShowFax(int Fax)
 	
 	if(rc != 0) 
 	{
-		KMessageBox::error(this, i18n("Please install KFax.\nYou can find the sourcecode at http:/www.kde.org/"));
+		KMessageBox::error(this, i18n("Please install KFax.\nYou can find the sourcecode at http://www.kde.org/"));
 	}
 
 	/*
@@ -485,7 +481,7 @@ void KMsgModem::PlayVoice(int Voice)
 	//
 	KURL url("/tmp/tel.wav");
 	
- 	KDE::PlayObjectFactory factory(server->server());
+ 	KDE::PlayObjectFactory factory(server.server());
  	playobj = factory.createPlayObject(url, true);
  	playobj->play();
 	

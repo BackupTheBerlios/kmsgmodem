@@ -2,8 +2,8 @@
 /****************************************************************************
 ** Form implementation generated from reading ui file './kmsgmodemwidgetbase.ui'
 **
-** Created: Wed Aug 11 21:19:26 2004
-**      by: The User Interface Compiler ($Id: kmsgmodemwidgetbase.cpp,v 1.1 2004/08/12 16:42:50 wirr Exp $)
+** Created: Mon Aug 16 15:29:42 2004
+**      by: The User Interface Compiler ($Id: kmsgmodemwidgetbase.cpp,v 1.2 2004/08/16 14:18:20 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 ****************************************************************************/
@@ -37,7 +37,7 @@ KMsgModemWidgetBase::KMsgModemWidgetBase( QWidget* parent, const char* name, WFl
     MessageView->addColumn( tr2i18n( "Size" ) );
     MessageView->addColumn( tr2i18n( "Sender" ) );
     MessageView->setSizePolicy( QSizePolicy( (QSizePolicy::SizeType)1, (QSizePolicy::SizeType)1, 0, 0, MessageView->sizePolicy().hasHeightForWidth() ) );
-    MessageView->setMinimumSize( QSize( 500, 250 ) );
+    MessageView->setMinimumSize( QSize( 500, 240 ) );
     MessageView->setMidLineWidth( 0 );
     MessageView->setResizePolicy( KListView::Default );
     MessageView->setProperty( "selectionMode", "Single" );

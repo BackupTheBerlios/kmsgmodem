@@ -20,11 +20,6 @@
 /*
  * Copyright (C) 2004 Alexander Wiedenbruch <wirr@abacho.de>
  */
- 
- // TODO list
- // 1. use arts for output
- // 2. implement more gui features, e.g. save fax...
- // 3. continue implement modem features
 
 #include "kmsgmodem.h"
 #include <kuniqueapplication.h>

@@ -1,8 +1,8 @@
 /****************************************************************************
 ** KMsgModem meta object code from reading C++ file 'kmsgmodem.h'
 **
-** Created: Wed Aug 11 23:23:46 2004
-**      by: The Qt MOC ($Id: kmsgmodem.moc,v 1.1 2004/08/12 16:42:49 wirr Exp $)
+** Created: Mon Aug 16 15:29:20 2004
+**      by: The Qt MOC ($Id: kmsgmodem.moc,v 1.2 2004/08/16 14:18:20 wirr Exp $)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -52,58 +52,53 @@ QMetaObject* KMsgModem::staticMetaObject()
     if ( metaObj )
 	return metaObj;
     QMetaObject* parentObject = KMainWindow::staticMetaObject();
-    static const QUMethod slot_0 = {"Startup", 0, 0 };
-    static const QUMethod slot_1 = {"LoadMessages", 0, 0 };
-    static const QUParameter param_slot_2[] = {
+    static const QUMethod slot_0 = {"LoadMessages", 0, 0 };
+    static const QUParameter param_slot_1[] = {
 	{ "Fax", &static_QUType_int, 0, QUParameter::In }
     };
-    static const QUMethod slot_2 = {"ShowFax", 1, param_slot_2 };
-    static const QUParameter param_slot_3[] = {
+    static const QUMethod slot_1 = {"ShowFax", 1, param_slot_1 };
+    static const QUParameter param_slot_2[] = {
 	{ "Voice", &static_QUType_int, 0, QUParameter::In }
     };
-    static const QUMethod slot_3 = {"PlayVoice", 1, param_slot_3 };
-    static const QUParameter param_slot_4[] = {
-	{ "proc", &static_QUType_ptr, "KProcess", QUParameter::In }
-    };
-    static const QUMethod slot_4 = {"ConvGsmExited", 1, param_slot_4 };
-    static const QUMethod slot_5 = {"showSettings", 0, 0 };
-    static const QUMethod slot_6 = {"ToogleStandaloneMode", 0, 0 };
-    static const QUMethod slot_7 = {"SetStatusbarText", 0, 0 };
-    static const QUParameter param_slot_8[] = {
+    static const QUMethod slot_2 = {"PlayVoice", 1, param_slot_2 };
+    static const QUMethod slot_3 = {"showSettings", 0, 0 };
+    static const QUMethod slot_4 = {"ToogleStandaloneMode", 0, 0 };
+    static const QUMethod slot_5 = {"SetStatusbarText", 0, 0 };
+    static const QUParameter param_slot_6[] = {
 	{ "text", &static_QUType_QString, 0, QUParameter::In }
     };
-    static const QUMethod slot_8 = {"SetStatusbarText", 1, param_slot_8 };
-    static const QUParameter param_slot_9[] = {
+    static const QUMethod slot_6 = {"SetStatusbarText", 1, param_slot_6 };
+    static const QUParameter param_slot_7[] = {
 	{ "text", &static_QUType_QString, 0, QUParameter::In },
 	{ "item", &static_QUType_int, 0, QUParameter::In }
     };
-    static const QUMethod slot_9 = {"SetStatusbarText", 2, param_slot_9 };
-    static const QUParameter param_slot_10[] = {
+    static const QUMethod slot_7 = {"SetStatusbarText", 2, param_slot_7 };
+    static const QUParameter param_slot_8[] = {
 	{ "text", &static_QUType_QString, 0, QUParameter::In },
 	{ "item", &static_QUType_int, 0, QUParameter::In },
 	{ "WithTimeout", &static_QUType_bool, 0, QUParameter::In }
     };
-    static const QUMethod slot_10 = {"SetStatusbarText", 3, param_slot_10 };
-    static const QUMethod slot_11 = {"StopPlayingVoice", 0, 0 };
-    static const QUMethod slot_12 = {"ClearMemory", 0, 0 };
+    static const QUMethod slot_8 = {"SetStatusbarText", 3, param_slot_8 };
+    static const QUMethod slot_9 = {"StopPlayingVoice", 0, 0 };
+    static const QUMethod slot_10 = {"ClearMemory", 0, 0 };
+    static const QUMethod slot_11 = {"SaveFile", 0, 0 };
     static const QMetaData slot_tbl[] = {
-	{ "Startup()", &slot_0, QMetaData::Private },
-	{ "LoadMessages()", &slot_1, QMetaData::Private },
-	{ "ShowFax(int)", &slot_2, QMetaData::Private },
-	{ "PlayVoice(int)", &slot_3, QMetaData::Private },
-	{ "ConvGsmExited(KProcess*)", &slot_4, QMetaData::Private },
-	{ "showSettings()", &slot_5, QMetaData::Private },
-	{ "ToogleStandaloneMode()", &slot_6, QMetaData::Private },
-	{ "SetStatusbarText()", &slot_7, QMetaData::Private },
-	{ "SetStatusbarText(QString)", &slot_8, QMetaData::Private },
-	{ "SetStatusbarText(QString,int)", &slot_9, QMetaData::Private },
-	{ "SetStatusbarText(QString,int,bool)", &slot_10, QMetaData::Private },
-	{ "StopPlayingVoice()", &slot_11, QMetaData::Private },
-	{ "ClearMemory()", &slot_12, QMetaData::Private }
+	{ "LoadMessages()", &slot_0, QMetaData::Private },
+	{ "ShowFax(int)", &slot_1, QMetaData::Private },
+	{ "PlayVoice(int)", &slot_2, QMetaData::Private },
+	{ "showSettings()", &slot_3, QMetaData::Private },
+	{ "ToogleStandaloneMode()", &slot_4, QMetaData::Private },
+	{ "SetStatusbarText()", &slot_5, QMetaData::Private },
+	{ "SetStatusbarText(QString)", &slot_6, QMetaData::Private },
+	{ "SetStatusbarText(QString,int)", &slot_7, QMetaData::Private },
+	{ "SetStatusbarText(QString,int,bool)", &slot_8, QMetaData::Private },
+	{ "StopPlayingVoice()", &slot_9, QMetaData::Private },
+	{ "ClearMemory()", &slot_10, QMetaData::Private },
+	{ "SaveFile()", &slot_11, QMetaData::Private }
     };
     metaObj = QMetaObject::new_metaobject(
 	"KMsgModem", parentObject,
-	slot_tbl, 13,
+	slot_tbl, 12,
 	0, 0,
 #ifndef QT_NO_PROPERTIES
 	0, 0,
@@ -124,19 +119,18 @@ void* KMsgModem::qt_cast( const char* clname )
 bool KMsgModem::qt_invoke( int _id, QUObject* _o )
 {
     switch ( _id - staticMetaObject()->slotOffset() ) {
-    case 0: Startup(); break;
-    case 1: LoadMessages(); break;
-    case 2: ShowFax((int)static_QUType_int.get(_o+1)); break;
-    case 3: PlayVoice((int)static_QUType_int.get(_o+1)); break;
-    case 4: ConvGsmExited((KProcess*)static_QUType_ptr.get(_o+1)); break;
-    case 5: showSettings(); break;
-    case 6: ToogleStandaloneMode(); break;
-    case 7: SetStatusbarText(); break;
-    case 8: SetStatusbarText((QString)static_QUType_QString.get(_o+1)); break;
-    case 9: SetStatusbarText((QString)static_QUType_QString.get(_o+1),(int)static_QUType_int.get(_o+2)); break;
-    case 10: SetStatusbarText((QString)static_QUType_QString.get(_o+1),(int)static_QUType_int.get(_o+2),(bool)static_QUType_bool.get(_o+3)); break;
-    case 11: StopPlayingVoice(); break;
-    case 12: ClearMemory(); break;
+    case 0: LoadMessages(); break;
+    case 1: ShowFax((int)static_QUType_int.get(_o+1)); break;
+    case 2: PlayVoice((int)static_QUType_int.get(_o+1)); break;
+    case 3: showSettings(); break;
+    case 4: ToogleStandaloneMode(); break;
+    case 5: SetStatusbarText(); break;
+    case 6: SetStatusbarText((QString)static_QUType_QString.get(_o+1)); break;
+    case 7: SetStatusbarText((QString)static_QUType_QString.get(_o+1),(int)static_QUType_int.get(_o+2)); break;
+    case 8: SetStatusbarText((QString)static_QUType_QString.get(_o+1),(int)static_QUType_int.get(_o+2),(bool)static_QUType_bool.get(_o+3)); break;
+    case 9: StopPlayingVoice(); break;
+    case 10: ClearMemory(); break;
+    case 11: SaveFile(); break;
     default:
 	return KMainWindow::qt_invoke( _id, _o );
     }

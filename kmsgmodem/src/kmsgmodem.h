@@ -89,8 +89,8 @@ private:
 	
 	KUniqueApplication *application;
 	
-	KArtsDispatcher *dispatcher;
-	KArtsServer *server;
+	KArtsDispatcher dispatcher;
+	KArtsServer server;
 	KDE::PlayObject *playobj;
 	
 	unsigned int selectedMessage;
