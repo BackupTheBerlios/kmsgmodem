@@ -1917,8 +1917,8 @@ fi
 
 
 # Define the identity of the package.
- PACKAGE=kmsgmodem
- VERSION=0.1
+ PACKAGE=$APPNAMELC$
+ VERSION=$VERSION$
 
 
 cat >>confdefs.h <<_ACEOF
@@ -31214,6 +31214,10 @@ done
 
           ac_config_files="$ac_config_files Makefile"
 
+          ac_config_files="$ac_config_files doc/Makefile"
+
+          ac_config_files="$ac_config_files doc/en/Makefile"
+
           ac_config_files="$ac_config_files po/Makefile"
 
           ac_config_files="$ac_config_files src/Makefile"
@@ -31782,6 +31786,8 @@ do
   case "$ac_config_target" in
   # Handling of arguments.
   "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+  "doc/Makefile" ) CONFIG_FILES="$CONFIG_FILES doc/Makefile" ;;
+  "doc/en/Makefile" ) CONFIG_FILES="$CONFIG_FILES doc/en/Makefile" ;;
   "po/Makefile" ) CONFIG_FILES="$CONFIG_FILES po/Makefile" ;;
   "src/Makefile" ) CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
