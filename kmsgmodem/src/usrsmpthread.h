@@ -24,6 +24,8 @@
 #include <qstring.h>
 #include <qptrlist.h>
 
+#include <time.h>
+
 #include "simplemodem.h"
 
 #define NORMAL			1
@@ -136,6 +138,10 @@ public:
 	
 	int GetModemType();
 	
+	time_t GetModemClock();
+	
+	int ResetModemClock();
+	
 private:
 	
 	//
@@ -149,7 +155,7 @@ private:
 	
 	void PlayVoiceFileThread();
 	
-	int ClearMemoryPrivate();
+	int ClearMemoryThread();
 	
 
 	int DetectModemType();

@@ -141,6 +141,9 @@ void SimpleModem::ReadMemoryToFile(FILE *fd)
 	}
 }
 
+/*! \brief This function returns a pointer to the connection
+ *
+ */
 Connection* SimpleModem::GetConnection()
 {
 	return port;

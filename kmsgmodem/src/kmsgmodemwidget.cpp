@@ -43,6 +43,8 @@ KMsgModemWidget::~KMsgModemWidget()
 /*$SPECIALIZATION$*/
 void KMsgModemWidget::MessageClicked(QListViewItem *item)
 {
+	if(item == NULL) return;
+	
 	if(item->text(1) == "Fax")
 	{
 		emit(FaxMsgClicked(item->text(0).toInt()));

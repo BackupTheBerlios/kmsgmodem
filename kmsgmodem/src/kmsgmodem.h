@@ -72,6 +72,8 @@ public:
 	
 private:
 	void NewMessage();
+	
+	QString CalcDate(int Day, int Hour, int Minute);
 			
 	KMsgModemWidget *mainWidget;
 	
@@ -95,6 +97,7 @@ private:
 	
 	unsigned int selectedMessage;
 	
+
 private slots:	
 	
 	void LoadMessages();
@@ -114,6 +117,8 @@ private slots:
 	void ClearMemory();
 	
 	void SaveFile();
+	
+	bool queryClose();
 };
 
 #endif // _KMSGMODEM_H_

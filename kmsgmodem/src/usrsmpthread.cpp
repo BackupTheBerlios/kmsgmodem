@@ -76,7 +76,7 @@ void UsrSmpThread::run()
 					break;
 					
 		case ERASEMESSAGES:
-					ClearMemoryPrivate();
+					ClearMemoryThread();
 					break;
 					
 		default:	break;
@@ -663,10 +663,45 @@ void UsrSmpThread::PlayVoiceFileThread()
 /*! \brief Deletes all messages
  *
  */
-int UsrSmpThread::ClearMemoryPrivate()
+int UsrSmpThread::ClearMemoryThread()
 {
 	QString resp = simplemodem->SendCommand("AT+MEM");
 	if(resp.find("OK") != -1) return 0;
 
 	return 1;
 }
+
+
+time_t UsrSmpThread::GetModemClock()
+{
+	QString resp = simplemodem->SendCommand("AT+MCC?");
+	
+	resp = resp.remove("\n");
+	resp = resp.remove("\r");
+	resp = resp.remove("OK");
+	
+	int Day = resp.mid(0,3).toInt();
+	int Hour = resp.mid(4,3).toInt();
+	int Minute = resp.mid(8,3).toInt();
+	int Second = resp.mid(12,3).toInt();
+	
+	if((Day == 255) && (Hour == 255) && (Minute == 255) && (Second == 255)) return 0;
+	if((Day == 254) && (Hour == 24)) return 0;
+	
+	time_t date = Second;
+	date += Minute * 60;
+	date += Hour * 60 * 60;
+	date += Day * 24 * 60 * 60;
+	
+	return date;
+}
+
+
+int UsrSmpThread::ResetModemClock()
+{
+	QString resp = simplemodem->SendCommand("AT+MCC");
+	if(resp.find("OK") != -1) return 0;
+
+	return 1;
+}
+

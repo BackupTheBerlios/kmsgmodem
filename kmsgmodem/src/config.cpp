@@ -19,7 +19,6 @@
  ***************************************************************************/
 #include "config.h"
 
-
 Config *Config::instance = NULL;
 
 Config::Config()
@@ -36,6 +35,7 @@ Config::Config()
 	setCurrentGroup("Messages");
 	addItemInt("NoOfVoiceMsgs", NoOfVoiceMsgs, -1);
 	addItemInt("NoOfFaxMsgs", NoOfFaxMsgs, -1);
+	addItemLong("ResetTime", ResetTime, time(NULL));
 	
 	readConfig();
 }

@@ -33,6 +33,8 @@
 #include <kdebug.h>
 #include <kfiledialog.h>
 
+#include <qdatetime.h>
+
 #include "kmsgmodem.h"
 #include "kmsgmodemwidget.h"
 #include "generalsettings.h"
@@ -99,7 +101,8 @@ KMsgModem::KMsgModem(KUniqueApplication *app)
  */
 KMsgModem::~KMsgModem()
 {	
-	Config *settings = Config::Self();
+	Config *settings = Config::Self();	
+	settings->writeConfig();
 	
 	if(settings->SetStandAloneModeOnExit && !standaloneModeActive)
 	{
@@ -267,7 +270,6 @@ void KMsgModem::LoadMessages()
 		
 		settings->NoOfFaxMsgs = MemInfo.FaxMsgs;
 		settings->NoOfVoiceMsgs = MemInfo.VoiceMsgs;
-		settings->writeConfig();
 	}
 	
 	// The temporary file was deleted, so we must read the messages again
@@ -281,9 +283,16 @@ void KMsgModem::LoadMessages()
 		
 		settings->NoOfFaxMsgs = MemInfo.FaxMsgs;
 		settings->NoOfVoiceMsgs = MemInfo.VoiceMsgs;
-		settings->writeConfig();
 	}
 	if(fileEx != NULL) fclose(fileEx);
+	
+	// Check if the modem clock should be resetted
+	time_t modemTime = modem->GetModemClock();
+	if(modemTime == 0)
+	{
+		modem->ResetModemClock();
+		settings->ResetTime = time(NULL);
+	}
 	
 	QPtrList<struct MessageInfo> MsgInfo;
 	
@@ -303,16 +312,12 @@ void KMsgModem::LoadMessages()
 		else Type = i18n("Tel");
 		
 		QString Date;
-		/*
+		
 		if(MsgInfo.at(Message)->ClockValid)
 		{
-			// @todo format date
-			Date = "%1:%2:%3";
-			Date = Date.arg(MsgInfo.at(Message)->ReceiveDay).arg(MsgInfo.at(Message)->ReceiveHour)
-															.arg(MsgInfo.at(Message)->ReceiveMinute);
+			Date = CalcDate(MsgInfo.at(Message)->ReceiveDay, MsgInfo.at(Message)->ReceiveHour, MsgInfo.at(Message)->ReceiveMinute);
 		}
 		else 
-		*/
 		Date = i18n("unknown");
 			
 		QString Size("%1");
@@ -336,6 +341,34 @@ void KMsgModem::LoadMessages()
 	SetStatusbarText(memory, 2);
 	
 	SetStatusbarText();
+}
+
+
+/*! \brief This function calcs the rec. date.
+ *
+ *	To make it simple, asume that from every message from
+ *  the future the date is unknown.
+ *	So, when the modem is resetted, every message rec. time
+ *	is in the future.
+ *	Perhaps the date is calced wrong when "now > rec date"
+ *	but I think that is no great problem for the user.
+ */
+QString KMsgModem::CalcDate(int Day, int Hour, int Minute)
+{	
+	Config *settings = Config::Self();
+	
+	time_t MsgTime = Minute * 60;
+	MsgTime += Hour * 60 * 60;
+	MsgTime += Day * 24 * 60 * 60;
+	
+	time_t RecDate = MsgTime + settings->ResetTime;
+	
+	if(RecDate > time(NULL)) return i18n("unknown");
+	
+	QDateTime time;
+	time.setTime_t(RecDate);
+	
+	return KGlobal::locale()->formatDateTime(time);
 }
 
 
@@ -369,7 +402,6 @@ void KMsgModem::NewMessage()
 	Config *settings = Config::Self();
 	settings->NoOfFaxMsgs = MemInfo.FaxMsgs;
 	settings->NoOfVoiceMsgs = MemInfo.VoiceMsgs;
-	settings->writeConfig();
 	
 	KMessageBox::information(this, i18n("There are new messages"));
 }
@@ -637,5 +669,24 @@ void KMsgModem::SaveFile()
 		return;
 	}
 }
+
+
+/*! \brief This function asks the user if s/he wants to really quit
+ *
+ *	Its a problem when quitting the application while the thread runs.
+ *	Normally this is save, but who knows?
+ */
+bool KMsgModem::queryClose()
+{
+	if(modem->running() == true)
+	{
+		int rc = KMessageBox::warningContinueCancel(this, i18n("You quit the application while an action is still running. This is not recommendable.\nDo you really want to continue quitting the application?"));
+		if(rc == KMessageBox::Continue) return true;
+		else return false;
+	}
+	
+	return true;
+}
+
 
 #include "kmsgmodem.moc"

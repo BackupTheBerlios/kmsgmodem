@@ -24,6 +24,8 @@
 
 #include <qstring.h>
 
+#include <time.h>
+
 /**
 @author Alexander Wiedenbruch
 */
@@ -45,6 +47,8 @@ public:
 	
 	int NoOfFaxMsgs;
 	int NoOfVoiceMsgs;
+	
+	time_t ResetTime;
 
 private:	
 	static Config *instance;
